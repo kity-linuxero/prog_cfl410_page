@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Problemas técnicos :(</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/white.css" id="theme">
+		<!-- <link rel="stylesheet" href="../plugin/highlight/zenburn.css"> -->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h2>Error 404</h2>
+					<img id="err" src="img/technical_dif1.jpg" class="r-stretch">
+					<h4>No se encontró la página</h4>
+				</section>
+			</div>
+
+		</div>
+
+		<script>
+			// Elije al azar entre tres imágenes de error ;
+			var random_img = Math.random();
+			if (random_img < 0.33){
+				document.getElementById("err").src = "img/technical_dif0.jpg";
+
+				}else if (random_img > 0.77){
+					document.getElementById("err").src = "img/technical_dif1.jpg";
+
+					}else{
+						document.getElementById("err").src = "img/technical_dif2.jpg";
+
+								}
+		</script>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ]
+			});
+		</script>
+
+	</body>
+</html>

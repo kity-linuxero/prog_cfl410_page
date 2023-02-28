@@ -1,0 +1,743 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Programación</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-transition="fade" data-background="img/background.jpg"  data-background-color="#dddddd" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+				</section>
+
+				<section data-transition="fade">
+					<section id="presentacion">
+						<h2>Presentación</h2>
+						<p class="fragment">Acerca de...</p>
+						<p class="fragment">Objetivos del curso</p>
+					</section>
+
+					<section id="dinamica">
+						<h2>Dinámica del curso</h2>
+						<ul>
+							<li>Métodos de evaluación
+								<ul>
+									<li class="fragment">Seguimiento</li>
+									<li class="fragment">Trabajos prácticos</li>
+									<li class="fragment">Trabajo final</li>
+								</ul>
+							</li>
+
+						</ul>
+						<!-- <p class="fragment">Método de evaluación<span class="fragment">: Trabajos <strong>prácticos</strong></span></p> -->
+						<p class="fragment">Asistencia requerida</p>
+
+						<h3 class="fragment">Plataformas a usar</h3>
+						<ul>
+							<li class="fragment">Grupo WhatsApp/Telegram</li>
+							<li class="fragment">Google Meets (eventualmente)</li>
+							<!-- <li class="fragment"><a href="https://programacion-cfp410.slack.com/">Slack</a></li> -->
+							<li class="fragment"><a href="https://github.com/">GitHub</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Clase 0</h2>
+					<h3>Contenido del curso</h3>
+					<ul>
+						<li>Presentación del curso</li>
+						<li>Conceptos básicos</li>
+						<ul>
+							<li>Ramas de la programación</li>
+							<li>Partes de una computadora</li>
+							<li>Programación, lenguajes y tipos</li>
+							<li>Algoritmos</li>
+							<!-- <li>Modularización</li> -->
+						</ul>				
+					</ul>
+				</section>
+
+				<section>
+						
+					<section id="intro">
+						<h3>Introducción</h3>
+						<p class="fragment">¿Por qué aprender a programar?</p>
+						<p class="fragment">Contexto del desarrollador en pandemia</p>
+					</section>
+
+					<!-- <section>
+						<h3>¿Preguntas?</h3>
+					</section> -->
+
+					<section id="ramas_programacion">
+						<h2>Diferentes ramas de la programación</h2>
+						<ul>
+							<li class="fragment">Web</li>
+							<li class="fragment">Móvil</li>
+							<li class="fragment">Desktop</li>
+							<li class="fragment">Machine Learning</li>
+							<li class="fragment">... y muchas otras.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section id="computadora">
+						<h3>¿Qué es una computadora?</h3>
+						<ul>
+							<li>Hardware</li>
+							<li>Software</li>
+						</ul>
+						<p>Hardware:</p>
+						<ul>
+							<li>CPU</li>
+							<li>Memoria (RAM)</li>
+							<li>Almacenamiento</li>
+							<li>Periféricos</li>
+						</ul>
+					</section>
+
+					<section id="cpu">
+						<h3>CPU</h3>
+						<p>
+							Unidad central de procesamiento o procesador
+						</p>
+						<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							&ldquo;Es el encargado de ejecutar todos los programas, desde el sistema operativo hasta las aplicaciones de usuario; solo ejecuta instrucciones en lenguaje binario, realizando operaciones aritméticas y lógicas simples, tales como sumar, restar, multiplicar, dividir, las lógicas binarias y accesos a memoria.&rdquo;
+							<a href="https://es.wikipedia.org/wiki/Microprocesador">[1]</a>
+						</blockquote>
+					</section>
+
+					<section>
+						<h3>Algunas características que definen a un CPU</h3>
+						<ul>
+							<li class="fragment">Arquitectura (x86, x86_64, ARM, PowerPC)</li>
+							<li class="fragment">Velocidad (Mhz, Ghz)</li>
+							<li class="fragment">Cantidad de cores y threads</li>
+							<li class="fragment">Set de instrucciones</li>
+						</ul>
+					</section>
+
+					<section id="memory">
+
+						<h3>Memoria</h3>
+						<p>
+							Memoria RAM (Ramdom Access Memory)
+						</p>
+						<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							&ldquo;En la RAM se cargan todas las instrucciones que ejecuta la unidad central de procesamiento (CPU) y otras unidades del computador, <strong>además de contener los datos que manipulan los distintos programas</strong>.&rdquo;
+							<a href="https://es.wikipedia.org/wiki/Memoria_de_acceso_aleatorio">[2]</a>
+						</blockquote>
+
+					</section>
+
+					<section id="almacenamiento">
+						<h3>Almacenamiento</h3>
+						<p>NO confundir con memoria</p>
+						<ul>
+							<li>Unidades internas (discos hdd, ssd, flash)</li>
+							<li>Unidades externas (discos usb, pendrives)</li>
+							<li>Almacenamiento por red local o en la nube</li>
+						</ul>
+						<p>Los programas se guardan y pueden guardar información en el almacenamiento.</p>
+
+					</section>
+
+					<section id="io">
+						<h3>Periféricos</h3>
+						<p>Son para interactuar con la computadora</p>
+						<ul>
+							<li>Teclado, mouse, touch (Entrada)</li>
+							<li>Monitor, sonido, impresora, luces (Salida)</li>
+						</ul>
+
+					</section>
+				</section>
+
+					<section id="prog">
+						<section>
+							<h3>¿Qué es la programación?</h3>
+							<p>Básicamente es escribir programas de computadora.</p>
+
+							<p>Programa:</p>
+
+							<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+								&ldquo;Un programa es un conjunto de instrucciones, ejecutables sobre una computadora, que permite cumplir una function específica.&rdquo;
+								<div title="Algoritmos, datos y programas. De Giusti (2001)"><small>[3]</small></div>
+							</blockquote>
+						</section>
+
+						<section>
+							<h3>Ejemplo de un programa</h3>
+
+							<p>Pseudocódigo</p>
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+								# Lee el nombre desde el teclado
+								imprimir_en_pantalla "Por favor ingrese su nombre"
+								leer_desde_teclado (nombre)
+
+								# Realiza el saludo con el nombre
+								imprimir_en_pantalla "¡Hola $nombre!"
+							</code></pre>
+
+							<p>Ejecutar programa: </p>
+
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+								ejecutar programa.exe 
+								Por favor, ingrese su nombre: Cristian
+								¡Hola Cristian!					
+							</code></pre>
+
+
+
+						</section>
+						<section>
+							<p>En Python</p>
+
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers="|2,4">
+								# Lee el nombre desde el teclado
+								nombre = input("Por favor, ingrese su nombre: ")
+								# Realiza el saludo con el nombre
+								print ("¡Hola " + nombre + "!") 					
+							</code></pre>
+
+							<p>En C</p>
+
+							<pre data-id="code-animation"><code class="c" data-trim data-line-numbers="|1,2,3,4,6,8,9,10">
+								#include "stdio.h"
+								int main( ) {
+									char str[64];
+									printf( "Por favor, ingrese su nombre: ");
+									// Lee el nombre desde el teclado
+									scanf("%s", str);
+									// Realiza el saludo con el nombre
+									printf( "\n¡Hola %s!", str);
+									return 0; 
+								}			
+							</code></pre>
+
+						</section>
+
+						<section>
+							<h4>Lenguajes de programación</h4>
+							
+								<p><strong>Lenguaje:</strong> Es un lenguaje formal que le proporciona a una persona la capacidad de escribir una serie de instrucciones en forma de algoritmos para ser ejecutados en una computadora.</p>
+						</section>
+						<section>
+							<h4>Clasificación de lenguajes</h4>
+							<ul>
+								<li class="fragment"><strong>Nivel:</strong> De alto nivel | bajo nivel</li>
+								<li class="fragment"><strong>Paradigmas:</strong> Orientado a objetos, procedural, eventos, reactiva... etc</li>
+								<li class="fragment"><strong>Propósito:</strong> Propósito general y específicos</li>
+								<li class="fragment"><strong>Compilados e interpretados</strong></li>
+								<li class="fragment"><strong>Tipados no tipados</strong></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Librerías</h4>
+								<p>Una librería (library) es un conjunto de implementaciones funcionales, codificadas en un lenguaje de programación, que ofrece una interfaz bien definida para la funcionalidad que se invoca.</p>
+								<p>Pueden extender las capacidades estándar del lenguaje y/o ofrecer al desarrollador herramientas útiles.</p>
+						</section>
+						<section>
+							<h2>¿Preguntas?</h2>
+						</section>
+
+					</section>
+
+					<section>
+
+						<section>
+							<h3>Algoritmos</h3>
+							<blockquote>
+								&ldquo;Algoritmo es la especificación rigurosa de la secuencia de pasos (instrucciones) a realizar sobre un autómata <small>[computadora]</small> para alcanzar un resultado deseado en un tiempo finito <small>[comienza y termina]</small>.&rdquo;
+								<div title="Algoritmos, datos y programas. De Giusti (2001)"><small>[3]</small></div>
+							</blockquote>
+
+							<p><small>"Una secuencia de pasos a seguir. Como si fuera una receta."</small></p>
+
+						</section>
+
+						<section>
+							<h3>Algoritmos (cont)</h3>
+							<p>Todos los lenguajes de programación tienen un conjunto mínimo de instrucciones... este conjunto debe contener <strong>estructuras de control</strong> para la asignación, decisión e iteración.</p>
+
+							<p> A continuación veremos el comportamiento de los mas básicos.</p>
+						</section>
+						<section>
+							<h3>Asignación<small> [=]</small></h3>
+							<p>Asigna un valor a una "variable" o constante para luego usar en la ejecución del programa.</p>
+							<p>Una <strong>variable</strong> es un lugar en la memoria (RAM) donde podremos almacenar valores temporalmente.</p>
+							<p><small>El tiempo de vida o alcance de una variable se verá mas adelante en el curso.</small></p>
+
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+								# Ejemplo de asignación
+								nombre= "Cristian"
+								edad= 35
+							</code></pre>
+
+						</section>
+						<section>
+							<h2>Secuencia</h2>
+							<p>Una sucesión de instrucciones. Se ejecutan en orden de arriba hacia abajo.</p>
+							<img class="r-frame" style="background: rgba(255,255,255,0.1);"  data-src="./static/clase1/fig1.gif" alt="Figura 1: Estructura secuencial">
+						</section>
+
+
+
+						<section>
+							<h2>Secuencia en Python</h2>
+
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+								print("Instrucción 1")
+								print("Instrucción 2")
+								print("Instrucción 3")
+								print("Instrucción 4")
+							</code></pre>
+
+							<h4>El resultado:</h4>
+
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+								Instrucción 1
+								Instrucción 2
+								Instrucción 3
+								Instrucción 4
+							</code></pre>
+
+							<p>El orden siempre será desde arriba hacia abajo.</p>
+
+						</section>
+
+						<section>
+							<h2>Decisión o selección (if)</h2>
+							<p>Un algoritmo que representa un problema real sería imposible que sean solo instrucciones secuenciales. Es necesario tomar decisiones en función de los datos del problema.</p>
+							<p>El flujo se verá modificado.</p>
+							<img  data-src="./static/clase1/fig2.gif" alt="Figura 1: Estructura decisión"/>
+							<img data-src="./static/clase1/fig3.gif" alt="Figura 1: Estructura decisión"/>
+						</section>
+
+						<section>
+							<h2>Decisión (if) en Python</h2>
+
+							<h4>Primer caso</h4>
+
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+								if llueve:
+									print("Tomar paraguas") # Instrucción 1
+								print ("Salir al trabajo") # Instrucción 2
+							</code></pre>
+							<!-- <section data-markdown>
+								<script type="text/template">
+									#### Si cantidad es 0, la salida será:
+									```bash []
+										Instrucción 1
+										Instrucción 2
+									```
+									#### Si la cantidad NO es 0, la salida será:
+									```bash []
+										Instrucción 2
+									```
+								</script>
+							</section> -->
+
+							<div class="fragment">
+								<h4>Si llueve la salida es:</h4>
+
+								<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+									Tomar paraguas  
+									Salir al trabajo
+								</code></pre>
+							</div>
+
+						<div class="fragment">
+							<h4>Si NO llueve la salida es:</h4>
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+								Salir al trabajo
+							</code></pre>
+						</div>
+
+
+						</section>
+
+						<section>
+							<h2>Decisión (if) en Python [p2]</h2>
+
+							<h4>Segundo caso</h4>
+
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+								if llueve:
+									print("Tomar paraguas") # Instrucción 1
+								else:
+									print("Abrir ventanas de la casa") # Instrucción 2
+								print ("Salir al trabajo")  # Instrucción 3
+							</code></pre>
+
+							<div class="fragment">
+								<h4>Si llueve la salida es:</h4>
+
+								<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+									Tomar paraguas   # Instrucción 1 
+									Salir al trabajo # Instrucción 3
+								</code></pre>
+							</div>
+							<div class="fragment">
+								<h4>Si NO llueve la salida es:</h4>
+								<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+									Abrir ventanas de la casa # Instrucción 2
+									Salir al trabajo # Instrucción 3
+								</code></pre>
+							</div>
+
+						</section>
+
+						<section id="case">
+							<h3>Decisión o selectiva múltiple <small>[case o switch]</small></h3>
+							<p><small>Es una extensión de la estructura básica de decisión, para el caso de que las alternativas sean mas de dos:</small></p>
+							<img class="fragment" data-src="./static/clase1/fig4.gif" alt="Figura 1: Estructura decisión">
+							<p class="fragment"><small>Si mas de una condición es verdadera puede haber distintas formas de elegir cual caso tomar.</small></p>
+						</section>
+
+						<section>
+							<h3>Case en Python</h3>
+							<p>Agregado en Python 3.10</p>
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+								match numero:
+									case 0:
+										print ("Cero")
+									case 1:
+										print ("Uno")
+									case 2:
+										print ("Dos")
+									case _:
+										print ("Es otro número")
+							</code></pre>
+
+							<h4>Si el número es 0, 1 o 2 el resultado será:</h4>
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+								Cero, Uno o Dos (respectivamente)
+							</code></pre>
+
+							<h4>Si es otro número, el resultado será</h4>
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+								Es otro número
+							</code></pre>
+
+						</section>
+
+						<section>
+							<h3>Case en Python (elif) </h3>
+							<p>Para usar en versiones anteriores a 3.10</p>
+							<h4>Se puede usar con elif anidados</h4>
+							<pre data-id="code-animation"><code class="python" data-trim data-line-numbers>
+								numero= 4 # Asignamos el valor
+								if numero == 0:
+									print ("Cero")
+								elif numero == 1:
+									print ("Uno")
+								elif numero == 2
+									print ("Dos")
+								else:
+									print ("Es otro número")
+							</code></pre>
+							<h4>Si corremos el programa, el resultado será</h4>
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers="|1,2">
+								Es otro número
+							</code></pre>
+						</section>
+
+						<section>
+							<h3>Iteración<small> [while, for]</small></h3>
+							<p>La iteración es la capacidad de ejecutar un bloque de sentencias de forma repetida.</p>
+							<img class="" data-src="./static/clase1/fig5.gif" alt="Figura 5: While">
+							<p class="fragment">Se puede entender como <strong>mientras</strong> (while) se cumpla la condición se repite.</p>
+							<p class="fragment">ó ejecutar <strong>n veces</strong> (for) un bloque de instrucciones en caso que se sepa de antemano. </p>
+						</section>
+
+						<section>
+							<h3>Iteración en Python</h3>
+							<h4>Mientras (while)</h4>
+
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers="|1,2">
+								
+								while llueve:
+									print("Espero a que pare") 							
+								print("Voy a clase")
+							</code></pre>
+
+							<div class="fragment">
+								<h4>La salida es:</h4>
+
+								<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+									Espero a que pare
+									Espero a que pare
+									Espero a que pare
+									Espero a que pare
+									Espero a que pare
+									Espero a que pare
+									Espero a que pare
+									Espero a que pare
+									...
+									Voy a clase
+								</code></pre>
+							</div>
+
+							<p class="fragment">¡Cuidado pueden hacerse loops infinitos!</p>
+
+						</section>
+
+						<section>
+							<h3>Iteración en Python</h3>
+							<h4>Mientras (while) - Ejemplo 2</h4>
+
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers="|3,4,5">
+								# Tengo que contar hasta 6
+								miContador = 0
+								while miContador < 6:
+									print(miContador) 	# Voy contando el número
+									miContador += 1			# Incremento el contador
+								print("Terminé de contar")
+							</code></pre>
+							
+							<div class="fragment">
+								<h4>La salida es:</h4>
+								<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+									0
+									1
+									2
+									3
+									4
+									5
+									Terminé de contar
+								</code></pre>
+							</div>
+
+						</section>
+
+						<section>
+							<h3>Iteración en Python</h3>
+							<h4>Repetición (for)</h4>
+
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers="|1,2">
+								for x in range(6):
+									print(x)
+								print("Terminé de contar")
+							</code></pre>
+
+							<div class="fragment">
+								<h4>La salida es:</h4>
+								<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+									0
+									1
+									2
+									3
+									4
+									5
+									Terminé de contar
+								</code></pre>
+							</div>					
+						</section>
+
+						<section>
+							<h3>Iteración en Python [p2]</h3>
+							<h4>Iteración en una lista* (for)</h4>
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers="|2,3">
+								frutas = ["manzana", "banana", "pera"]
+								for x in frutas:
+								  print(x)
+							</code></pre>
+
+
+							<div class="fragment">
+								<h4>La salida es:</h4>
+								<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers>
+									manzana
+									banana
+									pera
+								</code></pre>
+
+								<p><small>*Las listas se verán con mas detalle mas adelante en el curso.</small></p>
+							</div>		
+
+						</section>
+
+						<section>
+							<h3>Sentencia <code>break</code></h3>
+							<p><small>A veces no sabemos que es momento de terminar un bucle hasta que llegas a la mitad del cuerpo. En ese caso podemos utilizar la sentencia <code>break</code> para saltar hacia afuera del bucle.</small></p>
+							<p><small>Supongamos que queremos tomar la entrada del usuario hasta que se escriba 'listo'</small></p>
+							<pre data-id="code-animation"><code class="python" data-trim>
+								while True:
+									linea = input('Su texto: ')
+									if linea == 'listo':
+										break # Rompe el while
+									print(linea)
+								print('¡Listo!')
+							</code></pre>
+							<p><small>Como la condición del bucle es <code>True</code> siempre será verdadera y por lo tanto nunca corta. Salvo cuando se ejecuta la sentencia <code>break</code>.</small></p>					
+						</section>
+
+						<section>
+							<h3>Documentación de un algoritmo</h3>
+							<ul>
+								<li>Un programa bien documentado será mas fácil de leer y mantener.</li>
+								<li>La mayoría de lenguajes proveen mecanismos de documentación (comentarios)</li>
+								<li>Es recomendable que los identificadores sean auto explicativos</li>
+							</ul>
+						</section>
+
+						<section>
+							<h3>Corrección y verificación de algoritmos</h3>
+							<ul>
+								<li>El programa debe resolver los problemas planteados en la especificación</li>
+								<li>Probar con un amplio juego de datos reales</li>
+								<li>Los test con los datos para probar pueden escribirse antes que el programa</li>
+								<li>CI/CD</li>
+							</ul>
+						</section>
+
+						<section>
+							<h3>Eficiencia de un algoritmo</h3>
+							<ul>
+								<li>Puede haber muchas soluciones a un mismo problema</li>
+								<li>...y pueden ser todas correctas.</li>
+								<li>Algunas soluciones pueden ser mas eficientes que otras en recursos de computación (tiempo, memoria, etc)</li>
+							</ul>
+						</section>
+
+						<section>
+							<h2>¿Preguntas?</h2>
+						</section>
+
+					</section>
+
+
+					<section>
+
+						<section>
+							<h3>Las partes de un programa</h3>
+
+							<p>Como se mencionó antes, los componentes básicos de un programa son:</p>
+							<ul>
+								<li>Instrucciones</li>
+								<li>Datos</li>
+							</ul>
+
+							<p>Estructuras y datos</p>
+
+						</section>
+						<section>
+							<h3>Las partes de un programa (cont)</h3>
+
+							<ul>
+								<li>Instrucciones:<small> Son las operaciones que ejecutará la computadora al interpretar el programa.
+								
+								<ul>
+									<li>Asignación</li>
+									<li>Decisión</li>
+									<li>Iteración</li>
+								</ul></small></li>
+
+								<li>Datos: <small>Son valores de información que necesitamos disponer y en ocasiones transformar para ejecutar una función del programa
+									<ul>
+										<li><strong>Constantes: </strong>Se definen al comienzo y no cambian durante la ejecución del programa</li>
+										<li><strong>Variables: </strong>Se definen antes de usarlas y pueden cambiar durante la ejecución del programa.</li>
+									</ul>
+								</small></li>
+								<p class="fragment">Para cada uno de los datos, se definen <strong>identificadores</strong> (nombre). Para poder referirnos a esos datos en cualquier parte del programa.</p>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Ejemplo usando las estructuras de control y datos aprendidos</h4>
+							<p class="fragment fade-in">Problema: recorrer la fila para ingresar a un banco en un momento determinado y contar la cantidad de personas en espera.</p>
+							<p class="fragment">¿Qué tengo que hacer?</p>
+							<ul class="fragment">
+								<li>Ponerme al principio de la fila</li>
+								<li>Mientras haya una persona a mi lado, sumar uno</li>
+								<li>Avanzar un lugar</li>
+								<li>Cuando finalice informar la cantidad de personas</li>
+							</ul>
+
+
+						</section>
+
+						<section>
+							<h4>Problema de la fila del banco</h4>
+							<pre data-id="code-animation"><code class="bash" data-trim data-line-numbers="|1|2|4|5|6|4|5|6|4|8">
+								cantidad=0
+								colocarme_al_inicio_de_la_fila
+
+								mientras(no llegue al fin de la fila)
+									cantidad=cantidad+1
+									avanzar_un_lugar
+
+								informar ("Hay $cantidad personas en la fila")
+							</code></pre>
+
+							<section data-markdown class="fragment">
+								<script type="text/template">
+									
+									#### Salida del programa:
+					
+									```bash []
+										Hay 2 personas en la fila
+									```
+								</script>
+							</section>
+						</section>
+						<section>
+							<h2>¿Preguntas?</h2>
+						</section>
+					</section>
+
+					<section data-transition="zoom" data-background="./static/back.jpg"  data-background-color="#dddddd" data-background-size="contain">
+						<h3>¡Fin de la clase!</h3>
+						<a href="./clase2.html"> Ir a clase siguiente > </a><br>
+					</section>
+
+					<section data-transition="zoom" data-background="./static/back.jpg"  data-background-color="#dddddd" data-background-size="contain">
+						<h2>Bibliografía</h2>
+
+						<p>Algoritmos, datos y Programas (De Giusti)</p>
+						
+						<h3>Referencias</h3>
+						<p>Wikipedia</p>
+						<p>RealPython.com</p>
+						<a href="http://tic.taboadaleon.es/Unidad1-Programacion/Tema2_Lenguajes/contenido/5_estructura_de_un_programa_informtico.html#:~:text=Existen%20dos%20partes%20o%20bloques,para%20conseguir%20los%20resultados%20esperados.">taboadaleon.es</a>
+
+						<h3>Recursos</h3>
+						<a href="https://www.online-python.com/">Interprete Python Online</a>
+
+					</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+	</body>
+</html>
