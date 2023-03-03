@@ -31,14 +31,15 @@
 		<script>
 			// Elije al azar entre tres imágenes de error ;
 			var random_img = Math.random();
+			var base_url = window.location.origin;
 			if (random_img < 0.33){
-				document.getElementById("err").src = "img/technical_dif0.jpg";
+				document.getElementById("err").src = (base_url + "/img/technical_dif0.jpg");
 
 				}else if (random_img > 0.77){
-					document.getElementById("err").src = "img/technical_dif1.jpg";
+					document.getElementById("err").src = (base_url + "/img/technical_dif1.jpg");
 
 					}else{
-						document.getElementById("err").src = "img/technical_dif2.jpg";
+						document.getElementById("err").src = (base_url + "/img/technical_dif2.jpg");
 
 								}
 		</script>
