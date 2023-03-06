@@ -103,3 +103,33 @@
     background-color: #5cb85c;
     color: white;
   }
+
+  .footer {
+    position: absolute;
+    display: table;
+    width: 100%;
+    bottom: 0;
+     
+    /* color: $color-primary-2; */
+  }
+     
+  .footer span {
+    display: table-cell;
+    padding: 0px 15px 5px;
+     
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: 70%;
+
+  }
+     
+  .footer span:nth-of-type(1) {
+    /* text-align: left;
+
+    padding-inline-start: 10%; */
+
+  }
+  .footer span:nth-last-child(1) {
+
+
+  }

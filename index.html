@@ -13,9 +13,8 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/egg.css">
-		
-
 	</head>
 	<body>
 		
@@ -41,9 +40,8 @@
 
 		<div class="reveal">		
 			 <div class="slides">
-				<!-- data-background="img/background.jpg" -->
-				<!-- COLOR ATE "#289548" -->
-				<section  data-transition="slide" data-background-color="#adf09e" data-background-size="contain">
+				
+				<section data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 					<!-- <h3>Centro de formación laboral 410</h3> -->
 					
 					<h3>Curso de programación 2023</h3>
@@ -60,9 +58,15 @@
 					<br>
 					<a href="/#/tps">Trabajos prácticos</a>
 
+					<div id="schauderhaft-footer" class="footer">
+						<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" style="width: 100px; opacity: 40%;"></a></span>
+						<span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" style="width: 100px; opacity: 40%;"></a></span>
+						<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" style="width: 100px; opacity: 40%;"></a></span>
+					</div>
+
 				</section>
-				<section>
-					<section id ="indice_p1">
+				<section data-state="no_footer">
+					<section id ="indice_p1" data-background-transition="fade">
 						<h4>Indice de clases por temas <small></small></h4>
 						<small>
 
@@ -132,6 +136,14 @@
 						<h4>Indice de prácticas</h4>
 						<small>
 							<h4>Por el momento, nada por aquí ;)</h4>
+
+							<div class="sl-block" data-block-type="code" style="width: 707.542px; height: 437.464px; left: 126.229px; top: 61.268px;" data-name="code-119695" data-block-id="40aa1d633339770b0229e3a8c5ac60a8">
+								<div class="sl-block-style" style="z-index: 13; filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0px 5px) opacity(100%);">
+									<div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="osx" style="z-index: 13; border-width: 1px;">
+										<pre style="font-size: 16px; line-height: 19px;" class="python"><code data-line-numbers="">print("Hola a todos")</code></pre>
+									</div>
+								</div>
+							</div>
 
 							<!-- <table>
 								<tr>
@@ -264,21 +276,47 @@
 
 		</script>
 
-		
-
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
+
+			// Para eventos personalizados. Indica que está en la presentación
+			Reveal.on( 'customevent', function() {
+				console.log( 'Estás en la presentación' );
+				var element = document.getElementById("schauderhaft-footer");
+				element.style.display = "table";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("schauderhaft-footer");
+				element.style.display = "none";
+				console.log("hoas");
+
+			} );
+
 			Reveal.initialize({
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes]
 			});
 
-			// document.getElementById("mari").src = alvarvic;
+			
 
+			
+
+		</script>
+
+		<script type="text/javascript">
+			window.addEventListener("load", function() {
+		
+				revealDiv = document.querySelector("body div.reveal")
+				footer = document.getElementById("schauderhaft-footer");
+				revealDiv.appendChild(footer);
+		
+			} );
 		</script>
 		
 		
