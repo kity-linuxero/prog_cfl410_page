@@ -12,82 +12,267 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 
-				<section data-transition="fade" data-background="img/background.jpg"  data-background-color="#a3f27d" data-background-size="contain">
+				<section data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 					
 					<h2>Curso de programación</h2>
+					<h4>Clase 0: Presentación del curso</h4>
+
 				</section>
 
-				<section data-transition="fade">
+				<section data-state="no_footer" data-transition="fade">
 					<section id="presentacion">
 						<h2>Presentación</h2>
-						<p class="fragment">Acerca de mí</p>
-						<p class="fragment">Objetivos del curso</p>
+						
+						<div></div>
+
+						<p class="fragment">Instructor: Cristian O. Giambruni</p>
+						<p class="fragment">Mail: cgiambruni@gmail.com</p>
+
+						
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Acerca de mí: Nombre, estudios, qué hago.
+						</aside>
 						
 						
 					</section>
+					
 
-					<section id="dinamica">
+
+
+				</section>
+
+				<section data-state="no_footer">
+
+					<section>
 						<h2>Dinámica del curso</h2>
+					</section>
+	
+					<section>
+						<h3>Estructuras de la clase</h3>
 						<ul>
-							<li>Métodos de evaluación
+							<li class="fragment">Teorías
+								<ul>
+									<li>Presenciales</li>
+									<li>Virtuales*</li>
+								</ul>
+							</li>
+							<li class="fragment">Prácticas
+								<ul>
+									<li>Práctica de la teoría</li>
+									<li>Trabajos prácticos entregables</li>
+									<li>Laboratorios (prácticas mas complejas)</li>
+									<li>Trabajo final</li>
+								</ul>
+							</li>
+							<li class="fragment">Explicación de práctica*</li>
+							<li class="fragment">Consultas extras*</li>
+						</ul>
+						<small class="fragment">*Presencial/virtual</small>
+	
+						<!-- Notas del slide -->
+						<aside class="notes">
+							No siempre habrá clases teóricas.
+							En el pasado, ha habido clases teóricas virtuales.
+							Los laboratorios incluyen el contenido de varias prácticas y hay que aplicar mas conocimiento.
+							Consultas extras: Si algunos alumnos se quedan respecto a otros.
+						</aside>
+	
+	
+	
+					</section>
+	
+					<section id="dinamica">
+						<h2>Evaluación</h2>
+						<ul>
+							<li>Métodos
 								<ul>
 									<li class="fragment">Seguimiento</li>
 									<li class="fragment">Trabajos prácticos</li>
 									<li class="fragment">Trabajo final</li>
 								</ul>
 							</li>
-
+	
 						</ul>
 						<!-- <p class="fragment">Método de evaluación<span class="fragment">: Trabajos <strong>prácticos</strong></span></p> -->
 						<p class="fragment">Asistencia requerida</p>
-
-						<h3 class="fragment">Plataformas a usar</h3>
+	
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Importancia de la asistencia.
+							No habrá exámen escrito ni oral.
+						</aside>
+	
+	
+					</section>
+	
+					<section>
+						<h2>Comunicación</h2>
 						<ul>
 							<li class="fragment">Grupo WhatsApp/Telegram</li>
-							<li class="fragment">Google Meets (eventualmente)</li>
-							<!-- <li class="fragment"><a href="https://programacion-cfp410.slack.com/">Slack</a></li> -->
-							<li class="fragment"><a href="https://github.com/">GitHub</a></li>
+							<li class="fragment">Google Meets (clases virtuales, eventualmente)</li>
 						</ul>
-					</section>
+						
+						
+						
+					<p>
+						<div class="fragment">
+							<h3>Plataformas a usar:</h3>
+							<p><a href="https://github.com/">GitHub</a></p>
+							<p><a href="https://programacion.concristian.com.ar">programacion.concristian.com.ar</a></p>
+						</div>
+					</p>
 
-					<section id="contenido">
-						<h3>Contenido del curso</h3>
-
-						<p class="fragment">Contenidos que se dictarán:
-							<ul>
-								<li class="fragment">Hola</li>
-							</ul>
-						</p>
-					</section>
-
-					<section id="contenido_p2">
-						<h4>Capturas de pantallas</h4>
-
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Hasta acá alguna pregunta?
+						</aside>
 					</section>
 				</section>
 
-				<!-- <section>
-					<h2>Clase 0</h2>
-					<h3>Contenido del curso</h3>
-					<ul>
-						<li>Presentación del curso</li>
-						<li>Conceptos básicos</li>
-						<ul>
-							<li>Ramas de la programación</li>
-							<li>Partes de una computadora</li>
-							<li>Programación, lenguajes y tipos</li>
-							<li>Algoritmos</li>
-							<li>Modularización</li>
-						</ul>				
-					</ul>
-				</section> -->
+				<section data-state="no_footer">
 
-					<section data-transition="zoom" data-background="./static/back.jpg"  data-background-color="#dddddd" data-background-size="contain">
+					<section id="contenido">
+						<h2>Contenido del curso</h2>
+						<ul>
+							<li class="fragment">Mod1: Técnicas de programación
+								<small>
+								<ul>
+									<li>Conceptos básicos de programación</li>
+									<li>Tipos de lenguajes</li>
+									<li>Python</li>
+									<li>Variables, funciones, tipos de datos, etc.</li>
+								</ul>
+							</small>
+							</li>
+
+							<li class="fragment">Mod2: Relaciones laborales y orientación profesional</li>
+						</ul>
+
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Mod1: Técnicas de programación
+							Mod2: Situaciones cercanas a la vida real del programador
+						</aside>
+
+						
+
+					</section>
+
+					<section id="contenido_p2" data-auto-animate>
+						<h2>Contenido del curso</h2>
+
+						<ul>
+							<li>Mod3: Programación Orientada a Objetos
+								<small>
+								<ul>
+									<li>Conceptos básicos de poo</li>
+									<li>Objetos, clases, métodos, atributos</li>
+									<li>Polimorfismo, Abstracción, Herencia, Encapsulamiento</li>
+								</ul>
+							</small>
+							</li>
+							<li class="fragment">Mod4: Bases de datos <br>
+								<small>
+								<ul>
+									<li>Conceptos básicos de bbdd</li>
+									<li>Tablas, atributos, claves, consultas, relaciones</li>
+									<li>Tipos de bbdd</li>
+								</ul>
+							</small>
+							</li>
+							<li class="fragment">Extras<br>
+								<small>
+									<ul>
+										<li>Versionado de código</li>
+										<li>Interfaces gráficas simples</li>
+									</ul>
+								</small>
+
+							</li>
+						</ul>
+
+					</section>
+
+
+
+			</section>
+
+			<section data-state="no_footer">
+				<section>
+					<h2>Ejemplos de programas</h2>
+				</section>
+
+				<section>
+					<h2 data-id="code-title">Ejemplos de programa</h2>
+					<pre data-id="code-animation"><code class="hljs python" data-trim data-line-numbers><script type="text/template">
+						# El programa solicitará números hasta que se escriba fin
+						suma = 0
+						v = input('Ingrese un número: ')
+						while (v!= 'fin'):
+							suma += int(v)
+							v = input('Ingrese otro número: ')
+
+						print ("La suma es:", suma)
+					</script></code></pre>
+
+					<p>Código fuente de un programa básico en Python</p>
+				</section>
+
+				<section>
+					<h2 data-id="code-title">Ejemplos de programa</h2>
+					<!-- <pre data-id="code-animation"><code class="hljs bash" data-trim><script type="text/template">
+						
+						Ingrese un número: 2
+						Ingrese otro número: 3
+						Ingrese otro número: 5
+						Ingrese otro número: fin
+
+						La suma es: 10
+					</script></code></pre> -->
+					<img src="img/clase0/programa1.gif" style="height: 280px; filter: drop-shadow(5px 5px 5px #222); border-radius: 7px;"/>
+
+					<p>Así lo vería el usuario final del programa.</p>
+					<p><small>Al principio, la mayoría de nuestros programas se verán de esta manera.</small></p>
+				</section>
+
+				<section>
+					<h3 data-id="code-title">Hecho por alumnos en 2022</h3>
+					<img src="img/clase0/cel_tp.png" style="filter: drop-shadow(5px 5px 5px #222);"/>
+					<p><small>Aplicación con datos para una Farmacia</small></p>
+
+				</section>
+
+				<section>
+					<h3 data-id="code-title">Hecho por alumnos en 2022</h3>
+					<img src="img/clase0/val_tp.gif" style="height: 500px; filter: drop-shadow(5px 5px 5px #222); border-radius: 10px;"/>
+					<p><small>Juego de Plataformas en 2D</small></p>
+				</section>
+
+				<section>
+					<h3 data-id="code-title">Hecho por alumnos en 2022</h3>
+					<p>Se colaboró en un proyecto <strong>open source</strong> de alcance mundial.</p>
+					<p>Agregando código para la librería de Python <a href="https://github.com/joke2k/faker">Faker</a> para que contenga datos de Argentina.</p>
+					<img src="img/clase0/faker.png"/>
+				</section>
+
+				<section>
+					<h2>¿Consultas?</h2>
+				</section>
+			</section>
+
+			
+
+					<!-- <section data-transition="zoom" data-background-color="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain"> -->
+					<section data-state="customevent" data-transition="zoom" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 						<h3>¡Fin de la clase!</h3>
 						<!-- <a href="./clase2.html"> Ir a clase siguiente > </a><br> -->
 					</section>
@@ -109,6 +294,25 @@
 			</div>
 		</div>
 
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" class="foot-image"></a></span>
+				<span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span>
+				<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" class="foot-image"></a></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
@@ -118,6 +322,25 @@
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				console.log( 'Estás en la presentación' );
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "10%";
+				console.log("hoas");
+
+			} );
 			Reveal.initialize({
 				hash: true,
 
@@ -125,5 +348,6 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
 			});
 		</script>
-	</body>
+
+</body>
 </html>

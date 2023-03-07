@@ -38,6 +38,8 @@
 			</div>
 		</div>
 
+
+
 		<div class="reveal">		
 			 <div class="slides">
 				
@@ -51,18 +53,12 @@
 					
 					<a href="./#/indice_p1">Índice de clases</a>
 					<br>
-					<!-- <a href="https://github.com/kity-linuxero/prog_CFP410/tree/main/practicas" target="_blank">Prácticas</a> -->
-					<a href="./#/practicas">Prácticas</a>
+					
+					<!-- <a href="./#/practicas">Prácticas</a>
 					<br>
 					<a href="/#/labs">Laboratorios</a>
 					<br>
-					<a href="/#/tps">Trabajos prácticos</a>
-
-					<div id="schauderhaft-footer" class="footer">
-						<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" style="width: 100px; opacity: 40%;"></a></span>
-						<span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" style="width: 100px; opacity: 40%;"></a></span>
-						<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" style="width: 100px; opacity: 40%;"></a></span>
-					</div>
+					<a href="/#/tps">Trabajos prácticos</a> -->
 
 				</section>
 				<section data-state="no_footer">
@@ -72,7 +68,7 @@
 
 							<table>
 								<tr>
-									<td><a href="clase0.html#/presentacion">Clase 0</a></td>
+									<td><a href="clase0.html">Clase 0</a></td>
 									<td>Introducción. Presentación del curso.</td>
 								</tr>
 								<!-- <tr>
@@ -132,37 +128,31 @@
 							</small>
 					</section>
 
-					<section id ="practicas">
-						<h4>Indice de prácticas</h4>
-						<small>
-							<h4>Por el momento, nada por aquí ;)</h4>
-
-							<div class="sl-block" data-block-type="code" style="width: 707.542px; height: 437.464px; left: 126.229px; top: 61.268px;" data-name="code-119695" data-block-id="40aa1d633339770b0229e3a8c5ac60a8">
-								<div class="sl-block-style" style="z-index: 13; filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0px 5px) opacity(100%);">
-									<div class="sl-block-content notranslate" data-highlight-theme="a11y-dark" data-code-frame="osx" style="z-index: 13; border-width: 1px;">
-										<pre style="font-size: 16px; line-height: 19px;" class="python"><code data-line-numbers="">print("Hola a todos")</code></pre>
-									</div>
-								</div>
-							</div>
-
-							<!-- <table>
-								<tr>
-								<td><a href="clase9.html">Clase 9</a></td>
-								<td>Excepciones.</td>
-								</tr>
-								<tr>
-									<td><a href="clase2.html">Clase 2</a></td>
-									<td>Repaso clase 1. Tipos de datos. Operaciones entre tipos de datos.</td>
-								</tr>
-								
-
-							</table>		 -->
-							</small>
-					</section>
 
 
 
 
+
+				</section>
+
+				<section id ="practicas">
+					<h4>Indice de prácticas</h4>
+					<small>
+						<h4>Por el momento, nada por aquí ;)</h4>
+
+						<!-- <table>
+							<tr>
+							<td><a href="clase9.html">Clase 9</a></td>
+							<td>Excepciones.</td>
+							</tr>
+							<tr>
+								<td><a href="clase2.html">Clase 2</a></td>
+								<td>Repaso clase 1. Tipos de datos. Operaciones entre tipos de datos.</td>
+							</tr>
+							
+
+						</table>		 -->
+						</small>
 				</section>
 				<section id="labs">
 					<h4>Indice de Laboratorios</h4>
@@ -227,6 +217,25 @@
 
 		</div>
 
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" class="foot-image"></a></span>
+				<span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span>
+				<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" class="foot-image"></a></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
 		<script src="dist/reveal.js"></script>
 		<script src="js/egg.js"></script>
 		<script src="plugin/notes/notes.js"></script>
@@ -284,14 +293,17 @@
 			// Para eventos personalizados. Indica que está en la presentación
 			Reveal.on( 'customevent', function() {
 				console.log( 'Estás en la presentación' );
-				var element = document.getElementById("schauderhaft-footer");
+				var element = document.getElementById("logos-footer");
 				element.style.display = "table";
+				element.style.opacity = "40%";
 
 			} );
 
 			Reveal.on( 'no_footer', function() {
-				var element = document.getElementById("schauderhaft-footer");
-				element.style.display = "none";
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "10%";
 				console.log("hoas");
 
 			} );
@@ -303,22 +315,7 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes]
 			});
 
-			
-
-			
-
-		</script>
-
-		<script type="text/javascript">
-			window.addEventListener("load", function() {
-		
-				revealDiv = document.querySelector("body div.reveal")
-				footer = document.getElementById("schauderhaft-footer");
-				revealDiv.appendChild(footer);
-		
-			} );
-		</script>
-		
+		</script>	
 		
 	</body>
 </html>

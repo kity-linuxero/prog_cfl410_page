@@ -109,6 +109,7 @@
     display: table;
     width: 100%;
     bottom: 0;
+    opacity: 20%;
      
     /* color: $color-primary-2; */
   }
@@ -131,5 +132,10 @@
   }
   .footer span:nth-last-child(1) {
 
+  }
 
+  .foot-image{
+    width: 100px;
+    opacity: 40%;
+    /* filter: drop-shadow(1px 1px 1px #222); */
   }
