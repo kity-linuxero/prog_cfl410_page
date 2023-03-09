@@ -48,9 +48,6 @@
 					
 					<h3>Curso de programación 2023</h3>
 
-					
-					
-					
 					<a href="./#/indice_p1">Índice de clases</a>
 					<br>
 					
@@ -71,10 +68,14 @@
 									<td><a href="clase0.html">Clase 0</a></td>
 									<td>Introducción. Presentación del curso.</td>
 								</tr>
-								<!-- <tr>
+								<tr>
 								<td><a href="clase1.html#/presentacion">Clase 1</a></td>
-								<td>Introducción. Presentación del curso. Conceptos básicos</td>
+								<td>Entendiendo que es programar. Conceptos básicos</td>
 								</tr>
+								
+								<!--
+								
+								
 								<tr>
 									<td><a href="clase2.html#/1">Clase 2</a></td>
 									<td>Repaso clase 1. Tipos de datos. Operaciones entre tipos de datos</td>
@@ -221,7 +222,8 @@
 			<!-- Logos en el footer -->
 			<div id="logos-footer" class="footer">
 				<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" class="foot-image"></a></span>
-				<span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span>
+				<!-- <span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span> -->
+				<span class="element"><a href="https://atepba.org.ar/seccion/idep/" target="_blank"><img src="img/logos/idep_logo.png" class="foot-image-idep"></a></span>
 				<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" class="foot-image"></a></span>
 			</div>
 
@@ -292,7 +294,6 @@
 
 			// Para eventos personalizados. Indica que está en la presentación
 			Reveal.on( 'customevent', function() {
-				console.log( 'Estás en la presentación' );
 				var element = document.getElementById("logos-footer");
 				element.style.display = "table";
 				element.style.opacity = "40%";
@@ -303,9 +304,7 @@
 				var element = document.getElementById("logos-footer");
 				//element.style.display = "none";
 				// element.style.display = "table";
-				element.style.opacity = "10%";
-				console.log("hoas");
-
+				element.style.opacity = "15%";
 			} );
 
 			Reveal.initialize({

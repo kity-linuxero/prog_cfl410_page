@@ -136,6 +136,15 @@
 							Hasta acá alguna pregunta?
 						</aside>
 					</section>
+
+					<section id="pagina">
+						<h3>Estructura de presentaciones </h3>
+						<p><small>En la web <a href="https://programacion.concristian.com.ar">programacion.concristian.com.ar</a> se van a subir los materiales del curso.<br>
+						Las pantallas se pasan con las flechas (o haciendo los gestos) hacia derecha/izquieda o abajo/arriba.</small></p>
+						<img src="img/clase0/slides.png" style="width: 640px;">
+						<p><small>Si presiona la letra "O" puede ver el esquema global de cada presentación.</small></p>
+
+					</section>
 				</section>
 
 				<section data-state="no_footer">
@@ -298,7 +307,8 @@
 			<!-- Logos en el footer -->
 			<div id="logos-footer" class="footer">
 				<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" class="foot-image"></a></span>
-				<span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span>
+				<!-- <span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span> -->
+				<span class="element"><a href="https://atepba.org.ar/seccion/idep/" target="_blank"><img src="img/logos/idep_logo.png" class="foot-image-idep"></a></span>
 				<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" class="foot-image"></a></span>
 			</div>
 
@@ -326,7 +336,6 @@
 				// Para eventos personalizados. Indica que está en la presentación
 
 			Reveal.on( 'customevent', function() {
-				console.log( 'Estás en la presentación' );
 				var element = document.getElementById("logos-footer");
 				element.style.display = "table";
 				element.style.opacity = "40%";
@@ -337,9 +346,7 @@
 				var element = document.getElementById("logos-footer");
 				//element.style.display = "none";
 				// element.style.display = "table";
-				element.style.opacity = "10%";
-				console.log("hoas");
-
+				element.style.opacity = "15%";
 			} );
 			Reveal.initialize({
 				hash: true,

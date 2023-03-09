@@ -139,3 +139,26 @@
     opacity: 40%;
     /* filter: drop-shadow(1px 1px 1px #222); */
   }
+
+  .foot-image-idep{
+    width: 155px;
+    /* filtro para "Verde ATE" */
+    filter: brightness(0) saturate(100%) invert(47%) sepia(35%) saturate(838%) hue-rotate(85deg) brightness(93%) contrast(93%);
+    opacity: 40%;
+    /* filter: drop-shadow(1px 1px 1px #222); */
+  }
+
+  .aspiradora{
+    /* position: absolute;
+    left: 33%; */
+    /* right: 9;
+    margin: 0 auto; */
+    /* max-width: 100%; */
+    width: 300px;
+  }
+
+  .hardware_img_clase1{
+    width: 380px;
+    border-radius: 5px; 
+    filter: drop-shadow(5px 5px 4px #707070);
+  }

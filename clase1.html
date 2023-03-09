@@ -1,0 +1,443 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Programación</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+					<h4>Clase 1: Entendiendo qué es programar</h4>
+
+				</section>
+
+				<section data-state="no_footer" data-transition="fade">
+					<section id="definiciones">
+						<h2>Definiciones</h2>				
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Acerca de mí: Nombre, estudios, qué hago.
+						</aside>
+						
+					</section>
+
+
+					<section>
+						<h2>¿Qué es un programa?</h2>
+						<p>Un programa podría definirse como un <strong>conjunto de instrucciones</strong> que se utiliza para realizar una tarea específica en una computadora.</p>
+						<small><p>El <em>programa</em> puede ser diseñado para realizar una gran variedad de tareas, desde simples operaciones matemáticas hasta complejas operaciones de procesamientos de datos, gestión de bases de datos, video juegos y mucho mas.</p></small>
+						<p><small>Los programas de computadora se crean mediante la utilización de un <em>lenguaje de programación.</em></small></p>
+					</section>
+
+					<section>
+						<h2>¿Que sería un conjunto de instrucciones?</h2>
+						<p>Supongamos que tenemos que desarrollar el programa de un robot aspiradora.</p>
+						<p>La tarea es limpiar un área.</p>
+						<p>El conjunto de instrucciones puede estar dado por las cosas que el robot <em>podría hacer</em>. Como <strong>limpiar</strong>, <strong>moverse</strong>, <strong>girar</strong>, etc.</p>
+					</section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title">Ejemplos de programa</h2>
+						<p>El siguiente podría ser el programa que hace que la aspiradora funcione:</p>
+
+						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers><script type="text/template">
+							encender aspiradora
+							limpiar
+							moverse hacia adelante
+							limpiar
+							moverse hacia adelante
+							limpiar
+							...
+							apagar aspiradora
+						</script></code></pre>
+
+						<p>Las instrucciones se escriben una por línea <em>ejecutan</em> una tras otra en el orden de arriba hacia abajo.</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title">Ejemplos de un programa</h2>
+						<p>Un programa hace funcionar un semáforo:</p>
+
+						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers><script type="text/template">
+							encender luz roja
+							esperar 30 segundos
+							encender luz amarilla
+							esperar 2 segundos
+							encender luz verde
+							esperar 30 segundos
+							...
+						</script></code></pre>
+
+						<small><p>*Se asume que solo una luz puede estar encendida al mismo tiempo.</p></small>
+
+					</section>
+
+					<section>
+						<h3>Volvamos al ejemplo de la aspiradora</h3>
+						<p>Ejemplo de instrucciones</p>
+
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="|1|2|3|4|5|1-5">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="fragment fade-in-then-out aspiradora"src="img/clase1/aspiradora(2).png">
+							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(3).png">
+							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(4).png">
+							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(5).png">
+							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(6).png">
+							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(7).png">
+						</div>
+					</section>
+
+					<section>
+						<h3>Ejemplo para hacer en grupo</h3>
+						<p>Más área para limpiar con la aspiradora.</p>
+						
+						<img src="img/clase1/aspiradora_3x3.png">
+					
+						<br>
+						<small> Las instrucciones disponibles son:<br>
+							<ul> 
+								<li><code>limpiar</code></li>
+								<li><code>avanzar</code></li>
+								<li><code>girar a derecha</code></li>
+							</ul>
+						</small>
+						<p class="fragment"><small>¿Cómo se les ocurre que puede ser?</small></p>
+					</section>
+
+					<section>
+						<h3>¿Preguntas?</h3>
+						<p class="fragment">Seguimos con definiciones...</p>
+					</section>
+
+					<section>
+						<h2>¿Qué es una computadora?</h2>
+						<p class="fragment">Una computadora es una máquina electrónica que puede recibir, almacenar, procesar y producir información.</p>
+
+						<div class="fragment">
+							<ul>Contiene los siguientes componentes:
+								<li>Hardware (CPU, memoria, almacenamiento)</li>
+								<li>Software (Programas)</li>
+							</ul>
+						</div>
+
+					</section>
+
+					<section>
+						<h3>Hardware - CPU</h3>
+						<p>El CPU (unidad central de procesamiento, <em>central processing unit por sus siglas en inglés</em>) es el componente principal de una computadora que realiza la mayoría de las operaciones y cálculos. Es el cerebro de la computadora y se <strong>encarga de interpretar y ejecutar las instrucciones del software</strong>.</p>
+						<img src="img/clase1/CPU.jpg" class="hardware_img_clase1">
+					</section>
+
+					<section>
+						<h3>Hardware - Memoria (RAM)</h3>
+						<p>La RAM (Random Access Memory) es una forma de <em>memoria volátil</em> que se utiliza en las computadoras para almacenar <strong>temporalmente datos e instrucciones </strong>mientras se ejecutan los programas.</p>
+						<img src="img/clase1/RAM.webp" class="hardware_img_clase1">
+						<p><small>La cantidad de RAM que tiene puede afectar su rendimiento general del equipo. Cuanta más RAM tenga un equipo, más programas podrá ejecutar a la vez sin ralentizar la máquina.</small></p>
+					</section>
+
+					<section>
+						<h3>Hardware - almacenamiento</h3>
+						<p>NO confundir con memoria.<br>
+						Es un tipo de memoria <em>no volatil</em>. Los datos pueden permanecer en el tiempo, incluso cuando la computadora se apague.</p>
+						
+						<img src="img/clase1/hdd.webp" class="hardware_img_clase1">
+						<p><small>Discos rígidos, discos ssd, pendrives, etc.</small></p>
+
+						<aside class="notes">
+							¿Hacer un brake?
+						</aside>
+					</section>
+
+					<section>
+						<h3>¿Preguntas?</h3>
+					</section>
+
+				</section>
+
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Algoritmos</h2>
+					</section>
+	
+					<section>
+						<h3>¿Qué es un algoritmo?</h3>
+						<p>Un algoritmo es un conjunto de instrucciones precisas y bien definidas que se utilizan para resolver un problema o realizar una tarea.</p>
+						<p>Un algoritmo puede ser expresado en una variedad de formas, incluyendo en <em>lenguaje natural, diagramas de flujo, pseudocódigo y lenguajes de programación.</em> </p>
+	
+						<!-- Notas del slide -->
+						<aside class="notes">
+							
+						</aside>
+
+					</section>
+
+					<section>
+						<h3>Partes de los algoritmos</h3>
+
+						<ul>
+							<li><strong>Entrada (Input)</strong>: Es la información que damos al algoritmo con la que va a trabajar para ofrecer la solución esperada.</li>
+							<li><strong>Procesamiento</strong>: Es el conjunto de pasos para que, a partir de los datos de entrada, llegue a la solución de la situación.</li>
+							<li><strong>Salida (Output)</strong>: Son los resultados, a partir de la transformación de los valores de entrada durante el proceso.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Flujo en los algoritmos</h3>
+						<p>Un programa es <em>en parte</em> una secuencia de instrucciones</p>
+						<img src="img/clase1/secuencia.gif">
+						<p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p>
+
+						
+
+					</section>
+	
+					<section id="est_control_p1">
+						<h2>Estructuras de control</h2>
+						<p>Las estructuras de control son construcciones en la programación que permiten <em>controlar el flujo</em> de ejecución de un programa.</p>
+						<p>Existen tres tipos principales de estructuras de control: las estructuras de <strong>selección</strong>, las estructuras de <strong>iteración</strong> y las estructuras de <strong>salto</strong>.</p>
+
+
+						
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Importancia de la asistencia.
+							No habrá exámen escrito ni oral.
+						</aside>
+	
+	
+					</section>
+
+					<section id="est_control_p2">
+						<h3>Estructuras de control <br><small>(Selección)</small></h3>
+						<p>
+							<ul>
+								<li><strong>Selección</strong>: Se utilizan para tomar decisiones en función de una o varias condiciones. El ejemplo más común es el "si-sino", que permite al programa realizar una acción si se cumple una determinada condición y otra acción si no se cumple. </li>
+							</ul>
+							<img src="img/clase1/seleccion_1.gif">
+							<img src="img/clase1/seleccion_2.gif">
+						</p>
+						<!-- Notas del slide -->
+						<aside class="notes">						
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Estructuras de control <br><small>(Selección)</small></h3>
+						<p>Algoritmo "por si llueve" v1</p>
+						<pre data-id="code-animation"><code data-trim data-line-numbers>
+							mirar por la ventana
+							si (llueve)
+								agarrar paraguas
+							ir al curso
+						</code></pre>
+						<p class="fragment">El flujo del programa, en caso que llueva será, la línea 1,2,3 y 4. Pero si no llueve, será 1,2 y 4.</p>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Estructuras de control <br><small>(Selección)</small></h3>
+						<p>Algoritmo "por si llueve" v2</p>
+						<pre data-id="code-animation"><code data-trim data-line-numbers>
+							mirar por la ventana
+							si (llueve)
+								agarrar paraguas y llaves del auto
+							sino
+								agarrar la sube
+							ir al curso
+						</code></pre>
+						<p class="fragment">El flujo del programa, en caso que llueva será, la línea 1,2,3 y 6. Pero si no llueve, será 1,2,4,5 y 6.</p>
+						<p class="fragment"><small>Se utilizan los paréntesis para destacar la instrucción <code>si</code> y a la condición <code>llueve</code>.</small></p>
+					</section>
+	
+					<section>
+						<h3>Estructuras de control <br><small>(Iteración)</small></h3>
+						<p>
+							<ul>
+								<li><strong>Iteración</strong>: Se utilizan para repetir una acción o un conjunto de acciones varias veces, hasta que se cumpla una determinada condición. </li>
+							</ul>
+							<img src="img/clase1/iteracion.gif">
+						</p>
+						<small>Puede verse como un <strong>mientras</strong> se cumpla una condición repito un conjunto de acciones. El conjunto de instrucciones está sobre un <em>bucle</em> o <em>loop</em>.</small>
+
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Hasta acá alguna pregunta?
+						</aside>
+					</section>
+
+					<section>
+						<h3>Estructuras de control <br><small>(Iteración)</small></h3>
+						<p>Algoritmo "llenar pileta con agua"</p>
+						<pre data-id="code-animation"><code data-trim data-line-numbers>
+							abrir canilla
+							mientras (no se llene la pileta)
+								echar agua
+							cerrar canilla
+						</code></pre>
+						<p class="fragment">El flujo será: línea 1 y luego las líneas 2 y 3 se repitirán indefinidamente hasta que se llene la pileta. Luego continúa con las próximas sentencias.</p>
+					</section>
+
+					<section>
+						<h3>Estructuras de control <br><small>(Iteración/selección)</small></h3>
+						<p>Algoritmo "Saludamos a lxs alumnxs"</p>
+						<pre data-id="code-animation"><code data-trim data-line-numbers>
+							abrir centro de formacion
+							
+							mientras (sea el horario)
+								si (llega una persona)
+									si (viene al curso de programacion)
+										saludar "Bienvenidx al curso de programacion"
+									sino
+										saludar "Bienvenidx"
+								sino
+									espero
+							cerrar centro de formacion
+							
+						</code></pre>
+						<p><small>En este ejemplo se muestra que es posible anidar estructuras de control. En este caso se anidaron una iteración y dos selecciones pero no hay límites.</small></p>
+					</section>
+
+					<section>
+						<h3>Estructuras de control <br><small>(Salto)</small></h3>
+						<p>
+							<ul>
+								<li><strong>Salto</strong>: Las estructuras de salto se utilizan para alterar el flujo normal de ejecución del programa, permitiendo saltar a una determinada posición en el código.</li>
+							</ul>
+						</p>
+						<p><small>Anteriormente se utilizaba una instrucción especial llamada <code>goto</code> pero ya no es recomentable. Más adelante veremos en el curso como usar eficientemente una alternativa a esta estructura de control utilizando funciones.</small> </p>
+
+					</section>
+
+					<section>
+						<h3>¿Preguntas?</h3>
+					</section>
+				</section>
+
+				<section data-state="no_footer">
+
+					<section id="ejercicio">
+						<h2>Ejercicio en clase</h2>
+						<p>Diseñe un algoritmo para "adivinar un número".</p> 
+						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. </p>
+						<p><small>* Se asume que alguien, adivinará el número.</small></p>
+
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Mod1: Técnicas de programación
+							Mod2: Situaciones cercanas a la vida real del programador
+						</aside>
+
+						
+
+					</section>
+
+
+			</section>
+
+
+
+			
+
+					<!-- <section data-transition="zoom" data-background-color="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain"> -->
+					<section data-state="customevent" data-transition="zoom" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+						<h3>¡Fin de la clase!</h3>
+						<a href="/"> Ir al inicio </a><br>
+						<a href="./clase0.html"> Ir a clase anterior </a><br>
+					</section>
+<!-- 
+					<section data-transition="zoom" data-background="./static/back.jpg"  data-background-color="#dddddd" data-background-size="contain">
+						<h2>Bibliografía</h2>
+
+						<p>Algoritmos, datos y Programas (De Giusti)</p>
+						
+						<h3>Referencias</h3>
+						<p>Wikipedia</p>
+						<p>RealPython.com</p>
+						<a href="http://tic.taboadaleon.es/Unidad1-Programacion/Tema2_Lenguajes/contenido/5_estructura_de_un_programa_informtico.html#:~:text=Existen%20dos%20partes%20o%20bloques,para%20conseguir%20los%20resultados%20esperados.">taboadaleon.es</a>
+
+						<h3>Recursos</h3>
+						<a href="https://www.online-python.com/">Interprete Python Online</a>
+
+					</section> -->
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" class="foot-image"></a></span>
+				<!-- <span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span> -->
+				<span class="element"><a href="https://atepba.org.ar/seccion/idep/" target="_blank"><img src="img/logos/idep_logo.png" class="foot-image-idep"></a></span>
+				<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" class="foot-image"></a></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
