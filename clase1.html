@@ -23,7 +23,7 @@
 				<section data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 					
 					<h2>Curso de programación</h2>
-					<h4>Clase 1: Entendiendo qué es programar</h4>
+					<h4>Clase 1: Definiciones y algoritmos</h4>
 
 				</section>
 
@@ -333,6 +333,43 @@
 					</section>
 
 					<section>
+						<h3>Datos</h3>
+						<p>En los algoritmos, es de suma importancia poder ingresar, generar y almacenar datos.</p>
+						<p>Por ejemplo si queremos contar las personas que entraron al centro de formación</p>
+						
+						<pre data-id="code-animation"><code data-trim data-line-numbers>
+							abrir centro de formacion
+							cantidad = 0 # Arranco a contar desde 0
+							mientras (sea el horario)
+								si (llega una persona)
+									cantidad = cantidad +1
+								sino
+									espero
+							cerrar centro de formacion
+							Informar ("Entraron {cantidad} de personas")
+							
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Repaso</h3>
+						<small>
+						<ul>
+							<li><strong>Instrucciones secuencia</strong>: Se ejecuta una instrucción tras otra. El orden es de arriba hacia abajo.</li>
+						</ul>
+
+						<ul> <br>Estructuras de control:
+							<li><strong>Selección</strong>: Permite cambiar el flujo del programa si se cumple (o no) determinada condición.</li>
+							<li><strong>Iteración</strong>: Se repite un bloque de instrucciones <em>mientras</em> se cumpla una condición.</li>
+						</ul>
+						<ul>
+							<li><strong>Datos</strong>: Representan los datos que podemos ingresar, procesar, y pueden ser el resultado de la ejecución de los algoritmos.</li>
+						</ul>
+						</small>
+						<p><small>Con las herramientas vistas hasta ahora volcadas en un lenguaje de programación estamos en condiciones de desarrollar nuestros primeros programas.</small></p>
+					</section>
+
+					<section>
 						<h3>¿Preguntas?</h3>
 					</section>
 				</section>
@@ -342,7 +379,7 @@
 					<section id="ejercicio">
 						<h2>Ejercicio en clase</h2>
 						<p>Diseñe un algoritmo para "adivinar un número".</p> 
-						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. </p>
+						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. Se debe llevar la cantidad de intentos hasta que se adivina el número.</p>
 						<p><small>* Se asume que alguien, adivinará el número.</small></p>
 
 						<!-- Notas del slide -->
