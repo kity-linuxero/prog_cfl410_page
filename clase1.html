@@ -285,9 +285,43 @@
 							<li><strong>Entrada (Input)</strong>: Es la información que damos al algoritmo con la que va a trabajar para ofrecer la solución esperada.</li>
 							<li><strong>Procesamiento</strong>: Es el conjunto de pasos para que, a partir de los datos de entrada, llegue a la solución de la situación.</li>
 							<li><strong>Salida (Output)</strong>: Son los resultados, a partir de la transformación de los valores de entrada durante el proceso.</li>
-						</ul>
+						
 					</section>
 
+					<section>
+						<h3>Pre y poscondiciones de un algoritmo</h3>
+						<ul>
+							<li><strong>Precondición</strong>: es la información que se conoce como verdadera antes de comenzar el algoritmo.</li>
+							<li><strong>Poscondición</strong>: es la información que se conoce como verdadera después de finalizado el algoritmo, siempre que se cumpla con las precondiciones.</li>
+							
+						</ul>
+
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Ejemplo pre: Si hacemos un programa de división. Asumimos que el divisor no puede ser 0
+							Ejemplo pos: Asumimos que el resultado será el esperado.
+	
+						</aside>
+
+						
+					</section>
+
+					<!-- <section>
+						<h3>Comentarios en los algoritmos</h3>
+						<p>Es muy importante realizar comentarios en los algoritmos para que ganan claridad cuando tiene que ser comprendido por un tercero.</p>
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="5">
+							limpiar
+							# Termina de 
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<p></p>
+					</section> -->
+
+					
 					<section>
 						<h3>Flujo en los algoritmos</h3>
 						<p>Un programa es <em>en parte</em> una secuencia de instrucciones</p>
@@ -296,6 +330,15 @@
 
 						
 
+					</section>
+
+					<section id="condiciones">
+						<h3>Condiciones lógicas</h3>
+						<p>Una condición es algo que puede ser evaluado y tiene como respuesta o resultado un <strong><code>verdadero</code></strong> o <strong><code>falso</code></strong>.</p>
+						<p>Por ejemplo, una condición lógica sería si alguien preguntara <strong>¿Trabajás acá?</strong>. La respuesta sería sí o no (verdadero o falso).</p>
+						<p>Otro ejemplo, <strong>¿10 es mayor a 9?</strong> en este caso sería <strong>verdadero</strong>.</p>
+						<p><small>Veremos muchas condiciones lógicas a lo largo del curso.</small></p>
+						
 					</section>
 	
 					<section id="est_control_p1">
@@ -307,18 +350,17 @@
 						
 						<!-- Notas del slide -->
 						<aside class="notes">
-							Importancia de la asistencia.
-							No habrá exámen escrito ni oral.
+							
 						</aside>
 	
 	
 					</section>
 
-					<section id="est_control_p2">
+					<section id="est_control_seleccion">
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>
 							<ul>
-								<li><strong>Selección</strong>: Se utilizan para tomar decisiones en función de una o varias condiciones. El ejemplo más común es el "si-sino", que permite al programa realizar una acción si se cumple una determinada condición y otra acción si no se cumple. </li>
+								<li><strong>Selección</strong>: Se utilizan para tomar decisiones en función de una o varias <strong><a href="#/condiciones">condiciones</a></strong>. El ejemplo más común es el "si-sino", que permite al programa realizar una acción si se cumple una determinada <strong><a href="#/condiciones">condición</a></strong> y otra acción si no se cumple. </li>
 							</ul>
 							<img src="img/clase1/seleccion_1.gif">
 							<img src="img/clase1/seleccion_2.gif">
@@ -338,6 +380,7 @@
 							ir al curso
 						</code></pre>
 						<p class="fragment">El flujo del programa, en caso que llueva será, la línea 1,2,3 y 4. Pero si no llueve, será 1,2 y 4.</p>
+						<p class="fragment"><small>Observar que <code>(llueve)</code> tiene como resultado un valor <code>verdadero</code> o <code>falso</code>.</small></p>
 					</section>
 
 					<section data-auto-animate>
@@ -355,15 +398,15 @@
 						<p class="fragment"><small>Se utilizan los paréntesis para destacar la instrucción <code>si</code> y a la condición <code>llueve</code>.</small></p>
 					</section>
 	
-					<section>
+					<section id="est_control_iteracion">
 						<h3>Estructuras de control <br><small>(Iteración)</small></h3>
 						<p>
 							<ul>
-								<li><strong>Iteración</strong>: Se utilizan para repetir una acción o un conjunto de acciones varias veces, hasta que se cumpla una determinada condición. </li>
+								<li><strong>Iteración</strong>: Se utilizan para repetir una acción o un conjunto de acciones varias veces, hasta que se cumpla una determinada <strong><a href="#/condiciones">condición</a></strong>. </li>
 							</ul>
 							<img src="img/clase1/iteracion.gif">
 						</p>
-						<small>Puede verse como un <strong>mientras</strong> se cumpla una condición repito un conjunto de acciones. El conjunto de instrucciones está sobre un <em>bucle</em> o <em>loop</em>.</small>
+						<small>Puede verse como un <strong>mientras</strong> se cumpla una condición (la condición es verdadera) repito un conjunto de acciones. El conjunto de instrucciones está sobre un <em>bucle</em> o <em>loop</em>.</small>
 
 						<!-- Notas del slide -->
 						<aside class="notes">
@@ -376,11 +419,12 @@
 						<p>Algoritmo "llenar pileta con agua"</p>
 						<pre data-id="code-animation"><code data-trim data-line-numbers>
 							abrir canilla
-							mientras (no se llene la pileta)
+							mientras (la pileta no esté llena)
 								echar agua
 							cerrar canilla
 						</code></pre>
 						<p class="fragment">El flujo será: línea 1 y luego las líneas 2 y 3 se repitirán indefinidamente hasta que se llene la pileta. Luego continúa con las próximas sentencias.</p>
+						<p class="fragment"><small>Observar que <code>(la pileta no esté llena)</code> tiene como resultado un valor <code>verdadero</code> o <code>falso</code>.</small></p>
 					</section>
 
 					<section>
@@ -388,8 +432,7 @@
 						<p>Algoritmo "Saludamos a lxs alumnxs"</p>
 						<pre data-id="code-animation"><code data-trim data-line-numbers>
 							abrir centro de formacion
-							
-							mientras (sea el horario)
+							mientras (es horario de atencion)
 								si (llega una persona)
 									si (viene al curso de programacion)
 										saludar "Bienvenidx al curso de programacion"
@@ -401,6 +444,7 @@
 							
 						</code></pre>
 						<p><small>En este ejemplo se muestra que es posible anidar estructuras de control. En este caso se anidaron una iteración y dos selecciones pero no hay límites.</small></p>
+						<p><small>Las <strong>condiciones</strong> que están dentro del <code>mientras</code> y de los <code>si</code> pueden ser <code>verdadero</code> o <code>falso</code>.</small></p>
 					</section>
 
 					<section>
@@ -414,7 +458,7 @@
 
 					</section>
 
-					<section>
+					<section id="algoritmos_datos">
 						<h3>Datos</h3>
 						<p>En los algoritmos, es de suma importancia poder ingresar, generar y almacenar datos.</p>
 						<p>Por ejemplo si quisiéramos llevar la cuenta de las veces que un algoritmo realiza una cierta acción necesitamos de un mecanismo que nos permita almacenar ese dato, consultarlo y manipularlo.</p>
@@ -446,6 +490,7 @@
 						<small>
 						<ul>
 							<li><strong>Instrucciones secuencia</strong>: Se ejecuta una instrucción tras otra. El orden es de arriba hacia abajo.</li>
+							<li><strong>Condicionales</strong>: Algo que el resultado puede ser <code>verdadero</code> o <code>falso</code>.</li>
 						</ul>
 
 						<ul> <br>Estructuras de control:
@@ -470,13 +515,11 @@
 						<h2>Ejercicio en clase</h2>
 						<p>Diseñe un algoritmo para "adivinar un número".</p> 
 						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. Se debe llevar la cantidad de intentos hasta que se adivina el número.</p>
-						<p><small>* Se asume que alguien, adivinará el número.</small></p>
+						<p><small><strong>Precond:</strong> Eventualmente alguien adivinará el número.</small></p>
+						<p><small><strong>Poscond:</strong> Se obtiene el número de intentos hasta que alguien acierta.</small></p>
 
-						<!-- Notas del slide -->
-						<aside class="notes">
-							Mod1: Técnicas de programación
-							Mod2: Situaciones cercanas a la vida real del programador
-						</aside>
+
+
 
 						
 
@@ -484,32 +527,12 @@
 
 
 			</section>
-
-
-
-			
-
-					<!-- <section data-transition="zoom" data-background-color="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain"> -->
 					<section data-state="customevent" data-transition="zoom" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 						<h3>¡Fin de la clase!</h3>
 						<a href="/"> Ir al inicio </a><br>
 						<a href="./clase0.html"> Ir a clase anterior </a><br>
+						<a href="?print-pdf"> Exportar clase a PDF</a>
 					</section>
-<!-- 
-					<section data-transition="zoom" data-background="./static/back.jpg"  data-background-color="#dddddd" data-background-size="contain">
-						<h2>Bibliografía</h2>
-
-						<p>Algoritmos, datos y Programas (De Giusti)</p>
-						
-						<h3>Referencias</h3>
-						<p>Wikipedia</p>
-						<p>RealPython.com</p>
-						<a href="http://tic.taboadaleon.es/Unidad1-Programacion/Tema2_Lenguajes/contenido/5_estructura_de_un_programa_informtico.html#:~:text=Existen%20dos%20partes%20o%20bloques,para%20conseguir%20los%20resultados%20esperados.">taboadaleon.es</a>
-
-						<h3>Recursos</h3>
-						<a href="https://www.online-python.com/">Interprete Python Online</a>
-
-					</section> -->
 			</div>
 		</div>
 
