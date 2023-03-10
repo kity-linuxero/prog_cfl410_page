@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Programación</title>
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -89,11 +90,11 @@
 
 					</section>
 
-					<section>
+					<section data-auto-animate data-transition="none">
 						<h3>Volvamos al ejemplo de la aspiradora</h3>
 						<p>Ejemplo de instrucciones</p>
 
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="|1|2|3|4|5|1-5">
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers>
 							limpiar
 							avanzar
 							limpiar
@@ -102,12 +103,93 @@
 							...
 						</code></pre>
 						<div class="r-stack">
-							<img class="fragment fade-in-then-out aspiradora"src="img/clase1/aspiradora(2).png">
-							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(3).png">
-							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(4).png">
-							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(5).png">
-							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(6).png">
-							<img class="fragment fade-in-then-out aspiradora" src="img/clase1/aspiradora(7).png">
+							<img class="aspiradora" src="img/clase1/aspiradora(2).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Volvamos al ejemplo de la aspiradora</h3>
+						<p>Ejemplo de instrucciones</p>
+
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="1">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(3).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Volvamos al ejemplo de la aspiradora</h3>
+						<p>Ejemplo de instrucciones</p>
+
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="2">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+						    <img class="aspiradora" src="img/clase1/aspiradora(4).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Volvamos al ejemplo de la aspiradora</h3>
+						<p>Ejemplo de instrucciones</p>
+
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="3">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(5).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Volvamos al ejemplo de la aspiradora</h3>
+						<p>Ejemplo de instrucciones</p>
+
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="4">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(6).png">
+						</div>
+					</section>
+
+
+					<section data-transition="none">
+						<h3>Volvamos al ejemplo de la aspiradora</h3>
+						<p>Ejemplo de instrucciones</p>
+
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="5">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(7).png">
 						</div>
 					</section>
 
@@ -335,8 +417,15 @@
 					<section>
 						<h3>Datos</h3>
 						<p>En los algoritmos, es de suma importancia poder ingresar, generar y almacenar datos.</p>
-						<p>Por ejemplo si queremos contar las personas que entraron al centro de formación</p>
+						<p>Por ejemplo si quisiéramos llevar la cuenta de las veces que un algoritmo realiza una cierta acción necesitamos de un mecanismo que nos permita almacenar ese dato, consultarlo y manipularlo.</p>
+
 						
+						
+					</section>
+
+					<section>
+						<h3>Datos</h3>
+						<p>Supongamos que queremos contabilizar la cantidad de personas que entran al centro de formación.</p>
 						<pre data-id="code-animation"><code data-trim data-line-numbers>
 							abrir centro de formacion
 							cantidad = 0 # Arranco a contar desde 0
@@ -346,9 +435,10 @@
 								sino
 									espero
 							cerrar centro de formacion
-							Informar ("Entraron {cantidad} de personas")
+							Informar ("Entraron {cantidad} personas")
 							
 						</code></pre>
+						<p><small>En este caso, el dato está representado por <code>cantidad</code>. Donde se van contabilizando las personas cuando van llegando.</small></p>
 					</section>
 
 					<section>
@@ -426,10 +516,9 @@
 		<footer>
 			<!-- Logos en el footer -->
 			<div id="logos-footer" class="footer">
-				<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" class="foot-image"></a></span>
-				<!-- <span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span> -->
-				<span class="element"><a href="https://atepba.org.ar/seccion/idep/" target="_blank"><img src="img/logos/idep_logo.png" class="foot-image-idep"></a></span>
-				<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" class="foot-image"></a></span>
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
 			</div>
 
 			<script type="text/javascript">

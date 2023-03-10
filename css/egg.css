@@ -110,8 +110,6 @@
     width: 100%;
     bottom: 0;
     opacity: 20%;
-     
-    /* color: $color-primary-2; */
   }
      
   .footer span {
@@ -149,11 +147,6 @@
   }
 
   .aspiradora{
-    /* position: absolute;
-    left: 33%; */
-    /* right: 9;
-    margin: 0 auto; */
-    /* max-width: 100%; */
     width: 300px;
   }
 

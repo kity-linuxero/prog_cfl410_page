@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -69,7 +70,7 @@
 									<td>Introducción. Presentación del curso.</td>
 								</tr>
 								<tr>
-								<td><a href="clase1.html#/presentacion">Clase 1</a></td>
+								<td><a href="clase1.html">Clase 1</a></td>
 								<td>Definiciones y algoritmos</td>
 								</tr>
 								
@@ -221,10 +222,9 @@
 		<footer>
 			<!-- Logos en el footer -->
 			<div id="logos-footer" class="footer">
-				<span class="element"><a href="https://centro410laplata.edu.ar/" target="_blank"><img src="img/logos/cfl_logo.png" class="foot-image"></a></span>
-				<!-- <span class="element"><a href="https://atepba.org.ar/" target="_blank"><img src="img/logos/ate_logo.svg" class="foot-image"></a></span> -->
-				<span class="element"><a href="https://atepba.org.ar/seccion/idep/" target="_blank"><img src="img/logos/idep_logo.png" class="foot-image-idep"></a></span>
-				<span class="element"><a href="https://www.instagram.com/ate_informaticxs/" target="_blank"><img src="img/logos/info_logo.png" class="foot-image"></a></span>
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
 			</div>
 
 			<script type="text/javascript">
@@ -244,53 +244,13 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 
-		<!-- E f t c -->
-		<script>
-			// Get the modal
-			var modal = document.getElementById("myModal");
-
-			// Get the button that opens the modal
-			var btn = document.getElementById("myBtn");
-
-			// Get the <span> element that closes the modal
-			var span = document.getElementsByClassName("close")[0];
-
-			var today = new Date();
-			console.log();
-			// When the user clicks on <span> (x), close the modal
-			span.onclick = function() {
-			modal.style.display = "none";
-			}
-
-			// When the user clicks anywhere outside of the modal, close it
-			window.onclick = function(event) {
-			if (event.target === modal) {
-				modal.style.display = "none";
-			}
-			}
-			//let x = document.cookie;
-			//console.log(x)
-			if (today.getDate() == 1 & today.getMonth() == 6){
-					console.log("Un gran día")
-					var j = getCookie("julio");
-					if (j == null) {
-						modal.style.display = "block";
-						setCookie("julio","1",2)
-					}
-					else {
-						console.log("Ya se mostró lo mejor")					
-					}
-			}
-			// else{
-			// 	console.log("NO pasa nada");
-			// }
-
-		</script>
 
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
+
+			julio_egg(); // Easter egg!
 
 			// Para eventos personalizados. Indica que está en la presentación
 			Reveal.on( 'customevent', function() {

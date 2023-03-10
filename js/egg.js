@@ -71,3 +71,45 @@ function getCookie(name) {
   //return unescape(dc.substring(begin + prefix.length, end));
   return decodeURI(dc.substring(begin + prefix.length, end));
 }
+
+function julio_egg(){
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  var today = new Date();
+  console.log();
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+  modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+  }
+  //let x = document.cookie;
+  //console.log(x)
+  if (today.getDate() == 1 & today.getMonth() == 6){
+      console.log("Un gran día")
+      var j = getCookie("julio");
+      if (j == null) {
+        modal.style.display = "block";
+        setCookie("julio","1",2)
+      }
+      else {
+        console.log("Ya se mostró lo mejor")					
+      }
+  }
+  // else{
+  // 	console.log("NO pasa nada");
+  // }
+
+}
