@@ -21,7 +21,7 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 					
 					<h2>Curso de programación</h2>
 					<h4>Clase 1: Definiciones y algoritmos</h4>
@@ -40,186 +40,17 @@
 
 
 					<section>
-						<h2>¿Qué es un programa?</h2>
-						<p>Un programa podría definirse como un <strong>conjunto de instrucciones</strong> que se utiliza para realizar una tarea específica en una computadora.</p>
+						<h3>¿Qué es un programa?</h3>
+						<p>Un programa podría definirse como un <strong>conjunto de instrucciones</strong> que se utiliza para realizar una tarea específica <strong>en una computadora</strong>.</p>
 						<small><p>El <em>programa</em> puede ser diseñado para realizar una gran variedad de tareas, desde simples operaciones matemáticas hasta complejas operaciones de procesamientos de datos, gestión de bases de datos, video juegos y mucho mas.</p></small>
-						<p><small>Los programas de computadora se crean mediante la utilización de un <em>lenguaje de programación.</em></small></p>
+						<p><small>Los programas de computadora se crean mediante la utilización de un <em>lenguaje de programación</em> y se <em>ejecutan</em> sobre una computadora.</small></p>
 					</section>
 
 					<section>
-						<h2>¿Que sería un conjunto de instrucciones?</h2>
-						<p>Supongamos que tenemos que desarrollar el programa de un robot aspiradora.</p>
-						<p>La tarea es limpiar un área.</p>
-						<p>El conjunto de instrucciones puede estar dado por las cosas que el robot <em>podría hacer</em>. Como <strong>limpiar</strong>, <strong>moverse</strong>, <strong>girar</strong>, etc.</p>
-					</section>
+						<h3>¿Qué es una computadora?</h3>
+						<p>Una computadora es una máquina electrónica que puede recibir, almacenar, procesar y producir información.</p>
 
-					<section data-auto-animate>
-						<h2 data-id="code-title">Ejemplos de programa</h2>
-						<p>El siguiente podría ser el programa que hace que la aspiradora funcione:</p>
-
-						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers><script type="text/template">
-							encender aspiradora
-							limpiar
-							moverse hacia adelante
-							limpiar
-							moverse hacia adelante
-							limpiar
-							...
-							apagar aspiradora
-						</script></code></pre>
-
-						<p>Las instrucciones se escriben una por línea <em>ejecutan</em> una tras otra en el orden de arriba hacia abajo.</p>
-
-					</section>
-
-					<section data-auto-animate>
-						<h2 data-id="code-title">Ejemplos de un programa</h2>
-						<p>Un programa hace funcionar un semáforo:</p>
-
-						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers><script type="text/template">
-							encender luz roja
-							esperar 30 segundos
-							encender luz amarilla
-							esperar 2 segundos
-							encender luz verde
-							esperar 30 segundos
-							...
-						</script></code></pre>
-
-						<small><p>*Se asume que solo una luz puede estar encendida al mismo tiempo.</p></small>
-
-					</section>
-
-					<section data-auto-animate data-transition="none">
-						<h3>Volvamos al ejemplo de la aspiradora</h3>
-						<p>Ejemplo de instrucciones</p>
-
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers>
-							limpiar
-							avanzar
-							limpiar
-							avanzar
-							limpiar
-							...
-						</code></pre>
-						<div class="r-stack">
-							<img class="aspiradora" src="img/clase1/aspiradora(2).png">
-						</div>
-					</section>
-
-					<section data-transition="none">
-						<h3>Volvamos al ejemplo de la aspiradora</h3>
-						<p>Ejemplo de instrucciones</p>
-
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="1">
-							limpiar
-							avanzar
-							limpiar
-							avanzar
-							limpiar
-							...
-						</code></pre>
-						<div class="r-stack">
-							<img class="aspiradora" src="img/clase1/aspiradora(3).png">
-						</div>
-					</section>
-
-					<section data-transition="none">
-						<h3>Volvamos al ejemplo de la aspiradora</h3>
-						<p>Ejemplo de instrucciones</p>
-
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="2">
-							limpiar
-							avanzar
-							limpiar
-							avanzar
-							limpiar
-							...
-						</code></pre>
-						<div class="r-stack">
-						    <img class="aspiradora" src="img/clase1/aspiradora(4).png">
-						</div>
-					</section>
-
-					<section data-transition="none">
-						<h3>Volvamos al ejemplo de la aspiradora</h3>
-						<p>Ejemplo de instrucciones</p>
-
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="3">
-							limpiar
-							avanzar
-							limpiar
-							avanzar
-							limpiar
-							...
-						</code></pre>
-						<div class="r-stack">
-							<img class="aspiradora" src="img/clase1/aspiradora(5).png">
-						</div>
-					</section>
-
-					<section data-transition="none">
-						<h3>Volvamos al ejemplo de la aspiradora</h3>
-						<p>Ejemplo de instrucciones</p>
-
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="4">
-							limpiar
-							avanzar
-							limpiar
-							avanzar
-							limpiar
-							...
-						</code></pre>
-						<div class="r-stack">
-							<img class="aspiradora" src="img/clase1/aspiradora(6).png">
-						</div>
-					</section>
-
-
-					<section data-transition="none">
-						<h3>Volvamos al ejemplo de la aspiradora</h3>
-						<p>Ejemplo de instrucciones</p>
-
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="5">
-							limpiar
-							avanzar
-							limpiar
-							avanzar
-							limpiar
-							...
-						</code></pre>
-						<div class="r-stack">
-							<img class="aspiradora" src="img/clase1/aspiradora(7).png">
-						</div>
-					</section>
-
-					<section>
-						<h3>Ejemplo para hacer en grupo</h3>
-						<p>Más área para limpiar con la aspiradora.</p>
-						
-						<img src="img/clase1/aspiradora_3x3.png">
-					
-						<br>
-						<small> Las instrucciones disponibles son:<br>
-							<ul> 
-								<li><code>limpiar</code></li>
-								<li><code>avanzar</code></li>
-								<li><code>girar a derecha</code></li>
-							</ul>
-						</small>
-						<p class="fragment"><small>¿Cómo se les ocurre que puede ser?</small></p>
-					</section>
-
-					<section>
-						<h3>¿Preguntas?</h3>
-						<p class="fragment">Seguimos con definiciones...</p>
-					</section>
-
-					<section>
-						<h2>¿Qué es una computadora?</h2>
-						<p class="fragment">Una computadora es una máquina electrónica que puede recibir, almacenar, procesar y producir información.</p>
-
-						<div class="fragment">
+						<div>
 							<ul>Contiene los siguientes componentes:
 								<li>Hardware (CPU, memoria, almacenamiento)</li>
 								<li>Software (Programas)</li>
@@ -268,8 +99,9 @@
 	
 					<section>
 						<h3>¿Qué es un algoritmo?</h3>
-						<p>Un algoritmo es un conjunto de instrucciones precisas y bien definidas que se utilizan para resolver un problema o realizar una tarea.</p>
+						<p>Un algoritmo es un <strong>conjunto de instrucciones</strong> o <strong>sentencias</strong> precisas y bien definidas que se utilizan para resolver un problema o realizar una tarea.</p>
 						<p>Un algoritmo puede ser expresado en una variedad de formas, incluyendo en <em>lenguaje natural, diagramas de flujo, pseudocódigo y lenguajes de programación.</em> </p>
+						<p><small>A fines prácticos usaremos <em>instrucciones</em> y <em>sentencias</em> como sinónimos. <a href="https://cvc.cervantes.es/lengua/iulmyt/pdf/encuentros_iii/15_aguado.pdf" target="_blank">Mas info.</a></small></p>
 	
 						<!-- Notas del slide -->
 						<aside class="notes">
@@ -278,6 +110,197 @@
 
 					</section>
 
+					<!-- <section>
+						<h3>¿Que es una sentencia?</h3>
+						<p>En un lenguaje de programación, una sentencia es una línea de código al mando de una tarea. </p>
+						
+						<p>El conjunto de instrucciones puede estar dado por las cosas que el robot <em>podría hacer</em>. Como <strong>limpiar</strong>, <strong>moverse</strong>, <strong>girar</strong>, etc.</p>
+					</section> -->
+
+					<!-- <section>
+						<h3>Comentarios en los algoritmos</h3>
+						<p>Es muy importante realizar comentarios en los algoritmos para que ganan claridad cuando tiene que ser comprendido por un tercero.</p>
+						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="5">
+							limpiar
+							# Termina de 
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<p></p>
+					</section> -->
+
+					
+					<section>
+						<h3>Flujo en los algoritmos</h3>
+						<p>Un algoritmo es <em>en parte</em> una secuencia de instrucciones.</p>
+						<img src="img/clase1/secuencia.gif">
+						<p>La secuencia indica que se procesa una instrucción tras otra. En orden de arriba hacia abajo.</p>
+						<!-- <p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p> -->
+					</section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title">Ejemplo de un algoritmo</h2>
+						<p>El siguiente podría ser el programa que hace que la aspiradora robot mencionada funcione:</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
+							encender aspiradora
+							limpiar
+							moverse hacia adelante
+							limpiar
+							moverse hacia adelante
+							limpiar
+							...
+							apagar aspiradora
+						</code></pre>
+
+						<p><small>El orden de las instrucciones está dado de arriba hacia abajo. Primero se procesa la línea 1, luego la 2 y termina en la línea 8.</small></p>
+
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<h2 data-id="code-title">Ejemplo de un algoritmo</h2>
+						<p>Un programa hace funcionar un semáforo:</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
+							encender luz roja
+							esperar 30 segundos
+							encender luz amarilla
+							esperar 2 segundos
+							encender luz verde
+							esperar 30 segundos
+							...
+						</code></pre>
+
+						<small><p>*Se asume que solo una luz puede estar encendida al mismo tiempo.</p></small>
+
+					</section>
+
+					<section id="ej_aspiradora" data-auto-animate data-transition="none">
+						<h3>Ejemplo de algoritmo</h3>
+						<p>Algoritmo: Robot que limpia</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers>
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(2).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Ejemplo de algoritmo</h3>
+						<p>Algoritmo: Robot que limpia</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="1">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(3).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Ejemplo de algoritmo</h3>
+						<p>Algoritmo: Robot que limpia</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="2">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+						    <img class="aspiradora" src="img/clase1/aspiradora(4).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Ejemplo de algoritmo</h3>
+						<p>Algoritmo: Robot que limpia</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="3">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(5).png">
+						</div>
+					</section>
+
+					<section data-transition="none">
+						<h3>Ejemplo de algoritmo</h3>
+						<p>Algoritmo: Robot que limpia</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="4">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(6).png">
+						</div>
+					</section>
+
+
+					<section data-transition="none">
+						<h3>Ejemplo de algoritmo</h3>
+						<p>Algoritmo: Robot que limpia</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo" data-trim data-line-numbers="5">
+							limpiar
+							avanzar
+							limpiar
+							avanzar
+							limpiar
+							...
+						</code></pre>
+						<div class="r-stack">
+							<img class="aspiradora" src="img/clase1/aspiradora(7).png">
+						</div>
+					</section>
+
+					<section>
+						<h3>Ejemplo para hacer en grupo</h3>
+						<p>Más área para limpiar con la aspiradora.</p>
+						
+						<img src="img/clase1/aspiradora_3x3.png">
+					
+						<br>
+						<small>Las instrucciones disponibles son:<br>
+							<ul> 
+								<li><code>limpiar</code></li>
+								<li><code>avanzar</code></li>
+								<li><code>girar a derecha</code></li>
+							</ul>
+						</small>
+						<p class="fragment"><small>¿Cómo se les ocurre que puede ser?</small></p>
+					</section>
+
+					
 					<section>
 						<h3>Partes de los algoritmos</h3>
 
@@ -285,40 +308,151 @@
 							<li><strong>Entrada (Input)</strong>: Es la información que damos al algoritmo con la que va a trabajar para ofrecer la solución esperada.</li>
 							<li><strong>Procesamiento</strong>: Es el conjunto de pasos para que, a partir de los datos de entrada, llegue a la solución de la situación.</li>
 							<li><strong>Salida (Output)</strong>: Son los resultados, a partir de la transformación de los valores de entrada durante el proceso.</li>
+						
+					</section>
+
+					<section id="pre_pos">
+						<h3>Pre y poscondiciones de un algoritmo</h3>
+						<ul>
+							<li><strong>Precondición</strong>: es la información que se conoce como verdadera antes de comenzar el algoritmo.</li>
+							<li><strong>Poscondición</strong>: es la información que se conoce como verdadera después de finalizado el algoritmo, siempre que se cumpla con las precondiciones.</li>
+							
 						</ul>
+
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Ejemplo pre: Si hacemos un programa de división. Asumimos que el divisor no puede ser 0
+							Ejemplo pos: Asumimos que el resultado será el esperado.
+						</aside>
+
+						
+					</section>
+
+
+
+					<section id="condiciones">
+						<h3>Condiciones lógicas</h3>
+						<p>Una condición es algo que puede ser evaluado y tiene como respuesta o resultado un <strong><code>verdadero</code></strong> o <strong><code>falso</code></strong>.</p>
+						<p>Supongamos que nos pasan un número cualquiera. Una condición lógica podría ser <strong>¿El número es par?</strong>. La respuesta sería <em>sí</em> o <em>no</em> (<code>verdadero</code> o <code>falso</code>).</p>
+						<p>Otro ejemplo, <strong>¿10 es mayor a 9?</strong> en este caso sería <strong>verdadero</strong>.</p>
+						<p><small>Profundizaremos mas adelante en el curso sobre condiciones lógicas y el tipo de datos asociado a las mismas.</small></p>
+						
+					</section>
+
+					<section id="pseudocodigo">
+						<h3>pseudocódigo</h3>
+						<p>El pseudocódigo puede verse como un <em>lenguaje de programación</em> informal que se utiliza para describir el funcionamiento de un algoritmo de manera clara y concisa.</p>
+						<p>El pseudocódigo se asemeja al lenguaje natural pero con una serie de <em>convenciones</em> que facilitan la comprensión de los algoritmos.</p>
+						<p><small>Los ejemplos que veremos a continuación sobre algoritmos están expresados en pseudocódigo.</small></p>
 					</section>
 
 					<section>
-						<h3>Flujo en los algoritmos</h3>
-						<p>Un programa es <em>en parte</em> una secuencia de instrucciones</p>
-						<img src="img/clase1/secuencia.gif">
-						<p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p>
+						<h3>¿Preguntas?</h3>
+					</section>
 
-						
+				</section>
 
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Estructuras de control</h2>
 					</section>
 	
 					<section id="est_control_p1">
-						<h2>Estructuras de control</h2>
+						<h3>Estructuras de control</h3>
 						<p>Las estructuras de control son construcciones en la programación que permiten <em>controlar el flujo</em> de ejecución de un programa.</p>
-						<p>Existen tres tipos principales de estructuras de control: las estructuras de <strong>selección</strong>, las estructuras de <strong>iteración</strong> y las estructuras de <strong>salto</strong>.</p>
+						<p>Podemos destacar las siguientes estructuras de control: las estructuras de <strong>repetición</strong>, las estructuras de <strong>selección</strong>, estructuras de <strong>iteración</strong> y las estructuras de <strong>salto</strong>.</p>
 
 
 						
 						<!-- Notas del slide -->
 						<aside class="notes">
-							Importancia de la asistencia.
-							No habrá exámen escrito ni oral.
+							
 						</aside>
 	
 	
 					</section>
 
-					<section id="est_control_p2">
+					<section id="repeticion">
+						<h3>Estructuras de control <br><small>(Repetición)</small></h3>
+						<p>Es una instrucción que lleva a cabo la repetición de un <em>bloque de código</em> un número <code>n</code> de veces predefinido y conocido de antemano.</p>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="5">
+							repetir (3 veces)
+								limpiar
+								avanzar
+						</code></pre>
+
+						<p><small>Observar que las instrucciones <code>limpiar</code> y <code>avanzar</code> están "tabuladas". Eso significa que esas instrucciones <strong>están dentro del bloque de instrucciones <code>repetir</code></strong>.</small></p>
+						<p><small>Las instrucciones, <code>limpiar</code> y <code>avanzar</code> están en un bucle o loop.</small></p>
+					</section>
+
+					<section id="bloque_de_instruccion_p1" data-auto-animate data-transition="none">
+						<h3>Bloque de código o de instrucciones</h3>
+						<p>Es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
+						<p><small>Un bloque suele estar definido por la <span class="rojo">identación</span> (espacios delante), entre <code>{ }</code> o en palabras claves como <code>begin end</code></small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							instruccion_a
+							instruccion_b
+							repetir(3 veces)
+								instruccion_c
+								instruccion_d
+							instruccion_e
+						</code></pre>
+
+						<!-- <p>La secuencia es: 1-2-3-(4-5 4-5 4-5)-6</p>
+						<p class="fragment"><small>Las instrucciones c y d están dentro del bloque de <code>repetir(3 veces)</code></small></p> -->
+
+					</section>
+
+					<section data-transition="none" data-auto-animate id="bloque_de_instruccion_p2">
+						<h3>Bloque de código o de instrucciones</h3>
+						<p>Es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
+						<p><small>Un bloque suele estar definido por la identación (espacios delante), entre <span class="rojo"><code>{ }</code></span> o en palabras claves como <code>begin end</code></small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							instruccion_a
+							instruccion_b
+							repetir(3 veces)
+							{
+								instruccion_c
+								instruccion_d
+							}
+							instruccion_e
+						</code></pre>
+
+						<!-- <p>La secuencia es: 1-2-3-(4-5 4-5 4-5)-6</p>
+						<p class="fragment"><small>Las instrucciones c y d están dentro del bloque de <code>repetir(3 veces)</code></small></p> -->
+
+					</section>
+
+					<section data-transition="none" data-auto-animate id="bloque_de_instruccion_p3">
+						<h3>Bloque de código o de instrucciones</h3>
+						<p>Es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
+						<p><small>Un bloque suele estar definido por la identación (espacios delante), entre <code>{ }</code> o en palabras claves como <span class="rojo"><code>begin end</code></span></small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							instruccion_a
+							instruccion_b
+							repetir(3 veces) begin
+								instruccion_c
+								instruccion_d
+							end
+							instruccion_e
+						</code></pre>
+
+						<!-- <p>La secuencia es: 1-2-3-(4-5 4-5 4-5)-6</p>
+						<p class="fragment"><small>Las instrucciones c y d están dentro del bloque de <code>repetir(3 veces)</code></small></p> -->
+						<p class="fragment"><small>Por cuestiones de claridad en el código, además de estar entre las palabras claves o entre caracteres se suele agregar una identación.</small></p>
+
+					</section>
+
+
+					<section id="est_control_seleccion">
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>
 							<ul>
-								<li><strong>Selección</strong>: Se utilizan para tomar decisiones en función de una o varias condiciones. El ejemplo más común es el "si-sino", que permite al programa realizar una acción si se cumple una determinada condición y otra acción si no se cumple. </li>
+								<li><strong>Selección</strong>: Se utilizan para tomar decisiones en función de una o varias <strong><a href="#/condiciones">condiciones</a></strong>. El ejemplo más común es el "si-sino", que permite al programa realizar una acción si se cumple una determinada <strong><a href="#/condiciones">condición</a></strong> y otra acción si no se cumple. </li>
 							</ul>
 							<img src="img/clase1/seleccion_1.gif">
 							<img src="img/clase1/seleccion_2.gif">
@@ -331,19 +465,21 @@
 					<section data-auto-animate>
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>Algoritmo "por si llueve" v1</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							mirar por la ventana
 							si (llueve)
 								agarrar paraguas
 							ir al curso
 						</code></pre>
-						<p class="fragment">El flujo del programa, en caso que llueva será, la línea 1,2,3 y 4. Pero si no llueve, será 1,2 y 4.</p>
+						<p class="fragment">El flujo del algoritmo, en caso que llueva será, la línea 1,2,3 y 4. Pero si no llueve, será 1,2 y 4.</p>
+						<p class="fragment"><small>Observar que <code>(llueve)</code> tiene como resultado un valor <strong>lógico</strong> que puede evaluarse como <code>verdadero</code> o <code>falso</code>.</small></p>
+						<p class="fragment"><small>Se utilizan los paréntesis para destacar la instrucción <code>si</code> y a la condición <code>llueve</code>.</small></p>
 					</section>
 
 					<section data-auto-animate>
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>Algoritmo "por si llueve" v2</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							mirar por la ventana
 							si (llueve)
 								agarrar paraguas y llaves del auto
@@ -351,19 +487,31 @@
 								agarrar la sube
 							ir al curso
 						</code></pre>
-						<p class="fragment">El flujo del programa, en caso que llueva será, la línea 1,2,3 y 6. Pero si no llueve, será 1,2,4,5 y 6.</p>
-						<p class="fragment"><small>Se utilizan los paréntesis para destacar la instrucción <code>si</code> y a la condición <code>llueve</code>.</small></p>
+						<p class="fragment">El flujo del algoritmo, en caso que llueva será, la línea 1,2,3 y 6. Pero si no llueve, será 1,2,4,5 y 6.</p>
+						
+					</section>
+
+					<section>
+						<h3>Estructuras de control <br><small>(Selección múltiple)</small></h3>
+						<p>Existe una estructura para decidir entre múltiples alternativas.</p>
+						<small>Se les conoce como <code>case</code> o <code>switch</code> por la forma en que generalmente se los utiliza en los lenguajes de programación.</small>
+
+						<img src="img/clase1/seleccion_multiple.gif">
+						
+						
+
 					</section>
 	
-					<section>
+					<section id="est_control_iteracion">
 						<h3>Estructuras de control <br><small>(Iteración)</small></h3>
 						<p>
 							<ul>
-								<li><strong>Iteración</strong>: Se utilizan para repetir una acción o un conjunto de acciones varias veces, hasta que se cumpla una determinada condición. </li>
+								<li><strong>Iteración</strong>: Se utilizan para repetir una acción o un conjunto de acciones hasta que se cumpla una determinada <strong><a href="#/condiciones">condición</a></strong>. </li>
 							</ul>
 							<img src="img/clase1/iteracion.gif">
 						</p>
-						<small>Puede verse como un <strong>mientras</strong> se cumpla una condición repito un conjunto de acciones. El conjunto de instrucciones está sobre un <em>bucle</em> o <em>loop</em>.</small>
+						<small>Es como un <strong>mientras</strong> se cumpla una condición (la condición es verdadera) repito un conjunto de acciones.</small>
+						<small>A diferencia de la <a href="#/repeticion">repetición</a> que vimos antes, esta estructura se usa cuando no se sabe de antemano cuantas veces se va a repetir ya que depende de una condición.</small>
 
 						<!-- Notas del slide -->
 						<aside class="notes">
@@ -374,22 +522,22 @@
 					<section>
 						<h3>Estructuras de control <br><small>(Iteración)</small></h3>
 						<p>Algoritmo "llenar pileta con agua"</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							abrir canilla
-							mientras (no se llene la pileta)
+							mientras (la pileta no este llena)
 								echar agua
 							cerrar canilla
 						</code></pre>
 						<p class="fragment">El flujo será: línea 1 y luego las líneas 2 y 3 se repitirán indefinidamente hasta que se llene la pileta. Luego continúa con las próximas sentencias.</p>
+						<p class="fragment"><small>Observar que <code>(la pileta no esté llena)</code> tiene como resultado un valor <code>verdadero</code> o <code>falso</code>.</small></p>
 					</section>
 
 					<section>
 						<h3>Estructuras de control <br><small>(Iteración/selección)</small></h3>
 						<p>Algoritmo "Saludamos a lxs alumnxs"</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
 							abrir centro de formacion
-							
-							mientras (sea el horario)
+							mientras (es horario de atencion)
 								si (llega una persona)
 									si (viene al curso de programacion)
 										saludar "Bienvenidx al curso de programacion"
@@ -400,7 +548,11 @@
 							cerrar centro de formacion
 							
 						</code></pre>
+
+
+						  
 						<p><small>En este ejemplo se muestra que es posible anidar estructuras de control. En este caso se anidaron una iteración y dos selecciones pero no hay límites.</small></p>
+						<p><small>Las <strong>condiciones</strong> que están dentro del <code>mientras</code> y de los <code>si</code> pueden ser <code>verdadero</code> o <code>falso</code>.</small></p>
 					</section>
 
 					<section>
@@ -414,7 +566,7 @@
 
 					</section>
 
-					<section>
+					<!-- <section id="algoritmos_datos">
 						<h3>Datos</h3>
 						<p>En los algoritmos, es de suma importancia poder ingresar, generar y almacenar datos.</p>
 						<p>Por ejemplo si quisiéramos llevar la cuenta de las veces que un algoritmo realiza una cierta acción necesitamos de un mecanismo que nos permita almacenar ese dato, consultarlo y manipularlo.</p>
@@ -426,7 +578,7 @@
 					<section>
 						<h3>Datos</h3>
 						<p>Supongamos que queremos contabilizar la cantidad de personas que entran al centro de formación.</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation"><code data-trim class="hljs bash" data-line-numbers>
 							abrir centro de formacion
 							cantidad = 0 # Arranco a contar desde 0
 							mientras (sea el horario)
@@ -439,24 +591,30 @@
 							
 						</code></pre>
 						<p><small>En este caso, el dato está representado por <code>cantidad</code>. Donde se van contabilizando las personas cuando van llegando.</small></p>
-					</section>
+						<p><small>Profundizaremos el concepto de datos y tipos de datos mas adelante en el curso.</small></p>
+					</section> -->
 
 					<section>
 						<h3>Repaso</h3>
 						<small>
 						<ul>
 							<li><strong>Instrucciones secuencia</strong>: Se ejecuta una instrucción tras otra. El orden es de arriba hacia abajo.</li>
+							<li><strong>Condicionales</strong>: Algo que el resultado puede ser <code>verdadero</code> o <code>falso</code>.</li>
+							
 						</ul>
 
 						<ul> <br>Estructuras de control:
+							<li><strong>Repetición</strong>: Repite un conjunto de instrucciones un número predeterminado de veces.</li>
 							<li><strong>Selección</strong>: Permite cambiar el flujo del programa si se cumple (o no) determinada condición.</li>
 							<li><strong>Iteración</strong>: Se repite un bloque de instrucciones <em>mientras</em> se cumpla una condición.</li>
 						</ul>
-						<ul>
-							<li><strong>Datos</strong>: Representan los datos que podemos ingresar, procesar, y pueden ser el resultado de la ejecución de los algoritmos.</li>
+						<ul><br>
+							<!-- <li><strong>Datos</strong>: Representan los datos que podemos ingresar, procesar, y pueden ser el resultado de la ejecución de los algoritmos.</li> -->
+							<li><strong>Precondición</strong>: La información relevante que se conoce como verdadera antes de iniciar el programa.</li>
+							<li><strong>Postcondición</strong>: La información que debería ser verdadera al concluir el algoritmo.</li>
 						</ul>
 						</small>
-						<p><small>Con las herramientas vistas hasta ahora volcadas en un lenguaje de programación estamos en condiciones de desarrollar nuestros primeros programas.</small></p>
+						<p><small>Con las herramientas vistas hasta ahora volcadas en un lenguaje de programación se pueden desarrollar una gran cantidad de programas.</small></p>
 					</section>
 
 					<section>
@@ -466,50 +624,42 @@
 
 				<section data-state="no_footer">
 
-					<section id="ejercicio">
-						<h2>Ejercicio en clase</h2>
+					<section>
+						<h2>Ejercicios en clase</h2>
+
+					</section>
+
+					<section id="ejercicio_1">
+						<h3>Ejercicio en clase 1</h3>
+						<p>Escribir un algoritmo que permita a la aspiradora barrer todo el piso. Utilice todas las herramientas aprendidas que considere útiles.</p>
+						<img src="img/clase1/aspiradora_3x3.png">
+						<p><small>El área a limpiar es la que se muestra en la imágen.</small></p>
+
+					</section>
+
+					<!-- <section id="ejercicio_2">
+						<h3>Ejercicio en clase 2</h3>
 						<p>Diseñe un algoritmo para "adivinar un número".</p> 
 						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. Se debe llevar la cantidad de intentos hasta que se adivina el número.</p>
-						<p><small>* Se asume que alguien, adivinará el número.</small></p>
+						<p><small><strong>Precond:</strong> Eventualmente alguien adivinará el número.</small></p>
+						<p><small><strong>Poscond:</strong> Se obtiene el número de intentos hasta que alguien acierta.</small></p>
 
-						<!-- Notas del slide -->
-						<aside class="notes">
-							Mod1: Técnicas de programación
-							Mod2: Situaciones cercanas a la vida real del programador
-						</aside>
+
+
 
 						
 
-					</section>
+					</section> -->
 
 
 			</section>
-
-
-
-			
-
-					<!-- <section data-transition="zoom" data-background-color="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain"> -->
-					<section data-state="customevent" data-transition="zoom" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<section id="fin-clase" data-state="customevent" data-transition="zoom" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 						<h3>¡Fin de la clase!</h3>
 						<a href="/"> Ir al inicio </a><br>
 						<a href="./clase0.html"> Ir a clase anterior </a><br>
+						<a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica1.md" target="_blank"> Práctica 1 </a><br>
+						<a href="?print-pdf"> Exportar clase a PDF</a>
 					</section>
-<!-- 
-					<section data-transition="zoom" data-background="./static/back.jpg"  data-background-color="#dddddd" data-background-size="contain">
-						<h2>Bibliografía</h2>
-
-						<p>Algoritmos, datos y Programas (De Giusti)</p>
-						
-						<h3>Referencias</h3>
-						<p>Wikipedia</p>
-						<p>RealPython.com</p>
-						<a href="http://tic.taboadaleon.es/Unidad1-Programacion/Tema2_Lenguajes/contenido/5_estructura_de_un_programa_informtico.html#:~:text=Existen%20dos%20partes%20o%20bloques,para%20conseguir%20los%20resultados%20esperados.">taboadaleon.es</a>
-
-						<h3>Recursos</h3>
-						<a href="https://www.online-python.com/">Interprete Python Online</a>
-
-					</section> -->
 			</div>
 		</div>
 
