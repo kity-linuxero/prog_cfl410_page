@@ -145,7 +145,7 @@
 						<h2 data-id="code-title">Ejemplo de un algoritmo</h2>
 						<p>El siguiente podría ser el programa que hace que la aspiradora robot mencionada funcione:</p>
 
-						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers><script type="text/template">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							encender aspiradora
 							limpiar
 							moverse hacia adelante
@@ -154,7 +154,7 @@
 							limpiar
 							...
 							apagar aspiradora
-						</script></code></pre>
+						</code></pre>
 
 						<p><small>El orden de las instrucciones está dado de arriba hacia abajo. Primero se procesa la línea 1, luego la 2 y termina en la línea 8.</small></p>
 
@@ -166,7 +166,7 @@
 						<h2 data-id="code-title">Ejemplo de un algoritmo</h2>
 						<p>Un programa hace funcionar un semáforo:</p>
 
-						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers><script type="text/template">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							encender luz roja
 							esperar 30 segundos
 							encender luz amarilla
@@ -174,7 +174,7 @@
 							encender luz verde
 							esperar 30 segundos
 							...
-						</script></code></pre>
+						</code></pre>
 
 						<small><p>*Se asume que solo una luz puede estar encendida al mismo tiempo.</p></small>
 
@@ -184,7 +184,7 @@
 						<h3>Ejemplo de algoritmo</h3>
 						<p>Algoritmo: Robot que limpia</p>
 
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers>
 							limpiar
 							avanzar
 							limpiar
@@ -201,7 +201,7 @@
 						<h3>Ejemplo de algoritmo</h3>
 						<p>Algoritmo: Robot que limpia</p>
 
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="1">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="1">
 							limpiar
 							avanzar
 							limpiar
@@ -218,7 +218,7 @@
 						<h3>Ejemplo de algoritmo</h3>
 						<p>Algoritmo: Robot que limpia</p>
 
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="2">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="2">
 							limpiar
 							avanzar
 							limpiar
@@ -235,7 +235,7 @@
 						<h3>Ejemplo de algoritmo</h3>
 						<p>Algoritmo: Robot que limpia</p>
 
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="3">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="3">
 							limpiar
 							avanzar
 							limpiar
@@ -252,7 +252,7 @@
 						<h3>Ejemplo de algoritmo</h3>
 						<p>Algoritmo: Robot que limpia</p>
 
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="4">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="4">
 							limpiar
 							avanzar
 							limpiar
@@ -270,7 +270,7 @@
 						<h3>Ejemplo de algoritmo</h3>
 						<p>Algoritmo: Robot que limpia</p>
 
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="5">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo" data-trim data-line-numbers="5">
 							limpiar
 							avanzar
 							limpiar
@@ -376,7 +376,7 @@
 					<section id="repeticion">
 						<h3>Estructuras de control <br><small>(Repetición)</small></h3>
 						<p>Es una instrucción que lleva a cabo la repetición de un <em>bloque de código</em> un número <code>n</code> de veces predefinido y conocido de antemano.</p>
-						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="5">
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo"  data-trim data-line-numbers="5">
 							repetir (3 veces)
 								limpiar
 								avanzar
@@ -386,11 +386,12 @@
 						<p><small>Las instrucciones, <code>limpiar</code> y <code>avanzar</code> están en un bucle o loop.</small></p>
 					</section>
 
-					<section id="bloque_de_instruccion">
+					<section id="bloque_de_instruccion_p1" data-auto-animate data-transition="none">
 						<h3>Bloque de código o de instrucciones</h3>
 						<p>Es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
+						<p><small>Un bloque suele estar definido por la <span class="rojo">identación</span> (espacios delante), entre <code>{ }</code> o en palabras claves como <code>begin end</code></small></p>
 
-						<pre><code data-trim class="hljs bash" data-line-numbers>
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
 							instruccion_a
 							instruccion_b
 							repetir(3 veces)
@@ -399,8 +400,50 @@
 							instruccion_e
 						</code></pre>
 
-						<p>La secuencia es: 1-2-3-(4-5 4-5 4-5)-6</p>
-						<p class="fragment"><small>Las instrucciones c y d están dentro del bloque de <code>repetir(3 veces)</code></small></p>
+						<!-- <p>La secuencia es: 1-2-3-(4-5 4-5 4-5)-6</p>
+						<p class="fragment"><small>Las instrucciones c y d están dentro del bloque de <code>repetir(3 veces)</code></small></p> -->
+
+					</section>
+
+					<section data-transition="none" data-auto-animate id="bloque_de_instruccion_p2">
+						<h3>Bloque de código o de instrucciones</h3>
+						<p>Es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
+						<p><small>Un bloque suele estar definido por la identación (espacios delante), entre <span class="rojo"><code>{ }</code></span> o en palabras claves como <code>begin end</code></small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							instruccion_a
+							instruccion_b
+							repetir(3 veces)
+							{
+								instruccion_c
+								instruccion_d
+							}
+							instruccion_e
+						</code></pre>
+
+						<!-- <p>La secuencia es: 1-2-3-(4-5 4-5 4-5)-6</p>
+						<p class="fragment"><small>Las instrucciones c y d están dentro del bloque de <code>repetir(3 veces)</code></small></p> -->
+
+					</section>
+
+					<section data-transition="none" data-auto-animate id="bloque_de_instruccion_p3">
+						<h3>Bloque de código o de instrucciones</h3>
+						<p>Es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
+						<p><small>Un bloque suele estar definido por la identación (espacios delante), entre <code>{ }</code> o en palabras claves como <span class="rojo"><code>begin end</code></span></small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							instruccion_a
+							instruccion_b
+							repetir(3 veces) begin
+								instruccion_c
+								instruccion_d
+							end
+							instruccion_e
+						</code></pre>
+
+						<!-- <p>La secuencia es: 1-2-3-(4-5 4-5 4-5)-6</p>
+						<p class="fragment"><small>Las instrucciones c y d están dentro del bloque de <code>repetir(3 veces)</code></small></p> -->
+						<p class="fragment"><small>Por cuestiones de claridad en el código, además de estar entre las palabras claves o entre caracteres se suele agregar una identación.</small></p>
 
 					</section>
 
@@ -422,7 +465,7 @@
 					<section data-auto-animate>
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>Algoritmo "por si llueve" v1</p>
-						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							mirar por la ventana
 							si (llueve)
 								agarrar paraguas
@@ -436,7 +479,7 @@
 					<section data-auto-animate>
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>Algoritmo "por si llueve" v2</p>
-						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							mirar por la ventana
 							si (llueve)
 								agarrar paraguas y llaves del auto
@@ -479,7 +522,7 @@
 					<section>
 						<h3>Estructuras de control <br><small>(Iteración)</small></h3>
 						<p>Algoritmo "llenar pileta con agua"</p>
-						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							abrir canilla
 							mientras (la pileta no este llena)
 								echar agua
@@ -492,7 +535,7 @@
 					<section>
 						<h3>Estructuras de control <br><small>(Iteración/selección)</small></h3>
 						<p>Algoritmo "Saludamos a lxs alumnxs"</p>
-						<pre data-id="code-animation"><code data-trim class="hljs bash" data-line-numbers>
+						<pre data-id="code-animation" class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
 							abrir centro de formacion
 							mientras (es horario de atencion)
 								si (llega una persona)
@@ -505,6 +548,9 @@
 							cerrar centro de formacion
 							
 						</code></pre>
+
+
+						  
 						<p><small>En este ejemplo se muestra que es posible anidar estructuras de control. En este caso se anidaron una iteración y dos selecciones pero no hay límites.</small></p>
 						<p><small>Las <strong>condiciones</strong> que están dentro del <code>mientras</code> y de los <code>si</code> pueden ser <code>verdadero</code> o <code>falso</code>.</small></p>
 					</section>
@@ -520,7 +566,7 @@
 
 					</section>
 
-					<section id="algoritmos_datos">
+					<!-- <section id="algoritmos_datos">
 						<h3>Datos</h3>
 						<p>En los algoritmos, es de suma importancia poder ingresar, generar y almacenar datos.</p>
 						<p>Por ejemplo si quisiéramos llevar la cuenta de las veces que un algoritmo realiza una cierta acción necesitamos de un mecanismo que nos permita almacenar ese dato, consultarlo y manipularlo.</p>
@@ -546,7 +592,7 @@
 						</code></pre>
 						<p><small>En este caso, el dato está representado por <code>cantidad</code>. Donde se van contabilizando las personas cuando van llegando.</small></p>
 						<p><small>Profundizaremos el concepto de datos y tipos de datos mas adelante en el curso.</small></p>
-					</section>
+					</section> -->
 
 					<section>
 						<h3>Repaso</h3>
@@ -563,7 +609,7 @@
 							<li><strong>Iteración</strong>: Se repite un bloque de instrucciones <em>mientras</em> se cumpla una condición.</li>
 						</ul>
 						<ul><br>
-							<li><strong>Datos</strong>: Representan los datos que podemos ingresar, procesar, y pueden ser el resultado de la ejecución de los algoritmos.</li>
+							<!-- <li><strong>Datos</strong>: Representan los datos que podemos ingresar, procesar, y pueden ser el resultado de la ejecución de los algoritmos.</li> -->
 							<li><strong>Precondición</strong>: La información relevante que se conoce como verdadera antes de iniciar el programa.</li>
 							<li><strong>Postcondición</strong>: La información que debería ser verdadera al concluir el algoritmo.</li>
 						</ul>
@@ -591,7 +637,7 @@
 
 					</section>
 
-					<section id="ejercicio_2">
+					<!-- <section id="ejercicio_2">
 						<h3>Ejercicio en clase 2</h3>
 						<p>Diseñe un algoritmo para "adivinar un número".</p> 
 						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. Se debe llevar la cantidad de intentos hasta que se adivina el número.</p>
@@ -603,7 +649,7 @@
 
 						
 
-					</section>
+					</section> -->
 
 
 			</section>
