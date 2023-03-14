@@ -21,7 +21,7 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<section data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 					
 					<h2>Curso de programación</h2>
 					<h4>Clase 1: Definiciones y algoritmos</h4>
@@ -40,17 +40,17 @@
 
 
 					<section>
-						<h2>¿Qué es un programa?</h2>
+						<h3>¿Qué es un programa?</h3>
 						<p>Un programa podría definirse como un <strong>conjunto de instrucciones</strong> que se utiliza para realizar una tarea específica <strong>en una computadora</strong>.</p>
 						<small><p>El <em>programa</em> puede ser diseñado para realizar una gran variedad de tareas, desde simples operaciones matemáticas hasta complejas operaciones de procesamientos de datos, gestión de bases de datos, video juegos y mucho mas.</p></small>
-						<p><small>Los programas de computadora se crean mediante la utilización de un <em>lenguaje de programación.</em></small></p>
+						<p><small>Los programas de computadora se crean mediante la utilización de un <em>lenguaje de programación</em> y se <em>ejecutan</em> sobre una computadora.</small></p>
 					</section>
 
 					<section>
-						<h2>¿Qué es una computadora?</h2>
-						<p class="fragment">Una computadora es una máquina electrónica que puede recibir, almacenar, procesar y producir información.</p>
+						<h3>¿Qué es una computadora?</h3>
+						<p>Una computadora es una máquina electrónica que puede recibir, almacenar, procesar y producir información.</p>
 
-						<div class="fragment">
+						<div>
 							<ul>Contiene los siguientes componentes:
 								<li>Hardware (CPU, memoria, almacenamiento)</li>
 								<li>Software (Programas)</li>
@@ -99,8 +99,9 @@
 	
 					<section>
 						<h3>¿Qué es un algoritmo?</h3>
-						<p>Un algoritmo es un <strong>conjunto de instrucciones</strong> precisas y bien definidas que se utilizan para resolver un problema o realizar una tarea.</p>
+						<p>Un algoritmo es un <strong>conjunto de instrucciones</strong> o <strong>sentencias</strong> precisas y bien definidas que se utilizan para resolver un problema o realizar una tarea.</p>
 						<p>Un algoritmo puede ser expresado en una variedad de formas, incluyendo en <em>lenguaje natural, diagramas de flujo, pseudocódigo y lenguajes de programación.</em> </p>
+						<p><small>A fines prácticos usaremos <em>instrucciones</em> y <em>sentencias</em> como sinónimos. <a href="https://cvc.cervantes.es/lengua/iulmyt/pdf/encuentros_iii/15_aguado.pdf" target="_blank">Mas info.</a></small></p>
 	
 						<!-- Notas del slide -->
 						<aside class="notes">
@@ -109,12 +110,12 @@
 
 					</section>
 
-					<section>
-						<h3>¿Que es un conjunto de instrucciones?</h3>
-						<p>Dijimos que un algoritmo es un <strong>conjunto de instrucciones</strong>...</p>
-						<p>Supongamos que tenemos que desarrollar el algoritmo para que un robot aspiradora limpie.</p>
+					<!-- <section>
+						<h3>¿Que es una sentencia?</h3>
+						<p>En un lenguaje de programación, una sentencia es una línea de código al mando de una tarea. </p>
+						
 						<p>El conjunto de instrucciones puede estar dado por las cosas que el robot <em>podría hacer</em>. Como <strong>limpiar</strong>, <strong>moverse</strong>, <strong>girar</strong>, etc.</p>
-					</section>
+					</section> -->
 
 					<!-- <section>
 						<h3>Comentarios en los algoritmos</h3>
@@ -134,7 +135,7 @@
 					
 					<section>
 						<h3>Flujo en los algoritmos</h3>
-						<p>Un algoritmo es <em>en parte</em> una secuencia de instrucciones</p>
+						<p>Un algoritmo es <em>en parte</em> una secuencia de instrucciones.</p>
 						<img src="img/clase1/secuencia.gif">
 						<p>La secuencia indica que se procesa una instrucción tras otra. En orden de arriba hacia abajo.</p>
 						<!-- <p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p> -->
@@ -157,7 +158,7 @@
 
 						<p><small>El orden de las instrucciones está dado de arriba hacia abajo. Primero se procesa la línea 1, luego la 2 y termina en la línea 8.</small></p>
 
-						<!-- <p>Las instrucciones se escriben una por línea <em>ejecutan</em> una tras otra en el orden de arriba hacia abajo.</p> -->
+						
 
 					</section>
 
@@ -289,7 +290,7 @@
 						<img src="img/clase1/aspiradora_3x3.png">
 					
 						<br>
-						<small> Las instrucciones disponibles son:<br>
+						<small>Las instrucciones disponibles son:<br>
 							<ul> 
 								<li><code>limpiar</code></li>
 								<li><code>avanzar</code></li>
@@ -332,10 +333,17 @@
 					<section id="condiciones">
 						<h3>Condiciones lógicas</h3>
 						<p>Una condición es algo que puede ser evaluado y tiene como respuesta o resultado un <strong><code>verdadero</code></strong> o <strong><code>falso</code></strong>.</p>
-						<p>Por ejemplo, una condición lógica sería si alguien preguntara <strong>¿Trabajás acá?</strong>. La respuesta sería sí o no (verdadero o falso).</p>
+						<p>Supongamos que nos pasan un número cualquiera. Una condición lógica podría ser <strong>¿El número es par?</strong>. La respuesta sería <em>sí</em> o <em>no</em> (<code>verdadero</code> o <code>falso</code>).</p>
 						<p>Otro ejemplo, <strong>¿10 es mayor a 9?</strong> en este caso sería <strong>verdadero</strong>.</p>
-						<p><small>Veremos muchas condiciones lógicas a lo largo del curso.</small></p>
+						<p><small>Profundizaremos mas adelante en el curso sobre condiciones lógicas y el tipo de datos asociado a las mismas.</small></p>
 						
+					</section>
+
+					<section id="pseudocodigo">
+						<h3>pseudocódigo</h3>
+						<p>El pseudocódigo puede verse como un <em>lenguaje de programación</em> informal que se utiliza para describir el funcionamiento de un algoritmo de manera clara y concisa.</p>
+						<p>El pseudocódigo se asemeja al lenguaje natural pero con una serie de <em>convenciones</em> que facilitan la comprensión de los algoritmos.</p>
+						<p><small>Los ejemplos que veremos a continuación sobre algoritmos están expresados en pseudocódigo.</small></p>
 					</section>
 
 					<section>
@@ -367,7 +375,7 @@
 
 					<section id="repeticion">
 						<h3>Estructuras de control <br><small>(Repetición)</small></h3>
-						<p>En el <a href="#/ej_aspiradora">ejemplo de la aspiradora</a> vimos que las instrucciones repetían una y otra vez. Para simplificar el algoritmo, existen instrucciones que nos permiten escribirlas solo una vez y el algoritmo se encargará de repetirlas.</p>
+						<p>Es una instrucción que lleva a cabo la repetición de un <em>bloque de código</em> un número <code>n</code> de veces predefinido y conocido de antemano.</p>
 						<pre data-id="code-animation"><code class="hljs python"  data-trim data-line-numbers="5">
 							repetir (3 veces)
 								limpiar
@@ -379,10 +387,10 @@
 					</section>
 
 					<section id="bloque_de_instruccion">
-						<h3>Bloque de instrucciones</h3>
-						<p>Un bloque de instrucciones es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
+						<h3>Bloque de código o de instrucciones</h3>
+						<p>Es un conjunto de instrucciones que están <em>dentro de otra instrucción.</em></p>
 
-						<pre><code data-trim data-line-numbers>
+						<pre><code data-trim class="hljs bash" data-line-numbers>
 							instruccion_a
 							instruccion_b
 							repetir(3 veces)
@@ -414,21 +422,21 @@
 					<section data-auto-animate>
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>Algoritmo "por si llueve" v1</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
 							mirar por la ventana
 							si (llueve)
 								agarrar paraguas
 							ir al curso
 						</code></pre>
 						<p class="fragment">El flujo del algoritmo, en caso que llueva será, la línea 1,2,3 y 4. Pero si no llueve, será 1,2 y 4.</p>
-						<p class="fragment"><small>Observar que <code>(llueve)</code> tiene como resultado un valor sí o no... <code>verdadero</code> o <code>falso</code> respectivamente.</small></p>
+						<p class="fragment"><small>Observar que <code>(llueve)</code> tiene como resultado un valor <strong>lógico</strong> que puede evaluarse como <code>verdadero</code> o <code>falso</code>.</small></p>
 						<p class="fragment"><small>Se utilizan los paréntesis para destacar la instrucción <code>si</code> y a la condición <code>llueve</code>.</small></p>
 					</section>
 
 					<section data-auto-animate>
 						<h3>Estructuras de control <br><small>(Selección)</small></h3>
 						<p>Algoritmo "por si llueve" v2</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
 							mirar por la ventana
 							si (llueve)
 								agarrar paraguas y llaves del auto
@@ -438,6 +446,17 @@
 						</code></pre>
 						<p class="fragment">El flujo del algoritmo, en caso que llueva será, la línea 1,2,3 y 6. Pero si no llueve, será 1,2,4,5 y 6.</p>
 						
+					</section>
+
+					<section>
+						<h3>Estructuras de control <br><small>(Selección múltiple)</small></h3>
+						<p>Existe una estructura para decidir entre múltiples alternativas.</p>
+						<small>Se les conoce como <code>case</code> o <code>switch</code> por la forma en que generalmente se los utiliza en los lenguajes de programación.</small>
+
+						<img src="img/clase1/seleccion_multiple.gif">
+						
+						
+
 					</section>
 	
 					<section id="est_control_iteracion">
@@ -460,9 +479,9 @@
 					<section>
 						<h3>Estructuras de control <br><small>(Iteración)</small></h3>
 						<p>Algoritmo "llenar pileta con agua"</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation"><code class="hljs bash" data-trim data-line-numbers>
 							abrir canilla
-							mientras (la pileta no esté llena)
+							mientras (la pileta no este llena)
 								echar agua
 							cerrar canilla
 						</code></pre>
@@ -473,7 +492,7 @@
 					<section>
 						<h3>Estructuras de control <br><small>(Iteración/selección)</small></h3>
 						<p>Algoritmo "Saludamos a lxs alumnxs"</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation"><code data-trim class="hljs bash" data-line-numbers>
 							abrir centro de formacion
 							mientras (es horario de atencion)
 								si (llega una persona)
@@ -513,7 +532,7 @@
 					<section>
 						<h3>Datos</h3>
 						<p>Supongamos que queremos contabilizar la cantidad de personas que entran al centro de formación.</p>
-						<pre data-id="code-animation"><code data-trim data-line-numbers>
+						<pre data-id="code-animation"><code data-trim class="hljs bash" data-line-numbers>
 							abrir centro de formacion
 							cantidad = 0 # Arranco a contar desde 0
 							mientras (sea el horario)
@@ -526,6 +545,7 @@
 							
 						</code></pre>
 						<p><small>En este caso, el dato está representado por <code>cantidad</code>. Donde se van contabilizando las personas cuando van llegando.</small></p>
+						<p><small>Profundizaremos el concepto de datos y tipos de datos mas adelante en el curso.</small></p>
 					</section>
 
 					<section>
@@ -544,6 +564,8 @@
 						</ul>
 						<ul><br>
 							<li><strong>Datos</strong>: Representan los datos que podemos ingresar, procesar, y pueden ser el resultado de la ejecución de los algoritmos.</li>
+							<li><strong>Precondición</strong>: La información relevante que se conoce como verdadera antes de iniciar el programa.</li>
+							<li><strong>Postcondición</strong>: La información que debería ser verdadera al concluir el algoritmo.</li>
 						</ul>
 						</small>
 						<p><small>Con las herramientas vistas hasta ahora volcadas en un lenguaje de programación se pueden desarrollar una gran cantidad de programas.</small></p>
@@ -570,7 +592,7 @@
 					</section>
 
 					<section id="ejercicio_2">
-						<h2>Ejercicio en clase 2</h2>
+						<h3>Ejercicio en clase 2</h3>
 						<p>Diseñe un algoritmo para "adivinar un número".</p> 
 						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. Se debe llevar la cantidad de intentos hasta que se adivina el número.</p>
 						<p><small><strong>Precond:</strong> Eventualmente alguien adivinará el número.</small></p>
@@ -585,7 +607,7 @@
 
 
 			</section>
-					<section data-state="customevent" data-transition="zoom" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<section id="fin-clase" data-state="customevent" data-transition="zoom" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
 						<h3>¡Fin de la clase!</h3>
 						<a href="/"> Ir al inicio </a><br>
 						<a href="./clase0.html"> Ir a clase anterior </a><br>
