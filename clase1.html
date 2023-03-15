@@ -469,11 +469,14 @@
 							mirar por la ventana
 							si (llueve)
 								agarrar paraguas
+								agarrar piloto
+								agarrar botas
 							ir al curso
 						</code></pre>
 						<p class="fragment">El flujo del algoritmo, en caso que llueva será, la línea 1,2,3 y 4. Pero si no llueve, será 1,2 y 4.</p>
 						<p class="fragment"><small>Observar que <code>(llueve)</code> tiene como resultado un valor <strong>lógico</strong> que puede evaluarse como <code>verdadero</code> o <code>falso</code>.</small></p>
 						<p class="fragment"><small>Se utilizan los paréntesis para destacar la instrucción <code>si</code> y a la condición <code>llueve</code>.</small></p>
+						
 					</section>
 
 					<section data-auto-animate>
@@ -482,7 +485,8 @@
 						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
 							mirar por la ventana
 							si (llueve)
-								agarrar paraguas y llaves del auto
+								agarrar paraguas
+								agarrar llaves del auto
 							sino
 								agarrar la sube
 							ir al curso
@@ -526,11 +530,35 @@
 							abrir canilla
 							mientras (la pileta no este llena)
 								echar agua
+								hacer otra cosa
 							cerrar canilla
 						</code></pre>
 						<p class="fragment">El flujo será: línea 1 y luego las líneas 2 y 3 se repitirán indefinidamente hasta que se llene la pileta. Luego continúa con las próximas sentencias.</p>
-						<p class="fragment"><small>Observar que <code>(la pileta no esté llena)</code> tiene como resultado un valor <code>verdadero</code> o <code>falso</code>.</small></p>
+						<p class="fragment"><small>Es importante destacar que una vez que el programa entra al mientras, las instrucciones que están dentro del bloque se ejecutarán TODAS. Una vez que terminen de ejecutarse todas, se vuelve a evaluar la condición para ingresar otra vez (o no) a la iteración.</small></p>
 					</section>
+
+					<section>
+						<h3>Condicionales negativas</h3>
+
+						<p>Es posible evaluar una condición negativa</p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim data-line-numbers>
+							instruccion_a
+							si NO (llueve)
+								instruccion_b
+								instruccion_c
+								...
+							mientras NO (condición)
+								instruccion_d
+								instruccion_e
+								...
+						</code></pre>
+						<p><small>En los casos mencionados, entra en el bloque del <code>si</code>, si <strong>NO llueve</strong> y entra en el loop del mientras e itera sobre él mientras <strong>NO se cumpla la condición</strong>.</small></p>
+
+						<p><small>En algunos lenguajes se suele usar la palabra <strong>not</strong> o el signo <strong>!</strong> para realizar una negación de una condición.</small></p>
+					</section>
+
+
 
 					<section>
 						<h3>Estructuras de control <br><small>(Iteración/selección)</small></h3>
@@ -630,9 +658,9 @@
 					</section>
 
 					<section id="ejercicio_1">
-						<h3>Ejercicio en clase 1</h3>
-						<p>Escribir un algoritmo que permita a la aspiradora barrer todo el piso. Utilice todas las herramientas aprendidas que considere útiles.</p>
-						<img src="img/clase1/aspiradora_3x3.png">
+						<h3>Ejercicio en clase</h3>
+						<p>Escribir un algoritmo que permita a la aspiradora barrer la primer fila. Utilice todas las herramientas aprendidas que considere útiles.</p>
+						<img src="img/clase1/aspiradora_fila.png">
 						<p><small>El área a limpiar es la que se muestra en la imágen.</small></p>
 
 					</section>
@@ -643,11 +671,6 @@
 						<p>Una persona piensa un número y le pide a las demás personas que le digan un número. Si la persona no acierta, le preguntará a la persona siguiente. El algoritmo se ejecuta hasta que alguien adivine el número*. Una vez que lo adivine, le dirá a la persona ¡Ganaste!. Se debe llevar la cantidad de intentos hasta que se adivina el número.</p>
 						<p><small><strong>Precond:</strong> Eventualmente alguien adivinará el número.</small></p>
 						<p><small><strong>Poscond:</strong> Se obtiene el número de intentos hasta que alguien acierta.</small></p>
-
-
-
-
-						
 
 					</section> -->
 
