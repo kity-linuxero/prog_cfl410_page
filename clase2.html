@@ -158,14 +158,15 @@
 
 						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim>
 							programa ejemplo
-								# variables
+							# variables
 									# Aquí van a ir todas las variables que usemos
 
+							# main
 								repetir (10 veces)
 									limpiar
-							
 							fin_programa
 						</code></pre>
+						<small>Y también usaremos la sección <code>#main</code> para definir donde comienza el programa.</small>
 
 					</section>
 
@@ -231,7 +232,7 @@
 						<p>A continuación veremos ejemplos de lógica.</p>
 					</section>
 
-					<section data-auto-animate id="bool_not">
+					<section id="bool_not">
 						<h3>Operaciones sobre booleanos</h3>
 						<h4>Negación - NOT - NO</h4>
 
@@ -265,7 +266,7 @@
 
 					</section>
 
-					<section data-auto-animate id="bool_and">
+					<section id="bool_and">
 						<h3>Operaciones sobre booleanos</h3>
 						<h4>Disyunción - AND - y</h4>
 						<table>
@@ -308,7 +309,7 @@
 						</aside>
 					</section>
 
-					<section data-auto-animate id="bool_or">
+					<section id="bool_or">
 						<h3>Operaciones sobre booleanos</h3>
 						<h4>Conjunción - OR - ó</h4>
 						<table>
@@ -555,24 +556,22 @@
 								<tr>
 									<td>Suma</td>
 									<td><code>+</code></td>
-									<td><code>x+1</code></td>
-									<td><code>11</code></td>
+									<td><code>x+x+1</code></td>
+									<td><code>21</code></td>
 								</tr>
-
-								
 
 								<tr>
 									<td>Resta</td>
 									<td><code>-</code></td>
-									<td><code>x-2</code></td>
-									<td><code>8</code></td>
+									<td><code>x-20</code></td>
+									<td><code>-10</code></td>
 								</tr>
 
 								<tr>
 									<td>Producto</td>
 									<td><code>*</code></td>
-									<td><code>x*2</code></td>
-									<td><code>20</code></td>
+									<td><code>x*x</code></td>
+									<td><code>100</code></td>
 								</tr>
 
 								<tr>
@@ -593,7 +592,7 @@
 					<section id="tipo_string">
 						<h3>Tipo de dato string</h3>
 						<p>Se llama string (cadena) al tipo de datos utilizado para representar cadena de caracteres como palabras, texto, etc.</p>
-						<h4>Operaciones sobre string*</h4>
+						<h4>Operaciones sobre string</h4>
 						<small>
 							<table>
 								<thead><tr>
@@ -622,8 +621,10 @@
 							</table>
 							
 						</small>
-						<p><small>Por lo general un string va entre comillas dobles o comillas simples.</small>
-						<small>Existen muchas mas operaciones sobre string que se verán cuando veamos Python.</small></p>
+						<small>Por lo general un string va entre comillas dobles o comillas simples.</small>
+						<p><small class="fragment"><strong>¿Cuánto es '2'+'2'?</strong><span class="fragment"> <strong class="rojo">: 22</strong></span></small>
+						<small class="fragment">Existen muchas mas operaciones sobre string que se verán cuando veamos Python.</small></p>
+						
 
 
 					</section>
@@ -668,11 +669,11 @@
 
 						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
 							programa ejemplo_1
-								# variables
+							# variables
 								int x = 1 # Se crea x y se le asigna el valor 1
 								int y = 0 # Se crea y y se le asigna el valor 0
 
-								# Cambio de valores
+							# main
 								x = 20 # Ahora x vale 20
 								y = 1 # Ahora y vale 1
 
@@ -694,11 +695,11 @@
 
 						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
 							programa ejemplo_2
-								# variables
+							# variables
 								bool hay_stock = False # Se crea la variable en falso
 								float precio = 100.50 # Se crea precio
 								string mensaje = "NO hay stock"
-
+							# main
 								si (hay_stock)
 									imprimir(precio)
 								sino
@@ -713,13 +714,14 @@
 
 					<section data-auto-animate>
 						<h3>Notación usada en la práctica</h3>
-						<p>Ejemplo con la aspiradora robot:</p>
+						<p>Para la práctica de <em>pseudocódigo</em> usaremos la siguiente sintaxis:</p>
 
 						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							# Ejemplo con la aspiradora robot
 							programa ejemplo_3
-								# variables
-								int balsosas_limpiadas = 0
-								# Programa principal
+							# variables
+								int baldosas_limpiadas = 0
+							# main
 								mientras (NO hay_pared_delante)
 									si (NO esta_limpio)
 										limpiar
@@ -731,6 +733,29 @@
 						</code></pre>
 
 						<p><small>¿Qué hace el programa del ejemplo?</small></p>
+						
+
+					</section>
+					
+
+					<section>
+						<h3>Asignación</h3>
+						<p>Es posible asignarle valores a las variables o copiar el contenido de otra variable:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							programa ejemplo_4
+							# variables
+								int x = 10 # Ahora x es igual a 10
+								int y = x # Se copia el valor de x en y
+								
+							# main
+								x= x+1
+								imprimir("El valor de Y es: {y}")
+								
+							fin_programa
+						</code></pre>
+
+						<p><small>¿Qué imprime el programa?</small></p>
 
 					</section>
 	
