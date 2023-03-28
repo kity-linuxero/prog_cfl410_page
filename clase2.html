@@ -1,0 +1,856 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+					<h4>Clase 2: Datos, tipos de datos y variables</h4>
+
+				</section>
+
+				<section data-state="no_footer" data-transition="fade">
+				
+				<section>
+					<h2>Comentarios</h2>
+				</section>
+
+				<section>
+					<h3>Comentarios</h3>
+					<p>Los comentarios son anotaciones que el programador incorpora en el código fuente para mejorar la comprensión del programa/algoritmo.</p>
+					<p>La computadora ignora las líneas de comentarios en el momento de ejecución y/o compilación por lo que solo es a fines que el código se entienda mejor por una persona que lo leerá a futuro.</p>
+					
+				</section>
+
+				<section>
+					<h3>Comentarios</h3>
+					<p>Si un programa tiene comentarios o no es indistinto para la ejecución del mismo o el procesamiento por parte de la computadora.</p>
+					<p>Se recomienda el uso de comentarios siempre que sea posible y que sea información precisa, breve y descriptiva.</p>
+				</section>
+
+				<section data-auto-animate>
+					<h3>Sintaxis de comentarios</h3>
+					<p>Existen muchas formas de representar comentarios y cada lenguaje elije una forma.</p>
+					<p>En Java, Javascript, C, C++, C#... se utilizan los caracteres <code>/* */</code> y/o <code>//</code>para definir un comentario.</p>
+
+					<pre data-id="code-animation" class="codigo_shadow"><code class="hljs java codigo-redondo" data-trim data-line-numbers>
+						/* El siguiente programa hace un saludo en Java */
+						class Saludo {
+							public static void main(String[] args) {
+								// Imprime un saludo
+								System.out.println("¡Hola alumnos y alumnas!"); 
+							}
+						}
+					</code></pre>
+					
+					<p><small>¿Cuál el la diferencia entre <code>/* */</code> y <code>//</code>? Es que el primero permite hacer comentarios de mas de una línea, mientras que el segundo se utiliza para hacer comentarios de una sola línea.</small></p>
+					
+					
+
+				</section>
+
+				<section data-auto-animate>
+					<h3>Sintaxis de comentarios</h3>
+					<p>Existen muchas formas de representar comentarios y cada lenguaje elije una forma.</p>
+					<p>En Python, Ruby, Bash... se utilizan el caracter <code>#</code> para definir un comentario.</p>
+
+					<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo" data-trim data-line-numbers>
+						# El siguiente programa hace un saludo en Python
+						# Otra línea de comentario requiere otro '#'
+						print("Hola alumnos y alumnas")
+						# Ya están todxs saludados
+					</code></pre>
+					<small>El caracter <code>#</code> son para hacer comentarios de una línea.</small>
+					<small>En las prácticas de <em>pseudocódigo</em> usaremos el <code>#</code> para definir comentarios.</small>
+
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+			  </section>
+
+				<section data-state="no_footer" data-transition="fade">
+					<section id="definiciones">
+						<h2>Conceptos de control y datos</h2>				
+						<!-- Notas del slide -->
+
+
+						<aside class="notes">
+							Lo que vimos hasta ahora, las  instrucciones constituye el control del algoritmo.
+							Normalmente la lectura del control de un algoritmo, que también puede
+							representarse gráficamente, indica el orden en que se irán ejecutando las
+							instrucciones y como consecuencia de ello, qué es lo que ese algoritmo hace.
+						</aside>
+						
+					</section>
+
+					<section id="control">
+						<h3>Concepto de control</h3>
+						<p>Hasta ahora, estuvimos viendo el control del algoritmo mediante las estructuras vistas: secuencia, selección, repetición, iteración.</p>
+						<p>Con dichas estructuras fuimos capaces de manipular el control del algoritmo.</p>
+						<p>A continuación veremos como manipular los datos de un algoritmo.</p>
+					</section>
+
+
+					<section id="dato">
+						<h3>Concepto de dato</h3>
+						<p>Un <strong>dato</strong> es un elemento u objeto de la realidad que los algoritmos representan y son capaces de modificar y procesar.</p>
+						<small>Cuando se resuelven problemas con computadora, muchas veces se modelizan los
+							objetos reales mediante objetos más abstractos, representables y entendibles sobre una
+							computadora.</small>
+
+						<p><small>Un dato puede ser el nombre de una persona, la temperatura actual, el valor de un producto de un supermercado, etc.</small></p>
+						<p><small>Es importante entender que el mecanismo de resolución de problemas involucra generalmente una transformación o un procesamiento de los datos, manejado por el control del algoritmo.</small></p>
+					</section>
+
+					<section id="representacion_datos">
+						<h3>Representación de datos</h3>
+						<p>Los algoritmos modifican objetos de la realidad para resolver problemas. La representación de los datos estará dada por sus características principales o por la información que nos interese saber.</p>
+						<p>A continuación comenzaremos extendiendo la notación empleada en los algoritmos para dar lugar a las declaraciones y representación de los datos.</p>
+
+					</section>
+
+					<section id="variables">
+						<h3>Variables</h3>
+						<p>En general, durante la ejecución de un programa es necesario manipular información
+							que puede cambiar continuamente. Por este motivo, es imprescindible contar con un
+							elemento que permita variar la información que se maneja en cada momento. Este
+							elemento es lo que se conoce como <strong>variable</strong>.</p>
+						<p>Una variable <em>permite almacenar un valor</em> que puede ser modificado a lo largo de la
+							ejecución del programa.</p>
+
+						<p><small>Técnicamente, una variable es un lugar en la <a href="https://programacion.concristian.com.ar/clase1.html#ram" target="_blank">memoria RAM</a> de la computadora donde se almacenará dicha información.</small></p>
+						
+					</section>
+
+					<section id="declaracion_variables_p1">
+						<h3>Declaración de variables: Identificadores</h3>
+						<p><strong>Identificadores:</strong> Son los nombres descriptivos que se asocian a los datos (variables) para representar, dentro del programa su valor.</p>
+						<p><small>Los identificadores van tan de la mano de las variables que a veces se les conoce directamente como <em>nombre de la variable</em>.</small></p>
+						<p><small>Pero los <strong>identificadores</strong> no solo van asociados a las variables. También a muchas mas estructuras que veremos mas adelante.</small></p>
+					</section>
+
+					<section id="declaracion_variables_p2">
+						<h3>Declaración de variables</h3>
+						<p>En algunos lenguajes, existe un área específica para declarar variables. Otros lenguajes no tienen esta restricción y permiten declarar variables en cualquier momento.</p>
+						<p><small>A fines prácticos usaremos un área específica luego de la declaración del programa con un comentario <strong># variables</strong> donde declararemos las variables y mantenernos ordenados.</small></p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim>
+							programa ejemplo
+							# variables
+									# Aquí van a ir todas las variables que usemos
+
+							# main
+								repetir (10 veces)
+									limpiar
+							fin_programa
+						</code></pre>
+						<small>Y también usaremos la sección <code>#main</code> para definir donde comienza el programa.</small>
+
+					</section>
+
+					<section>
+						<h2>¿Preguntas?</h2>
+
+					</section>
+
+				</section>
+
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Tipos de datos</h2>
+					</section>
+	
+					<section id="tipos_de_datos">
+						<h3>Tipos de datos</h3>
+						
+						<p>Independientemente del lenguaje de programación que se use, la definición de un tipo de dato implica considerar:</p>
+						<p>
+							<ul>
+								<li>Cuáles valores puede tomar.</li>
+								<li>Cuáles son las operaciones que se pueden hacer sobre esos datos.</li>
+								<li>Su representación interna.</li>
+							</ul>
+						</p>
+	
+						<!-- Notas del slide -->
+						<aside class="notes">
+							
+						</aside>
+
+					</section>
+
+					<section id="tipos_basicos">
+						<h3>Tipos de datos básicos</h3>
+						<p>Resumen tipos básicos:</p>
+						<ul>
+							<li><strong>Lógicos</strong>: Valores lógicos (Verdadero o Falso)</li>
+							<li><strong>Numéricos</strong>: Valores numéricos (1,2,3...)</li>
+							<li><strong>String</strong>: Cadena de caracteres. (Palabras)</li>
+						</ul>
+						<p><small>A veces también son llamados tipos de datos primitivos.</small></p>
+					</section>
+
+					<section id="logicos">
+						<h3>Tipo de dato lógico</h3>
+						<p>También conocido como <em>boolean</em> o <em>bool</em> es un tipo de datos que puede tener los valores <strong>Verdadero</strong> (True) o <strong>Falso</strong> (False).</p>
+						<p>Los tipos lógicos pueden compararse entre sí. Y las operaciones son las siguientes:</p>
+
+					</section>
+
+					<section id="operaciones_logicas" data-auto-animate>
+						<h3>Operaciones sobre booleanos</h3>
+						<p>Los operadores booleanos básicos son:
+						</p>
+						<ul>
+							<li>Negación - no (not)</li>
+							<li>Suma o disyunción - ó (or)</li>
+							<li>Producto o conjunción - y (and)</li>
+						</ul>
+						<p>A continuación veremos ejemplos de lógica.</p>
+					</section>
+
+					<section id="bool_not">
+						<h3>Operaciones sobre booleanos</h3>
+						<h4>Negación - NOT - NO</h4>
+
+						<table>
+							<thead><tr>
+								<th>p</th>
+								<th>not p</th>
+
+							</tr></thead>
+							<tbody><tr>
+								<td>True</td>
+								<td>False</td>
+
+							</tr>
+							<tr>
+								<td>False</td>
+								<td>True</td>
+
+							</tr></tbody>
+						</table>
+
+						<small>Si algo es <strong>True</strong> y se le aplica el operador <strong>not</strong> su valor se cambia a <strong>False</strong>.</small>
+						<small>Si algo es <strong>False</strong> y se le aplica el operador <strong>not</strong> su valor se cambia a <strong>True</strong>.</small>
+						<small>Básicamente invierte su valor.</small>
+
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Ejemplo de la aspiradora. Si NOT hay_bateria. Si NOT este_limpio o hay_pared.
+						</aside>
+
+
+					</section>
+
+					<section id="bool_and">
+						<h3>Operaciones sobre booleanos</h3>
+						<h4>Disyunción - AND - y</h4>
+						<table>
+							<thead>
+								<tr>
+									<th>p</th>
+									<th>q</th>
+									<th>p and q</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>True</td>
+									<td>True</td>
+									<td>True</td>
+								</tr>
+								<tr>
+									<td>True</td>
+									<td>False</td>
+									<td>False</td>
+								</tr>
+								<tr>
+									<td>False</td>
+									<td>True</td>
+									<td>False</td>
+								</tr>
+								<tr>
+									<td>False</td>
+									<td>False</td>
+									<td>False</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><small>Si hay <strong>un valor en false</strong>, el resultado será siempre false.</small></p>
+						<p class="fragment"><small>p: esta_limpio | q: hay_pared_delante</small></p>
+
+						<!-- Notas del slide -->
+						<aside class="notes">
+							Ejemplo de la aspiradora. Si hay_bateria y NOT este_limpio
+						</aside>
+					</section>
+
+					<section id="bool_or">
+						<h3>Operaciones sobre booleanos</h3>
+						<h4>Conjunción - OR - ó</h4>
+						<table>
+							<thead>
+								<tr>
+									<th>p</th>
+									<th>q</th>
+									<th>p or q</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>True</td>
+									<td>True</td>
+									<td>True</td>
+								</tr>
+								<tr>
+									<td>True</td>
+									<td>False</td>
+									<td>True</td>
+								</tr>
+								<tr>
+									<td>False</td>
+									<td>True</td>
+									<td>True</td>
+								</tr>
+								<tr>
+									<td>False</td>
+									<td>False</td>
+									<td>False</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><small>Si hay <strong>valor en true</strong>, el resultado será siempre true.</small></p>
+						<p class="fragment"><small>p: esta_limpio | q: hay_pared_delante</small></p>
+					</section>
+
+					<section id="logicos_comparacion">
+						<h3>Operadores de comparación</h3>
+						<p><small>Suponiendo que <code>x=False</code> e <code>y=True</code></small></p>
+						<small>
+							<table>
+								<thead><tr>
+									<th>Relación</th>
+									<th>Sintaxis</th>
+									<th>Ejemplo</th>
+									<th>Resultado</th>
+								</tr></thead>
+								<tbody>
+
+								<tr>
+									<td>Igualdad</td>
+									<td><code>==</code></td>
+									<td><code>x==y</code></td>
+									<td><code>False</code></td>
+								</tr>
+
+								<tr>
+									<td>Igualdad</td>
+									<td><code>==</code></td>
+									<td><code>x==False</code></td>
+									<td><code>True</code></td>
+								</tr>
+
+								<tr>
+									<td>Distinto</td>
+									<td><code>!=</code></td>
+									<td><code>x!=y</code></td>
+									<td><code>True</code></td>
+								</tr>
+
+								<tr>
+									<td>Distinto</td>
+									<td><code>!=</code></td>
+									<td><code>x!=True</code></td>
+									<td><code>True</code></td>
+								</tr>
+
+								
+							
+							</tbody>
+							</table>
+						</small>
+						
+						<!-- <p><small>.</small></p> -->
+					</section>
+
+					<section>
+						<h2>¿Preguntas?</h2>
+						<p class="fragment">Seguimos... </p>
+					</section>
+					
+					<section id="numericos">
+						<h3>Tipo de dato numérico</h3>
+						<p>Es uno de los tipos de datos fundamentales. Dentro de los cuales podemos destacar:</p>
+						<p>
+							<ul>
+								<li><strong>Enteros</strong> (int):<small>Son números que no tienen parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>enteros</strong> que se representan con este tipo son: ... -2, -1, 0, 1, 2 ... En los lenguajes de programación se suelen identificar como <code><strong>int</strong></code> o <code><strong>Integer</strong></code>.</small></li>
+								<li><strong>Reales</strong> (float):<small>Son números que tienen una parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>reales</strong> que se representan con este tipo son: ... -2.23, -1.01, 0.009, 1.9, 2.1 ... En los lenguajes de programación se suelen identificar como <code><strong>float</strong></code>.</small></li>
+							</ul>
+						</p>
+
+						<p class="fragment"><small>¿Cuándo usar un <code>int</code> y cuando un <code>float</code>?</small></p>
+						
+						<!-- <p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p> -->
+					</section>
+
+					<section id="numericos_comparacion">
+						<h3>Operadores de comparación</h3>
+						<small>
+							<table>
+								<thead><tr>
+									<th>Relación</th>
+									<th>Sintaxis</th>
+									<th>Ejemplo</th>
+									<th>Resultados posibles</th>
+								</tr></thead>
+								<tbody>
+
+								<tr>
+									<td>Menor</td>
+									<td><code><</code></td>
+									<td><code>x<y</code></td>
+									<td><code>True</code> o <code>False</code></td>
+								</tr>
+
+								<tr>
+									<td>Mayor</td>
+									<td><code>></code></td>
+									<td><code>x>y</code></td>
+									<td><code>True</code> o <code>False</code></td>
+								</tr>
+
+								<tr>
+									<td>Menor o igual</td>
+									<td><code><=</code></td>
+									<td><code>x<=y</code></td>
+									<td><code>True</code> o <code>False</code></td>
+								</tr>
+
+								<tr>
+									<td>Mayor o igual</td>
+									<td><code>>=</code></td>
+									<td><code>x>=y</code></td>
+									<td><code>True</code> o <code>False</code></td>
+								</tr>
+
+								<tr>
+									<td>Igualdad</td>
+									<td><code>==</code></td>
+									<td><code>x==y</code></td>
+									<td><code>True</code> o <code>False</code></td>
+								</tr>
+
+								<tr>
+									<td>Distinto</td>
+									<td><code>!=</code></td>
+									<td><code>x!=y</code></td>
+									<td><code>True</code> o <code>False</code></td>
+								</tr>
+							
+							</tbody>
+							</table>
+						</small>
+						<p><small><code>x</code> e <code>y</code> son dos variables cualquieras.</small></p>
+						<p><small>Los operadores de comparación serán utilizados para comparar variables, valores o condiciones en los programas. El resultado de una comparación entre dos datos será <strong>True</strong> o <strong>False</strong>.</small></p>
+					</section>
+
+					<section id="numericos_aritmetica">
+						<h3>Operadores de aritmética</h3>
+						<p><small>Suponiendo que <code>x=1</code> e <code>y=2</code></small></p>
+						<small>
+							<table>
+								<thead><tr>
+									<th>Relación</th>
+									<th>Sintaxis</th>
+									<th>Ejemplo</th>
+									<th>Resultado</th>
+								</tr></thead>
+								<tbody>
+
+								<tr>
+									<td>Suma</td>
+									<td><code>+</code></td>
+									<td><code>x+y</code></td>
+									<td><code>3</code></td>
+								</tr>
+
+								<tr>
+									<td>Resta</td>
+									<td><code>-</code></td>
+									<td><code>x-y</code></td>
+									<td><code>-1</code></td>
+								</tr>
+
+								<tr>
+									<td>Producto</td>
+									<td><code>*</code></td>
+									<td><code>x*y</code></td>
+									<td><code>2</code></td>
+								</tr>
+
+								<tr>
+									<td>División</td>
+									<td><code>/</code></td>
+									<td><code>x/y</code></td>
+									<td><code>0.5</code></td>
+								</tr>
+
+								<tr>
+									<td>División entera</td>
+									<td><code>//</code></td>
+									<td><code>x//y</code></td>
+									<td><code>0</code></td>
+								</tr>
+
+								<tr>
+									<td>Módulo</td>
+									<td><code>%</code></td>
+									<td><code>x%y</code></td>
+									<td><code>1</code></td>
+								</tr>
+							
+							</tbody>
+							</table>
+						</small>
+						
+						<p><small>En los lenguajes de programación los tipos <code>int</code> y <code>float</code> tienen compatibilidad o una forma de compatibilizarlos. Por lo que se pueden realizar esas tareas sobre enteros y float. Prestar atención que a veces el resultado puede ser un tipo u otro.</small></p>
+					</section>
+
+					<section id="numericos_aritmetica_const">
+						<h3>Operadores de aritmética</h3>
+						<p><small>Suponiendo que <code>x=10</code> es posible operar con números directamente.</small></p>
+						<small>
+							<table>
+								<thead><tr>
+									<th>Relación</th>
+									<th>Sintaxis</th>
+									<th>Ejemplo</th>
+									<th>Resultado</th>
+								</tr></thead>
+								<tbody>
+
+								<tr>
+									<td>Suma</td>
+									<td><code>+</code></td>
+									<td><code>x+x+1</code></td>
+									<td><code>21</code></td>
+								</tr>
+
+								<tr>
+									<td>Resta</td>
+									<td><code>-</code></td>
+									<td><code>x-20</code></td>
+									<td><code>-10</code></td>
+								</tr>
+
+								<tr>
+									<td>Producto</td>
+									<td><code>*</code></td>
+									<td><code>x*x</code></td>
+									<td><code>100</code></td>
+								</tr>
+
+								<tr>
+									<td>División</td>
+									<td><code>/</code></td>
+									<td><code>x/2</code></td>
+									<td><code>5</code></td>
+								</tr>						
+							</tbody>
+							</table>
+						</small>
+						
+						<p><small>En los lenguajes de programación los tipos <code>int</code> y <code>float</code> tienen compatibilidad o una forma de compatibilizarlos. Por lo que se pueden realizar esas tareas sobre enteros y float. Prestar atención que a veces el resultado puede ser un tipo u otro.</small></p>
+					</section>
+
+
+
+					<section id="tipo_string">
+						<h3>Tipo de dato string</h3>
+						<p>Se llama string (cadena) al tipo de datos utilizado para representar cadena de caracteres como palabras, texto, etc.</p>
+						<h4>Operaciones sobre string</h4>
+						<small>
+							<table>
+								<thead><tr>
+									<th>Relación</th>
+									<th>Sintaxis</th>
+									<th>Ejemplo</th>
+									<th>Resultado</th>
+								</tr></thead>
+								<tbody>
+
+								<tr>
+									<td>Comparar</td>
+									<td>==</td>
+									<td>"Hola" == "Chau"</td>
+									<td>False</td>
+								</tr>
+
+								<tr>
+									<td>Concatenar</td>
+									<td>+</td>
+									<td>"Hola" + "Chau"</td>
+									<td>"HolaChau"</td>
+								</tr>
+							
+							</tbody>
+							</table>
+							
+						</small>
+						<small>Por lo general un string va entre comillas dobles o comillas simples.</small>
+						<p><small class="fragment"><strong>¿Cuánto es '2'+'2'?</strong><span class="fragment"> <strong class="rojo">: 22</strong></span></small>
+						<small class="fragment">Existen muchas mas operaciones sobre string que se verán cuando veamos Python.</small></p>
+						
+
+
+					</section>
+
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+
+				</section>
+
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Usando variables</h2>
+					</section>
+
+					<section>
+						<h3>Declaración de variables</h3>
+						<p>En Java, las variables de <em>tipo primitivo</em> se declaran de la siguiente manera:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs java codigo-redondo" data-line-numbers>
+							// Se declara una variable de tipo int vacía
+							int x;
+							// Se declara una variable int y se le asigna el valor 0
+							int y = 0; 
+						</code></pre>
+
+						<p>En Python puede variar la sintaxis:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							# Se declara una variable y se le asigna el 0
+							x = 0
+							x = "Hola"
+						</code></pre>
+
+						<p><small>Existen notables diferencias entre estos dos lenguajes. Mientras que en Java debemos ser específicos para definir el tipo de datos (tipado estático), en Python al <strong>asignarle</strong> el valor, se establece el tipo (tipado dinámico).</small></p>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Notación usada en la práctica</h3>
+						<p>Para la práctica de <em>pseudocódigo</em> usaremos la siguiente sintaxis:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
+							programa ejemplo_1
+							# variables
+							int x = 1 # Se crea x y se le asigna el valor 1
+							int y = 0 # Se crea y y se le asigna el valor 0
+
+							# main
+								x = 20 # Ahora x vale 20
+								y = 1 # Ahora y vale 1
+
+								si (x > y)
+									imprimir("X es mayor")
+								sino
+									imprimir("Y es mayor")
+							fin_programa
+						</code></pre>
+
+						<p><small>¿Qué hace el programa del ejemplo?</small></p>
+						
+
+					</section>
+
+					<section data-auto-animate>
+						<h3>Notación usada en la práctica</h3>
+						<p>Para la práctica de <em>pseudocódigo</em> usaremos la siguiente sintaxis:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
+							programa ejemplo_2
+							# variables
+								bool hay_stock = False # Se crea la variable en falso
+								float precio = 100.50 # Se crea precio
+								string mensaje = "NO hay stock"
+							# main
+								si (hay_stock)
+									imprimir(precio)
+								sino
+									imprimir(mensaje)
+
+							fin_programa
+						</code></pre>
+
+						<p><small>¿Qué hace el programa del ejemplo?</small></p>
+
+					</section>
+
+					<section data-auto-animate>
+						<h3>Notación usada en la práctica</h3>
+						<p>Para la práctica de <em>pseudocódigo</em> usaremos la siguiente sintaxis:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
+							# Ejemplo con la aspiradora robot
+							programa ejemplo_3
+							# variables
+								int baldosas_limpiadas = 0
+							# main
+								mientras (NO hay_pared_delante)
+									si (NO esta_limpio)
+										limpiar
+										balsosas_limpiadas = balsosas_limpiadas + 1
+									avanzar
+								# fin mientras
+								imprimir("Se limpiaron",balsosas_limpiadas,"baldosas")
+							fin_programa
+						</code></pre>
+
+						<p><small>¿Qué hace el programa del ejemplo?</small></p>
+						
+
+					</section>
+					
+
+					<section>
+						<h3>Asignación</h3>
+						<p>Es posible asignarle valores a las variables o copiar el contenido de otra variable:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							programa ejemplo_4
+							# variables
+								int x = 10 # Ahora x es igual a 10
+								int y = x # Se copia el valor de x en y
+								
+							# main
+								x= x+1
+								imprimir("El valor de Y es: {y}")
+								
+							fin_programa
+						</code></pre>
+
+						<p><small>¿Qué imprime el programa?</small></p>
+
+					</section>
+	
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+				</section>
+
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Ejercicios en clase</h2>
+
+					</section>
+
+					<section id="ejercicio_1">
+						<h3>Ejercicio en clase</h3>
+						<p>Escribir un programa que informe la cantidad de veces que fueron necesarias limpiar para que la baldosa <code>(1,39)</code> quede completamente limpia.</p>
+					</section>
+
+			</section>
+				<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+					<section id="fin-clase"  data-background-size="contain">
+						<h3>¡Fin de la clase!</h3>
+						<a href="/"> Ir al inicio </a><br>
+						<!-- <a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica1.md" target="_blank"> Práctica 1 </a><br> -->
+						<a href="?print-pdf"> Exportar clase a PDF</a>
+					</section>
+
+					<section>
+						<h3>Bibliografía</h3>
+						<ul>
+							<li>Apunte Curso ingreso 2019 - Capitulo 3, Facultad de Informática, UNLP.</li>
+						</ul>
+					</section>
+
+				</section>
+					
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
