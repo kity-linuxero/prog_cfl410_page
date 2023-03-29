@@ -643,6 +643,46 @@
 					</section>
 
 					<section>
+						<h3>Operación de Asignación</h3>
+						<p>En la programación, existe una instrucción para asignar un valor a una variable u <em>objeto</em>. Por lo general, se usa el signo igual <code>=</code></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							# Ejemplo de asignación en Python
+							# Se asigna el valor 0 a la variable contador
+							contador = 0 
+
+							# Se asigna el valor de contador a contador_2
+							contador_2 = contador
+							
+						</code></pre>
+
+						<p><small>Aunque al principio pueda parecer confuso, recordar que el símbolo <code>=</code> es usado para asignación. Si buscamos comparación, el símbolo será <code>==</code>.</small></p>
+						
+					</section>
+
+					<section>
+						<h3>Operación de Asignación</h3>
+						<p>Veamos el siguiente pseudocódigo:</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
+							programa ejemplo_asignacion
+							# variables
+								int x = 10 # Ahora x es igual a 10
+								int y = x # Se copia el valor de x en y
+								
+							# main
+								x= x+1
+								imprimir("El valor de Y es: {y}")
+								
+							fin_programa
+						</code></pre>
+
+						<p><small>¿Qué imprime el programa?</small></p>
+						<small class="fragment">Respuesta: <code>El valor de Y es: <span class="rojo">10</span></code><br>¿Por qué? <strong>El valor</strong> de <code>x</code> es copiado a <code>y</code> antes de hacer el cambio en <code>x</code>.</small>
+
+					</section>
+
+					<section>
 						<h3>Declaración de variables</h3>
 						<p>En Java, las variables de <em>tipo primitivo</em> se declaran de la siguiente manera:</p>
 
@@ -656,12 +696,13 @@
 						<p>En Python puede variar la sintaxis:</p>
 
 						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
-							# Se declara una variable y se le asigna el 0
-							x = 0
-							x = "Hola"
+							
+							x = 0 # Se declara una variable y se le asigna el 0
+							y = 10 # Se declara una variable y se le asigna el 10
+							x = "Hola" # Ahora x tiene el valor "Hola"
 						</code></pre>
 
-						<p><small>Existen notables diferencias entre estos dos lenguajes. Mientras que en Java debemos ser específicos para definir el tipo de datos (tipado estático), en Python al <strong>asignarle</strong> el valor, se establece el tipo (tipado dinámico).</small></p>
+						<p><small>Existen notables diferencias entre estos dos lenguajes. Mientras que en Java debemos ser específicos para definir el tipo de datos y el mismo NO puede cambiar (tipado estático), en Python al <strong>asignarle</strong> el valor, se establece el tipo y el mismo puede cambiar durante la ejecución del programa (tipado dinámico).</small></p>
 					</section>
 
 					<section data-auto-animate>
@@ -739,26 +780,7 @@
 					</section>
 					
 
-					<section>
-						<h3>Asignación</h3>
-						<p>Es posible asignarle valores a las variables o copiar el contenido de otra variable:</p>
 
-						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
-							programa ejemplo_4
-							# variables
-								int x = 10 # Ahora x es igual a 10
-								int y = x # Se copia el valor de x en y
-								
-							# main
-								x= x+1
-								imprimir("El valor de Y es: {y}")
-								
-							fin_programa
-						</code></pre>
-
-						<p><small>¿Qué imprime el programa?</small></p>
-
-					</section>
 	
 					<section>
 						<h2>¿Preguntas?</h2>
