@@ -789,6 +789,96 @@
 				</section>
 
 				<section data-state="no_footer">
+					<section>
+						<h2>Entrada/Salida de algoritmos</h2>
+					</section>
+					<section>
+						<h3>Salida (output)</h3>
+						<p>Ya <a href="https://programacion.concristian.com.ar/clase1.html#/2/12" target="_blank">hemos mencionado</a> que un algoritmo tiene <strong>entrada</strong> <em>(input)</em> y <strong>salida</strong> <em>output</em> de datos.</p>
+						<p>Una salida es un dato que nos devuelve la computadora que podemos ver o escuchar. Por ejemplo, un texto en pantalla, una luz que se enciende o un sonido.</p>
+						<p>Se utiliza para tener un <em>feedback</em> del programa al usuario.</p>
+					</section>
+
+					<section>
+						<h3>Salida (output)</h3>
+						<p>Por ahora venimos trabajando con la salida que, en pseudocódigo, imprime un mensaje en pantalla.</p>
+
+						<h4>Programa:</h4>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
+							imprimir("Hola Mundo")
+						</code></pre>
+
+						<h4>Salida:</h4>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo">
+							Hola Mundo
+						</code></pre>
+
+						<p><small>Es una forma muy común de informar el estado interno de un programa y lo usaremos muy a menudo en nuestro proceso de aprendizaje.</small></p>
+						<p><small>Casi todos los lenguajes de programación proveen una instrucción para imprimir algo en pantalla. El famoso <a href="https://es.wikipedia.org/wiki/Hola_mundo" target="_blank">Hola mundo</a>.</small></p>
+					</section>
+
+					<section>
+						<h3>Entrada (input)</h3>
+						<p>Los programas y algoritmos, procesan datos y generan salidas. Los datos deben obtenerlos de alguna forma, una de ellas es que el usuario los ingrese manualmente.</p>
+						<p>Los lenguajes tienen alguna forma de ingresar datos por teclado. Usaremos esta forma para ingresar manualmente.</p>
+					</section>
+
+					<section>
+						<h3>Entrada (input)</h3>
+						<p>Usaremos <code>input</code> para ingresar datos por teclado</p>
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
+							# variables
+							int x = 0
+							# main
+							imprimir("Ingrese un valor numérico: ")
+							x = input() # El programa se detiene 
+							imprimir("El valor ingresado es", x)
+						</code></pre>
+						<p><small>De esa manera, el programa se detiene y espera que el usuario ingrese un dato por teclado y lo almacenará en la variable <code>x</code></small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo">
+							Ingrese un valor numérico: 5
+							El valor ingresado es 5
+						</code></pre>
+
+						<p><small>La variable donde se ingrese los datos será una variable más y se podrá operar con ella según lo permita el tipo de datos que estamos esperando.</small></p>
+					</section>
+
+					<section>
+						<h3>Entrada (input)</h3>
+						<!-- <p>Usaremos <code>input</code> para ingresar datos por teclado</p> -->
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
+							# variables
+							int x = 0
+							# main
+							imprimir("Ingrese un valor numérico: ")
+							x = input() # El programa se detiene
+							si (x > 10)
+								imprimir("El valor ingresado es mayor a diez")
+							sino
+								imprimir("El valor ingresado NO mayor a diez")
+						</code></pre>
+						
+						<small>Como la variable espera un dato <code>int</code> se espera y se recibe un dato numérico.</small>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo">
+							Ingrese un valor numérico: 5
+							El valor ingresado NO mayor a diez
+						</code></pre>
+
+						<p><small>Por el momento, supondremos que los datos se ingresarán correctamente según su tipo de variable esperada.</small></p>
+					</section>
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+
+				</section>
+
+
+				<section data-state="no_footer">
 
 					<section>
 						<h2>Ejercicios en clase</h2>
@@ -796,8 +886,13 @@
 					</section>
 
 					<section id="ejercicio_1">
-						<h3>Ejercicio en clase</h3>
+						<h3>Ejercicio en clase 1</h3>
 						<p>Escribir un programa que informe la cantidad de veces que fueron necesarias limpiar para que la baldosa <code>(1,39)</code> quede completamente limpia.</p>
+					</section>
+
+					<section id="ejercicio_2">
+						<h3>Ejercicio en clase 2</h3>
+						<p>Escribir un programa que le pida al usuario una ubicación de x para ubicar al robot en la primer fila.</p>
 					</section>
 
 			</section>
