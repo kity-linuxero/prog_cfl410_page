@@ -28,7 +28,7 @@
 
 				</section>
 
-				<section data-state="no_footer" data-transition="fade">
+				<section data-state="no_footer">
 				
 				<section>
 					<h2>Introducción a Python</h2>
@@ -36,7 +36,8 @@
 
 				<section>
 					<h3>¿Qué es Python?</h3>
-					<p>Python es un lenguaje de programación <em>de propósito general</em> que data de los años 1990s y que goza de gran popularidad hoy en día sobre todo por su facilidad de aprender.</p>
+					<p>Python es un lenguaje de programación de <strong>alto nivel</strong>, <em>de propósito general</em> e <strong>interpretado</strong> con <em>objetos</em>, <em>módulos</em>, threads (hilos), <em>excepciones</em> y administración de memoria automática.</p>
+					<p><small>Es un lenguaje simple y fácil de aprender pero muy poderoso.</small></p>
 				</section>
 
 				<section>
@@ -50,15 +51,14 @@
 				</section>
 
 				<section>
-					<h3>Python</h3>
+					<h3>Cualidades de Python</h3>
 					<p><small>Entre las cualidades que lo hacen ser el más elegido podemos destacar:</small></p>
 					
 					<ul>
 						<li><strong>Fácil de aprender</strong><small>Sintaxis muy sencilla que se asemeja bastante al pseudocódigo. <em>Poco código hace mucho.</em></small></li>
 						<li><strong>De propósito general</strong><small>Desarrollo web, ciencia y educación, desarrollo de interfaces gráficas, machine learning, finanzas y trading, visualización de datos.</small></li>
-						<li><strong>Multiplataforma</strong><small>El mismo código funciona en Windows, Linux, MacOS sin cambiar nada.</small></li>
-						<li><strong>Gran comunidad</strong></li>
-						<li><strong>Tiempos de desarrollo</strong></li>
+						<li><strong>Comunidad enorme</strong><small>Desde 2018 es el top 1 en consultas en el sitio Stack Overflow.</small></li>
+						<li><strong>Gratis y de código abierto</strong><small>No se necesita de licencias ni un hardware de desarrollo especial para programar en Python. Está en constante desarrollo por una comunidad de desarrolladores de todo el mundo.</small></li>
 					</ul>
 					
 				</section>
@@ -67,50 +67,29 @@
 					<h3>Caracteristicas de Python</h3>
 
 					<ul>
-						<li><strong>Lenguaje interpretado</strong><small> NO es un lenguaje compilado.</small></li>
+						<li><strong>Lenguaje interpretado</strong><small> NO es un lenguaje compilado. El intérprete de Python corre directamente sobre el código fuente sin necesidad compilar el código.</small></li>
 						<li><strong>Tipado dinámico</strong><small>Desarrollo web, ciencia y educación, desarrollo de interfaces gráficas, machine learning, finanzas y trading, visualización de datos.</small></li>
-						<li><strong>Fuertemente tipado</strong><small>: significa que el tipo no cambia de manera repentina. Para que se produzca un cambio de tipo tiene que hacer una conversión explícita.</small></li>
-						<li><strong>Gran comunidad</strong></li>
-						<li><strong>Tiempos de desarrollo</strong></li>
+						<!-- <li><strong>Fuertemente tipado</strong><small>El tipo no cambia de manera repentina. Para que se produzca un cambio de tipo tiene que hacer una conversión explícita.</small></li> -->
+						<li><strong>Orientado a objetos </strong><small>Soporta el paradigma de programación orientada a objetos. Será visto en el curso mas adelante.</small></li>
+						<li><strong>Multiplataforma</strong><small>El mismo código funciona en Windows, Linux, MacOS sin cambiar nada.</small></li>
+						<li><strong>Tiempos de desarrollo</strong><small>Se programa mucho en poco tiempo tanto de aprendizaje como de desarrollo.</small></li>
 					</ul>
 
 				</section>
 
-				<section data-auto-animate>
-					<h3>Sintaxis de comentarios</h3>
-					<p>Existen muchas formas de representar comentarios y cada lenguaje elije una forma.</p>
-					<p>En Java, Javascript, C, C++, C#... se utilizan los caracteres <code>/* */</code> y/o <code>//</code>para definir un comentario.</p>
-
-					<pre data-id="code-animation" class="codigo_shadow"><code class="hljs java codigo-redondo" data-trim data-line-numbers>
-						/* El siguiente programa hace un saludo en Java */
-						class Saludo {
-							public static void main(String[] args) {
-								// Imprime un saludo
-								System.out.println("¡Hola alumnos y alumnas!"); 
-							}
-						}
-					</code></pre>
-					
-					<p><small>¿Cuál el la diferencia entre <code>/* */</code> y <code>//</code>? Es que el primero permite hacer comentarios de mas de una línea, mientras que el segundo se utiliza para hacer comentarios de una sola línea.</small></p>
-					
-					
-
-				</section>
-
-				<section data-auto-animate>
-					<h3>Sintaxis de comentarios</h3>
-					<p>Existen muchas formas de representar comentarios y cada lenguaje elije una forma.</p>
-					<p>En Python, Ruby, Bash... se utilizan el caracter <code>#</code> para definir un comentario.</p>
-
-					<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo" data-trim data-line-numbers>
-						# El siguiente programa hace un saludo en Python
-						# Otra línea de comentario requiere otro '#'
-						print("Hola alumnos y alumnas")
-						# Ya están todxs saludados
-					</code></pre>
-					<small>El caracter <code>#</code> son para hacer comentarios de una línea.</small>
-					<small>En las prácticas de <em>pseudocódigo</em> usaremos el <code>#</code> para definir comentarios.</small>
-
+				<section id="interprete_python">
+					<h3>El intérprete Python</h3>
+					<p>El intérprete de Python es el programa que se encargará de traducir línea por línea nuestro programa a lenguaje de máquina para que el programa sea ejecutado por una computadora.</p>
+					<small>
+					<p>El intérprete puede ejecutar uno (o varios) archivos, generalmente con extensión <code>.py</code> o también puede ejecutarse en modo <em>shell</em>. En los siguientes enlaces puede encontrar intérpretes de Python online y gratuitos.</p>
+					</small>
+					<small>
+					<ul>
+						<li><a href="https://www.mycompiler.io/es/new/python" target="_blank">My Compiler</a></li>
+						<li><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">Programiz</a></li>
+						<li><a href="https://www.online-python.com/" target="_blank">Online Python (beta)</a></li>
+					</ul>
+					</small>
 				</section>
 
 				<section>
@@ -119,85 +98,322 @@
 
 			  </section>
 
-				<section data-state="no_footer" data-transition="fade">
-					<section id="definiciones">
-						<h2>Conceptos de control y datos</h2>				
+			  <section data-state="no_footer">
+				<section id="sintaxis">
+					<h2>Sintaxis de Python</h2>				
+					
+					<!-- Notas del slide -->
+					<aside class="notes">
+						
+					</aside>
+					
+				</section>
+
+				<section id="repaso">
+					<h3>Lo visto hasta ahora en el curso</h3>
+					<p><small>Hasta el momento hemos visto los siguientes conceptos poniéndolos en práctica con pseudocódigo.</small></p>
+					
+					<small>
+					<ul>
+
+
+						<li>Variables
+							<ul>
+								<li>Creación</li>
+								<li>Asignación</li>
+							</ul>
+						</li>
+						<li>Datos
+							<ul>
+								<li>Tipos de datos</li>
+								<li>Operaciones sobre datos</li>
+								<li>Entrada/salida de datos</li>
+							</ul>
+						</li>
+
+						<li>Estructuras de control
+							<ul>
+								<li>Secuencia</li>
+								<li>Selección (si/sino condicional)</li>
+								<li>Repetición (repetir)</li>
+								<li>Iteración (mientras)</li>
+							</ul>
+						</li>
+					</ul>
+					<p>A continuación veremos en sintaxis de Python a realizar cada una de las listadas.</p>
+				</small>
+					
+				</section>
+
+			  </section>
+
+			  <section data-state="no_footer">
+
+				<section>
+					<h2>Variables en Python</h2>
+				</section>
+
+				<section>
+					<h3>Definición de variables en Python</h3>
+					<small>
+					<p>Es muy sencillo definir variables en Python ya que al momento de la creación de la misma no es necesario especificar el tipo de datos, simplemente se le asigna un valor.</p>
+				</small>
+					<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+						a = 86 			# Es tipo int
+						b = 29.2		# Es tipo float
+						c = "Hola"	# Es tipo str (string)
+						d = False		# Es tipo bool
+						e = None		# Es tipo NoneType (vacía)
+					</code></pre>
+
+				</section>
+
+				<section>
+					<h2>Comparaciones</h2>
+					<p>Las comparaciones entre tipos serán las mismas vistas en la clase anterior.</p>
+					<ul>
+						<li><a href="https://programacion.concristian.com.ar/clase2.html#/logicos_comparacion" target="_blank">Comparación entre lógicos</a></li>
+						<li><a href="https://programacion.concristian.com.ar/clase2.html#/numericos_comparacion" target="_blank">Comparación entre numéricos</a></li>
+						<li><a href="https://programacion.concristian.com.ar/clase2.html#/tipo_string" target="_blank">Comparación entre strings</a></li>
+					</ul>
+				</section>
+
+
+
+				<section>
+					<h2>Operaciones de aritmética</h2>
+				</section>
+
+				<section>
+					<h3>Operaciones de aritmética</h3>
+
+					<p>Las operaciones de aritmética entre tipos serán las mismas vistas en la clase anterior.</p>
+					<ul>
+						<li><a href="https://programacion.concristian.com.ar/clase2.html#/numericos_aritmetica" target="_blank">Operaciones aritméticas en números</a></li>
+						<li><a href="https://programacion.concristian.com.ar/clase2.html#/numericos_aritmetica_const" target="_blank">Operaciones aritméticas en números con ejemplos</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+				
+			  </section>
+
+				<section data-state="no_footer">
+					<section id="sintaxis">
+						<h2>Estructuras de control en Python </h2>				
 						
 						<!-- Notas del slide -->
-
-
 						<aside class="notes">
-							Lo que vimos hasta ahora, las  instrucciones constituye el control del algoritmo.
-							Normalmente la lectura del control de un algoritmo, que también puede
-							representarse gráficamente, indica el orden en que se irán ejecutando las
-							instrucciones y como consecuencia de ello, qué es lo que ese algoritmo hace.
+							
 						</aside>
 						
 					</section>
 
-					<section id="control">
-						<h3>Concepto de control</h3>
-						<p>Hasta ahora, estuvimos viendo el control del algoritmo mediante las estructuras vistas: secuencia, selección, repetición, iteración.</p>
-						<p>Con dichas estructuras fuimos capaces de manipular el control del algoritmo.</p>
-						<p>A continuación veremos como manipular los datos de un algoritmo.</p>
-					</section>
+					<section id="print">
 
+						<h3>Salida de datos a pantalla</h3>
+						<small>
+						<p>La instrucción <code>imprimir()</code> que vimos en las primeras clases, se reemplaza por la instrucción <code>print()</code></p>
+					</small>
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							print("Hola alumnos y alumnas")
+							print("Esto es una salida de texto a pantalla")
+						</code></pre>
 
-					<section id="dato">
-						<h3>Concepto de dato</h3>
-						<p>Un <strong>dato</strong> es un elemento u objeto de la realidad que los algoritmos representan y son capaces de modificar y procesar.</p>
-						<small>Cuando se resuelven problemas con computadora, muchas veces se modelizan los
-							objetos reales mediante objetos más abstractos, representables y entendibles sobre una
-							computadora.</small>
+						<h4>Output</h4>
 
-						<p><small>Un dato puede ser el nombre de una persona, la temperatura actual, el valor de un producto de un supermercado, etc.</small></p>
-						<p><small>Es importante entender que el mecanismo de resolución de problemas involucra generalmente una transformación o un procesamiento de los datos, manejado por el control del algoritmo.</small></p>
-					</section>
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+							Hola alumnos y alumnas
+							Esto es una salida de texto a pantalla
+						</code></pre>
 
-					<section id="representacion_datos">
-						<h3>Representación de datos</h3>
-						<p>Los algoritmos modifican objetos de la realidad para resolver problemas. La representación de los datos estará dada por sus características principales o por la información que nos interese saber.</p>
-						<p>A continuación comenzaremos extendiendo la notación empleada en los algoritmos para dar lugar a las declaraciones y representación de los datos.</p>
+						
+
 
 					</section>
 
-					<section id="variables">
-						<h3>Variables</h3>
-						<p>En general, durante la ejecución de un programa es necesario manipular información
-							que puede cambiar continuamente. Por este motivo, es imprescindible contar con un
-							elemento que permita variar la información que se maneja en cada momento. Este
-							elemento es lo que se conoce como <strong>variable</strong>.</p>
-						<p>Una variable <em>permite almacenar un valor</em> que puede ser modificado a lo largo de la
-							ejecución del programa.</p>
+					<section id="print-var">
+						<h3>Salida de datos a pantalla</h3>
 
-						<p><small>Técnicamente, una variable es un lugar en la <a href="https://programacion.concristian.com.ar/clase1.html#ram" target="_blank">memoria RAM</a> de la computadora donde se almacenará dicha información.</small></p>
+						<p><small>La instrucción <code>print()</code> también puede imprimir en la misma línea agregando variables.</small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							x = 86
+							print("El valor de x es:", x)
+							print("El valor de x es:" + str(x) )
+							print(f"El valor de x es: {x}")
+						</code></pre>
+
+						<h4>Output</h4>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+							El valor de x es: 86
+							El valor de x es:86
+							El valor de x es: 86
+						</code></pre>
+
+						<p><small>Las tres formas se pueden usar para imprimir texto y variables.</small>
+							<small>La "f" del tercer print que se agrega luego del primer paréntesis es para que el intérprete permita insertar variables entre llaves <code>{ }</code> e imprima directamente el valor.</small></p>
+
+					</section>
+
+
+
+
+					<section id="if-else">
+						<h3>Estructura de selección</h3>
+						
+						<p>si/sino se remplaza por <code><strong>if</strong></code>/<code><strong>else</strong></code> respectivamente.</p>
+						
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							x = 86
+							y = 40
+							if (x > y):
+								print(f"x es mayor a y. ({x}>{y})")
+							else:
+								print(f"x NO es mayor a y. ({x}<={y})")
+						</code></pre>
+
+						<h4>Output</h4>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+							x es mayor a y. (86>40)
+						</code></pre>
+
+						<p><small>Observar el <code>:</code> luego del <code>if</code> y el <code>else</code>.</small>
+						<small>Recordar que el <code>else</code>, al igual que el <code>sino</code> es opcional.</small></p>
+
 						
 					</section>
 
-					<section id="declaracion_variables_p1">
-						<h3>Declaración de variables: Identificadores</h3>
-						<p><strong>Identificadores:</strong> Son los nombres descriptivos que se asocian a los datos (variables) para representar, dentro del programa su valor.</p>
-						<p><small>Los identificadores van tan de la mano de las variables que a veces se les conoce directamente como <em>nombre de la variable</em>.</small></p>
-						<p><small>Pero los <strong>identificadores</strong> no solo van asociados a las variables. También a muchas mas estructuras que veremos mas adelante.</small></p>
+					<section id="elif">
+						<h3>Estructura de selección</h3>
+						<small>
+						<p>En Python existe una sintaxis abreviada por si tenemos que usar un if seguido de un else.</p>
+						</small>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							if (x > y):
+								print(f"x es mayor a y. ({x}>{y})")
+							else:
+								if (x == y):
+									print(f"x es igual a y. ({x}={y})")
+								else:
+									print(f"x es menor a y. ({x}<={y})")
+						</code></pre>
+
+						<h4>Forma corta</h4>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							if (x > y):
+								print(f"x es mayor a y. ({x}>{y})")
+							elif (x == y):
+								print(f"x es igual a y. ({x}={y})")
+							else:
+								print(f"x es menor a y. ({x}<={y})")
+						</code></pre>
+
+						
+
+						
 					</section>
 
-					<section id="declaracion_variables_p2">
-						<h3>Declaración de variables</h3>
-						<p>En algunos lenguajes, existe un área específica para declarar variables. Otros lenguajes no tienen esta restricción y permiten declarar variables en cualquier momento.</p>
-						<p><small>A fines prácticos usaremos un área específica luego de la declaración del programa con un comentario <strong># variables</strong> donde declararemos las variables y mantenernos ordenados.</small></p>
+					<section id="while">
+						<h3>Iteración</h3>
+						<p>El mientras() se remplaza por <strong><code>while()</code></strong></p>
 
-						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs bash codigo-redondo" data-trim>
-							programa ejemplo
-							# variables
-									# Aquí van a ir todas las variables que usemos
-
-							# main
-								repetir (10 veces)
-									limpiar
-							fin_programa
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							while(True):
+								print("¡Hola alumnos y alumnas!")
 						</code></pre>
-						<small>Y también usaremos la sección <code>#main</code> para definir donde comienza el programa.</small>
 
+						<small>¿Cuál les parece que es la salida de ese programa?</small>
+
+						<div class="fragment">
+							<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+								¡Hola alumnos y alumnas!
+								¡Hola alumnos y alumnas!
+								¡Hola alumnos y alumnas!
+								... # Al infinito o que el programa se detenga
+								¡Hola alumnos y alumnas!
+							</code></pre>
+
+							<p><small>La instrucción vista, se le conoce como un loop infinito. Como la condición de corte del while siempre será True, el bloque del while se ejecutará siempre a menos que el programa termine, o se rompa el loop con una instrucción, por ejemplo con <code>break</code> o <code>return</code>.</small></p>
+
+						</div>
+					</section>
+
+					<section id="while-2">
+						<h3>Iteración</h3>
+						<p>El mientras() se remplaza por <strong><code>while()</code></strong></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							x = 0
+							while(x < 5):
+								print(f"x ahora vale {x}. Se incrementará en 1")
+								x = x+1
+							print(f"Llegó a {x}")
+						</code></pre>
+
+						<small>¿Qué imprime el programa?</small>
+
+						<div class="fragment">
+							<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+								x ahora vale 0. Se incrementará en 1
+								x ahora vale 1. Se incrementará en 1
+								x ahora vale 2. Se incrementará en 1
+								x ahora vale 3. Se incrementará en 1
+								x ahora vale 4. Se incrementará en 1
+								Llegó a 5
+							</code></pre>
+						</div>
+					</section>
+
+					<section id="repetir">
+						<h3>Repetición/Iteración</h3>
+						<p><small>La estructura de repetición vista, es en realidad una iteración que va iterando sobre un elemento o cantidad de veces predefinidas. La instrucción que se usa es <strong>for</strong>. Si la queremos usar para repetir un número predeterminado de veces se usa así:</small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							for i in range(4):
+								print(i)
+						</code></pre>
+
+						<p><small>Esta operación es muy interesante. Se usa una variable i (el nombre puede ser cualquiera) como una forma de representar el iterador, es para identificar por cual de las "veces" se está ejecutando. La salida será:</small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs codigo-redondo">
+							0
+							1
+							2
+							3
+						</code></pre>
+
+						<p><small>También es importante resaltar que siempre se arranca desde 0. Así que lo tenemos que tener muy en cuenta. <a href="https://www.w3schools.com/python/ref_func_range.asp" target="_blank">Mas info sobre range()</a></small></p>
+					</section>
+
+					<section id="repetir2">
+						<h3>Repetición/Iteración</h3>
+						<p><small>Iteración en un string. En este caso iterará sobre cada letra.</small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							for l in "Hola!":
+								print(l)
+						</code></pre>
+
+						<h4>output</h4>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+							H
+							o
+							l
+							a
+							!
+						</code></pre>
+
+						<p><small>La instrucción <strong>for</strong> se usa para iterar sobre muchos objetos que permiten que se iteren sobre sí. Puede ver mas ejemplos en <a href="https://www.w3schools.com/python/python_for_loops.asp" target="_blank">este enlace</a>.</small></p>
 					</section>
 
 					<section>
@@ -209,612 +425,189 @@
 
 				<section data-state="no_footer">
 
+					<section id="input">
+						<h2>Entrada de datos</h2>
+					</section>
+
 					<section>
-						<h2>Tipos de datos</h2>
+						<h3>Entrada de datos (input)</h3>
+						<small>
+						<p>Al igual que lo visto en la <a href="https://programacion.concristian.com.ar/clase2.html#/5/3" target="_blank">clase pasada</a> la instrucción que usa Python para ingresar datos por teclado es <strong>input()</strong>.</p>
+						</small>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							print ("Ingrese un valor para x: ")
+							x = input()
+							y = input("Ingrese un valor para y: ") # Mas corta
+						</code></pre>
+						<h4>Salida:</h4>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+						Ingrese un valor para x: 
+						34
+						Ingrese un valor para y: 34
+						</code></pre>
 					</section>
-	
-					<section id="tipos_de_datos">
-						<h3>Tipos de datos</h3>
+
+					<section>
+						<h3>Entrada de datos (input)</h3>
 						
-						<p>Independientemente del lenguaje de programación que se use, la definición de un tipo de dato implica considerar:</p>
-						<p>
-							<ul>
-								<li>Cuáles valores puede tomar.</li>
-								<li>Cuáles son las operaciones que se pueden hacer sobre esos datos.</li>
-								<li>Su representación interna.</li>
-							</ul>
-						</p>
-	
-						<!-- Notas del slide -->
-						<aside class="notes">
-							
-						</aside>
+						<p>Se puede usar el <em>parámetro</em> string del input como en print</p>
+					
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							x = 10
+							x = input(f"Ahora x={x}. Ingrese un valor remplazarlo: ")
+							print(f"Ahora x={x}")
+						</code></pre>
+
+						<div class="fragment">
+
+							<h4>salida</h4>
+							<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+								Ahora x=10. Ingrese un valor remplazarlo: 32
+								Ahora x=32
+							</code></pre>
+
+						</div>
+
 
 					</section>
 
-					<section id="tipos_basicos">
-						<h3>Tipos de datos básicos</h3>
-						<p>Resumen tipos básicos:</p>
-						<ul>
-							<li><strong>Lógicos</strong>: Valores lógicos (Verdadero o Falso)</li>
-							<li><strong>Numéricos</strong>: Valores numéricos (1,2,3...)</li>
-							<li><strong>String</strong>: Cadena de caracteres. (Palabras)</li>
-						</ul>
-						<p><small>A veces también son llamados tipos de datos primitivos.</small></p>
-					</section>
+					<section>
+						<h3>Tipo de datos de input</h3>
+						<p>Es muy importante saber que TODOS los datos ingresados por input, Python los asumirá como si fueran strings (str). Por lo tanto, si queremos manejar números debemos convertirlos.</p>
 
-					<section id="logicos">
-						<h3>Tipo de dato lógico</h3>
-						<p>También conocido como <em>boolean</em> o <em>bool</em> es un tipo de datos que puede tener los valores <strong>Verdadero</strong> (True) o <strong>Falso</strong> (False).</p>
-						<p>Los tipos lógicos pueden compararse entre sí. Y las operaciones son las siguientes:</p>
 
 					</section>
 
-					<section id="operaciones_logicas" data-auto-animate>
-						<h3>Operaciones sobre booleanos</h3>
-						<p>Los operadores booleanos básicos son:
-						</p>
-						<ul>
-							<li>Negación - no (not)</li>
-							<li>Suma o disyunción - ó (or)</li>
-							<li>Producto o conjunción - y (and)</li>
-						</ul>
-						<p>A continuación veremos ejemplos de lógica.</p>
+					<section>
+						<h3>Conversión de tipos de datos</h3>
+						<p>Veamos un ejemplo</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							x = input("Ingrese un número para obtener su suma: ")
+							print(f"La suma x+x es {x+x}")
+						</code></pre>
+						<p><small>¿Qué imprime el programa si ingresamos el valor 89?</small>
+						<div class="fragment">
+
+							<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+								Ingrese un número para obtener su suma: 89
+								La suma x+x es 8989
+							</code></pre>
+
+							<p><small>¿Por qué pasa esto? Porque se trata de "sumar" dos string, pero eso da una <em>concatenación</em>.</small></p>
+						</div>
 					</section>
 
-					<section id="bool_not">
-						<h3>Operaciones sobre booleanos</h3>
-						<h4>Negación - NOT - NO</h4>
+					<section>
+						<h3>Conversión de tipos de datos</h3>
+						<p>Veamos otro ejemplo</p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
+							x = input("Ingrese un número para obtener su cuadrado: ")
+							print(f"El cuadrado x*x es {x*x}")
+						</code></pre>
+						<p><small>¿Qué imprime el programa si ingresamos el valor 4?</small>
+						<div class="fragment">
+
+							<pre class="codigo_shadow"><code data-trim class="hljs codigo-redondo">
+								TypeError: can't multiply sequence by non-int of type 'str'
+							</code></pre>
+
+							<p><small>Da un error y el programa se cierra. Dice que no se puede multiplicar un str.</small></p>
+							<p>Necesitamos hacer conversión de tipos.</p>
+
+						</div>
+					</section>
+
+					<section>
+						<h3>Conversión de tipos</h3>
 
 						<table>
 							<thead><tr>
-								<th>p</th>
-								<th>not p</th>
+
+								<th>Tipo Destino</th>
+								<th>Instrucción</th>
+								<th>Ejemplo</th>
 
 							</tr></thead>
 							<tbody><tr>
-								<td>True</td>
-								<td>False</td>
+
+								<td>int</td>
+								<td><code>int()</code></td>
+								<td><code>y= int(x)</code></td>
 
 							</tr>
 							<tr>
-								<td>False</td>
-								<td>True</td>
 
-							</tr></tbody>
+								<td>float</td>
+								<td><code>float()</code></td>
+								<td><code>y= float(x)</code></td>
+
+							</tr>
+
+							<tr>
+
+								<td>string</td>
+								<td><code>str()</code></td>
+								<td><code>y= str(x)</code></td>
+
+							</tr>
+						
+						</tbody>
 						</table>
-
-						<small>Si algo es <strong>True</strong> y se le aplica el operador <strong>not</strong> su valor se cambia a <strong>False</strong>.</small>
-						<small>Si algo es <strong>False</strong> y se le aplica el operador <strong>not</strong> su valor se cambia a <strong>True</strong>.</small>
-						<small>Básicamente invierte su valor.</small>
-
-						<!-- Notas del slide -->
-						<aside class="notes">
-							Ejemplo de la aspiradora. Si NOT hay_bateria. Si NOT este_limpio o hay_pared.
-						</aside>
-
-
-					</section>
-
-					<section id="bool_and">
-						<h3>Operaciones sobre booleanos</h3>
-						<h4>Disyunción - AND - y</h4>
-						<table>
-							<thead>
-								<tr>
-									<th>p</th>
-									<th>q</th>
-									<th>p and q</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>True</td>
-									<td>True</td>
-									<td>True</td>
-								</tr>
-								<tr>
-									<td>True</td>
-									<td>False</td>
-									<td>False</td>
-								</tr>
-								<tr>
-									<td>False</td>
-									<td>True</td>
-									<td>False</td>
-								</tr>
-								<tr>
-									<td>False</td>
-									<td>False</td>
-									<td>False</td>
-								</tr>
-							</tbody>
-						</table>
-						<p><small>Si hay <strong>un valor en false</strong>, el resultado será siempre false.</small></p>
-						<p class="fragment"><small>p: esta_limpio | q: hay_pared_delante</small></p>
-
-						<!-- Notas del slide -->
-						<aside class="notes">
-							Ejemplo de la aspiradora. Si hay_bateria y NOT este_limpio
-						</aside>
-					</section>
-
-					<section id="bool_or">
-						<h3>Operaciones sobre booleanos</h3>
-						<h4>Conjunción - OR - ó</h4>
-						<table>
-							<thead>
-								<tr>
-									<th>p</th>
-									<th>q</th>
-									<th>p or q</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>True</td>
-									<td>True</td>
-									<td>True</td>
-								</tr>
-								<tr>
-									<td>True</td>
-									<td>False</td>
-									<td>True</td>
-								</tr>
-								<tr>
-									<td>False</td>
-									<td>True</td>
-									<td>True</td>
-								</tr>
-								<tr>
-									<td>False</td>
-									<td>False</td>
-									<td>False</td>
-								</tr>
-							</tbody>
-						</table>
-						<p><small>Si hay <strong>valor en true</strong>, el resultado será siempre true.</small></p>
-						<p class="fragment"><small>p: esta_limpio | q: hay_pared_delante</small></p>
-					</section>
-
-					<section id="logicos_comparacion">
-						<h3>Operadores de comparación</h3>
-						<p><small>Suponiendo que <code>x=False</code> e <code>y=True</code></small></p>
-						<small>
-							<table>
-								<thead><tr>
-									<th>Relación</th>
-									<th>Sintaxis</th>
-									<th>Ejemplo</th>
-									<th>Resultado</th>
-								</tr></thead>
-								<tbody>
-
-								<tr>
-									<td>Igualdad</td>
-									<td><code>==</code></td>
-									<td><code>x==y</code></td>
-									<td><code>False</code></td>
-								</tr>
-
-								<tr>
-									<td>Igualdad</td>
-									<td><code>==</code></td>
-									<td><code>x==False</code></td>
-									<td><code>True</code></td>
-								</tr>
-
-								<tr>
-									<td>Distinto</td>
-									<td><code>!=</code></td>
-									<td><code>x!=y</code></td>
-									<td><code>True</code></td>
-								</tr>
-
-								<tr>
-									<td>Distinto</td>
-									<td><code>!=</code></td>
-									<td><code>x!=True</code></td>
-									<td><code>True</code></td>
-								</tr>
-
-								
-							
-							</tbody>
-							</table>
-						</small>
-						
-						<!-- <p><small>.</small></p> -->
+						<small>En los ejemplos de los casos anteriores se creó una variable y para volcar el resultado de la conversión. De esa manera se mantiene en x el valor original. Pero se podría haber reemplazado el valor de x por el convertido si ya no se necesita.</small>
+						<small>Veamos los ejemplos anteriores corregidos: </small>
 					</section>
 
 					<section>
-						<h2>¿Preguntas?</h2>
-						<p class="fragment">Seguimos... </p>
-					</section>
-					
-					<section id="numericos">
-						<h3>Tipo de dato numérico</h3>
-						<p>Es uno de los tipos de datos fundamentales. Dentro de los cuales podemos destacar:</p>
-						<p>
-							<ul>
-								<li><strong>Enteros</strong> (int):<small>Son números que no tienen parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>enteros</strong> que se representan con este tipo son: ... -2, -1, 0, 1, 2 ... En los lenguajes de programación se suelen identificar como <code><strong>int</strong></code> o <code><strong>Integer</strong></code>.</small></li>
-								<li><strong>Reales</strong> (float):<small>Son números que tienen una parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>reales</strong> que se representan con este tipo son: ... -2.23, -1.01, 0.009, 1.9, 2.1 ... En los lenguajes de programación se suelen identificar como <code><strong>float</strong></code>.</small></li>
-							</ul>
-						</p>
-
-						<p class="fragment"><small>¿Cuándo usar un <code>int</code> y cuando un <code>float</code>?</small></p>
-						
-						<!-- <p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p> -->
-					</section>
-
-					<section id="numericos_comparacion">
-						<h3>Operadores de comparación</h3>
-						<small>
-							<table>
-								<thead><tr>
-									<th>Relación</th>
-									<th>Sintaxis</th>
-									<th>Ejemplo</th>
-									<th>Resultados posibles</th>
-								</tr></thead>
-								<tbody>
-
-								<tr>
-									<td>Menor</td>
-									<td><code><</code></td>
-									<td><code>x&lt;y</code></td>
-									<td><code>True</code> o <code>False</code></td>
-								</tr>
-
-								<tr>
-									<td>Mayor</td>
-									<td><code>></code></td>
-									<td><code>x>y</code></td>
-									<td><code>True</code> o <code>False</code></td>
-								</tr>
-
-								<tr>
-									<td>Menor o igual</td>
-									<td><code><=</code></td>
-									<td><code>x<=y</code></td>
-									<td><code>True</code> o <code>False</code></td>
-								</tr>
-
-								<tr>
-									<td>Mayor o igual</td>
-									<td><code>>=</code></td>
-									<td><code>x>=y</code></td>
-									<td><code>True</code> o <code>False</code></td>
-								</tr>
-
-								<tr>
-									<td>Igualdad</td>
-									<td><code>==</code></td>
-									<td><code>x==y</code></td>
-									<td><code>True</code> o <code>False</code></td>
-								</tr>
-
-								<tr>
-									<td>Distinto</td>
-									<td><code>!=</code></td>
-									<td><code>x!=y</code></td>
-									<td><code>True</code> o <code>False</code></td>
-								</tr>
-							
-							</tbody>
-							</table>
-						</small>
-						<p><small><code>x</code> e <code>y</code> son dos variables cualquieras.</small></p>
-						<p><small>Los operadores de comparación serán utilizados para comparar variables, valores o condiciones en los programas. El resultado de una comparación entre dos datos será <strong>True</strong> o <strong>False</strong>.</small></p>
-					</section>
-
-					<section id="numericos_aritmetica">
-						<h3>Operadores de aritmética</h3>
-						<p><small>Suponiendo que <code>x=1</code> e <code>y=2</code></small></p>
-						<small>
-							<table>
-								<thead><tr>
-									<th>Relación</th>
-									<th>Sintaxis</th>
-									<th>Ejemplo</th>
-									<th>Resultado</th>
-								</tr></thead>
-								<tbody>
-
-								<tr>
-									<td>Suma</td>
-									<td><code>+</code></td>
-									<td><code>x+y</code></td>
-									<td><code>3</code></td>
-								</tr>
-
-								<tr>
-									<td>Resta</td>
-									<td><code>-</code></td>
-									<td><code>x-y</code></td>
-									<td><code>-1</code></td>
-								</tr>
-
-								<tr>
-									<td>Producto</td>
-									<td><code>*</code></td>
-									<td><code>x*y</code></td>
-									<td><code>2</code></td>
-								</tr>
-
-								<tr>
-									<td>División</td>
-									<td><code>/</code></td>
-									<td><code>x/y</code></td>
-									<td><code>0.5</code></td>
-								</tr>
-
-								<tr>
-									<td>División entera</td>
-									<td><code>//</code></td>
-									<td><code>x//y</code></td>
-									<td><code>0</code></td>
-								</tr>
-
-								<tr>
-									<td>Módulo</td>
-									<td><code>%</code></td>
-									<td><code>x%y</code></td>
-									<td><code>1</code></td>
-								</tr>
-							
-							</tbody>
-							</table>
-						</small>
-						
-						<p><small>En los lenguajes de programación los tipos <code>int</code> y <code>float</code> tienen compatibilidad o una forma de compatibilizarlos. Por lo que se pueden realizar esas tareas sobre enteros y float. Prestar atención que a veces el resultado puede ser un tipo u otro.</small></p>
-					</section>
-
-					<section id="numericos_aritmetica_const">
-						<h3>Operadores de aritmética</h3>
-						<p><small>Suponiendo que <code>x=10</code> es posible operar con números directamente.</small></p>
-						<small>
-							<table>
-								<thead><tr>
-									<th>Relación</th>
-									<th>Sintaxis</th>
-									<th>Ejemplo</th>
-									<th>Resultado</th>
-								</tr></thead>
-								<tbody>
-
-								<tr>
-									<td>Suma</td>
-									<td><code>+</code></td>
-									<td><code>x+x+1</code></td>
-									<td><code>21</code></td>
-								</tr>
-
-								<tr>
-									<td>Resta</td>
-									<td><code>-</code></td>
-									<td><code>x-20</code></td>
-									<td><code>-10</code></td>
-								</tr>
-
-								<tr>
-									<td>Producto</td>
-									<td><code>*</code></td>
-									<td><code>x*x</code></td>
-									<td><code>100</code></td>
-								</tr>
-
-								<tr>
-									<td>División</td>
-									<td><code>/</code></td>
-									<td><code>x/2</code></td>
-									<td><code>5</code></td>
-								</tr>						
-							</tbody>
-							</table>
-						</small>
-						
-						<p><small>En los lenguajes de programación los tipos <code>int</code> y <code>float</code> tienen compatibilidad o una forma de compatibilizarlos. Por lo que se pueden realizar esas tareas sobre enteros y float. Prestar atención que a veces el resultado puede ser un tipo u otro.</small></p>
-					</section>
-
-
-
-					<section id="tipo_string">
-						<h3>Tipo de dato string</h3>
-						<p>Se llama string (cadena) al tipo de datos utilizado para representar cadena de caracteres como palabras, texto, etc.</p>
-						<h4>Operaciones sobre string</h4>
-						<small>
-							<table>
-								<thead><tr>
-									<th>Relación</th>
-									<th>Sintaxis</th>
-									<th>Ejemplo</th>
-									<th>Resultado</th>
-								</tr></thead>
-								<tbody>
-
-								<tr>
-									<td>Comparar</td>
-									<td>==</td>
-									<td>"Hola" == "Chau"</td>
-									<td>False</td>
-								</tr>
-
-								<tr>
-									<td>Concatenar</td>
-									<td>+</td>
-									<td>"Hola" + "Chau"</td>
-									<td>"HolaChau"</td>
-								</tr>
-							
-							</tbody>
-							</table>
-							
-						</small>
-						<small>Por lo general un string va entre comillas dobles o comillas simples.</small>
-						<p><small class="fragment"><strong>¿Cuánto es '2'+'2'?</strong><span class="fragment"> <strong class="rojo">: '22'</strong></span></small>
-						<small class="fragment">Existen muchas mas operaciones sobre string que se verán cuando veamos Python.</small></p>
-						
-
-
-					</section>
-
-
-					<section>
-						<h2>¿Preguntas?</h2>
-					</section>
-
-				</section>
-
-				<section data-state="no_footer">
-
-					<section>
-						<h2>Usando variables</h2>
-					</section>
-
-					<section>
-						<h3>Operación de Asignación</h3>
-						<p>En la programación, existe una instrucción para asignar un valor a una variable u <em>objeto</em>. Por lo general, se usa el signo igual <code>=</code></p>
+						<h3>Conversión de tipos de datos</h3>
+						<p>Ejemplo suma corregido</p>
 
 						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
-							# Ejemplo de asignación en Python
-							# Se asigna el valor 0 a la variable contador
-							contador = 0 
-
-							# Se asigna el valor de contador a contador_2
-							contador_2 = contador
-							
+							x = int(input("Ingrese un número para obtener su suma: "))
+							print(f"La suma x+x es {x+x}")
 						</code></pre>
 
-						<p><small>Aunque al principio pueda parecer confuso, recordar que el símbolo <code>=</code> es usado para asignación. Si buscamos comparación, el símbolo será <code>==</code>.</small></p>
+						<p><small>La conversión de tipo se hace inmediatamente después del input. x ahora tiene un int.</small></p>
+
+						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo">
+							Ingrese un número para obtener su suma: 89
+							La suma x+x es 178
+						</code></pre>
+
+							
 						
 					</section>
 
 					<section>
-						<h3>Operación de Asignación</h3>
-						<p>Veamos el siguiente pseudocódigo:</p>
-
-						<pre class="codigo_shadow"><code data-trim class="hljs bash codigo-redondo" data-line-numbers>
-							programa ejemplo_asignacion
-							# variables
-								int x = 10 # Ahora x es igual a 10
-								int y = x # Se copia el valor de x en y
-								
-							# main
-								x= x+1
-								imprimir("El valor de Y es: {y}")
-								
-							fin_programa
-						</code></pre>
-
-						<p><small>¿Qué imprime el programa?</small></p>
-						<small class="fragment">Respuesta: <code>El valor de Y es: <span class="rojo">10</span></code><br>¿Por qué? <strong>El valor</strong> de <code>x</code> es copiado a <code>y</code> antes de hacer el cambio en <code>x</code>.</small>
-
-					</section>
-
-					<section>
-						<h3>Declaración de variables</h3>
-						<p>En Java, las variables de <em>tipo primitivo</em> se declaran de la siguiente manera:</p>
-
-						<pre class="codigo_shadow"><code data-trim class="hljs java codigo-redondo" data-line-numbers>
-							// Se declara una variable de tipo int vacía
-							int x;
-							// Se declara una variable int y se le asigna el valor 0
-							int y = 0; 
-						</code></pre>
-
-						<p>En Python puede variar la sintaxis:</p>
+						<h3>Conversión de tipos de datos</h3>
+						<p>Ejemplo cuadrado corregido</p>
 
 						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo" data-line-numbers>
-							
-							x = 0 # Se declara una variable y se le asigna el 0
-							y = 10 # Se declara una variable y se le asigna el 10
-							x = "Hola" # Ahora x tiene el valor "Hola"
+							x = input("Ingrese un número para obtener su cuadrado: ")
+							print(f"El cuadrado x*x es {int(x*x)}")
 						</code></pre>
 
-						<p><small>Existen notables diferencias entre estos dos lenguajes. Mientras que en Java debemos ser específicos para definir el tipo de datos y el mismo NO puede cambiar (tipado estático), en Python al <strong>asignarle</strong> el valor, se establece el tipo y el mismo puede cambiar durante la ejecución del programa (tipado dinámico).</small></p>
-					</section>
+						<p><small>La conversión de tipo se hace en el print dentro de la operación.</small></p>
 
-					<section data-auto-animate>
-						<h3>Notación usada en la práctica</h3>
-						<p>Para la práctica de <em>pseudocódigo</em> usaremos la siguiente sintaxis:</p>
-
-						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
-							programa ejemplo_1
-							# variables
-							int x = 1 # Se crea x y se le asigna el valor 1
-							int y = 0 # Se crea y y se le asigna el valor 0
-
-							# main
-								x = 20 # Ahora x vale 20
-								y = 1 # Ahora y vale 1
-
-								si (x > y)
-									imprimir("X es mayor")
-								sino
-									imprimir("Y es mayor")
-							fin_programa
+						<pre class="codigo_shadow"><code data-trim class="hljs python codigo-redondo">
+							Ingrese un número para obtener su cuadrado: 4
+							El cuadrado x*x es 16
 						</code></pre>
-
-						<p><small>¿Qué hace el programa del ejemplo?</small></p>
 						
+						<p><small>Si hicieramos un <code>print(x)</code> ¿Qué valor daría?</small></p>
+
 
 					</section>
-
-					<section data-auto-animate>
-						<h3>Notación usada en la práctica</h3>
-						<p>Para la práctica de <em>pseudocódigo</em> usaremos la siguiente sintaxis:</p>
-
-						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
-							programa ejemplo_2
-							# variables
-								bool hay_stock = False # Se crea la variable en falso
-								float precio = 100.50 # Se crea precio
-								str mensaje = "NO hay stock"
-							# main
-								si NO (hay_stock)
-									imprimir (mensaje)
-								sino
-									imprimir(precio)
-
-							fin_programa
-						</code></pre>
-
-						<p><small>¿Qué hace el programa del ejemplo?</small></p>
-
-					</section>
-
-					<section data-auto-animate>
-						<h3>Notación usada en la práctica</h3>
-						<p>Para la práctica de <em>pseudocódigo</em> usaremos la siguiente sintaxis:</p>
-
-						<pre class="codigo_shadow"><code data-trim class="hljs py codigo-redondo" data-line-numbers>
-							# Ejemplo con la aspiradora robot
-							programa ejemplo_3
-							# variables
-								int baldosas_limpiadas = 0
-							# main
-								mientras (NO hay_pared_delante)
-									si (NO esta_limpio)
-										limpiar
-										balsosas_limpiadas = balsosas_limpiadas + 1
-									avanzar
-								# fin mientras
-								imprimir("Se limpiaron",balsosas_limpiadas,"baldosas")
-							fin_programa
-						</code></pre>
-
-						<p><small>¿Qué hace el programa del ejemplo?</small></p>
-						
-
-					</section>
-					
-
-
 	
+
 					<section>
 						<h2>¿Preguntas?</h2>
 					</section>
+
 				</section>
 
 				<section data-state="no_footer">
@@ -825,8 +618,25 @@
 					</section>
 
 					<section id="ejercicio_1">
-						<h3>Ejercicio en clase</h3>
-						<p>Escribir un programa que informe la cantidad de veces que fueron necesarias limpiar para que la baldosa <code>(1,39)</code> quede completamente limpia.</p>
+						<h3>Ejercicio en clase 1</h3>
+						<p>Escriba un programa en Python que imprima por pantalla ¡HOLA MUNDO!.</p>
+						<p><small>Utilice alguno de los <a href="#interprete_python">intérpretes online vistos en clase.</a></small></p>
+					</section>
+
+					<section id="ejercicio_2">
+						<h3>Ejercicio en clase 2</h3>
+						<p>Escriba un programa en Python que imprima tres veces por pantalla ¡HOLA MUNDO!.</p>
+					</section>
+
+
+					<section id="ejercicio_3">
+						<h3>Ejercicio en clase 3</h3>
+						<p>Escriba un programa en Python que solicite al usuario ingresar su nombre e imprima un saludo, por ejemplo "¡Hola Cristian!".</p>
+					</section>
+
+					<section id="ejercicio_4">
+						<h3>Ejercicio en clase 4</h3>
+						<p>Escriba un programa en Python que solicite al usuario ingresar dos números y devuelva la suma de ellos.</p>
 					</section>
 
 			</section>
@@ -834,14 +644,16 @@
 					<section id="fin-clase"  data-background-size="contain">
 						<h3>¡Fin de la clase!</h3>
 						<a href="/"> Ir al inicio </a><br>
-						<a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica2.md" target="_blank"> Práctica 2</a><br>
+						<!-- <a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica3.md" target="_blank"> Práctica 3</a><br> -->
 						<a href="?print-pdf"> Exportar clase a PDF</a>
 					</section>
 
 					<section>
 						<h3>Bibliografía</h3>
 						<ul>
-							<li>Apunte Curso ingreso 2019 - Capitulo 3, Facultad de Informática, UNLP.</li>
+							<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+							<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+							<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Pyton</a></li>
 						</ul>
 					</section>
 
