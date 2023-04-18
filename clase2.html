@@ -28,7 +28,7 @@
 
 				</section>
 
-				<section data-state="no_footer" data-transition="fade">
+				<section data-state="no_footer">
 				
 				<section>
 					<h2>Comentarios</h2>
@@ -90,7 +90,7 @@
 
 			  </section>
 
-				<section data-state="no_footer" data-transition="fade">
+				<section data-state="no_footer">
 					<section id="definiciones">
 						<h2>Conceptos de control y datos</h2>				
 						
@@ -220,6 +220,65 @@
 						<p>Los tipos lógicos pueden compararse entre sí. Y las operaciones son las siguientes:</p>
 
 					</section>
+
+					
+					
+					<section id="numericos">
+						<h3>Tipo de dato numérico</h3>
+						<p>Es uno de los tipos de datos fundamentales. Dentro de los cuales podemos destacar:</p>
+						<p>
+							<ul>
+								<li><strong>Enteros</strong> (int):<small>Son números que no tienen parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>enteros</strong> que se representan con este tipo son: ... -2, -1, 0, 1, 2 ... En los lenguajes de programación se suelen identificar como <code><strong>int</strong></code> o <code><strong>Integer</strong></code>.</small></li>
+								<li><strong>Reales</strong> (float):<small>Son números que tienen una parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>reales</strong> que se representan con este tipo son: ... -2.23, -1.01, 0.009, 1.9, 2.1 ... En los lenguajes de programación se suelen identificar como <code><strong>float</strong></code>.</small></li>
+							</ul>
+						</p>
+
+						<p class="fragment"><small>¿Cuándo usar un <code>int</code> y cuando un <code>float</code>?</small></p>
+						
+						<!-- <p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p> -->
+					</section>
+
+
+
+
+
+					<section id="tipo_string">
+						<h3>Tipo de dato string</h3>
+						<p>Se llama string (cadena) al tipo de datos utilizado para representar cadena de caracteres como palabras, texto, etc.</p>
+						<p><small>Los tipos string se representan con el texto entre comillas simples <code>' '</code> o dobles <code>" "</code>.</small></p>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo" data-trim>
+							"Esto es un string"
+							'Esto también es un string'
+						</code></pre>
+
+						<small>¿Cuándo usar uno u otro?... Podemos decir que si necesitamos usar el caracter ' en el string es obligatorio el uso de las comillas dobles.</small>
+
+						<pre data-id="code-animation" class="codigo_shadow"><code class="hljs python codigo-redondo" data-trim>
+							# Para representar este string es obligatorio usar dobles.
+							"I didn't do it!" 
+						</code></pre>
+						
+
+
+						
+
+
+					</section>
+
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+
+				</section>
+
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Operaciones sobre tipos de datos</h2>
+					</section>
+
 
 					<section id="operaciones_logicas" data-auto-animate>
 						<h3>Operaciones sobre booleanos</h3>
@@ -402,20 +461,9 @@
 						<h2>¿Preguntas?</h2>
 						<p class="fragment">Seguimos... </p>
 					</section>
-					
-					<section id="numericos">
-						<h3>Tipo de dato numérico</h3>
-						<p>Es uno de los tipos de datos fundamentales. Dentro de los cuales podemos destacar:</p>
-						<p>
-							<ul>
-								<li><strong>Enteros</strong> (int):<small>Son números que no tienen parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>enteros</strong> que se representan con este tipo son: ... -2, -1, 0, 1, 2 ... En los lenguajes de programación se suelen identificar como <code><strong>int</strong></code> o <code><strong>Integer</strong></code>.</small></li>
-								<li><strong>Reales</strong> (float):<small>Son números que tienen una parte fraccionaria. El rango de los números depende del lenguaje. Ejemplo de números <strong>reales</strong> que se representan con este tipo son: ... -2.23, -1.01, 0.009, 1.9, 2.1 ... En los lenguajes de programación se suelen identificar como <code><strong>float</strong></code>.</small></li>
-							</ul>
-						</p>
 
-						<p class="fragment"><small>¿Cuándo usar un <code>int</code> y cuando un <code>float</code>?</small></p>
-						
-						<!-- <p><small>Pero los algoritmos que resuelven problemas o cuestiones de la vida real suelen ser complejos y no podrían realizarse solo con instrucciones secuenciales. Por eso se crearon las <strong>estructuras de control</strong>.</small></p> -->
+					<section>
+						<h2>Operadores de comparación sobre números</h2>
 					</section>
 
 					<section id="numericos_comparacion">
@@ -588,11 +636,9 @@
 						<p><small>En los lenguajes de programación los tipos <code>int</code> y <code>float</code> tienen compatibilidad o una forma de compatibilizarlos. Por lo que se pueden realizar esas tareas sobre enteros y float. Prestar atención que a veces el resultado puede ser un tipo u otro.</small></p>
 					</section>
 
-
-
-					<section id="tipo_string">
-						<h3>Tipo de dato string</h3>
-						<p>Se llama string (cadena) al tipo de datos utilizado para representar cadena de caracteres como palabras, texto, etc.</p>
+					<section id="tipo_string_operaciones">
+						<h3>Operaciones sobre string</h3>
+						<p>Hay muchísimas operaciones que se pueden hacer con los string. Entre las mas básicas:</p>
 						<h4>Operaciones sobre string</h4>
 						<small>
 							<table>
@@ -625,11 +671,12 @@
 						<small>Por lo general un string va entre comillas dobles o comillas simples.</small>
 						<p><small class="fragment"><strong>¿Cuánto es '2'+'2'?</strong><span class="fragment"> <strong class="rojo">: '22'</strong></span></small>
 						<small class="fragment">Existen muchas mas operaciones sobre string que se verán cuando veamos Python.</small></p>
+
+						<small class="fragment"><a href="https://programminghistorian.org/es/lecciones/manipular-cadenas-de-caracteres-en-python" target="_blank">Algunas formas de manipular strings en Python</a></small>
 						
 
 
 					</section>
-
 
 					<section>
 						<h2>¿Preguntas?</h2>
