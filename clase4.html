@@ -26,8 +26,8 @@
 			<!-- EGG content -->
 			<div class="modal-content">
 			<div class="modal-header">
-				<span class="close">&times;</span>
-				<h2>EGG #1</h2>
+				<span class="close" onclick="close_egg()">&times;</span>
+				<h2>EGG #2</h2>
 			</div>
 			<div class="modal-body">
 				<p>¡Felicitaciones!</p>
@@ -402,14 +402,14 @@
 
 				<section>
 					<section>
-						<h2>Funciones para listas</h2>
+						<h2>Métodos para listas</h2>
 						
 					</section>
 
 					<section>
-						<h3>Funciones para listas</h3>
+						<h3>Métodos para listas</h3>
 
-						<p>Python (como otros lenguajes) nos proveen funciones, métodos o herramientas para interactuar o manipular listas. A continuación veremos algunos con ejemplos.</p>
+						<p>Python (como otros lenguajes) nos proveen funciones, métodos o herramientas para interactuar o manipular listas. A continuación veremos algunos métodos con ejemplos.</p>
 					</section>
 
 					<section>
@@ -556,6 +556,8 @@
 							Mai tiene 20 años.
 						</code></pre>
 
+						
+
 					</section>
 
 					<section>
@@ -572,13 +574,17 @@
 						</code></pre>
 						
 						<h4>Output</h4>
-						<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
-							Alberto tiene 60 años.
-							Avril tiene 21 años.
-							Manuel tiene 37 años.
-							Gabriel tiene 40 años.
-							Mai tiene 20 años.
-						</code></pre>
+						<div onclick="egg_fun()">
+							<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+								Alberto tiene 60 años.
+								Avril tiene 21 años.
+								Manuel tiene 37 años.
+								Gabriel tiene 40 años.
+								Mai tiene 20 años.
+							</code></pre>
+						</div>
+
+						<p style="color:white"><small><span id="egg_text">Cinco veces en el código de más arriba dará mas luz a tu conocimiento ;)</span></small></p>
 
 					</section>
 
@@ -831,6 +837,7 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/zoom/zoom.js"></script>
+
 		
 		<script>
 			// More info about initialization & config:

@@ -11,7 +11,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 function egg_2(){
-  if (egg2 ===4){
+  if (egg2 === 4){
     if (egg < 0){
       alert("Te conviene empezar de nuevo :(")
     }else{
@@ -23,6 +23,12 @@ function egg_2(){
 }
 
 function egg_fun() {
+  //Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
   if (egg === 4){
     modal.style.display = "block";
     egg=-9999;
@@ -30,10 +36,23 @@ function egg_fun() {
   } else {
       egg++;
   }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+    }
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+
+function close_egg(){
+  // Get the modal
+  var modal = document.getElementById("myModal");
   modal.style.display = "none";
 }
 
