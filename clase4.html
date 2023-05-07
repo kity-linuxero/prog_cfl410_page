@@ -211,9 +211,11 @@
 						<p><small>Muchos lenguajes de programación proporcionan soporte para tipos de dato de la lista, y tienen sintaxis especiales y semánticas para listas y operaciones de lista.</small></p>
 						<p><small>Las listas son usualmente <strong>implementadas</strong> como listas enlazadas o como arrays de longitud variable o array dinámicos.</small></p>
 
-						<h4>Estructura de una lista</h4>
+						<h4>Estructura de una lista enlazada</h4>
 						<img   data-src="./img/clase4/lista01.png" alt="Figura 1: Estructura secuencial">
 					</section>
+
+
 
 					<section>
 						<h3>Listas en Python</h3>
@@ -233,6 +235,14 @@
 					</section>
 
 					<section>
+						<h3>Listas en Python</h3>
+
+						<p>En Python podemos imaginarnos las listas como si fueran <strong>arrays</strong>, dado que podemos usar índices para acceder a los elementos.</p>
+						<img data-src="./img/clase4/lista.png">
+
+					</section>
+
+					<section>
 						<h2>Crear listas en Python</h2>
 
 						Una lista en Python se define entre <code>[]</code>.
@@ -246,6 +256,7 @@
 
 						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
 							lista_vacia = [] # Variable tipo lista.
+							otra_lista_vacia = list() # Otra forma
 							lista_numeros = [1,2,3,4] # Una variable tipo lista
 						</code></pre>
 
@@ -309,21 +320,7 @@
 
 					</section>
 
-					<section>
-						<h3>Eliminar elemento de una lista</h3>
-						<p><small>Hay distintas formas de eliminar elementos de una lista. Ahora veremos del y remove().</small></p>
 
-						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
-							a = [90, "Python", 3.87]
-							del a[1] # Elimina el elemento en la posición 1 de la lista
-							print(a) # [90, 3.87]					
-							a.remove(90) # Elimina el 90 de la lista
-							print(a) # [3.87]
-						</code></pre>
-
-						<p><small><a href="https://ellibrodepython.com/listas-en-python#acceder-y-modificar-listas">Más sobre listas en El Libro de Python</a></small></p>
-
-					</section>
 
 					<section>
 						<h3>Recorrer (iterar) listas</h3>
@@ -464,7 +461,7 @@
 							l.remove(3)
 							print(l) #[1, 2]
 						</code></pre>
-						<br>
+						<!-- <br> -->
 
 						<p><small>El método <code style="background-color:lightgrey; color:darkslategray;">pop()</code> retorna el último elemento de la lista y lo borra. Si se pasa como parámetro un índice permite retornar y borrar elementos diferentes al último. </small></p>
 						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
@@ -474,6 +471,22 @@
 							print(l.pop()) # 
 						</code></pre>
 					</section>
+
+					<!-- <section>
+						<h3>Eliminar elemento de una lista</h3>
+						<p><small>Hay distintas formas de eliminar elementos de una lista. Ahora veremos del y remove().</small></p>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							a = [90, "Python", 3.87]
+							del a[1] # Elimina el elemento en la posición 1 de la lista
+							print(a) # [90, 3.87]					
+							a.remove(90) # Elimina el 90 de la lista
+							print(a) # [3.87]
+						</code></pre>
+
+						<p><small><a href="https://ellibrodepython.com/listas-en-python#acceder-y-modificar-listas">Más sobre listas en El Libro de Python</a></small></p>
+
+					</section> -->
 
 					<section>
 						<h3>Obtener el índice de un elemento</h3>
@@ -504,7 +517,7 @@
 							l.reverse()
 							print(l) #[3, 2, 1]
 						</code></pre>
-						<br>
+						<!-- <br> -->
 						<p><small>El método <code style="background-color:lightgrey; color:darkslategray;">sort()</code> ordena los elementos de menor a mayor por defecto. </small></p>
 						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
 							l = [3, 1, 2]
@@ -523,8 +536,8 @@
 							cant = len(l)
 							print(cant) # 5
 						</code></pre>
-						<br>
-						<h3>¿Está en la lista?</h3>
+						<!-- <br> -->
+						<h4>¿Está en la lista?</h4>
 						<p><small>De esta manera se puede saber por sí o por no (True/False) si un elemento está en una lista.</small></p>
 						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
 							list = [1,2,3,4,5,6] 
@@ -764,17 +777,19 @@
 
 					</section>
 
-					<section id="ejercicio_1">
+
+					 <section id="ejercicio_1">
 						<h3>Ejercicio en clase 1</h3>
-						<p>Escriba un programa que pida al usuario nombres de personas hasta que llegue "Juan de Los Palotes" el cual debe ser agregado a la lista. Al finalizar el programa debe imprimir los nombres con la letra capitalizada.</p>
+						<p>Escriba un programa que dada la lista <code>[1, 2, 3, 4, 5, 6, 7]</code> convierta cada elemento a su cuadrado (n*n) en una lista nueva y luego imprima por pantalla la nueva lista.</p>
+					</section>
+
+
+					<section id="ejercicio_2">
+						<h3>Ejercicio en clase 2</h3>
+						<p>Escriba un programa que pida al usuario nombres de personas hasta que llegue "Juan" el cual debe ser agregado a la lista. Al finalizar el programa debe imprimir los nombres con la letra capitalizada.</p>
 						<p>Debe también decir la cantidad de personas que llegaron.</p>
 						
 						<!-- <p><small>Utilice alguno de los <a href="#interprete_python">intérpretes online vistos en clase.</a></small></p> -->
-					</section>
-
-					 <section id="ejercicio_2">
-						<h3>Ejercicio en clase 2</h3>
-						<p>Escriba un programa que dada la lista <code>[1, 2, 3, 4, 5, 6, 7]</code> convierta cada elemento a su cuadrado (n*n) en una lista nueva y luego imprima por pantalla la nueva lista.</p>
 					</section>
 
 
