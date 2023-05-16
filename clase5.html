@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+					<h4>Clase 5: Tuplas y diccionarios</h4>
+
+				</section>
+
+				<section data-state="no_footer">
+				
+				<section>
+					<h2>Tuplas</h2>
+				</section>
+
+				<section>
+					<h2>Tuplas</h2>
+					<p> Una tupla (tuple) es una secuencia de valores. Los valores pueden ser de cualquier tipo y están indexados por enteros, por lo que en ese sentido las tuplas se parecen mucho a las listas. La diferencia importante es que las tuplas <strong>son inmutables</strong>.</p>
+				</section>
+
+				<!-- <section>
+					<h4>¿Para qué sirve lo que veremos hoy?</h4>
+					<p><small>Supongamos que necesitamos escribir un programa que se registren los nombres de las primeras diez personas que llegaron al curso en un determinado día.</small></p>
+					<p><small>Como sabemos que son diez, podríamos definir diez variables de tipo string para registrar cada uno de los nombres.</small></p>
+					<p><small>Si bien esta solución parecería ser la mas sencilla, no escala. Es decir, luego se nos pide hacer que registremos las primeras 200 personas que llegan a un auditorio y tenemos que reescribir el código y definiendo 200 variables.</small></p>
+					<p><small>A veces necesitamos almacenar muchos datos y es útil contar con estructuras de datos que nos permitan realizar las operaciones necesarias, mantenerlas ordenadas y sea fácil acceder a los datos.</small></p>
+					<p><small>Teniendo este problema como base, veremos como nos pueden ayudar las estructuras de datos Arrays y Listas.</small></p>
+				</section> -->
+
+				<section>
+					<h2>Tuplas (cont)</h2>
+					<p>Sintácticamente, una tupla es una secuencia de valores separados por comas:</p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						t = 'a', 'b', 'c', 'd', 'e'
+					</code></pre>
+					<p>Aunque <em>no es necesario</em>, es común encerrar las tuplas entre paréntesis:</p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						t = ('a', 'b', 'c', 'd', 'e')
+					</code></pre>
+					<small>Dependiendo de lo que queramos hacer, <strong>las tuplas pueden ser más rápidas</strong> que las listas.<small><a href="https://ellibrodepython.com/tuplas-python#crear-tupla-python">Ref</a></small></small>
+				</section>
+
+				<section>
+					<h2>Tuplas</h2>
+					<p>Por lo tanto, podemos decir que las tuplas son un tipo de datos que:</p>
+					<ul>
+						<li>Tiene un orden.</li>
+						<li>Se acceden a los elementos mediante un índice numérico</li>
+						<li>Iterables</li>
+						<li><strong>Inmutables</strong>. Es la diferencia principal.</li>
+					</ul>
+					<small><a href="./clase4.html#/3/2">Ver comparación con listas</a></small>
+				</section>
+
+				<section>
+					<h3>Crear tuplas en Python</h3>
+					
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						tupla = (1,2,3)
+						tupla2 = 1,2,3 # Se crea una tupla sin paréntesis
+						vocales = ('a', 'e', 'i', 'o', 'u')
+						dias = ("lunes", "martes", "miércoles", "jueves", "viernes")
+						print (tupla)
+						print (tupla2)
+						print (vocales)
+						print (dias)
+						print (dias[3]) # Se accede por índice al elemento 3
+					</code></pre>
+					<div class="fragment">
+					<h4>Output</h4>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+						(1, 2, 3)
+						(1, 2, 3)
+						('a', 'e', 'i', 'o', 'u')
+						('lunes', 'martes', 'miércoles', 'jueves', 'viernes')
+						jueves
+					</code></pre>
+				</div>
+
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Operaciones con tuplas</h2>
+					</section>
+					<section>
+						<h3>Operaciones con tuplas</h3>
+						
+						<h4>Las tuplas son inmutables</h4>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							tupla = (1, 2, 3)
+							tupla[0] = 5
+							# TypeError: object doesn't support item assignment
+						</code></pre>
+						<h4>Tuplas anidadas</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							tupla = 1, 2, ('a', 'b'), 3
+							print(tupla)       #(1, 2, ('a', 'b'), 3)
+							print(tupla[2][0]) #a
+						</code></pre>
+						<h4>Una lista en la tupla</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							tupla = (1, 2, [88, 99], 3)
+							tupla[2][0]= 99 # Permite cambiar el valor
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Concatenar dos tuplas</h4>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							t1 = (1, 2, 3)
+							t2 = (4, 5, 6)
+							t3 = t1 + t2
+							print(t3) # (1, 2, 3, 4, 5, 6)
+						</code></pre>
+						
+					</section>
+
+					<section>
+						<h4>¿Agregar un elemento a una tupla?</h4>
+						<p><small>Si bien vimos que las tuplas son <strong>inmutables</strong> y por lo tanto los elementos no pueden agregarse, borrarse o modificarse. Tenemos algunas opciones para poder simularlo.</small></p>
+						<p><small>Por ejemplo, si queremos agregar un elemento a una tupla, como no podemos modificarla podríamos <strong>crear una nueva tupla</strong> concatenando el elemento a agregar y ese valor se lo asignamos a la variable ya existente de la tupla.</small></p>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							mi_tupla = (1, 2, 3, 4, 5)
+							# Si quiesieramos "agregar" un elemento
+							mi_tupla = mi_tupla + (6,)
+						</code></pre>
+
+						<p><small>En realidad lo que estamos haciendo es concatenar (unir) dos tuplas y de esa manera tenemos el resultado como si fuera agregar un elemento.</small></p>
+
+
+					</section>
+
+					<section>
+						<h4>Convertir una lista a tupla</h4>
+						<p><small>El método <code style="background-color:lightgrey; color:darkslategray;">tuple()</code> permite convertir una lista en una tupla.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							lista = [1, 2, 3]
+							tupla = tuple(lista)
+							print (lista) # [1, 2, 3]
+							print (tupla) # (1, 2, 3)
+						</code></pre>
+						<h4>Iterar una tupla</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							tupla = (1, 2, 3)
+							for t in tupla:
+								print(t) #1, 2, 3
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Más métodos de tuplas</h4>
+						<small>La mayoría de los operadores de listas funcionan también en tuplas.</small>
+						<p><small>El método <code style="background-color:lightgrey; color:darkslategray;">count(elem)</code> cuenta el número de veces que aparece "elem" en la tupla.</small></p>
+	
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							t = (1, 2, 3, 1, 1)
+							print (t.count(1)) # 3
+						</code></pre>
+						
+						<p><small>El método <code style="background-color:lightgrey; color:darkslategray;">index(elem)</code> busca el objeto que se le pasa como parámetro (elem) y devuelve el índice en el que se ha encontrado.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							l = (7, 7, 7, 3, 5)
+							print(l.index(5)) #4
+						</code></pre>
+						<p><small>El método <code style="background-color:lightgrey; color:darkslategray;">index()</code> también acepta un segundo parámetro opcional, que indica a partir de que índice empezar a buscar el objeto.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							l = (7, 7, 7, 3, 5)
+							print(l.index(7, 2)) #2
+						</code></pre>
+
+						<small>En caso de no encontrarse el elemento devuelve un <code style="background-color:lightgrey; color:darkslategray;">ValueError</code></small>
+
+					</section>
+
+
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+
+			  </section>
+
+			  <section data-state="no_footer">
+	
+
+					<section>
+						<h2>Diccionarios</h2>
+					</section>
+
+					<section>
+						<h2>Diccionarios</h2>
+						<p>Los diccionarios son una estructura de datos que permite almacenar su contenido en forma de <code>clave:valor</code></p>
+						<p><small>Son como listas, pero más general. Mientras que en las listas, los índices tienen que ser números enteros, en un diccionario pueden ser (casi) de cualquier tipo.</small></p>
+					</section>
+
+
+
+					<section>
+						<h3>Propiedades de los diccionarios</h3>
+						<p>Algunas propiedades de los diccionarios en Python:</p>
+						<ul>
+						<li><strong>Dinámicos</strong>:<small> Pueden crecer o decrecer. Se pueden añadir o eliminar elementos. Igual que las listas.</small></li>
+						<li><strong>Indexados</strong>:<small> Los elementos del diccionario son accesibles a través de un índice llamada <code>key</code>.</small></li>
+						<li><strong>Anidados</strong>:<small> Un diccionario puede contener a otro diccionario en su campo <code>value</code>.</small></li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Crear diccionarios en Python</h3>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							diccionario = {} # Se crea diccionario vacío
+							otro_diccionario = dict() # Se crea diccionario vacío
+						</code></pre>
+
+						<div class="fragment">
+							<h4>Agregar elementos</h4>
+
+							<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+								> traductor = {} # Crear diccionario vacío
+								> traductor['one']='uno' # Agregar el valor uno a la clave one
+								> traductor['two']='dos' # Agregar el valor dos a la clave two
+								> traductor
+								{'one': 'uno', 'two': 'dos'} # Estructura del diccionario
+							</code></pre>
+							<p><small>Si la clave no existe se crea y agrega el valor.</small></p>
+							<small>Desde la versión 3.7 de Python los diccionarios están <strong>ordenados</strong> por lo que los elementos tendrán el orden en el cual fueron agregados. No pasa lo mismo en Python <= 3.6 </small>
+						</div>
+					</section>
+
+					<section>
+						<h3>Crear diccionarios en Python</h3>
+						<p><small>Podemos crear un diccionario nuevo enviándole directamente un diccionario</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							traductor = {'one': 'uno', 'two': 'dos', 'three': 'tres'}
+						</code></pre>
+						<div class="fragment">
+						<h4>Otra forma de verlo. Mas intuitivo.</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+							traductor = {
+								'one': 'uno',
+								'two': 'dos',
+								'three': 'tres'
+							}
+						</code></pre>
+						
+					</div>
+
+					</section>
+
+					<section>
+						<h3>Acceder y modificar elementos</h3>
+
+						<p><small>Al igual que las listas y tuplas, los elementos pueden accederse con <code>[]</code> o con la función <code>get()</code></small></p>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							print(traductor['one']) # Uno
+							print(traductor.get('one')) # Uno
+						</code></pre>
+						<p><small>Para modificar un elemento basta con usar <code>[]</code> con el nombre del <code>key</code> y asignar el valor que queremos.</small></p>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							traductor['one']= 1
+							print(traductor.get('one')) # 1
+						</code></pre>
+						<p><small>Si el <code>key</code> al que accedemos no existe, se añade automáticamente</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							traductor['four']= 'cuatro'
+							print(traductor.get('four')) # cuatro
+							
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Iterar un diccionario</h4>
+						<p><small>Los diccionarios se iteran igual que una lista. La iteración se realiza sobre su <code>key</code>.</small></p>
+						
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							diccionario = {
+								'nombre': 'Carlos',
+								'edad': '32',
+								'e-mail': 'carlitos@gmail.com'
+							}
+							for d in diccionario:
+								print (d)
+						</code></pre>
+						
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							nombre
+							edad
+							e-mail
+						</code></pre>
+						<div class="fragment">
+							<p><small>Si quisiera imprimir el <code>value</code> en vez de la <code>key</code>. ¿Cómo debería modificar el código?</small></p>
+						</div>
+						<div class="fragment">
+							<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+								for d in diccionario:
+									print (diccionario.get(d))
+							</code></pre>
+							
+						</div>
+						
+					</section>
+
+					<section>
+						<h3>Diccionarios anidados</h3>
+						<p><small>Podemos tener en el <code>value</code> de una <code>key</code> otro diccionario o lista.</small></p>						
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							anidado1 = {"a": 1, "b": 2}
+							anidado2 = {"a": 1, "b": 2}
+							d = {
+							"anidado1" : anidado1,
+							"anidado2" : anidado2
+							}
+							print(d)
+							#{'anidado1': {'a': 1, 'b': 2}, 'anidado2': {'a': 1, 'b': 2}}
+						</code></pre>
+						<!-- <small class="fragment">¿Cómo podríamos obtener el dato 1 de la key a? <a href="https://www.mycompiler.io/new/python" target="_blank">¿Lo intentamos?</a></small> -->
+						<div class="fragment">
+						<h3>Listas como values</h3>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							l1 = [1,2,3,4,5]
+							l2 = ['a', 'b', 'c']
+							d = { "numeros" : l1, "letras" : l2 }
+							print(d)
+							#{'numeros': [1, 2, 3, 4, 5], 'letras': ['a', 'b', 'c']}
+						</code></pre>
+					</div>
+
+					</section>
+
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Métodos para diccionarios</h2>
+					</section>
+
+					<section>
+						<h4>Métodos diccionarios Python</h4>
+						<p><small>El método <code>clear()</code> elimina todo el contenido del diccionario.</small></p>
+	
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							d = {'a': 1, 'b': 2}
+							d.clear()
+							print(d) #{}
+						</code></pre>
+						
+						<p><small>El método <code>get(key,default)</code> nos permite consultar el <code>value</code> para un <code>key</code> determinado. El segundo parámetro es opcional y es el valor que va a devolver en caso que no encuentre la key.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							d = {'a': 1, 'b': 2}
+							print(d.get('a')) #1
+							print(d.get('z', 'No encontrado')) #No encontrado
+						</code></pre>
+						
+					</section>
+					<section>
+						<h4>Mas métodos útiles (part1)</h4>
+						<p><small>El método <code>items()</code> devuelve una lista con los keys y values del diccionario. Si se convierte en list se puede indexar como si de una lista normal se tratase, siendo los primeros elementos las key y los segundos los value.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							d = {'a': 1, 'b': 2}
+							it = d.items()
+							print(it)             # dict_items([('a', 1), ('b', 2)])
+							print(list(it))       # [('a', 1), ('b', 2)]
+							print(list(it)[0][0]) # a
+						</code></pre>
+						<p><small>El método <code>keys()</code> devuelve las keys del diccionario. Si se usa en conjunto con <code>list()</code> se puede obtener en forma de lista.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							k = d.keys() 					# dict_keys(['a', 'b'])
+							lista_keys = list(k) 	# ['a', 'b']
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Mas métodos útiles (part2)</h4>
+						<p><small>El método <code>values()</code> devuelve todos los values de un diccionario.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							d = {'a': 1, 'b': 2}
+							print(list(d.values())) #[1, 2] # Se convierte a Lista
+						</code></pre>
+						<p><small>El método <code>pop(key)</code> busca y borra la <code>key</code> que se pasa como parámetro y devuelve el <code>value</code> asociado. Si la clave no existe da error.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							d = {'a': 1, 'b': 2}
+							elem = d.pop('a') # elem=1
+							print(d) #{'b': 2}
+						</code></pre>
+						<p><small>El método <code>pop(key,default)</code> es igual que el método <code>get(key)</code> pero en caso de error retorna <code>default</code> pasado por parámetro.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							d = {'a': 1, 'b': 2}
+							elem = d.pop('e', 'no elem') # elem='no elem'
+							print(d) # {'a': 1, 'b': 2}
+						</code></pre>
+					</section>
+
+					<section>
+						<h4>Mas métodos útiles (part3)</h4>
+						<p><small>El método <code>update(diccionario)</code> recibe como parámetro un diccionario. Los <code>value</code> son actualizados en el diccionario que es llamado. Si alguna <code>key</code> no está es agregada.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							d1 = {'a': 1, 'b': 2}
+							d2 = {'a': 0, 'd': 400}
+							d1.update(d2)
+							print(d1)
+							#{'a': 0, 'b': 2, 'd': 400}
+						</code></pre>
+					</section>
+
+
+
+						
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+
+
+
+
+
+			  </section>
+
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Ejercicios en clase</h2>
+
+					</section>
+
+
+					 <section id="ejercicio_1">
+						<h3>Ejercicio en clase 1</h3>
+						<p>Crea una tupla llamada mi_tupla con los siguientes elementos: 1, 2, 3, 4, 5. E imprima el tercer elemento de la tupla.</p>
+					</section>
+
+
+					<section id="ejercicio_2">
+						<h3>Ejercicio en clase 2</h3>
+						<ul>
+							<li>Crea un diccionario llamado <code>mi_diccionario</code> con las siguientes claves y valores
+								<ul>
+									<li>Clave: 'nombre'. Valor: 'Juan'</li>
+									<li>Clave: 'edad'. Valor: '30'</li>
+									<li>Clave: 'ciudad'. Valor: 'La Plata'</li>
+								</ul>
+							</li>
+							<li>Imprime el valor de la clave <code>'edad'</code>.</li>
+							<li>Agregue una nueva clave <code>'profesion'</code> con el valor <code>'programador'</code></li>
+							<li>Imprima el diccionario completo.</li>
+						</ul>
+						
+						
+					</section>
+
+
+			</section>
+				<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+					<section id="fin-clase"  data-background-size="contain">
+						<h3>¡Fin de la clase!</h3>
+						<a href="/"> Ir al inicio </a><br>
+						<!-- <a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica4.md" target="_blank"> Práctica 4</a><br> -->
+						<a href="?print-pdf"> Exportar clase a PDF</a>
+					</section>
+
+					<section>
+						<h3>Bibliografía</h3>
+						<ul>
+							<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+							<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+							<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Pyton</a></li>
+						</ul>
+					</section>
+
+				</section>
+					
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
