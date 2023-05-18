@@ -309,7 +309,7 @@
 					</section>
 
 					<section>
-						<h4>Iterar un diccionario</h4>
+						<h3>Iterar un diccionario</h3>
 						<p><small>Los diccionarios se iteran igual que una lista. La iteración se realiza sobre su <code>key</code>.</small></p>
 						
 						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
@@ -338,6 +338,33 @@
 							
 						</div>
 						
+					</section>
+
+					<section>
+
+						<h3>Iterar un diccionario </h3>
+						<p><small>Es posible iterar sobre las keys y values de un diccionario.</small></p>
+						
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							diccionario = {
+								'nombre': 'Carlos',
+								'edad': '32',
+								'e-mail': 'carlitos@gmail.com'
+							}
+							for k,v in diccionario.items():
+								print (f"Dato: {k} | Valor: {v}")
+						</code></pre>
+
+						<p>Salida:</p>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							Dato: nombre | Valor: Carlos
+							Dato: edad | Valor: 32
+							Dato: e-mail | Valor: carlitos@gmail.com
+						</code></pre>
+
+						<p><small>Observar que se itera en realidad sobre <code>diccionario.items()</code></small></p>
+
 					</section>
 
 					<section>
