@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+					<h4>Clase 6: Modularización</h4>
+
+				</section>
+
+				<section data-state="no_footer">
+
+				<!-- <section>
+					<h2>Clase 6</h2>
+					<h3>Contenido de la clase</h3>
+					<ul>
+						<li>Modularización</li>
+						<li>Funciones</li>	
+						<li>Parámetros</li>	
+						<li>Alcance de los datos</li>	
+					</ul>
+				</section> -->
+				
+				<section>
+					<h2>Concepto de modularización</h2>
+				</section>
+
+				<section>
+					<h3>Modularización</h3>
+
+					<p>La modularización ó modularidad es un <em>principio de diseño</em> que permite <strong>dividir un 
+						programa en partes más pequeñas y manejables llamadas módulos</strong>. 
+						Cada módulo representa una unidad lógica y funcional que se puede desarrollar, mantener y probar de forma independiente.
+						Esto facilita el desarrollo y la gestión del código, ya que cada módulo se puede trabajar por separado
+						sin afectar a otros módulos.
+					</p>
+				</section>
+
+				<section>
+					<h3>Ventajas (p1)</h3>
+
+					<ul>
+						<li><strong>Reutilización de código</strong><small>Al dividir un programa en módulos se fomenta la reutilización de código. Un módulo puede ser utilizado en diferentes partes de un programa o incluso en varios programas diferentes. Esto evita la duplicación de código y mejora la eficiencia del desarrollo, ya que no es necesario volver a escribir el mismo código una y otra vez.</small></li>
+						<li><strong>Mantenimiento</strong><small>Al dividir un programa en módulos se mejora el mantenimiento y soporte del código. Cada módulo se puede entender, probar y corregir de forma aislada, lo que facilita la detección y solución de errores. Además, si se requiere realizar cambios o mejoras en el programa, es más sencillo y menos propenso a errores modificar un módulo específico en lugar de tener que revisar y modificar todo el código.</small></li>
+					</ul>
+					
+				</section>
+
+				<section>
+					<h3>Ventajas (p2)</h3>
+
+					<ul>
+						<li><strong>Escalabilidad</strong><small>La división en módulos permite que un programa crezca y se amplíe de manera más sencilla. Se pueden agregar nuevos módulos para incorporar nuevas características o funcionalidades sin afectar el funcionamiento de los módulos existentes. Esto permite una mayor flexibilidad y adaptabilidad del programa a medida que cambian los requisitos o se agregan nuevas necesidades.</small></li>
+						<li><strong>Colaboración</strong><small>Dividir un programa en módulos facilita la colaboración en el desarrollo de software. Varios desarrolladores pueden trabajar en diferentes módulos simultáneamente sin interferir con el trabajo de los demás. Esto agiliza el proceso de desarrollo y permite una mayor productividad en equipos de desarrollo.</small></li>
+					</ul>
+					
+				</section>
+
+				<section>
+					<h3>Ventajas (resumen)</h3>
+					<p>
+						En resumen, la división de programas en módulos ofrece beneficios como modularidad, reutilización de código, mantenibilidad, escalabilidad y facilidad de colaboración. Estas prácticas ayudan a mejorar la eficiencia, calidad y soporte del software.
+					</p>
+				</section>
+
+
+				<section>
+					<h2>Modularidad (cont)</h2>
+					<p>La modularidad puede llevarse a cabo mediante varias técnicas y prácticas, entre ellas:</p>
+					<ul>
+						<li><strong>Abstracción</strong><small> Consiste en identificar y aislar las partes fundamentales y funcionales de un programa. Estas partes se convierten en módulos independientes que ocultan los detalles internos y proporcionan <em>una interfaz</em> clara y definida para su uso.</small></li>
+						<li><strong>Modularidad funcional</strong><small> Implica dividir un programa en funciones lógicas y coherentes. Cada función realiza una tarea específica y bien definida dentro del programa. Estas funciones pueden ser reutilizables y se pueden llamar desde diferentes partes del programa. La modularidad funcional permite una mayor legibilidad, mantenibilidad y reutilización de código.</small></li>
+					</ul>
+					
+				</section>
+
+				<section>
+					<h2>Modularidad (cont)</h2>
+					<p>La modularidad puede llevarse a cabo mediante varias técnicas y prácticas, entre ellas:</p>
+					<ul>
+						<li><strong>Acoplamiento adecuado</strong><small> El acoplamiento se refiere al grado de interdependencia entre los módulos de un programa. Un acoplamiento bajo significa que los módulos son independientes y tienen poca relación entre sí, lo que facilita los cambios y las actualizaciones.</small></li>
+						<li><strong>Pruebas unitarias</strong><small> Unit-tests. Se centran en verificar el funcionamiento correcto de cada módulo de forma aislada. Esto implica diseñar y ejecutar pruebas específicas para cada módulo individualmente, comprobando que produce los resultados esperados. </small></li>
+					</ul>
+					
+				</section>
+
+				<section>
+					<h3>¿Cómo definimos un módulo?</h3>
+					<p>Una de las formas es mediante <strong>funciones</strong>. Los lenguajes de programación proveen instrucciones para definir funciones.</p>
+					<p>Estas funciones son prácticamente un bloque de código que se definen pero se ejecutan solo en el momento del programa que son invocadas.</p>
+					<p>Las funciones pueden tener datos de entrada y retornar un valor como resultado.</p>
+
+				</section>
+
+				<section>
+					<h3>Crear funciones en Python</h3>
+					<p>Ejemplo de una función simple. Sin parámetros de entrada ni retorno de resultado.</p>
+					
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						def saludo():
+							print("Hola")
+
+						print("Bienvenido al programa")
+						saludo()
+					</code></pre>
+					<div class="fragment">
+					<h4>Salida del programa</h4>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+					Bienvenido al programa
+					Hola
+
+					</code></pre>
+				</div>
+
+				</section>
+
+				<section data-auto-animate>
+					<h3>Crear funciones en Python</h3>
+					<p>Podemos utilizar muchas veces la función</p>
+					
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						def saludo():
+							print("Hola")
+
+						print("Bienvenido al programa")
+						saludo()
+						saludo()
+						saludo()
+					</code></pre>
+					<div class="fragment">
+					<h4>Salida del programa</h4>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+					Bienvenido al programa
+					Hola
+					Hola
+					Hola
+
+					</code></pre>
+				</div>
+				</section>
+
+				<section>
+					<h3>Valor de retorno</h3>
+					<p><small>Por lo general, una función devuelve un valor de retorno resultado de su ejecución. Si nuestra función se encarga de devolver un número aleatorio, el resultado sería ese número en particular.</small></p>
+					<p><small>Supongamos que queremos implementar esa función</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						from random import randint
+						# Comienza la función
+						def lanzar_dado():
+							return randint(1,6)
+
+						# El programa
+						mi_dado = lanzar_dado()
+						print(f"El resultado es {mi_dado}")
+							
+					</code></pre>
+
+					<p></p>
+				</section>
+
+				<section>
+
+					<h3>Consideraciones</h3>
+					<p>La función <strong>NO se ejecutará</strong> hasta que sea invocada. Diferencia entre definir e invocar.</p>
+					<p>La función debe estar definida antes de invocarla. Sino, puede dar el mismo error de querer invocar a una variable si no está definida, por ejemplo:</p>
+					<p><code><small>NameError: name 'saludo' is not defined</small></code></p>
+					
+				</section>
+
+
+				
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Parámetros</h2>
+					</section>
+					
+					<section>
+						<h3>Parámetros</h3>
+						
+						<p><small>Las funciones pueden recibir valores de entrada mediante los llamados parámetros. Esos valores se definen en la cabecera de la función dentro de los paréntesis separados por coma si son mas de uno.</small></p>
+						
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							def saludo(nombre):
+								print("Hola",nombre)
+							
+							nom = input("Ingrese su nombre: ")
+							saludo(nom)
+						</code></pre>
+
+						<div class="fragment">
+
+							<h4>Salida</h4>
+							<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+								Ingrese su nombre: Cristian
+								Hola Cristian
+							</code></pre>
+
+							<p><small>Observar que variable que se usó para enviar el dato no se corresponde con el nombre del parámetro.</small></p>
+						</div>
+					</section>
+
+					<section>
+						<h3>Parámetros</h3>
+						
+						<p><small>Las funciones pueden recibir valores de entrada mediante los llamados parámetros. Esos valores se definen en la cabecera de la función dentro de los paréntesis separados por coma si son mas de uno.</small></p>
+						
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							def saludo(nombre, apellido):
+								print(f"¡Hola {nombre} {apellido}!")
+							
+							
+							nom = input("Ingrese su nombre: ")
+							ape = input("Ingrese su apellido: ")
+							saludo(nom, ape)
+						</code></pre>
+
+						<h4>Salida</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+							Ingrese su nombre: Sergio
+							Ingrese su apellido: Pérez
+							¡Hola Sergio Pérez!
+						</code></pre>
+						
+					</section>
+
+					<section>
+						<h3>Orden de los parámetros</h3>
+						<p>Como se habrá observado, el parámetro se trata internamente en la función como si fuera una variable mas.</p>
+						<!-- <p>Visto desde el programa que invoca al módulo, en estos casos hemos enviado variables que contienen un valor que el mismo valor será visto desde la función.</p> -->
+						<p>Cuando tenemos mas de un parámetro es importante saber que importa el orden que enviemos los datos ya que se respeta el orden de los parámetros y no el nombre de los mismos.</p>
+
+					</section>
+
+					<section>
+						<h4>Orden de los parámetros (ejemplo)</h4>
+						<p><small>Qué imprime este código.</small></p>
+						
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							def saludo(nombre, apellido):
+								print(f"¡Hola {nombre} {apellido}!")
+							
+							
+							nom = input("Ingrese su nombre: ")
+							ape = input("Ingrese su apellido: ")
+							saludo(ape, nom)
+
+						</code></pre>
+						<div class="fragment">
+							<h4></h4>
+							<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+								Ingrese su nombre: Sergio
+								Ingrese su apellido: Pérez
+								¡Hola Pérez Sergio!
+							</code></pre>
+					</div>
+					</section>
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+
+			  </section>
+
+			  <section data-state="no_footer">
+	
+
+					<section>
+						<h2>Variables locales</h2>
+					</section>
+
+					<section>
+						<h2>Variables locales</h2>
+						<p>Las funciones pueden tener variables para usar internamente.</p>
+						<p>Las variables locales son exactamente igual a las variables vistas hasta el momento, solo que pueden verse dentro de la función y una vez que la función termina su ejecución las variables son eliminadas.</p>
+					</section>
+
+					<section>
+						<h3>Ejemplo variables locales</h3>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							def funcion_prueba(numero):
+								x=0
+								if numero == x:
+									print("El número es igual a x")
+								else:
+									print("El número NO es igual a x")
+
+							funcion_prueba(3)
+							funcion_prueba(2)
+							funcion_prueba(0)
+						</code></pre>
+
+						<div class="fragment">
+							<h4>Output</h4>
+
+							<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+								El número NO es igual a x
+								El número NO es igual a x
+								El número es igual a x
+							</code></pre>
+							<small>Observar que se puede enviar valores directamente.</small>
+						</div>
+					</section>
+
+					<section>
+						<h3>Ejemplo variables locales</h3>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							y=99
+							def funcion_prueba(numero):
+								x=y
+								if numero == x:
+									print("El número es igual a x")
+								else:
+									print("El número NO es igual a x")
+
+							funcion_prueba(3)
+							funcion_prueba(2)
+							funcion_prueba(99)
+						</code></pre>
+
+						<div class="fragment">
+							<h4>Output</h4>
+
+							<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+								El número NO es igual a x
+								El número NO es igual a x
+								El número es igual a x
+							</code></pre>
+							<small>Desde las funciones se puede acceder (solo lectura) a las variables que están definidas en el programa.</small>
+						</div>
+					</section>
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+				</section>
+
+				<section data-state="no_footer">
+
+					<section>
+						<h2>Ejercicios en clase</h2>
+
+					</section>
+
+					<section id="ejercicio_1">
+
+						<h3>Ejercicio en clase 1</h3>
+						<p><small>Escriba un programa que solicite al usuario que ingrese su nombre y apellido y luego una función que se encargue de saludar (similar a lo visto en los <a href="#/2/4/0">ejemplos</a>). En caso que el nombre y el apellido sean "Sergio" y "Pérez" respectivamente debe saludar como "¡Hola, Checo!" de lo contrario un Hola nombre apellido.</small></p>
+
+					</section>
+
+
+					 <section id="ejercicio_2">
+						<h3>Ejercicio en clase 2</h3>
+						<p><small>Crea un programa que simule una calculadora. Le debe pedir al usuario dos números y una operación (puede ser suma, resta, multiplicación y división). Posteriormente debe imprimir el resultado.</small></p>
+						<p><small>Escribir una función para cada operación.</small></p>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							Escriba el op1: 9
+							Escriba el op2: 2
+							Elija una operación (+ - * /): +
+
+							El resultado es 9+2=11
+						</code></pre>
+
+						<p><small>En caso de la división, verificar que op2 NO sea 0. Dado que no puede realizarse una división por 0. En tal caso debe imprimir "No se puede dividir por 0".</small></p>
+
+					</section>
+
+
+					<section id="ejercicio_3">
+						<h3>Ejercicio en clase 3</h3>
+						<p><small>
+							Escribe un programa que convierta una temperatura ingresada por el usuario en grados Celsius a grados Fahrenheit y viceversa. 
+							Crea dos funciones: una llamada celsius_a_fahrenheit() que tome una temperatura en grados Celsius y devuelva 
+							su equivalente en grados Fahrenheit, y otra llamada fahrenheit_a_celsius() que haga lo contrario.
+						</small>
+						</p>
+						
+						<p><small>Celsius a Fahrenheit: <code>(x°C * 9/5) + 32 = y°F</code></small></p>
+						<p><small>Fahrenheit a Celsius: <code>(x°F -32) * 5/9 = y°C</code></small></p>
+
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							¡Bienvenido al conversor de temperaturas!
+							Ingresa una temperatura: 64
+							64.0 grados Celsius equivalen a 147.2 grados Fahrenheit.
+							64.0 grados Fahrenheit equivalen a 17.77 grados Celsius.
+						</code></pre>
+
+
+						
+						
+						
+					</section>
+
+
+			</section>
+				<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+					<section id="fin-clase"  data-background-size="contain">
+						<h3>¡Fin de la clase!</h3>
+						<a href="/"> Ir al inicio </a><br>
+						<!-- <a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica4.md" target="_blank"> Práctica 4</a><br> -->
+						<a href="?print-pdf"> Exportar clase a PDF</a>
+					</section>
+
+					<section>
+						<h3>Bibliografía</h3>
+						<ul>
+							<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+							<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+							<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Pyton</a></li>
+						</ul>
+					</section>
+
+				</section>
+					
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
