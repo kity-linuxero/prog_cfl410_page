@@ -1,0 +1,10 @@
+Marisco
+Alimento
+Carne
+Uva
+Arroz
+Habichuelas
+Huevos
+Cebada
+Pera
+Manzana
