@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+					<h4>Clase 7: Archivos</h4>
+
+				</section>
+			
+			<section data-state="no_footer">
+				<section id="archivos-p1">
+					<h2>Archivos: Principios básicos</h2>
+				</section>
+
+				<section>
+					<h3>Archivos</h3>
+					<p><small>Un archivo o fichero es una secuencia de bytes almacenados en un dispositivo. Un archivo se identifica por un nombre y una ubicación dentro de un sistema de archivos (file system). Un sistema de archivos, por lo general tiene una forma jerárquica donde la raíz puede ser un <code>X:\</code> para sistemas Windows o <code>/</code> para sistemas Unix (GNU/Linux, Mac, Android, FreeBSD, etc).</small></p>
+					<img data-src="./img/clase7/FilesAndFolders.png" style="width: 30%;">
+					
+				</section>
+
+				<section>
+					<h3>Archivos (cont)</h3>
+					<p><small>El sistema operativo se encarga de las operaciones de bajo nivel sobre los archivos, de manera que no tenemos que preocuparos por los detalles de implementación del file-system.</small></p>
+					<p><small>Por lo tanto, temas como como está compuesto el file-system, permisos de acceso, control de acceso y tipo de file-system escapa al alcance de este curso.</small></p>
+					<p><small>Al menos en esta primera parte, vamos a enfocarnos en procesar 'parsear' (parse) archivos de texto plano (sin formato).</small></p>
+
+				</section>
+
+				<section>
+					<h3>Archivos en Python</h3>
+					<p><small>Al igual que en otros lenguajes de programación, Python soporta de forma nativa operaciones sobre archivos.</small></p>
+					<p><small>Las operaciones soportadas mas utilizadas son: abrir un archivo, cerrar, crear, escribir, añadir contenido, abrir archivo en modo binario.</small></p>
+					<p><small>Como podrá imaginarse, en Python es muy sencillo realizar todas estas operaciones. A continuación veremos varios ejemplos de como realizar las acciones mencionadas.</small></p>
+					
+
+				</section>
+
+			</section>
+
+
+			<section data-state="no_footer">
+
+				<section id="archivos-lectura">
+					<h2>Operaciones sobre archivos: Lectura<h2>
+
+				</section>
+
+				<section>
+					<h3>Leer archivos</h3>
+					<p><small>Uno de los tipos de archivos que soporta Python son los archivos de texto plano (sin formato). Imaginemos que tenemos el archivo <code>curso_ate.txt</code> en la misma carpeta donde corre nuestro programa.</small></p>
+
+					<p><small>Podemos abrir el archivo usando la función <code>open()</code> pasando como argumento el nombre de archivo que queremos abrir.</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt')
+					</code></pre>
+					<p><small>De esa manera tendremos en la variable <code>archivo</code> el contenido del archivo. De esta forma cargamos un archivo que está en almacenamiento a la memoria RAM para poder trabajar sobre él.</small></p>
+					
+				</section>
+
+				<section>
+					<h3>Leer archivos (cont)</h3>
+					<p><small>En el ejemplo anterior, vimos la función <code>open()</code> enviando como argumento de la función solo el nombre del archivo.</small></p>
+					<p><small>Si no se especifica algún otro argumento que no sea el nombre del archivo, se abrirá el archivo en modo <code>lectura</code>. Pero existe un segundo argumento es es importante especificar que representa el <strong>el modo de apertura del archivo</strong>:</small></p>
+					<small>
+					<ul>
+						<li><strong><code>'r'</code></strong>: Por defecto. Leer un archivo.</li>
+						<li><strong><code>'w'</code></strong>: Escribir un archivo.</li>
+						<li><strong><code>'x'</code></strong>: Creación de un archivo. Si existe falla.</li>
+						<li><strong><code>'a'</code></strong>: Añadir contenido a un archivo existente.</li>
+						<li><strong><code>'b'</code></strong>: Abrir un archivo en modo binario.</li>
+					</ul>
+					</small>
+					<p><small>Por lo tanto, para abrir el archivo <code>curso_ate.txt</code> si especificamos el segundo argumento quedaría:</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt','r')
+					</code></pre>
+					<p><small>Si bien no hace falta especificar el modo 'r' se recomienda como buena práctica.</small></p>
+					<p><small>Mas info en la <a href="https://docs.python.org/3/library/functions.html#open">doc oficial.</a></small></p>
+				
+
+				</section>
+
+				<section id="read">
+					<h3>Método <code>read()</code></h3>
+					<p><small>Volviendo al ejemplo del archivo <code>curso_ate.txt</code> imaginemos que el archivo tiene el siguiente contenido:</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="txt codigo-redondo" data-trim>
+						Línea 1
+						Línea 2
+						Línea 3
+					</code></pre>
+
+					<p><small>Podemos leer el archivo e imprimirlo por pantalla:</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt','r')
+						print(archivo.read())
+						# Línea 1
+						# Línea 2
+						# Línea 3
+					</code></pre>					
+
+				</section>
+
+				<section>
+					<h3>Método <code>readline()</code></h3>
+					<p><small>Es posible ir leyendo línea por línea un archivo. El método que se usa para realizar esto es <code>readline()</code>. Cada vez que se llama a la función <code>readline()</code> se lee una línea. Hasta que se llega al final del archivo en ese momento, la función no devolverá nada.</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt','r')
+						print(archivo.readline())
+						print(archivo.readline())
+						# Línea 1
+						# Línea 2
+					</code></pre>
+					<p><small>Otra forma de usar <code>readline()</code> es pasando como argumento un número que indicará la cantidad de caracteres a leer.</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt','r')
+						print(archivo.readline(1))
+						# L
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Método <code>readlines()</code></h3>
+					<p><small>Este método devuelve una <strong>lista</strong> donde cada elemento de la lista es una línea del archivo. De manera que podemos tratarlo como una lista común y corriente.</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt','r')
+						lista_lineas = archivo.readlines()
+						print(lista_lineas)
+						# ['Línea 1\n', 'Línea 2\n', 'Línea 3\n']
+					</code></pre>
+					<h4>Iterar sobre las líneas</h4>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt','r')
+						lista = archivo.readlines()
+						
+						for l in lista:
+							print(l)
+
+						# Línea 1
+						# Línea 2
+						# Línea 3
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>Cerrar archivos</h3>
+					<p><small>Otra cosa que debemos hacer cuando trabajamos con archivos en Python es cerrar dichos archivos una vez que hemos trabajado con ellos.</small></p>
+					<p><small>Aunque Python los cierra automáticamente una vez finaliza el programa, es recomendable cerrarlos manualmente.</small></p>
+					<p><small>Por lo tanto, para cerrar los archivos alcanza simplemente con el método <code>close()</code></small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open('curso_ate.txt','r')
+						# ... Trabajo con el archivo
+						archivo.close()
+					</code></pre>						
+
+				</section>
+
+				<section>
+					<h3>Cerrar archivos (cont)</h3>
+					<p><small>Existe otra forma de cerrar el archivo automáticamente cuando finalicemos el bloque de código. Esto es posible con la instrucción <code>with()</code></small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						with open('curso_ate.txt','r') as archivo:
+							# Trabajar con 'archivo'
+						# El archivo ya está cerrado.
+					</code></pre>							
+				</section>
+
+				<section>
+					<h3>Ejemplos - leer líneas</h3>
+					
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						with open('curso_ate.txt', 'r') as archivo:
+							linea = archivo.readline()
+							while linea != '':
+								print(linea, end='')
+								linea = archivo.readline()
+					</code></pre>
+					<p><small>Se usa el <code>end=''</code> para que no imprima el salto de línea. </small></p>
+
+					<h4>Como lista</h4>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						with open('curso_ate.txt', 'r') as archivo:
+							for linea in archivo.readlines():
+								print(linea, end='')
+					</code></pre>
+
+				</section>
+
+				<section>
+					<h3>Ejemplos - leer líneas (Cont)</h3>
+					<p>Versión resumida:</p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						with open('ejemplo.txt', 'r') as archivo:
+							for linea in archivo:
+								print(linea, end='')
+					</code></pre>
+					<h4>Output</h4>
+					
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+						# Línea 1
+						# Línea 2
+						# Línea 3
+					</code></pre>
+					<p>En todos los casos dará el mismo output</p>
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+
+
+
+		</section>
+
+		<section data-state="no_footer">
+
+			<section>
+				<h2>Operaciones sobre archivos: Escritura</h2>
+
+			</section>
+
+			<section>
+				<h3>Escribir archivos</h3>
+				<p><small>En la sección anterior vimos como abrir archivos y leerlos línea por línea. Es posible también escribir en archivos. A modo de repaso, veremos el método <code>open()</code> con argumentos orientados a la modificación de archivos:</small></p>
+				<small>
+					<ul>
+						<li><strong><code>'w'</code></strong>: Borra el archivo si ya existiese y crea uno nuevo con el nombre indicado.</li>
+						<li><strong><code>'x'</code></strong>: Creación de un archivo. Si ya existe el archivo se devuelve un error..</li>
+						<li><strong><code>'a'</code></strong>: Añadirá el contenido al final del archivo si ya existiese (append end Inglés).</li>
+					</ul>
+				</small>
+
+				
+
+				<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+					archivo = open("datos.txt", 'w')
+				</code></pre>
+				<p><small>De esa forma creamos un archivo con el nombre <code>datos.txt</code>. Si queremos agregar datos lo abrimos con la opción "append".</small></p>
+				<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+					archivo = open("datos.txt", 'a')
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Método <code>write()</code></h3>
+				<p><small>Ya hemos visto como crear un archivo, ahora veremos como agregar contenido al mismo.</small></p>
+				<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+					archivo = open("datos.txt", 'w')
+					archivo.write("Agregamos una línea")
+					archivo.close()
+				</code></pre>
+				<p><small>Es <strong>muy importante</strong> cerrar el archivo cuando estamos en modo escritura.</small></p>
+				
+				<p class="fragment"><small>Copiemos y peguemos el ejemplo citado. ¿Puede correr el programa y ver si se crea el archivo con el contenido indicado? ¿Así de fácil se agrega una línea?</small></p>
+			</section>
+			<section>
+				<h3>Método <code>write()</code> (cont)</h3>
+				<p><small>Si quisieramos guardar una lista de elementos en un archivo. ¿Cómo procedemos?</small></p>
+				<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+					# Abrimos el archivo como escritura
+					archivo = open("datos.txt", 'w')
+					
+					# Tenemos unos datos que queremos guardar
+					jugadores = ["Messi", "J. Alvarez", "Dybala"]
+					
+					# Guardamos la lista en el archivo
+					for linea in jugadores:
+						archivo.write(linea + "\n")
+					
+					# Cerramos el archivo
+					archivo.close()
+				</code></pre>
+				<p><small>Es importante agregar el salto de línea "<code>\n</code>" ya que por defecto no la agrega.</small></p>
+
+			</section>
+
+			<section>
+				<h3>Método <code>writelines()</code></h3>
+				<p><small>Podemos enviarle una lista al método <code>writelines()</code> y el mismo se encargará de guardar cada elemento en el archivo.</small></p>
+				<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+					archivo = open("datos.txt", 'w')
+					jugadores = ["Messi", "J. Alvarez", "Dybala"]
+					
+					archivo.writelines(jugadores)
+					archivo.close()
+					
+					# Se guarda
+					# MessiJ. AlvarezDybala
+				</code></pre>
+				<p><small>Se guarda todo junto sin espacios en cada elemento. Quizás no es lo que deseamos. Podemos solucionarlo agregando un salto de línea en cada elemento de la lista.</small></p>
+				<p><small>Podemos hacer una iteración recorriendo la lista agregando el salto de línea en cada elemento o guardarlo con el salto de línea.</small></p>
+			</section>
+
+			<section>
+				<h3>Usando <code>with</code></h3>
+				<p><small>Podemos simplificar el código con la instrucción <code>with()</code>. Con dicho método no será necesario cerrar el archivo una vez que lo hayamos utilizado. El archivo se cerrará cuando finalice el bloque <code>with</code>.</small></p>
+				<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+					jugadores = ["Messi\n", "J. Alvarez\n", "Dybala\n"]
+					with open("datos.txt", 'w') as archivo:
+						 archivo.writelines(jugadores)
+				</code></pre>
+				<h4>Contenido del archivo</h4>
+				<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+					Messi
+					J. Alvarez
+					Dybala
+				</code></pre>
+			</section>
+
+			<section>
+				<h3>Ejemplos escribiendo archivos</h3>
+				<p><small>Realizaremos dos funciones, una para leer un archivo y otra para escribirlo.</small></p>
+				<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+					def escribe_archivo(mensaje):
+						with open('file.txt', 'w') as archivo:
+							archivo.write(mensaje)
+
+					def lee_archivo():
+						mensaje = ""
+						with open('file.txt', 'r') as archivo:
+							mensaje = archivo.read()
+						# Borra el contenido del archivo para dejarlo vacío
+						f = open('file.txt', 'w')
+						f.close()
+						return mensaje
+					escribe_archivo("Mensaje para el curso")
+					print(lee_archivo())
+				</code></pre>
+
+			</section>
+			<section>
+				<h2>¿Preguntas?</h2>
+			</section>
+
+
+	</section>
+
+	<section data-state="no_footer">
+
+		<section id="ejercicios">
+			<h2>Ejercicios en clase</h2>
+		</section>
+
+		<section>
+			<h3>Ejercicio en clase 1</h3>
+
+			<p>Descargue <a href="./img/clase7/clase7.txt" download="clase7.txt">este archivo</a> y colóquelo en una carpeta. En esa misma carpeta, cree el archivo <code>clase7.py</code>. Luego lea el contenido del archivo e imprímalo por pantalla de manera que quede de la siguiente manera.</p>
+			<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+				Marisco
+				Alimento
+				...
+				Manzana
+			</code></pre>
+		</section>
+		<section>
+			<h3>Ejercicio en clase 2</h3>
+			<p>Con el archivo anterior descargado, lea el contenido del archivo línea por línea e imprimalo por pantalla marcando el número de línea de cada una seguida por un <code> - </code>.</p>
+			<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+				1 - Marisco
+				2 - Alimento
+				...
+				10 - Manzana
+			</code></pre>
+
+		</section>
+
+		<section>
+			<h3>Ejercicio en clase 3</h3>
+			<p>Escriba un programa que tome un texto por teclado y lo guarde en un archivo llamado <code>dato.txt</code></p>
+
+
+		</section>
+	</section>
+
+
+	<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+		<section id="fin-clase"  data-background-size="contain">
+			<h3>¡Fin de la clase!</h3>
+			<a href="/"> Ir al inicio </a><br>
+			<a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica7.md" target="_blank"> Práctica 7</a><br>
+			<a href="?print-pdf"> Exportar clase a PDF</a>
+		</section>
+
+		<section>
+			<h3>Bibliografía</h3>
+			<ul>
+				<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+				<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+				<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Pyton</a></li>
+			</ul>
+		</section>
+
+	</section>
+					
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
