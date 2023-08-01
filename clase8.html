@@ -1,0 +1,476 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+					<h4>Clase 8: Excepciones</h4>
+
+				</section>
+			
+			<section data-state="no_footer">
+				<section id="indice">
+					<h2>Excepciones</h2>
+					<h3>Contenido de la clase</h3>
+					<ul>
+						<li>Excepciones</li>
+						<small>
+							<ul>
+								<li><a href="?#/excepciones">Qué son las excepciones</a></li>
+								<li><a href="?#/handling">Manejo de excepciones</a></li>
+								<li><a href="?#/en_python">Excepciones en Python</a></li>
+								<li><a href="?#/built-in">built-in exceptions</a></li>
+								<li><a href="?#/raise">Lanzar excepciones</a></li>
+								<li><a href="?#/ejemplos">Ejemplos</a></li>
+							</ul>
+						</small>
+						
+						<li><a href="?#/ejercicio">Ejercicio en clase</a></li>
+						
+					</ul>
+				</section>
+			</section>
+
+			<section data-state="no_footer">
+
+				<section>
+					<h2>Excepciones</h2>
+				</section>
+
+				<section id="excepciones">
+					<h3>Excepciones</h3>
+					<p><small>Una <strong>excepción</strong> es una condición inesperada o inusual, que surge durante la ejecución del programa.</small></p>
+					<p><small>Como su nombre lo indica, se producen cuando la ejecución de una parte del programa no termina correctamente sino que termina de manera excepcional como consecuencia de una situación inesperada. Se suponen que las excepciones ocurren con poca frecuencia.</small></p>
+					<p><small>A estas alturas nos hemos encontrado con numerosas excepciones que tal vez simplemente ignorábamos o se lo atribuíamos a un error en nuestro código, pero no siempre es así. Nuestro código puede ser correcto y aún así, el programa puede dar alguna excepción.</small></p>
+					<p><small>A continuación veremos excepciones típicas para ir entendiendo el concepto.</small></p>
+
+				</section>
+
+				<section>
+					<h3>Excepciones <small>(p2)</small></h3>
+					<p><small>Una excepción típica es intentar abrir en modo lectura un archivo que no existe. En tal caso la ejecución del programa dará un error y el programa terminará.</small></p>
+					
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						archivo = open("d.txt", 'r')
+						archivo.write("Agregamos una línea")
+						archivo.close()
+					</code></pre>
+
+					<p><small>Si el archivo <code>datos.txt</code> no existe, el error será el siguiente:</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+						FileNotFoundError: [Errno 2] No such file or directory: d.txt
+					</code></pre>
+
+					<p><small>Prestar atención que el error es <code>FileNotFoundError</code>. Mas adelante veremos como tratar ese error.</small></p>
+				</section>
+
+				<section>
+					<h3>Excepciones <small>(p3)</small></h3>
+					<p><small>Supongamos que nos piden escribir una función <code>divide(a,b)</code> que tiene que retornar el valor de a dividido por b.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						def divide(a,b):
+							return a/b
+					</code></pre>
+					<p><small>Puede parecer que no hay problema, pero ¿Qué pasaría si <code>b=0</code>?</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+						ZeroDivisionError: division by zero
+					</code></pre>
+					<p class="fragment"><small>En los números naturales, enteros y reales, la división por cero no posee un valor definido por lo tanto la operación da error.</small></p>
+					
+				</section>
+
+				<section>
+					<h3>Excepciones <small>(p4)</small></h3>
+					<p><small>Otra excepción que se suele dar es cuando queremos hacer una conversión de tipos y los datos de entrada no son válidos para la conversión.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						dato = int(input("Ingrese un número"))
+						print("Su número es",dato)
+					</code></pre>
+					<p><small>¿Qué pasaría si el usuario ingresa, por ejemplo, una letra?</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+						ValueError: invalid literal for int() with base 10: 
+					</code></pre>
+					<p class="fragment"><small>Esta excepción se lanza porque no es posible convertir a int una letra.</small></p>
+					
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+			</section>
+
+
+	<section data-state="no_footer">
+		<section id="handling">
+			<h2>Manejo de excepciones</h2>
+		</section>
+
+		<section>
+			<h3>Manejo de excepciones</h3>
+			<p><small>El <strong>manejo de excepciones</strong> (Exception handling) permite al programador crear aplicaciones tolerantes a fallos y robustas (resistente a errores). De manera que el programa se ejecuta y no termina de forma inesperada ante la aparición de excepciones.</small></p>
+			<p><small>Es importante aclarar que <strong>no todos los lenguajes soportan manejo de excepciones</strong>.</small></p>
+			
+			<p><small>Para que un lenguaje soporte excepciones debe proveer:
+				<ul>
+					<li>Un modo de definirlas.</li>
+					<li>Una forma de alcanzarlas (invocarlas).</li>
+					<li>Una forma de manejarlas.</li>
+					<li>Un criterio de continuación.</li>
+				</ul>
+			</small>
+
+			<p><small>En casos donde el lenguaje no soporta el manejo de excepciones debe buscarse alguna forma definiendo procedimientos manualmente y agregando sentencias <code>if</code> donde podría ocurrir alguna excepción.</small></p>
+
+			</p>
+
+		</section>
+
+		<section id="en_python">
+			<h3>Excepciones en Python</h3>
+			<p><small>En Python se manejan a través de los bloques <code>try except</code></small></p>
+
+			<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+				while True:
+					try:
+						x = int(input("Por favor ingrese un número: "))
+						break # Para "romper" el while
+					except ValueError:
+						print("Oops! No era válido. Intente nuevamente...")
+			</code></pre>
+			<p><small>Puede probar el código <a href="https://www.mycompiler.io/view/Bym8uc2Hhs2" target="_blank">aquí</a> ingresando distintos valores en el input. (Por defecto, toma los valores "Hola" y 99).</small></p>
+			
+
+		</section>
+
+		<section>
+			<h3>Excepciones en Python <small>(p2)</small></h3>
+			<p><small>La declaración try funciona de la siguiente manera:</small></p>
+			<small>
+				<ul>
+					<li>Primero se ejecuta el bloque <code>try</code> (el código que está entre <code>try</code> y <code>except</code>)</li>
+					<li>Si no ocurre ninguna excepción, el bloque <code>except</code> se saltea y termina la ejecución de la declaración <code>try</code>.</li>
+					<li>Si ocurre una excepción durante la ejecución del bloque <code>try</code>, el resto del bloque se saltea. Luego, si su tipo (en este caso el tipo es <code>ValueError</code>)coincide con la excepción nombrada luego de la palabra <code>except</code>, se ejecuta el bloque <code>except</code> y la ejecución continúa luego de la declaración <code>try</code> </li>
+					<li>Si ocurre una excepción pero que no coincide con el tipo esperado en el <code>except</code>, la excepción se pasa a las declaraciones <code>try</code> de "más afuera". Si no se encuentra nada que la maneje queda como una excepción no manejada y la ejecución termina mostrando la excepción.</li>
+				</ul>
+
+				<p>Es posible declarar varios bloques <code>except</code> para manejar varios tipos de excepciones.</p>
+			</small>
+		</section>
+
+		<section>
+			<h3>Excepciones en Python <small>(p3)</small></h3>
+			<p><small>¿Qué sucede cuando una excepción no encuentra un manejador en su bloque <code>try except</code>?</small></p>
+			<small>
+			  <ul>
+				<li><strong>Busca estáticamente</strong>: Analiza si el <code>try</code> está contenido dentro de otro y si ese otro tiene un manejador para la excepción. Sino...</li>
+				<li><strong>Busca dinámicamente</strong>: Analiza quién lo llamó y analiza ahí.</li>
+				<li><strong>Si no se encuentra un manejador, se corta el proceso</strong> y larga el mensaje de error estándar.</li>
+				<li><strong>Levanta excepciones explícitamente con <code>raise</code></strong></li>
+			  </ul>
+			</small>
+		</section>
+
+		<section>
+			<h3>Excepciones en Python <small>(p4)</small></h3>
+			<p><small>El bloque <code>try except</code> se puede complementar opcionalmente con <code>else</code> y <code>finally</code>
+				<ul>
+					<li><strong><code>else</code></strong>: Se ejecuta en caso que NO se haya producido una excepción.</li>
+					<li><strong><code>finally</code></strong>: Se ejecuta siempre. Haya ocurrido una excepción o no.</li>
+				</ul>
+			</p>
+			</small>
+			<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim data-line-numbers>
+			try:
+				x = int(input("Por favor ingrese un número: "))
+			except ValueError as e:
+				print(f"Oops! No era válido.\nCódigo de error: {e}")
+			except:
+				print(f"Ha ocurrido un error inesperado")
+			else:
+				print("El proceso terminó sin error")
+			finally:
+				print("Fin del proceso")
+			</code></pre>
+
+			<p class="fragment"><small>Observar la línea 3. El mensaje de la excepción se guardará en la variable <strong>e</strong> y la podremos mostrar al usuario. Esto no siempre es así ya que a veces (sobre todo en ambientes productivos) es deseable ocultar los errores de la aplicación y solo mostrar un mensaje genérico o con un código de error.</small></p>
+
+		</section>
+
+		<section>
+			<h3>Excepciones en Java</h3>
+			<p><small>En Java se usan los bloques <code>try</code> y <code>catch</code>. Pero el funcionamiento es similar.</small></p>						
+			<pre data-id="code-animation"><code class="java" data-trim>
+				public class ExcDemo {
+					public static void main(String[] args) {
+						int nums[]=new int[4];
+						try {
+							System.out.println("Antes de la excepción.");
+							//generar una excepción de índice fuera de límites
+							nums[7]=10;
+						}catch (ArrayIndexOutOfBoundsException exc){
+							//Capturando la excepción
+							System.out.println("Índice fuera de los límites!");
+						} finally {
+						System.out.println("Después de la excepción.");
+						}
+					}
+				}
+				</code></pre>
+		</section>
+
+		<section>
+			<h2>¿Preguntas?</h2>
+		</section>
+
+
+	</section>
+
+	<section data-state="no_footer">
+
+		<section>
+			<h2>Excepciones built-in</h2>
+		</section>
+		<section id="built-in">
+			<h3>Listado de built-in exceptions</h3>
+			<p>Algunas built-in exceptions</p>
+			<small>
+			<ul>
+				<li>
+					<strong><code>ModuleNotFoundError</code></strong>: Se lanza cuando se intenta importar un módulo que no es encontrado.
+				</li>
+				<li>
+					<strong><code>KeyError</code></strong>: Se lanza cuando se intenta acceder a la key inexistente de un diccionario.
+				</li>
+				<li>
+					<strong><code>ZeroDivisionError</code></strong>: Se lanza cuando se intenta dividir por cero.
+				</li>
+				<li>
+					<strong><code>FileNotFoundError</code></strong>: Se lanza cuando se intenta abrir un archivo que no es encontrado en el path indicado.
+				</li>
+				<li>
+					<strong><code>SyntaxError</code></strong>: Se  lanza cuando hay un error de sintaxis.
+				</li>
+				<li>
+					<strong><code>IndentationError</code></strong>: Es un tipo de <code>SyntaxError</code>, que se lanza específicamente cuando se encuentra un error de identación en el código. <a href="https://docs.python.org/3/library/exceptions.html#exception-hierarchy" target="_blank">Ver herencia de excepciones</a>
+				</li>
+				<li>
+					<strong><code>TypeError</code></strong>: Se lanza cuando se aplica una función u operación no encontrada para el tipo. 
+				</li>
+			</ul>
+
+		</small>
+		<p><small>Hay un listado de built-in exceptions que lo pueden consultar en <a href="https://docs.python.org/es/3/library/exceptions.html">la documentación</a></small></p>
+		<p><small>El listado de excepciones se centraron en la versión de 3.10 de Python. Para los demás lenguajes pueden ser similares los nombres.</small></p>
+
+		</section>
+
+		<section>
+			<h3>Ejemplo abrir archivo</h3>
+			<p><small>Habiendo visto excepciones es deseable cada vez que nuestro programa pueda lanzar una excepción, el mismo tenga la capacidad de manejarla.</small></p>
+
+			<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim data-line-numbers>
+				file= "archivo.txt"
+				try:
+					with open(file, 'r') as archivo:
+						for linea in archivo:
+							print (linea, end='')
+				except FileNotFoundError:
+					print("No se ha encontrado el archivo")
+				</code></pre>
+
+		</section>
+
+		<section>
+			<h3>Ejemplo calculadora</h3>
+			<p><small>En este ejemplo se descartan datos de entrada inválidos y se maneja la excepción por si b=0.</small></p>
+
+			<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim data-line-numbers>
+				try:
+					a = int(input("Ingrese un valor para a:"))
+					b = int(input("Ingrese un valor para b:"))
+					c = a / b
+					print(f"a / b = {c}")
+				except(ValueError, ZeroDivisionError):
+					print("Ha ocurrido un error")
+			</code></pre>
+
+			<p><small>En caso que a o b den error al convertirse a número o b=0, el mensaje será el mismo.</small></p>
+
+		</section>
+
+		<section>
+			<h2>¿Preguntas?</h2>
+		</section>
+	</section>
+
+	<section data-state="no_footer">
+		<section id="ejercicios">
+			<h2>Lanzar excepciones</h2>
+		</section>
+
+		<section id="raise">
+			<h3>Lanzar excepciones</h3>
+			<p><small>Es posible levantar o lanzar manualmente una excepción. En Python, se usa la instrucción <code>raise</code>. En Java, se lanza una excepción con las instrucciones <code>throws</code> o <code>throw</code>.</small></p>
+			<h4>Ejemplo lanzar una excepción</h4>
+
+			<pre data-id="code-animation"><code class="python" data-trim>
+			def division_entera(dividendo, divisor):
+				if divisor == 0:
+					raise ValueError("El divisor no puede ser cero.")
+				return dividendo // divisor
+
+			# Ejemplo de uso
+			try:
+				resultado = division_entera(10, 0)
+				print("El resultado de la división es:", resultado)
+			except ValueError as error:
+				print("Se produjo un error:", error)
+	
+			</code></pre>
+
+			
+			<p class="fragment"><small>¿Para qué puede ser útil lanzar excepciones? ¿Si justamente lo que queremos es evitarlas?.					
+			<span class="fragment">Porque podríamos personalizar los mensajes de error de la excepción de manera de ocultarla al usuario final. También se puede mantener una lista de errores del programa.</span></small></p>
+
+		</section>
+
+		<section>
+			<h2>¿Preguntas?</h2>
+		</section>
+	</section>
+
+		
+
+	<section data-state="no_footer">
+
+		<section id="ejercicios">
+			<h2>Ejercicios en clase</h2>
+		</section>
+
+		<section>
+			<h3>Ejercicio en clase 1</h3>
+			<p>Escriba una función que pida al usuario dos valores numéricos. La función debe detectar que realmente se puedan convertir a números los valores ingresados. Usar excepciones para poder validar los datos.</p>
+			<p>La función debe retornar una tupla con los números convertidos a números.</p>
+
+		</section>
+		<section>
+			<h3>Ejercicio en clase 2</h3>
+
+			<p>Escriba una función que reciba los dos parámetros validados por el ejercicio anterior de los cuales deberá restarlos entre si. La función debe retornar la resta (a-b). En caso que la resta sea negativa, debe lanzar una excepción del tipo ValueError. El programa principal debe manejar la excepción y si llega un ValueError deberá informar que hubo algún error con los valores.</p>
+
+		</section>
+
+	</section>
+
+
+	<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+		<section id="fin-clase"  data-background-size="contain">
+			<h3>¡Fin de la clase!</h3>
+			<a href="/"> Ir al inicio </a><br>
+			<a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica7.md" target="_blank"> Práctica 7</a><br>
+			<a href="?print-pdf"> Exportar clase a PDF</a>
+		</section>
+
+		<section>
+			<h3>Bibliografía</h3>
+			<ul>
+				<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+				<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+				<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Pyton</a></li>
+			</ul>
+		</section>
+
+	</section>
+					
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
