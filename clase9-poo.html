@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					
+					<h2>Curso de programación</h2>
+					<h4>Clase 9: Programación orientada a Objetos Parte I</h4>
+
+				</section>
+			
+			<section data-state="no_footer">
+				<section id="indice">
+					<h2>Clase 10</h2>
+					<h3>Contenido de la clase</h3>
+					<ul>
+						<li>Programación orientada a objetos</li>
+						<small>
+							<ul>
+								<li><a href="clasePoo.html#/poo1">Introducción</a></li>
+								<li><a href="clasePoo.html#/poo2">Clase/objeto</a></li>
+								<li><a href="clasePoo.html#/poo3">Atributos/métodos</a></li>
+								<li><a href="clasePoo.html#/def_class/0">Definicion de Clases en Python</a></li>
+								<li><a href="clasePoo.html#/def_attrib/2">Definicion de Atributos en Python</a></li>
+								<li><a href="clasePoo.html#/constructor/2">Constructor</a></li>
+								<li><a href="clasePoo.html#/metodos/0">Definiendo métodos</a></li>
+								<li><a href="clasePoo.html#/ejemplo/5">Ejemplo</a></li>
+								<li><a href="clasePoo.html#/atributos_y_objetos">Instancias en atributos</a></li>
+							</ul>
+						</small>
+						
+						<li><a href="clasePoo.html#/ejercicio">Ejercicio en clase</a></li>
+						<li><a href="clasePoo.html#/glosario1">Glosario</a></li>
+					</ul>
+				</section>
+
+
+
+			</section>
+
+			<section data-state="no_footer">
+				<section id="poo">
+					<h3>Introducción a la Programación Orientada a objetos</h3>
+					<h4>Parte I</h4>
+				</section>
+
+				<section id="poo1">
+					<h3>Programación orientada a objetos</h3>
+					<p><small>La <strong>Programación orientada a Objetos</strong> (POO) es un <strong>paradigma</strong> de programación, es decir, un modelo o un estilo de programación que nos da unas guías sobre cómo trabajar con él. Se basa en el <strong>concepto de clases y objetos</strong>. </small></p>
+					<p><small>Con el paradigma de Programación Orientado a Objetos lo que buscamos es dejar de centrarnos en la lógica pura de los programas, para empezar a pensar en objetos, lo que constituye la base de este paradigma. Esto nos ayuda a poder modelar objetos de la vida real o abstractos con su comportamiento y características de forma directa hacia un lenguaje de programación.</small></p>
+					<p><small>Un programa orientado a objetos puede verse como: «Un conjunto de <strong>objetos</strong> que colaboran enviándose <strong>mensajes</strong>».</small></p>
+
+				</section>
+
+				<!-- <section id="poo2">
+					<h3>Programación orientada a objetos<small></small></h3>
+					<p><small>La Programación Orientada a objetos permite que el código sea reutilizable, organizado y fácil de mantener. Sigue el principio de desarrollo de software utilizado por muchos programadores <strong>DRY</strong>(Don't Repeat Yourself) «entre otros principios», para evitar duplicar el código y crear de esta manera programas eficientes. Además, evita el acceso no deseado a los datos o la exposición de código mediante la <strong>encapsulación</strong> y la <strong>abstracción</strong>, de la que hablaremos en detalle más adelante.</small></p>
+					<p><small>Un programa orientado a objetos puede verse como: «Un conjunto de <strong>objetos</strong> que colaboran enviándose <strong>mensajes</strong>».</small></p>
+				</section> -->
+
+				<section id="poo2">
+					<h3>Conceptos de POO</h3>
+					<p><small>La POO introduce nuevos conceptos, que amplían los conceptos vistos hasta el momento.</small></p>
+		
+					<ul>
+						<!-- <li><strong>Clase</strong><small>Es una especie de "plantilla" o "molde" que define de manera genérica los datos o <strong>atributos</strong> que va a poseer el objeto y el <strong>comportamiento</strong> (implementado en métodos) que tendrá el mismo. Una clase es un modelo que define un conjunto de variables y métodos apropiado para operar con dichos datos. Cada objeto creado a partir de la clase se denomina <em>instancia</em> de la clase. -->
+						<li><strong>Clase</strong><small>Es una especie de <strong>plantilla</strong> o <strong>molde</strong> para crear <strong>objetos</strong> a partir de ella. Esta plantilla es la que contiene la información, características y capacidades que tendrán los objetos que deriven de la clase. En la clase de definen los <em>atributos</em> y el <em>comportamiento</em> (o mensajes) que tendrán los objetos.</small></li>
+						<!-- <ul>
+							<li><strong>Atributos:</strong> Almacenan el estado de la clase por medio de <em>variables</em> (variables de instancia o de clase), estructura de datos e incluso otras clases.</li>
+							<li><strong>Métodos:</strong> Son funciones que describen lo que es capaz de hacer el objeto.</li>
+						</ul> -->
+						
+						<!-- <li><strong>Objeto</strong><small>Un objeto es creado a partir de una clase predefinida que tendrá la información, características y capacidades definidas en la clase. Un objeto almacena información (atributos/datos) y tienen capacidades (comportamiento/métodos) de realizar tareas.</small></li> -->
+						<!-- Un objeto contiene <em>atributos</em> (datos) y un <em>comportamiento</em> provisto por los <em>métodos</em> (funciones) definidos en la clase de la cual es instancia. -->
+
+						<li><strong>Objeto</strong><small>Es un ente que consta de un estado (atributos) y de un comportamiento, que a su vez constan respectivamente de <strong>datos</strong> almacenados y de <strong>tareas realizables</strong> durante el tiempo de ejecución. Un objeto es <em>creado a partir de una clase</em> y son capaces de interactuar con otros objetos y partes del programa.</small></li>
+						
+					</ul>
+
+					<!-- <p><small>Los atributos y comportamiento que tendrá un objeto que se definen en la clase, son</small></p> -->
+
+			
+					
+				</section>
+
+				<section id="poo3">
+					<h3>Conceptos de POO <small>(p2)</small></h3>
+					<ul>
+						<li><strong>Atributo o estado</strong> (Dato)<small>Es un dato que se define en la clase y que serán los datos que definirá el estado del objeto. El valor de los datos pueden cambiar durante la ejecución del programa.<br>En la práctica, un atributo será literalmente una <em>variable</em> que almacenarán datos del objeto.</small></li> 
+						<li><strong>Métodos</strong> (Código)<small>Define ya descrito <em>comportamiento</em> del objeto y por lo tanto es lo que un objeto puede o es capaz de hacer.<br>En la práctica, un método es una <em>función</em> que ejecuta un código escrito en la clase.</small></li>
+						
+						
+					</ul>
+					<p class="fragment"><small>Además de los conceptos previamente vistos, la POO incluye más conceptos como Herencia, Abstracción, Polimorfismo, Encapsulamiento, Acoplamiento y Cohesión que veremos mas adelante a medida que avancemos en la POO.</small></p>
+				</section>
+
+				<section>					
+					<h3>Conceptos de POO<small>(p3)</small></h3>
+					<p><small>Para tratar de entender con ejemplos, podemos crear una clase para representar animales llamada "Animal" y tener una serie de <strong>atributos</strong>, como "nombre" y "edad", y una serie de tareas realizables (comportamiento) que estos animales pueden tener, como caminar o comer, y que a su vez se implementan como <strong>métodos</strong> en la clase (funciones).</small></p>
+					<p><small>Otro ejemplo, podemos tener una clase para representar vehículos, llamada "Vehiculo". Los <strong>atributos</strong> pueden ser patente, marca, modelo, etc. Y el <strong>comportamiento</strong> puede ser arrancar, poner alarma, acelerar, etc.</small></p>
+					<p><small>Como puede verse, cosas <em>cotidianas</em> como vehículos, animales o cualquier cosa que nos imaginemos pueden ser representadas en un lenguaje de programación mediante el paradigma <em>POO</em>.</small></p>
+					<p><small></small></p>
+				</section>
+
+				<!-- <section>					
+					<h3>Conceptos de POO<small>(p4)</small></h3>
+					<p><small>Además de los conceptos previamente vistos, la POO se basa en 6 principios básicos:</small></p>
+		
+					<ul>
+						<li>Herencia</li>
+						<li>Cohesión</li>
+						<li>Abstracción</li>
+						<li>Polimorfismo</li>
+						<li>Acoplamiento</li>
+						<li>Encapsulamiento</li>
+					</ul>
+					<p><small>Estos principios se verán mas adelante.</small></p>
+				</section> -->
+
+				<section>
+					<h3>Motivación</h3>
+					<p><small>Luego de esta breve explicación, parece ser que la POO es bastante lógica, pero no es algo que existió siempre en los lenguajes de programación y muchos de estos no lo soportan. </small></p>
+					<p><small>En parte surgió debido a las necesidades de los programadores, en el trascurso de los años, de hacer programas cada vez mas complejos. </small></p>
+					<p><small>En el mundo de la programación hay gran cantidad de aplicaciones que realizan tareas muy similares y es importante identificar los <em>patrones</em> que nos permiten no reinventar la rueda. La programación orientada a objetos intentaba resolver esto.</small></p>
+					<p><small>Uno de los primeros mecanismos que se han utilizado para agrupar bloques y resolver problemas repetitivos fueron las <strong>funciones</strong>. Si bien las funciones son muy útiles, no son suficientes para resolver problemas complejos por si solas.</small></p>
+				</section>
+				
+				<section>
+					<h3>Motivación <small>(p2)</small></h3>
+					<p><small>Imaginemos que tenemos un juego de naves en 2D moviéndose por la pantalla. Cada una de ellas tendrá una una posición <code>(x,y)</code>, un color, un tamaño de nave como también un comportamiento cada una.</small></p>
+					<p><small>Sin usar <em>POO</em> tendríamos que definir una variable por cada dato que queremos almacenar para cada nave. Si tenemos 10 naves y 5 datos para almacenar por cada nave, <em>¡Tendríamos que definir 50 variables!</em>. El código sería un verdadero desorden y más aún si quisieramos modificar la cantidad de naves o agregar atributos nuevos.</small></p>
+					<p><small>Si diseñamos el programa con una arquitectura <em>orientada a objetos</em> esto sería mucho mas sencillo.</small></p>
+					<p><small>Mediante una <strong>clase</strong> podríamos definir lo general de las naves; sus <strong>atributos</strong> y <strong>comportamiento</strong>, luego "fabricar" naves (crear <strong>objetos</strong>) cada una con sus cualidades.</small></p>
+				</section>
+
+				<section>
+					<h3>Repaso:</h3>
+					<h4>Características básicas de la POO</h4>
+					<ul>
+						<li>Clase</li>
+						<li>Objeto</li>
+						<li>Atributos o datos</li>
+						<li>Comportamiento o métodos</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+			</section>
+
+			
+			<section id="definicion" data-state="no_footer">
+				<section>
+					<h2>Definir clases, atributos y métodos</h2>
+				</section>
+
+				<section id="def_class">
+					<h3>Definiendo clases</h3>
+					<p><small>Como hemos <a href="#/poo2">mencionado</a> anteriormente, una <strong>clase</strong> es como una <em>plantilla</em> para crear objetos. Imaginemos que queremos crear un objeto para representar un auto.</small></p>
+				
+					<pre data-id="code-animation"><code class="python" data-trim>
+						# Creamos una clase vacía
+						class Auto:
+							pass # No hace nada
+					</code></pre>
+
+					<p><small>Ahora que tenemos la <strong>clase</strong>, podemos crear un <strong>objeto</strong> de la misma. Podemos hacerlo como si de una variable normal se tratase; 
+						<code>nombre_variable=Clase()</code>. Dentro de los paréntesis irían los parámetros de entrada si los hubiera.</small></p>
+
+					<pre data-id="code-animation"><code class="python" data-trim>
+						mi_auto = Auto()
+						otro_auto = Auto()
+					</code></pre>
+					
+					<p><small>Cuando se crea un objeto a partir de una clase se dice que se <em>instancia</em> una clase o que un objeto es <em>instancia</em> de una determinada clase.</small></p>
+					<p><small>En este ejemplo vimos una clase vacía, sin atributos ni comportamiento definido, lo cual no tiene ninguna utilidad práctica. Pero nos sirve para introducirnos en la sintáxis.</small></p>
+					<p class="fragment"><small><strong>IMPORTANTE:</strong> Por <em>convención</em>, los nombres de las clases empiezan <em>siempre</em> en <strong>mayúsculas</strong>.</small></p>
+				</section>
+
+				<section id="def_attrib">
+					<h2>Definiendo atributos</h2>
+					<p>Las clases pueden tener atributos y es importante saber que hay dos tipos:</p>
+
+					<p>
+						<ul>
+							<li class="fragment">Atributos de <strong>instancia</strong>:<small>También llamados atributo de objeto. Son atributos (datos) que pertenecen solo a la instancia u objeto en particular. Es decir cada objeto tendrá sus propios datos basados en sus atributos de instancia. Para acceder al atributo de instancia, será requisito <em>instanciar</em> una clase. Es decir, crear un objeto.</small></li>
+							<li class="fragment">Atributos de <strong>clase</strong>:<small>Son atributos que pertenecen a la clase y que todos los objetos tendrán ese atributo. Como es un atributo de la clase, no es necesario instanciar una clase para acceder al atributo. Sino que basta con invocar a la clase seguido por el atributo.</small></li>
+						</ul>
+					</p>
+					<!-- <p class="fragment"><small>Para resumir, podemos decir que los atributos que tendrá un objeto se definen con <strong>variables</strong> y su comportamiento serán definidos por <strong>funciones</strong>.</small></p> -->
+					<p class="fragment"><small>De ahora en mas diremos <em>variables de instancia</em> a los atributos de instancia y <em>variables de clase</em> a los atributos de clase.</small></p>
+				</section>
+
+				<!-- <section>
+					<h2>Definiendo atributos <small>(p2)</small></h2>
+					<p>Vamos a definir una clase con sus atributos.</p>
+
+					<pre data-id="code-animation"><code class="python" data-trim>
+						class Auto:
+							marca = "VW"
+							color = None
+
+						mi_auto = Auto() # Instanciamos la clase auto
+						mi_auto.color = 'Rojo'
+						
+						otro_auto = Auto()
+						otro_auto.color = 'Blanco'
+
+						print(mi_auto.marca) # VW
+						print(mi_auto.color) # Rojo
+						print(otro_auto.color) # Blanco
+					</code></pre>
+					<p><small>Hemos creado una clase <code>Auto</code> con dos atributos de <em>instancia</em>; marca y color. Marca tiene un valor por defecto. Son tratados como <em>variables</em> normales, pero se acceden a ella anteponiendo el nombre del <em>objeto</em>. Quedando finalmente: <code>objeto.atributo</code></small></p>
+				</section> -->
+
+				<section id="constructor">
+					<h3>Definiendo métodos: constructor</h3>
+					<!-- <h4>Constructor</h4> -->
+					<p><small>Los lenguajes nos proveen un <em>constructor</em> por defecto para que cada clase pueda construir objetos. Pero a veces resulta muy útil tener nuestros propios <em>constructores</em>.</small></p>
+					<p><small>En <code>Python</code> hay un <em>método</em> especial llamado <code>__init__</code> que se usa como constructor.</small></p>
+					
+					<pre data-id="code-animation" class="fragment"><code class="python" data-trim data-line-numbers>
+						class Auto:
+							def __init__(self, un_modelo, un_color): # Constructor
+								self.modelo = un_modelo # Variable de instancia
+								self.color = un_color # Variable de instancia
+
+						mi_auto = Auto('Fiesta', 'Blanco') # Se instancia objeto
+						print(mi_auto.modelo, mi_auto.color) # Fiesta Blanco
+						otro_auto = Auto('Cruze', 'Negro') # Se instancia objeto
+						print(otro_auto.modelo, otro_auto.color) # Cruze Negro
+					</code></pre>
+
+					<p class="fragment"><small>Seguramente te hayas fijado en el <code>self</code> que se pasa como parámetro de entrada del método. Es una variable que representa la instancia de la clase, y <em>deberá estar siempre ahí</em>.</small></p>
+					<p class="fragment"><small>El uso de <code>__init__</code> y el doble __ no es una coincidencia. Cuando veas un método con esa forma, significa que está <em>reservado</em> para un uso especial del lenguaje.</small></p>
+					
+
+				</section>
+
+				<section id="metodos">
+					<h2>Definiendo métodos</h2>
+					
+					<pre data-id="code-animation"><code class="python" data-trim>
+						class Auto:
+							origen = "Argentina" # Variable de clase
+
+							def __init__(self, un_modelo): # Constructor
+								self.modelo= un_modelo	# Variable de instancia
+						
+							def arrancar(self): # Método
+								print("Auto encendido")
+							def acelerar(self, velocidad): # Método
+								print(f"Acelerando a {velocidad}km/h")
+							
+						mi_auto = Auto('Cruze')
+						mi_auto.arrancar() # Auto encendido"
+						mi_auto.acelerar(40) # Acelerando a 40km/h
+					</code></pre>
+					<p><small>Podemos acceder a los <em>métodos</em> con un punto luego del identificador del objeto. El primer parámetro de los métodos <em>debe ser</em> <code>self</code>. <a href="https://www.mycompiler.io/view/JdPnZIvjeYB" target="_blank">Ver código</a></small></p>
+					<p class="fragment"><small>En Python las variables de clase se definen fuera de los métodos y las variables de instancia van dentro de algún método.</small></p>
+				</section>
+
+				<section id="ejemplo">
+					<h2>Ejemplo</h2>
+					
+					<p><small>Queremos implementar en código el comportamiento de un semáforo.</small></p>
+					<p><small>El semáforo debe tener un estado de luz (Rojo o Verde) y de alguna forma deberíamos intercambiar entre un color de luz y el otro.</small></p>
+					<p class="fragment">¿Cómo se les ocurre que podemos hacer?</p>
+					<ul>
+						<li class="fragment">Crear una clase <em>Semaforo</em></li>
+						<li class="fragment">Crear el <em>constructor</em> de la clase</li>
+						<li class="fragment">Crear una <em>variable de instancia</em> para la luz</li>
+						<li class="fragment">Crear un <em>método</em> para cambiar la luz</li>
+					</ul>
+					
+
+					<p class="fragment"><small><a href="https://www.mycompiler.io/view/Lcly15uBOFt" target="_blank">Vamos al ejemplo resuelto</a></small></p>
+					
+
+					
+				</section>
+
+				<section>
+					<h3>Conclusiones sobre el ejemplo 1</h3>
+					<small>
+					<p>
+						<ul>
+							<li>Es necesario un método para definir variables de instancia. (L8)</li>
+							<li>Es posible definir valores por defecto a las variables de instancia (L8)</li>
+							<li>Es posible modificar las variables de instancia desde un método (L11)</li>
+							<li>Un constructor puede no tener parámetros de entrada (L17)</li>
+							<li>Es posible crear varios objetos de una clase (L23)</li>
+							<li>Es posible modificar las variables de instancia desde el programa principal (L24). Pero no es una buena práctica. Más adelante veremos que lo ideal es crear métodos para modificar los atributos (principio de encapsulación).</li>
+						</ul>
+
+					</p>
+											<!-- <p class="fragment"><small>Los métodos pueden invocar a las variables de instancia, de clase o incluso otros métodos del objeto o de la clase. <a href="https://www.mycompiler.io/view/AfLZLONyIeD" target="_blank">Veamoslo en un ejemplo:</a></small></p> -->
+
+				</small>
+				</section>
+
+				<section id="atributos_y_objetos">
+					<h3>Los atributos son objetos</h3>
+					<p><small>Si bien hasta ahora no lo hemos notado, los atributos son objetos. Con esta afirmación podemos crear una clase y que una instancia de esa clase sea el atributo de otra clase que estemos trabajando.</small></p>
+					<pre data-id="code-animation"><code class="python" data-trim>
+						class Estereo:
+							def encender(self):
+								# Código
+							def apagar(self):
+								# Código
+							# ...  Más código ...
+
+						class Auto
+							def __init__(self, un_color): # Constructor
+								self.audio = Estereo() # Objeto como va de instancia
+								self.color = un_color
+								# ...  Más código ...
+					</code></pre>
+					<p><small>De esta manera, podemos crear tantos objetos como creamos que sean necesarios. Y de hecho es bueno que hagamos una clase para cada objeto que contenga un comportamiento particular.</small></p>
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+
+			</section>
+
+			<section data-state="no_footer">
+
+
+
+
+				<section id="ejercicio">
+					<h2>Ejercicio en clase</h2>
+					<p>Modele con POO el comportamiento de un <em>encendedor</em>.</p>
+					<p><small>Un encendedor puede encenderse (muestra un mensaje "Encendor encendido") y apagarse ("Encendedor apagado").</small></p>
+					<p><small>Además, cada encendedor consta de un tanque de butano con capacidad máxima de 10 encendidos. Cada vez que se enciende el encendedor, la capacidad disminuye en uno. Si el tanque está vacío no será posible encenderlo ("No hay suficiente combustible"). Debe ser posible llenar el tanque de butano donde se llenará a su capacidad máxima.</small></p>
+					<p><small>También debe ser posible crear un segundo encendedor con el comportamiento totalmente independiente al primer encendedor.</small></p>
+
+					<p><small>Definir la clase <code>Encendedor</code> con los atributos y métodos que considere necesarios para modelarlo como se pide.</small></p>
+					<p><small>Escribir un programa que cree un encendedor, lo encienda 11 veces y una vez agotado el tanque, lo recargue y lo encienda una vez mas. <span><a href="https://www.mycompiler.io/view/Fmv9jPU45mO" target="_blank">Ejercicio resuelto</a></span></small></p>
+					
+				</section>
+
+			</section>
+
+			<section data-state="no_footer>
+
+			
+
+	
+				<section id="glosario1">
+					<h3>Glosario <small>(p1/2)</small></h3>
+					<ul>
+						
+						<li><strong>POO:</strong><small> (Programación orientada a objetos): Un estilo de programación en el cual los datos y las operaciones que los manipulan se organizan en clases y métodos.</small></li>
+						<li><strong>Clase:</strong><small> Una "plantilla" que definen los datos y comportamiento que tendrán los objetos creados a partir de la clase .</small></li>
+						<li><strong>Objeto:</strong><small> Es una <em>instancia</em> de la clase a la cual pertenece. Tendrán los datos y comportamiento definidos en la clase.</small></li>
+						
+
+
+					</ul>
+
+				</section>
+
+				<section id="glosario2">
+					<h3>Glosario <small>(p2/2)</small></h3>
+					<ul>
+						
+						<li><strong>Método:</strong><small> Una función que se define dentro de una definición de clase y se invoca en instancias de esa clase.</small></li>
+						<li><strong>Variable de instancia:</strong><small> Son variables que pertenecen a los objetos. Cada objeto creado tendrán sus propias variables de instancia.</small></li>
+						<li><strong>Variable de clase:</strong><small> Son variables que pertenecen a la clase. No hace falta instanciar la clase para interactuar con dicha variable.</small></li>
+
+
+					</ul>
+
+				</section>
+			</section>
+
+
+
+
+
+	<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+		<section id="fin-clase"  data-background-size="contain">
+			<h3>¡Fin de la clase!</h3>
+			<a href="/"> Ir al inicio </a><br>
+			<a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica7.md" target="_blank"> Práctica 7</a><br>
+			<a href="?print-pdf"> Exportar clase a PDF</a>
+		</section>
+
+		<section>
+			<h3>Bibliografía</h3>
+			<ul>
+				<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+				<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+				<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Pyton</a></li>
+			</ul>
+		</section>
+
+	</section>
+					
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
