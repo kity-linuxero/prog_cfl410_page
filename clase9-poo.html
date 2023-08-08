@@ -185,7 +185,7 @@
 					<h3>Definiendo clases</h3>
 					<p><small>Como hemos <a href="#/poo2">mencionado</a> anteriormente, una <strong>clase</strong> es como una <em>plantilla</em> para crear objetos. Imaginemos que queremos crear un objeto para representar un auto.</small></p>
 				
-					<pre data-id="code-animation"><code class="python" data-trim>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
 						# Creamos una clase vacía
 						class Auto:
 							pass # No hace nada
@@ -194,7 +194,7 @@
 					<p><small>Ahora que tenemos la <strong>clase</strong>, podemos crear un <strong>objeto</strong> de la misma. Podemos hacerlo como si de una variable normal se tratase; 
 						<code>nombre_variable=Clase()</code>. Dentro de los paréntesis irían los parámetros de entrada si los hubiera.</small></p>
 
-					<pre data-id="code-animation"><code class="python" data-trim>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
 						mi_auto = Auto()
 						otro_auto = Auto()
 					</code></pre>
@@ -246,7 +246,7 @@
 					<p><small>Los lenguajes nos proveen un <em>constructor</em> por defecto para que cada clase pueda construir objetos. Pero a veces resulta muy útil tener nuestros propios <em>constructores</em>.</small></p>
 					<p><small>En <code>Python</code> hay un <em>método</em> especial llamado <code>__init__</code> que se usa como constructor.</small></p>
 					
-					<pre data-id="code-animation" class="fragment"><code class="python" data-trim data-line-numbers>
+					<pre class="codigo_shadow" data-id="code-animation" class="fragment"><code class="python codigo-redondo" data-trim data-line-numbers>
 						class Auto:
 							def __init__(self, un_modelo, un_color): # Constructor
 								self.modelo = un_modelo # Variable de instancia
@@ -267,7 +267,7 @@
 				<section id="metodos">
 					<h2>Definiendo métodos</h2>
 					
-					<pre data-id="code-animation"><code class="python" data-trim>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
 						class Auto:
 							origen = "Argentina" # Variable de clase
 
@@ -329,7 +329,7 @@
 				<section id="atributos_y_objetos">
 					<h3>Los atributos son objetos</h3>
 					<p><small>Si bien hasta ahora no lo hemos notado, los atributos son objetos. Con esta afirmación podemos crear una clase y que una instancia de esa clase sea el atributo de otra clase que estemos trabajando.</small></p>
-					<pre data-id="code-animation"><code class="python" data-trim>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo " data-trim>
 						class Estereo:
 							def encender(self):
 								# Código
@@ -354,6 +354,11 @@
 			</section>
 
 			<section data-state="no_footer">
+
+				<section id="ejercicio_1">
+					<h2>Ejercicio en clase 1</h2>
+					<p>Crea una clase llamada Persona que tenga los siguientes atributos: nombre y edad. Luego, crea un método llamado "saludar" que imprima un mensaje de saludo que incluya el nombre y la edad de la persona.</p>
+				</section>
 
 
 
