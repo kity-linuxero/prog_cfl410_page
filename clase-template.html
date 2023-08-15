@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+			<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+				
+				<h2>Curso de programación</h2>
+				<h4>Clase X: </h4>
+
+			</section>
+			
+			<section data-state="no_footer">
+				<section>
+
+				</section>
+									
+			</section>
+
+
+			
+
+
+
+
+
+			<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+				<section id="fin-clase"  data-background-size="contain">
+					<h3>¡Fin de la clase!</h3>
+					<a href="/"> Ir al inicio </a><br>
+					<!-- <a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica9.md" target="_blank"> Práctica 9</a><br> -->
+					<a href="?print-pdf"> Exportar clase a PDF</a>
+				</section>
+
+				<section>
+					<h3>Bibliografía</h3>
+					<ul>
+						<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+						<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+						<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Python</a></li>
+					</ul>
+				</section>
+
+			</section>
+						
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>

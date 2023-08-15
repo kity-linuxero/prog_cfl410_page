@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+			<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+				
+				<h2>Curso de programación</h2>
+				<h4>Clase 10: Módulos y paquetes</h4>
+
+			</section>
+			
+			<section data-state="no_footer">
+				<section>
+					<h2>Clase 10</h2>
+					<h3>Contenido de la clase</h3>
+					<ul>
+						<li>Módulos y paquetes</li>
+						<li>Built-in functions</li>
+						<li>Documentación de los módulos</li>
+					</ul>
+				</section>
+									
+			</section>
+
+			<section data-state="no_footer">
+				
+					<section>
+						<h2>Módulos y paquetes</h2>
+					</section>
+
+					<section>
+						<h2>Módulos y paquetes</h2>
+						<p><small>Una forma de tener el código ordenado cuando nuestro programa va creciendo es tener todo el programa separado en varios archivos.</small></p>
+						<p><small>En Python, los programas se escriben usando la extensión <code>.py</code> así que un módulo, tendrá esa misma extensión.</small></p>
+						<p><small>Un <strong>módulo</strong> o <strong>module</strong> en Python será un archivo <code>.py</code> que contiene un conjunto de funciones, variables o clases y que puede ser usado por otros módulos. Nos permiten reutilizar código y organizarlo mejor en namespaces.</small></p>
+						
+					</section>
+
+					<section>
+						<h4>Ejemplo import</h4>
+						<p><small>Podemos definir un módulo llamado <code>module.py</code> en un archivo separado con dos funciones <code>suma()</code> y <code>resta()</code>.</small></p>
+						
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							# module.py
+							def suma(a, b):
+								return a + b
+							def resta(a, b):
+								return a - b
+						</code></pre>
+						<p><small>Una vez definido el módulo puede ser <strong>importado</strong> desde otro archivo usando <code>import</code></small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							# programa.py
+							import module
+							print(modulo.suma(4, 3))   # 7
+							print(modulo.resta(10, 9)) # 1
+						</code></pre>
+						<p><small>En el ejemplo citado se importa todo el contenido del archivo. Pero puede importarse solamente las funciones que nos interese importar.</small></p>
+					</section>
+
+					<section>
+						<h4>Ejemplo import (cont)</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							# programa.py
+							from module import suma, resta					
+							print(suma(4, 3))   # 7
+							print(resta(10, 9)) # 1
+						</code></pre>
+						<p><small>Se importan funciones que vamos a utilizar separadas por coma y solo se importarán dichas funciones.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							# programa.py
+							from module import *
+							print(suma(4, 3))   # 7
+							print(resta(10, 9)) # 1
+						</code></pre>
+						<p><small>Si importamos los módulos de la forma <code>from modulo import</code> no hace falta hacer explícito el llamado a la función con <code>module.funcion()</code>.</small></p>
+
+						<p><small>Siempre que sea posible debemos importar solamente las funciones que vamos a utilizar.</small></p>
+					</section>
+
+					<section>
+						<h3>Rutas (path) de los módulos</h3>
+						<p><small>En el ejemplo anterior, <code>modulo.py</code> y <code>programa.py</code> están ubicados en la misma carpeta. Pero es posible (y recomendable) tener los módulos ubicados en otra carpeta.</small></p>
+						<p><small>Por ejemplo, podemos tener la siguiente estructura:</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+							curso
+							├── mods
+							│   ├── module.py
+							│   └── module_2.py
+							└── programa.py
+						</code></pre>
+						<p><small>Si queremos invocar a <code>module.py</code> desde nuestro programa debemos hacerlo de la siguiente manera:</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							from mods.module.py import *
+							print(suma(4, 3))   # 7
+						</code></pre>
+
+					</section>
+
+					<!-- <section>
+						<h3>Paths del sistema</h3>
+						<p><small>Por defecto, Python buscará los módulos en el/los <code>sys.path</code></small>
+						<small>Para ver nuestro sys.path, lo podemos hacer de la siguiente manera:</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							import sys
+							print(sys.path)
+						</code></pre>
+
+						<p><small>Obviamente en el <code>sys.path</code> aparecerá la ubicación donde corrimos el programa, pero aparecerán mas ubicaciones.</small></p>
+	
+						<p class="fragment"><small>En las prácticas anteriores usamos el módulo <code>random.py</code>. ¿Puede encontrar el archivo random.py y ver el contenido?</small></p>
+
+
+					</section> -->
+
+					<section>
+						<h3>Renombrando módulos</h3>
+						<p><small>Es habitual importar módulos y renombrarlos internamente con un nombre mas corto. Supongamos que tenemos un módulo con un nombre largo.</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							# modulo_con_nombre_largo.py
+							saludo = "Hola"
+						</code></pre>
+						<p><small>En vez de invocarlo así:</small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							import modulo_con_nombre_largo
+							print(modulo_con_nombre_largo.saludo)
+						</code></pre>
+						<p><small>Podríamos abreviarlo de la siguiente manera usando <code>as</code></small></p>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							import modulo_con_nombre_largo as m
+							print(m.saludo)
+						</code></pre>
+					</section>
+
+					<section>
+
+						<h3>Excepción ImportError</h3>
+						<p><small>Importar un módulo puede lanzar una excepción cuando se intenta importar un módulo que no ha sido encontrado. Dicha excepción es un <code>ModuleNotFoundError</code>.</small></p>
+						<p><small>Tal excepción es levantada porque un módulo no ha sido encontrado y debemos verificar si lo estamos invocando correctamente.</small></p>
+						<h4>Ejemplo</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+							from mods.modulosas import *
+						</code></pre>
+						<h4>Output</h4>
+						<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo " data-trim>
+							ModuleNotFoundError: No module named 'mods.modulosas'
+						</code></pre>
+
+
+					</section>
+
+					
+
+					<section>
+						<h2>¿Preguntas?</h2>
+					</section>
+
+					
+					
+				
+			</section>
+
+			<section data-state="no_footer">
+				<section>
+					<h2>Módulos y función main</h2>
+				</section>
+
+				<section>
+					<h3>Módulos y función main</h3>
+					<p><small>Un problema frecuente es que al crear un módulo e importarlo desde otro módulo tengamos código "suelto" (fuera de funciones), entonces al importarlo, el intérprete ejecutará ese código y probablemente no sea lo que deseamos. Ejemplo:</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						# modulo.py
+						def suma(a, b):
+							return a + b
+						
+						print(f"La suma es {suma(3,99)}") # Código "suelto"
+					</code></pre>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						# programa.py
+						import modulo
+						# Output: La suma es 102
+						# ...
+					</code></pre>
+
+				</section>
+
+				<section>
+					<h3>Módulos y función main (cont.)</h3>
+					<p><small>Dependiendo del caso, puede ser importante especificar que el código "suelto" se ejecute solamente si el módulo es ejecutado por sí mismo (y no si es importado desde otro módulo). Por lo tanto se dice que el módulo es el <code>__main__</code> </small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						# modulo.py
+						def suma(a, b):
+							return a + b
+						
+						if (__name__ == '__main__'):
+							print(f"La suma es {suma(3,99)}") # Código "suelto"
+					</code></pre>
+
+					<p><small>La variable <code>__main__</code> es una variable auto-generada por el intérprete que se refiere al nombre del módulo actual.</small></p>
+
+					<p><small>El código dentro de <code>__main__</code> suele usarse para "testear" el módulo con casos de prueba. Pero tales datos de prueba no se ejecutan si es importado por otro módulo.</small></p>
+
+					
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+			</section>
+
+			<section data-state="no_footer">
+				<section>
+					<h3>Built-in Functions</h3>
+				</section>
+
+				<section>
+					<h3>Built-in Functions</h3>
+					<p><small>Python (como muchos otros lenguajes) contiene tipos y funciones incorporadas (Built-in Functions) que siempre estarán disponibles para usarlas sin necesidad de acudir a <code>import</code>.</small></p>
+					<p><small>Puede consultar en <a href="https://docs.python.org/es/3/library/functions.html" target="_blank">la Documentación de Python</a> para tener un listado completo.</small></p>
+					<p><small>Algunas ya las hemos usado en clase por lo que le pueden resultar familiar.</small></p>
+				</section>
+				
+			</section>
+
+			<section data-state="no_footer">
+				<section>
+					<h3>Consideraciones para escribir módulos</h3>
+				</section>
+
+				<section>
+					<h3>Documentación de los módulos</h3>
+					<p><small>Una buena práctica cuando se escribe un módulo es definir que es lo que hace y como se usa. Se usa la notación de comentarios con triple comillas dobles.</small></p>
+
+					<h4>modulo_clase.py</h4>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						"""Breve descripción del módulo
+						Puede contener instrucciones de como se usa
+						"""
+						
+						def suma(a, b):
+							""" Retorna la suma de dos operandos enviados por parámetro
+							"""
+							return a + b
+						
+						if (__name__ == '__main__'):
+							print(f"La suma es {suma(3,99)}") # Código "suelto"
+					</code></pre>
+
+
+				</section>
+
+				
+
+
+				
+			</section>
+
+			<section data-state="no_footer">
+				<section>
+					<h3>Ejercicios en clase </h3>
+				</section>
+
+				<section>
+					<h3>Ejercicio en clase 1</h3>
+					<p>Realice un módulo llamado calcular.py que contenga 4 funciones, <code>sumar(x,y)</code>, <code>restar(x,y)</code>, <code>multiplicar(x,y)</code>, <code>dividir(x,y)</code>.</p>
+				</section>
+
+				<section>
+					<h3>Ejercicio en clase 2</h3>
+					<p>Separe en un módulo, llamado <code>pila.py</code> que contenga el código del <a ref="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica9.md#ejercicio-5">ejercicio 5 de la práctica 9</a>. De manera que se pueda importar desde otro programa y se pueda usar.</p>
+					<p>Realice una pequeña documentación con lo que hace cada método.</p>
+
+				</section>
+			</section>
+
+
+
+
+			
+
+
+
+
+
+			<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+				<section id="fin-clase"  data-background-size="contain">
+					<h3>¡Fin de la clase!</h3>
+					<a href="/"> Ir al inicio </a><br>
+					<a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica9.md" target="_blank"> Práctica 9</a><br>
+					<a href="?print-pdf"> Exportar clase a PDF</a>
+				</section>
+
+				<section>
+					<h3>Bibliografía</h3>
+					<ul>
+						<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+						<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+						<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Python</a></li>
+					</ul>
+				</section>
+
+			</section>
+						
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>
