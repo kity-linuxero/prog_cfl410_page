@@ -1,0 +1,650 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+			<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+				
+				<h2>Curso de programación</h2>
+				<h4>Clase 11 : Programación orientada a objetos. Parte II</h4>
+
+			</section>
+			
+			<section data-state="no_footer">
+				<section id="indice">
+					<h2>Clase 11</h2>
+					<h3>Contenido de la clase</h3>
+					<ul>
+						<li>Programación orientada a objetos</li>
+
+							<ul>
+								<li><a href="#/poo1">Repaso</a></li>
+								<li><a href="#/abstraccion">Abstracción</a></li>
+								<li><a href="#/herencia">Herencia</a></li>
+								<li><a href="#/encapsulamiento">Encapsulamiento</a></li>
+								<li><a href="#/polimorfismo">Polimorfismo</a></li>
+								
+							</ul>
+
+						
+						<li><a href="#/ejercicios">Ejercicios en clase</a></li>
+						
+					</ul>
+				</section>
+
+				<section id="poo1">
+					<h3>Programación orientada a objetos</h3>
+					<h4>Repaso de conceptos vistos</h4>
+
+					<ul>
+						
+						<li><strong>Clase</strong><small>Es como una una <em>plantilla</em> para crear <strong>objetos</strong> a partir de ella. En la clase de definen los <em>métodos</em> y <em>variables</em>.</small></li>
+						<li><strong>Objeto</strong><small>Es una <em>instancia</em> (como una imágen) de una clase que tendrá el comportamiento y los datos definidos en la clase de la que es instancia.</small></li>
+						<li><strong>Métodos</strong><small>Es el código que implementa el <em>comportamiento</em> que tendrá el objeto. A fines prácticos, son funciones.</small></li>
+						<li><strong>Variables</strong><small>Pueden ser <em>variables de instancia</em> o <em>variables de clase</em>. Contienen información que puede ser almacenada por las clases y/o las instancias.</small></li>
+						
+					</ul>
+					
+
+				</section>
+
+									
+			</section>
+
+			<section>
+				<section id="abstraccion" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<h2>Abstracción</h2>
+				</section>
+
+				<section id="abstraccion-p1" data-state="no_footer">
+					<h3>Abstracción: Definición</h3>
+					
+					
+					<p><small>La abstracción puede entenderse como el mecanismo que se usa al momento de <em>analizar</em> un elemento particular (puede ser un elemento de la vida real), desechando los aspectos no relevantes y considerando solo las propiedades esenciales para nuestro análisis. Es una forma de simplificar la complejidad de la realidad para facilitar el diseño y la implementación de sistemas de software.</small></p>
+					<p><small>Durante las prácticas hemos realizado una y otra vez el proceso de <em>abstracción</em> para poder entender un <em>algo</em> y poder así resaltar las características que son relevantes representar en un programa de computadora.</small></p>
+					<!-- <p><small>Como para dar un ejemplo, en la <a href="clasePoo.html#/ejercicio" target="_blank">clase anterior</a> hemos visto una forma de abstracción de un encendedor. Resaltando las cualidades que nos interesaba y descartando otras que no eran relevantes para lo que nos pedía el ejercicio.</small></p> -->
+					<p><small>La abstracción nos ayuda también a desechar <em>como</em> se hacen procesos complejos y centrarnos en <em>qué es</em> que hacen.</small></p>
+					<p><small>Cuanto ya hemos identificado las características de un objeto que queremos representar (abstraer), nos queda concentrarnos en la <strong>interfaz</strong>, es decir, en como un objeto puede ser usado sin necesidad de conocer los detalles de su implementación.</small></p>
+
+				</section>
+
+				<section id="abstraccion-p2" data-state="no_footer" >
+					<h3>Proceso de abstraccion</h3>
+					<p><small>En el proceso de abstracción, vamos a identificar los siguientes componentes:</small></p>
+					<ul>
+						<li><strong>Clase y objeto</strong><small>
+							<ul>
+								<li>Una clase es una plantilla que define las propiedades y métodos que un tipo particular de objeto tendrá.</li>
+								<li>Un objeto es una instancia de una clase. Representa un ejemplo particular de un concepto abstracto.</li>
+							</ul>
+						</small></li>
+						<li><strong>Atributos y Métodos</strong><small>
+							<ul>
+								<li>Los atributos son las propiedades o características de un objeto. Representan el estado de un objeto.</li>
+								<li>Los métodos son las funciones o acciones que un objeto puede realizar. Representan el comportamiento de un objeto.</li>
+							</ul>
+						</small></li>
+					</ul>
+				</section>
+
+				<section id="abstraccion-p3" data-state="no_footer" >
+					<h2>Proceso de abstraccion</h2>
+					<ul>
+						<li><strong>Encapsulamiento</strong><small>
+							<ul>
+								<li>El encapsulamiento es una técnica de abstracción que implica ocultar los detalles internos de un objeto y proporcionar una interfaz controlada para interactuar con él.</li>
+								
+							</ul>
+						</small></li>
+						<li><strong>Herencia</strong><small>
+							<ul>
+								<li>La herencia es una relación entre clases donde una clase (subclase o clase hija) puede heredar atributos y métodos de otra clase (superclase o clase padre).</li>
+								<li>La herencia permite la creación de jerarquías de clases que reflejan relaciones del mundo real.</li>
+							</ul>
+						</small></li>
+						<li><strong>Polimorfismo</strong><small>
+							<ul>
+								<li>El polimorfismo permite que objetos de diferentes clases respondan a métodos con el mismo nombre de manera específica para cada clase.</li>
+								<li>Esto simplifica la manipulación de objetos y permite tratarlos de manera más genérica.</li>
+							</ul>
+						</small></li>
+					</ul>
+				</section>
+
+				<section id="abstraccion-p4" data-state="no_footer" >
+					<h3>Abstracción: En la práctica</h3>
+					<p><small>Imaginemos que estamos creando un programa para gestionar una biblioteca. En este contexto, los libros son objetos importantes. Cada libro tiene un título, un autor, una fecha de publicación y una ubicación en la biblioteca. Acá es donde entra en juego la abstracción.</small></p>
+					<p><small>La abstracción en este caso consiste en identificar las propiedades y comportamientos esenciales de los libros, mientras se omiten los detalles innecesarios. Los detalles como el número de páginas, el tipo de encuadernación o la fecha exacta de adquisición podrían no ser relevantes en este contexto.</small></p>
+				</section>
+
+				<section id="abstraccion-p5" data-state="no_footer" >
+					<h3>Abstracción: En la práctica</h3>
+					<ul>
+						<li><strong>Identificar atributos relevantes:</strong><small>Título, autor, fecha de publicación, ubicación en la biblioteca</small></li>
+						<li><strong>Identificar comportamientos relevantes:</strong><small>Prestar, devolver, mostrar detalles</small></li>
+						<li><strong>Creación de una Clase "Libro":</strong><small>Basándonos en los atributos y comportamientos identificados, creamos una clase llamada "Libro" que encapsula estos aspectos. Los detalles como el número de páginas o la fecha de adquisición pueden no estar presentes en esta clase, ya que no son esenciales para el contexto de una biblioteca.</small></li>
+					</ul>
+
+					<p><small>Ver un <a href="https://www.mycompiler.io/view/LSNJzVJBZr2" target="_blank">ejemplo</a></small></p>
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+			</section>
+
+			<section>
+
+				<section id="herencia" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<h2>Herencia</h2>
+				</section>
+
+				<section id="herencia-p1"  data-state="no_footer">
+					<h3>Herencia</h3>
+					<p><small>En POO, se define herencia a la capacidad de crear clases que <em>hereden</em> el comportamiento (métodos) y atributos (variables) de otra clase. De esta manera, se introducen nuevos conceptos, clases <strong>padres</strong> o <strong>superclases</strong> y clases <strong>hijas</strong> o <strong>subclases</strong>.</small></p>
+					<p><small>Podemos decir entonces que la clase <em>hija</em> hereda los métodos y atributos de la clase padre. Aunque también puede tener atributos y métodos propios o los métodos de la clase padre <em>reescritos</em> como veremos mas adelante. Esto hace que las clases tengan una relación jerárquica entre las que comparten la herencia.</small></p>
+					<p><small>Imaginemos que podríamos tener una clase <code>Animal</code> para representar animales. Y dotar a la clase con atributos como nombre, especie, etc. y como métodos podemos tener comer, dormir, caminar, correr, etc.</small></p>
+					<p><small>A su vez podemos ser más específicos y definir la clase <code>Gato</code> para representar gatos en nuestro programa. La clase <code>Gato</code> puede ser una <em>subclase</em> de la clase <code>Animal</code>. Como un gato <strong>es a su vez un animal</strong>, es fácil imaginarnos que heredará los atributos y métodos de la <em>superclase</em>.</small></p>
+				</section>
+
+				<section id="herencia-p2"  data-state="no_footer">
+					<h3>Uso de herencia</h3>
+					<p><small>Hasta este punto podemos preguntarnos para qué sirve realmente la herencia o nos puede parecer de poca utilidad. Sin embargo, aporta mucha claridad y evita código repetido.</small></p>
+					<p><small>Puede ser útil cuando tengamos clases que <em>se parecen entre sí pero tienen ciertas particularidades</em>.</small></p>
+					<p><small>En vez de definir una clase por cada "animal", podemos tomar los elementos en común y crear una clase <em>Animal</em> de la que hereden el resto de los animales.</small></p>
+					<p><small>Esto, ayuda a aplicar el concepto de <strong>DRY</strong> <a href="https://es.wikipedia.org/wiki/No_te_repitas" target="_blank"><em>(Don't Repeat Yourself)</em></a> que consiste en no repetir código de manera innecesaria. Cuanto más código repetido haya, será mas difícil de mantener y habrá mas posibilidad de inconsistencia.</small></p>
+					<p class="fragment"><small>Veamos un <a href="https://www.mycompiler.io/view/8gvQRnpyS66" target="_blank">ejemplo</a> para profundizar el concepto</small></p>
+
+				</section>
+
+				<section id="herencia-ej1" data-state="no_footer">
+					<h3>Herencia - Ejemplo</h3>
+
+					<p><small>Los diferentes lenguajes tienen sus formas de indicar que una clase es hija de otra clase previamente definida. Se usan palabras claves como <em>extends</em>, <em>subclass</em>, <em>inherits</em> u otras similares.</small></p>
+					<p><small>En el caso de <strong>Python</strong>, lenguaje de referencia en este curso, simplemente se envía como parámetro la clase padre.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						# Superclase
+						class Animal:
+							pass
+
+						# Subclase 1
+						class Gato(Animal):
+							pass
+
+						# Subclase 2
+						class Perro(Animal):
+							pass
+					</code></pre>
+				</section>
+
+				<section id="herencia_multiple" data-state="no_footer">
+					<h3>Herencia múltiple</h3>
+					<p><small>El concepto de herencia múltiple, es que una clase puede heredar (o ser hija) de más de una clase. No todos los lenguajes soportan esta característica. Python, por su parte sí soporta herencia múltiple. La sintaxis es la siguiente:</small></p>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						class Gato(Animal, Mamifero):
+							pass
+					</code></pre>
+					<p><small>Otros lenguajes, como Java, al no soportar <strong>herencia múltiple</strong> suelen utilizar mecanismos como el concepto de <strong>interface</strong>. Una clase puede implementar múltiples interfaces, para lograr ciertos aspectos de herencia múltiple.</small></p>
+					<p><small>Se requiere de un buen análisis y diseño de clases para implementar herencia múltiple para no generar ambigüedad en el código.</small></p>
+
+				</section>
+
+				<section>
+					<h2>¿Preguntas?</h2>
+					<p class="fragment">... seguimos...</p>
+				</section>
+
+				<section id="super" data-state="no_footer" data-auto-animate>
+					<h3>El método especial <code>super()</code></h3>
+					<p><small>Algunas veces nos es útil acceder a un método de la superclase desde una subclase. Para eso existe un método especial llamado <code>super()</code>. </small></p>
+					<p><small>Es algo muy habitual en la POO y los lenguajes con dichas características soportan un mecanismo para interactuar con la clase padre. Se suele usar el nombre <code>super().metodo_padre()</code> para referirnos al método de la superclase.</small></p>
+
+					<div class="fragment" data-auto-animate>
+					<h4>Ejemplo</h4>
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						class Animal():
+							def __init__(self, una_especie):
+								self.especie = una_especie
+					
+						class Gato(Animal):
+							def __init__(self):
+								super().__init__('gato')
+					</code></pre>
+					<p><small>¿Qué pasa en este ejemplo? <a href="https://www.mycompiler.io/view/AWW0NhYxKPP" target="_blank">Ver código funcionando.</a>
+					 <span class="fragment">¿Vemos <a href="https://www.mycompiler.io/view/3oSWKuVeTg5" target="_blank">otro ejemplo</a>?</span>
+					</small></p>
+
+					</div>
+				</section>
+
+				<section id="metodos" data-state="no_footer">
+					<h3>Métodos y atributos en subclases</h3>
+					<p><small>Las subclases pueden tener métodos o atributos que la superclase no tiene. Por ejemplo, la subclase <strong>Gato</strong> puede tener un método <code>maullar()</code> que la clase Animal no tiene.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						class Animal():
+							pass
+					
+						class Gato(Animal):
+							def maullar(self):
+								print("¡Miau!")
+					</code></pre>
+
+					<p><small><strong>Importante:</strong> La visibilidad de los métodos y atributos, es siempre desde arriba hacia abajo. Es decir, las subclases tienen acceso a los métodos y variables de las superclases, pero no es igual a la inversa.</small></p>
+
+					<p><small>Veamos un <a href="https://www.mycompiler.io/view/13QFdGNUNKj" target="_blank">ejemplo</a> mas completo.</small></p>
+
+				</section>
+
+				<section id="root" data-state="no_footer">
+					<h3>La superclase padre de todas</h3>
+					<p><small>En varios lenguajes de programación orientados a objetos, existe una clase de la cuál <em>heredan todas las clases</em> que puedan existir aunque no se especifiquen. Por lo general, esa clase se llama <strong><code>Object</code></strong>.</p></small>
+					<p><small>Dicha clase object tiene ciertos métodos y atributos definidos, como <code>__str__</code>, <code>__repr__</code>, <code>__eq__</code>, entre otros de las cuales podemos hacer uso.</p></small>
+					<p><small>También es común que las subclases de <code>Object</code> tengan sus propias implementación de dichos métodos y/o atributos.</small></p>
+					<p><small>Es posible que las subclases tengan sus propias implementaciones para los métodos como veremos a continuación... </small></p>
+					
+
+
+				</section>
+
+				<section id="sobreescribir_metodos" data-state="no_footer">
+					<h3>Sobreescribiendo metodos</h3>
+					<p><small>Una de las cualidades mas interesantes de la POO, además que las clases hijas pueden heredar los atributos y comportamiento de las clases padres, es que las clases hijas pueden realizar ciertas acciones <em>a su manera</em>. Es decir, no tiene por qué realizar una acción igual que la clase padre.</small></p>
+					<p><small>Volviendo a la clase Animal, en el siguiente ejemplo intentamos describir este concepto.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						class Animal():
+							def hablar(self):
+								pass
+					
+						class Perro(Animal):
+							def hablar(self):
+								print("¡Guau!")
+					</code></pre>
+
+					<p><small>Algo muy interesante que podemos hacer es sobreescribir el método <code>__str__()</code> en una clase. Lo veremos dos ejemplos; uno sin <a href="https://www.mycompiler.io/view/7jfmwpUvRnG" target="_blank">reescribir</a> el método y otro ejemplo <a href="https://www.mycompiler.io/view/G8gM07rUvsa" target="_blank">reescribiendo</a> el método. <a href="https://docs.python.org/es/3/reference/datamodel.html#object.__str__">Ref.</a></small></p>
+					
+
+					<p><small>Esto nos da el pie para continuar con el próximo principio de la POO, <strong>polimorfismo</strong>.</small></p>
+
+				</section>
+
+				<section id="resumen_herencia" data-state="no_footer">
+					<h3>Resumen de Herencia</h3>
+					<ul>
+						<li>Herencia: <small> es un concepto que permite que una clase adquiera atributos y métodos de otra clase, lo que facilita la reutilización de código y la creación de relaciones jerárquicas entre clases.</small></li>
+						<li>Herencia múltiple: <small> la capacidad que una clase herede de más de una clase. No todos los lenguajes lo soportan.</small></li>
+						<li>Método <code>super</code>: <small> se usa para invocar a los métodos o atributos de la superclase.</small></li>
+						<li>Sobre escritura de métodos: <small>las subclases pueden tener su propia implementación de los métodos. A veces pueden usar parcialmente la implementación de la superclase completando con una porción de código propia.</small></li>
+
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>¿Preguntas?</h2>
+				</section>
+
+
+
+
+			</section>
+
+
+
+			<section>
+
+				<section id="encapsulamiento" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<h2>Encapsulamiento</h2>
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Encapsulamiento</h3>
+					<p><small>El encapsulamiento o encapsulación en programación es un concepto relacionado con la POO, y hace referencia al <strong>ocultamiento</strong> de los estado internos (variables y métodos) de una clase hacia al exterior de la misma. </small></p>
+
+					<!-- <p><small>En ciertos lenguajes es posible ocultar información que puede ser vista por otras clases, incluso con sus clases hijas. En <em>C++</em> y <em>Java</em> se especifica usando las palabras claves:</small></p>
+					<small>
+						<ul>
+							<li><strong>Public:</strong> El atributo o método será accesible desde fuera de la clase.</li>
+							<li><strong>Private:</strong> El atributo o método <em>NO</em> será accesible desde fuera de la clase.</li>
+							<li><strong>Protected:</strong> El atributo o método será accesible <em>solo desde las subclases</em>.</li>
+						</ul>
+					</small> -->
+					<p><small> En Python, como en muchos lenguajes de programación orientados a objetos, el encapsulamiento se logra utilizando <em>modificadores de acceso</em> y <em>propiedades</em>. </small></p>
+
+					<p><small>Como hemos mencionado anteriormente, no es una buena práctica de programación acceder y modificar directamente los estados internos de una clase fuera de la misma.</small></p>
+					<p><small>Por lo tanto veremos como proteger los estados internos de una clase para que no sea posible modificarlos y proteger la integridad de nuestros objetos.</small></p>
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Modificadores de Acceso</h3>
+
+					<p><small>En ciertos lenguajes es posible ocultar información que puede ser vista por otras clases, incluso con sus clases hijas. En <em>C++</em> y <em>Java</em> se especifica usando las palabras claves:</small></p>
+					<small>
+						<ul>
+							<li><strong>Public:</strong> El atributo o método será accesible desde fuera de la clase.</li>
+							<li><strong>Private:</strong> El atributo o método <em>NO</em> será accesible desde fuera de la clase.</li>
+							<li><strong>Protected:</strong> El atributo o método será accesible <em>solo desde las subclases</em>.</li>
+						</ul>
+					</small>
+
+					<p><small>Si bien, el curso se centra en Python, dichas palabras claves son importantes para entender el concepto.</small></p>
+
+					<p><small>Entonces.. ¿Qué quiere decir?. Básicamente es, podemos proteger por ejemplo un atributo de la clase, para que, una vez instanciada no pueda ser accedida ni modificada por un programa y solo se modifique de una manera controlada definida por nosotros en el código de la clase.</small></p>
+
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Modificadores de Acceso en Python</h3>
+
+					<p><small>Python no tiene modificadores de acceso tradicionales como los que hemos mencionado. Sin embargo, sigue una convención para indicar la visibilidad de los atributos y métodos:</small></p>
+					<small>
+					<ul>
+						<li>Atributos y métodos que comienzan con un guión bajo (_) se consideran "protected" y deben ser tratados como internos, aunque aún son accesibles desde fuera de la clase.</li>
+						<li>Atributos y métodos que comienzan con dos guiones bajos (__) se consideran "private" y se someten a un mecanismo de "name mangling", lo que hace que sean más difíciles de acceder desde fuera de la clase.</li>
+					</ul>
+					</small>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo " data-trim>
+						class Prueba:
+							def __init__(self):
+								self.atributo_publico = 0
+								self._atributo_protegido = 1
+								self.__atributo_privado = 2
+						p = Prueba()
+						print (p.atributo_publico) # 0
+						print (p._atributo_protegido) # 1
+						print (p.__atributo_privado) # AttributeError:
+							
+					</code></pre>
+				</section>
+
+				<section id="propiedades" data-state="no_footer">
+					<h3>Propiedades</h3>
+					<p><small>Las propiedades son una forma de encapsulación que permite definir métodos especiales para acceder y modificar atributos de un objeto. Se utilizan para mantener el control sobre la forma en que los atributos son accedidos y modificados. </small></p>
+					<p><small>Las propiedades se definen utilizando los <strong>decoradores</strong>  <code>@property</code>, <code>@atributo.setter</code> y <code>@atributo.deleter</code>.</small></p>
+					<p><small>Si bien los decoradores son parte mas avanzada de programación en Python que no entraremos en detalle en este momento, puede ver algo de información en este <a href="https://ellibrodepython.com/decoradores-python#decoradores" target="_blank">link</a>.</small></p>
+					
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Getters y Setters</h3>
+					<p><small>Son un mecanismo para acceder a los atributos de la clase mediante métodos definidos por el programador. Esto le provee de la seguridad de que los datos serán correctos manteniendo la integridad de los objetos.</small></p>
+					<p><small>Aunque las <strong><a href="#propiedades">propiedades</a></strong> son una forma más elegante de lograrlo, en Python también puedes utilizar métodos "getter" y "setter" para acceder y modificar atributos privados o protegidos. Esto permite un mayor control sobre la validación y manipulación de los valores.</small></p>
+					<small>
+						<ul>
+							<li><strong>getter</strong>: Viene del inglés <em>get</em> (obtener) y se usa para obtener el atributo que está encapsulado.</li>
+							<li><strong>setter</strong>: Viene del inglés <em>set</em> (establecer o setear) y se usa para establecer el valor al atributo que está encapsulado.</li>
+						</ul>
+					</small>
+
+					<p><small>A continuación veremos algunos ejemplos para compararlos</small></p>
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Getters y Setters (Ejemplo)</h3>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo " data-trim>
+						class Persona:
+							def __init__(self, nombre, edad):
+								self.__nombre = nombre
+								self.__edad = edad
+
+							def get_edad(self):
+								return self.__edad
+								
+							def set_edad(self, nueva_edad):
+								if nueva_edad >= 0:
+									self.__edad = nueva_edad
+								else:
+									print("La edad no puede ser negativa.")
+					</code></pre>
+
+					<p><small>Ver el <a href="https://www.mycompiler.io/view/8cogHe0Uil5" target="_blank">ejemplo completo</a></small></p>
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Usando propiedades</h3>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo " data-trim>
+						class Persona:
+							def __init__(self, nombre, edad):
+								self.__nombre = nombre
+								self.__edad = edad
+							@property
+							def edad(self):
+								return self.__edad	
+							@edad.setter
+							def edad(self, nueva_edad):
+								if nueva_edad >= 0:
+									self.__edad = nueva_edad
+								else:
+									print("La edad no puede ser negativa.")	
+					</code></pre>
+
+					<p><small>Ver el <a href="https://www.mycompiler.io/view/2xLTHRFRUaM" target="_blank">ejemplo completo</a></small></p>
+					
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Beneficios del encapsulamiento</h3>
+					<ul>
+						<li><strong>Ocultamiento de Detalles:</strong><small> Los detalles internos de la implementación se mantienen ocultos, lo que facilita cambios futuros sin afectar el código externo.</small></li>
+						<li><strong>Control y Validación: </strong><small>Podemos aplicar lógica de validación y control en los métodos "setter" para garantizar que los valores asignados sean válidos.</small></li>
+						<li><strong>Reusabilidad: </strong><small>Los cambios internos no afectan la interfaz pública, lo que mejora la reutilización de clases en diferentes contextos.</small></li>
+					</ul>
+
+					<p><small>En resumen, el encapsulamiento en Python y en la POO en general se trata de limitar el acceso directo a los detalles internos de una clase y proporcionar métodos controlados para interactuar con esos detalles.</small></p>
+
+				</section>
+
+				<section data-state="no_footer">
+					<h2>¿Preguntas?</h2>
+				</section>
+
+
+			</section>
+
+			<section>
+				<section id="polimorfismo" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<h2>Polimorfismo</h2>
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Polimorfismo</h3>
+					<p><small>El término <strong>polimorfismo</strong> tiene origen en las palabras <em>poly</em> (muchos) y <em>morfo</em> (formas) y aplicado a la programación hace referencia a que los objetos pueden tomar diferentes formas.</small></p>
+					<p><small>Se refiere a la capacidad de diferentes clases de responder a un mismo método de forma única, permitiendo tratar objetos de distintas clases de manera uniforme a través de una interfaz común.</small></p>
+					<!-- <p><small>En <strong>Python</strong> (y en otros lenguajes de tipado dinámico como Ruby), el término <em>polimorfismo</em> viene muy ligado con el <a href="https://ellibrodepython.com/duck-typing-python">duck typing</a>. Que básicamente lo que propone es que <em>si un objeto camina como un pato y habla como un pato, entonces tiene que ser un pato</em>. </small></p> -->
+
+
+
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Polimorfismo</h3>
+
+					<p><small>Yendo a lo práctico, el <em>polimorfismo</em> nos dice que podemos tratar de la misma manera a varios objetos independientemente del tipo o instancia de la clase que sea.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						class Perro(Animal):
+							def hacer_sonido(self):
+								print("Guau!")
+						class Gato(Animal):
+							def hacer_sonido(self):
+								print("Miau!")
+					</code></pre>
+
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						p = Perro()
+						g = Gato()
+						p.hacer_sonido() # Guau!
+						g.hacer_sonido() # Miau!
+					</code></pre>
+					<p><small>Cada animal hace un sonido distinto pero el método tiene el mismo nombre.</small>
+					<small>En lenguajes como Java, el polimorfismo es más estructurado y a menudo se apoya en la herencia para facilitar la interacción entre objetos de distintas clases. En Python también se puede lograr por herencia, pero su naturaleza dinámica el uso del polimorfismo es mas flexible.</small> </p>
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Algunas ventajas del polimorfismo</h3>
+					<ul>
+						<li><strong>Reutilización del código:</strong><small> El polimorfismo permite definir métodos genéricos que pueden ser utilizados por múltiples clases, lo que reduce la necesidad de duplicar código similar en diferentes lugares.</small></li>
+						<li><strong>Eficacia en el Desarrollo:</strong><small> Al reducir la duplicación de código y permitir la reutilización, el polimorfismo agiliza el proceso de desarrollo y reduce la posibilidad de errores.</small></li>
+						<li><strong>Mantenibilidad:</strong><small> Al utilizar el polimorfismo, si es necesario hacer cambios en la lógica de un método, solo se requiere hacerlo en un lugar, lo que facilita la actualización y mantenimiento del código.</small></li>
+					</ul>
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Resumen</h3>
+					<p><small>El polimorfismo en la programación orientada a objetos (POO) se refiere a la capacidad de diferentes clases de responder al mismo método de manera única, permitiendo tratar objetos de diferentes tipos a través de una interfaz común. Esto simplifica la reutilización de código, mejora la modularidad y permite la extensibilidad del software. Puede ser logrado mediante la herencia y la implementación de interfaces en lenguajes como Java, o de manera más flexible en lenguajes dinámicos como Python. El polimorfismo fomenta un diseño orientado a interfaces y abstracciones, lo que facilita la gestión de programas complejos y su adaptación a futuros cambios.</small></p>
+				</section>
+
+				<section data-state="no_footer">
+					<h2>¿Preguntas?</h2>
+				</section>
+
+			</section>
+
+
+			<section>
+				<section id="ejercicios" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+						<h2>Ejercicios en clase</h2>
+				</section>
+				
+
+				<section>
+					<h2>Animales y Sonidos</h2>
+					<p>Crea una jerarquía de clases para representar diferentes animales. Define una clase base "Animal" con atributos como nombre y tipo. Luego, crea subclases como "Perro" y "Gato" que hereden de la clase base. Implementa un método "hacer_sonido" en cada subclase y utiliza el polimorfismo para que cada tipo de animal haga un sonido único cuando se llama a este método.</p>
+				</section>
+				<section>
+					<h2>Figuras geométricas</h2>
+					<p>
+						Crea una jerarquía de clases para representar diferentes figuras geométricas (por ejemplo, círculos y rectángulos). Utiliza herencia para crear una clase base "Figura" y luego subclases específicas como "Círculo" y "Rectángulo". Implementa métodos para calcular áreas y perímetros, y utiliza propiedades para acceder a atributos como el radio y el lado.
+					</p>
+				</section>
+			</section>
+
+
+
+			
+
+
+			
+
+
+
+
+
+			<section data-state="customevent" data-background-gradient="radial-gradient(#ffffff, #dcffdc)">
+				<section id="fin-clase"  data-background-size="contain">
+					<h3>¡Fin de la clase!</h3>
+					<a href="/"> Ir al inicio </a><br>
+					<!-- <a href="https://github.com/kity-linuxero/practicas_23/blob/main/practicas/practica9.md" target="_blank"> Práctica 9</a><br> -->
+					<a href="?print-pdf"> Exportar clase a PDF</a>
+				</section>
+
+				<section>
+					<h3>Bibliografía</h3>
+					<ul>
+						<li><a href="https://www.w3schools.com/python/" target="_blank">w3schools</a></li>
+						<li><a href="https://docs.python.org/3/">Python Documentation</a></li>
+						<li><a href="https://ellibrodepython.com" target="_blank">El Libro de Python</a></li>
+					</ul>
+				</section>
+
+			</section>
+						
+
+					
+			</div>
+		</div>
+
+		<footer>
+			<!-- Logos en el footer -->
+			<div id="logos-footer" class="footer">
+				<span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+				<span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+				<span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+			</div>
+
+			<script type="text/javascript">
+				window.addEventListener("load", function() {
+			
+					revealDiv = document.querySelector("body div.reveal")
+					footer = document.getElementById("logos-footer");
+					revealDiv.appendChild(footer);
+			
+				} );
+			</script>
+		</footer>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+
+		
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+				// Para eventos personalizados. Indica que está en la presentación
+
+			Reveal.on( 'customevent', function() {
+				var element = document.getElementById("logos-footer");
+				element.style.display = "table";
+				element.style.opacity = "40%";
+
+			} );
+
+			Reveal.on( 'no_footer', function() {
+				var element = document.getElementById("logos-footer");
+				//element.style.display = "none";
+				// element.style.display = "table";
+				element.style.opacity = "15%";
+			} );
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+			});
+		</script>
+
+</body>
+</html>

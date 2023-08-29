@@ -162,12 +162,12 @@
 }
 
 .codigo_shadow{
-  filter: drop-shadow(3px 3px 3px #707070);
-  border-radius: 4px;
+  filter: drop-shadow(4px 4px 4px #707070);
+  border-radius: 5px;
 }
 
 .codigo-redondo{
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 
