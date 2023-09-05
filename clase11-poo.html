@@ -50,7 +50,7 @@
 								
 							</ul>
 
-						
+						<li><a href="#/clase_abstracta">Clases y métodos abstractos</a></li>
 						<li><a href="#/ejercicios">Ejercicios en clase</a></li>
 						
 					</ul>
@@ -533,6 +533,102 @@
 				</section>
 
 				<section data-state="no_footer">
+					<h2>¿Preguntas?</h2>
+				</section>
+
+			</section>
+
+			<section>
+				<section id="clase_abstracta" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<h2>Clases y métodos abstractos</h2>
+				</section>
+
+				<section data-state="no_footer" id="clases_abstractas">
+					<h3>Clases y métodos abstractos</h3>
+						<p><small>Se suman nuevos conceptos relacionados con la abstracción como lo son <em>clases abstractas</em> y <em>métodos abstractos</em>.</small></p>
+						<p><small>Se define como método abstracto a un método que ha sido declarado pero no implementado. Es decir, que no tiene código.</small></p>
+						<p><small>Se define como clase abstracta la que contiene métodos abstractos y esta <em>NO puede ser instanciada</em>.</small></p>
+						
+						<p class="fragment"><small>¿Y para qué puede servir una clase abstracta si no puede ser instanciada? ¿Para qué puede servir un método que no tiene código?</small></p>
+						<p class="fragment"><small>Una clase abstracta sirve para definir la <em>interfaz</em> de las clases hijas al igual que los métodos abstractos, sirven para estandarizar la <em>interfaz</em> de los objetos obligándonos a implementar los métodos abstractos en las clases hijas.</small></p>
+						
+				</section>
+
+				<section data-state="no_footer">
+					<h4>Clases abstractas - Ejemplo</h4>
+						
+						<p><small>Supongamos que tenemos una superclase <em>Vehículo</em> con tres subclases, Auto, Camioneta y Moto.</small></p>
+
+						<img data-src="./img/poo/clase_abstracta.png" style="height: 55%; width: 55%">
+						
+						<p><small>Si no definimos la clase <em>Vehículo</em> como abstracta podrán haber instancias de <em>Vehículo</em> que NO serán un Auto, o Camioneta o Moto y tal vez no queramos que eso ocurra.</small></p>
+						<!-- <p><small>En un <a href="https://github.com/kity-linuxero/prog_CFP410/blob/main/practicas/practica9.md#introducci%C3%B3n-al-diagrama-de-clases-uml" target="_blank">diagrama de clases</a>, una clase se indica que es abstracta cuando el nombre de la misma está en cursiva.</small></p> -->
+
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Clases abstractas en Python</h3>
+					<p><small>Para poder crear clases abstractas en Python es necesario importar la clase <code>ABC</code> y el decorador <code>abstractmethod</code> del módulo abc (Abstract Base Classes). <a href="https://docs.python.org/es/dev/library/abc.html" target="_blank">Ref.</a></small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						from abc import ABC, abstractmethod
+						class Vehiculo(ABC):
+							
+							@abstractmethod
+							def arrancar(self):
+								pass
+
+						v = Vehiculo() # Error!
+					</code></pre>
+					
+					<pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+						TypeError: Can't instantiate abstract class Vehiculo with abstract methods arrancar
+					</code></pre>
+					<p><small>En Python, una clase abstracta es la que contiene métodos abstractos.</small>
+					<small>Las clases abstractas <strong>no se pueden instanciar</strong>.</small></p>
+
+				</section>
+
+				<section data-state="no_footer" id="metodos_abstractos">
+					<h3>Métodos abstractos</h3>
+					<p><small>Los métodos abstractos nos <em>obligan</em> a implementar los métodos en cada subclase. Si no los implementamos, dará error.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						from abc import ABC, abstractmethod
+						class Vehiculo(ABC):
+
+							@abstractmethod
+							def arrancar(self):
+								pass
+
+						class Auto(Vehiculo):
+							pass # Error!
+					</code></pre>
+
+					<p><small>En ese ejemplo el intérprete dará error porque el método <code>arrancar()</code> no está implementado en la subclase Auto.</small></p>
+				</section>
+
+				<section data-state="no_footer">
+					<h3>Métodos abstractos <small>(P2)</small></h3>
+
+					<p><small>Para implementar un método abstracto, en la subclase debe ir el nombre del método con sus parámetros sin el decorator <code>@abstractmethod</code>.</small></p>
+
+					<pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+						from abc import ABC, abstractmethod
+						class Vehiculo(ABC):
+
+							@abstractmethod
+							def arrancar(self):
+								pass
+
+						class Auto(Vehiculo):
+							# Se implementa el método abstracto
+							def arrancar(self):  
+								print("ruuunnn") 
+					</code></pre>
+				</section>
+
+				<section>
 					<h2>¿Preguntas?</h2>
 				</section>
 
