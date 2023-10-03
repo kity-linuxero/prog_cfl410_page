@@ -1,0 +1,485 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+			<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+				
+				<h2>Curso de programación</h2>
+				<h4>Clase 12 : Software Libre y librerías</h4>
+
+			</section>
+			
+
+			<section>
+				<section id="software_libre" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+					<h2>Software Libre</h2>
+				</section>
+
+				<section id="software_libre-def" data-state="no_footer">
+					<h3>¿Qué es el software libre?</h3>
+
+                    <p><small>Es el software (programa) cuyo código fuente puede ser estudiado, modificado, y utilizado libremente con cualquier finalidad y redistribuido con cambios o mejoras sobre él.</small></p>			
+					
+					<!-- <p><small>El software libre nació como una alternativa al <strong>software privativo</strong></small></p> -->
+					<!-- <p><small>Mediante el uso de licencias de uso se establecen que los programas de computadora tengan el <em>código fuente</em> disponible para que cualquier persona lo <em>vea</em>, <em>modifique</em> y <em>redistribuya</em>.</small></p> -->
+					
+					<!-- <p><small><small>Ya que el término en inglés es Free Software y la palabra "free" se usa también para indicar que algo es gratis. Pero el Software Libre o Free Software no hace referencia a una cuestión de precio.</small></p> -->
+                    <small>
+                    <p>
+                        <q cite="https://www.fsf.org/about/what-is-free-software">El software libre es un software que le brinda al usuario la libertad de compartirlo, estudiarlo y modificarlo. A esto lo llamamos software libre porque el usuario es libre.</q>
+                      Free Software Foundation</p>
+                      
+
+					</small>
+
+                    <p><small>El software libre suele estar disponible gratuitamente en
+                        Internet, o a precio del coste de la distribución a través de otros medios; sin embargo no es
+                        obligatorio que sea así y, aunque conserve su carácter de libre, puede ser vendido comercialmente.</small></p>
+
+				</section>
+
+                <section id="software_libre-hist1" data-state="no_footer">
+                    <h4>Software Libre: Un poco de historia</h4>
+
+                    <p><small>Entre los años 1960 y 1970, el software no se consideraba un producto. En los años 70, cuando la informática todavía no disfrutaba de su gran auge, las personas que hacían uso de ella, en ámbitos universitarios y empresariales, creaban y compartían el software <em>sin ningún tipo de restricciones</em>.</small></p>
+                    <p><small>Con la llegada de los años 1980 la situación empezó a cambiar. Las computadoras más modernas comenzaban a utilizar sistemas operativos privativos, forzando a los usuarios a aceptar condiciones restrictivas que impedían intercambiar, compartir o realizar modificaciones a dicho software. </small></p>
+                    <p><small>En caso de que algún usuario o programador encontrase algún error en la aplicación, lo único que podía hacer era darlo a conocer a la empresa desarrolladora para que esta lo solucionara, si lo consideraba procedente. Aunque el programador estuviese capacitado para solucionar el problema y lo desease hacer sin pedir nada a cambio, el contrato le impedía que modificase el software. </small></p>
+                    
+                </section>
+
+                <section id="software_libre-hist2" data-state="no_footer">
+                    <h4>Software Libre: Un poco de historia p2</h4>
+
+                    <p><small>Richard Stallman en aquel entonces era un programador en el Laboratorio de Inteligencia Artificial del MIT en la década de 1970 y principios de la de 1980. Durante ese tiempo, notó un cambio en la cultura del software. Las empresas comenzaron a limitar la accesibilidad al código fuente y a imponer restricciones en el uso del software.</small></p>
+                    <p><small>Stallman se sintió frustrado por estas restricciones, que consideraba una violación de la libertad de los usuarios de computadoras. Por ejemplo, no podía modificar el software o compartirlo con otros colegas.</small></p>
+
+                    <div class="r-stack codigo_shadow codigo-redondo">
+                        <img class="" data-fragment-index="0" src="img/software_libre/stallman.png" width="450" height="300">
+                        
+                        
+                      </div>
+                      <p><small>Richard Stallman - Facultad de Informática UNLP 2011</small></p>
+
+                    
+                    
+                    
+                </section>
+
+                <section id="software_libre-hist3" data-state="no_footer">
+                    <h4>Software Libre: Un poco de historia p3</h4>
+                    <p><small>En 1983, Stallman anunció públicamente su intención de iniciar un proyecto de desarrollo de software que respetara <strong>las libertades de los usuarios</strong>. Este anuncio incluyó la publicación del <a href="https://www.gnu.org/gnu/manifesto.html" target="_blank">"Manifiesto de GNU"</a> donde estableció sus objetivos y principios para el Proyecto GNU.</small></p>
+                    <p><small>Stallman fundó el Proyecto GNU, cuyo nombre es un acrónimo de "GNU's Not Unix," con el objetivo de crear un sistema operativo completo y totalmente libre basado en Unix.</small></p>
+                    <p><small>Además, creó la <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPL</a>*, una licencia de software libre que garantiza que el software basado en código fuente de GNU siga siendo libre y abierto para siempre. <em>La GPL se convirtió en un modelo</em> para otras licencias de código abierto. También creó el término <strong>copyleft</strong> para garantizar que se mantengan las libertades del usuario en obras derivadas.</small></p>
+                    <p><small>En 1985, Stallman cofundó la FSF, una organización sin fines de lucro que promueve y defiende el software libre y las <strong>libertades de los usuarios</strong>. La FSF define a las <strong>cuatro libertades</strong> del software libre:</small></p>
+                    
+                </section>
+
+                <section id="software_libre-libertades" data-state="no_footer">
+                    <h3>Libertades del software</h3>
+
+                    <ul>
+                        <li>0 - Ejecutar el programa para cualquier propósito: <small>Tienes la libertad de usar el software para cualquier propósito, ya sea personal, académico, comercial o cualquier otro, sin restricciones.</small></li>
+                        <li>1 - Estudiar cómo funciona el programa:<small>Puedes acceder al código fuente del software, lo que te permite examinar cómo funciona internamente. Esto proporciona transparencia y la capacidad de aprender de él.</small></li>
+                        <li>2 - Distribuir copias<small>Tienes la libertad de compartir copias del software con otras personas, ya sea regalándolas, vendiéndolas o distribuyéndolas de cualquier manera que desees.</small></li>
+                        <li>3 - Mejorar y redistribuir las versiones mejoradas:<small>Puedes modificar el software, adaptarlo a tus necesidades y redistribuir esas versiones mejoradas. Esto fomenta la colaboración y la evolución constante del software.</small></li>
+                    </ul>
+
+                    <p><small><a href="https://youtu.be/onrIApj3Cjs?si=-7og1m31aK95A7Y-" target="_blank">Entrevista interesante a Richard Stallman</a></small></p>
+                </section>
+
+                <section data-state="no_footer">
+                    <h4>Software libre y privativo</h4>
+                            
+                        <small>
+                            <table>
+                                <thead><tr>
+                                    <th>Característica</th>
+                                    <th>Software Libre</th>
+                                    <th>Software privativo</th>
+                                </tr></thead>
+                                <tbody><tr>
+                                    <td>Acceso al Código Fuente</td>
+                                    <td>Código fuente abierto y accesible</td>
+                                    <td>Código fuente cerrado y no accesible</td>
+                                </tr>
+                                <tr>
+                                    <td>Libertades de Usuario</td>
+                                    <td><a href="#software_libre-libertades"> Cuatro libertades</a></td>
+                                    <td>Restricciones en el uso, copia, modificación y distribución.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Costo</td>
+                                    <td>Gratuito o pago</td>
+                                    <td>A menudo requiere licencia y/o pago</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Restricciones de Uso</td>
+                                    <td>Generalmente sin restricciones.</td>
+                                    <td>Sujeto a términos de licencia y uso.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Comunidad</td>
+                                    <td>Fomenta la colaboración y participación de la comunidad.</td>
+                                    <td>Desarrollo controlado por una entidad.</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Actualizaciones</td>
+                                    <td>Pueden ser desarrolladas por múltiples colaboradores.</td>
+                                    <td>Las actualizaciones dependen de la empresa propietaria</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Transparencia</td>
+                                    <td>Generalmente es transparente y auditable</td>
+                                    <td>La transparencia depende de la voluntad de la empresa</td>
+                                </tr>
+
+                                
+                            
+                            </tbody>
+                            </table>
+
+                        </small>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h4>Licencias software libre/opensource</h4>
+                    <small>
+
+                    <table>
+                        <thead><tr>
+                            <th>Licencia</th>
+                            <th>Descripción</th>
+                            <th>Ejemplos</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr>
+                            <td>Pública General de GNU (GPL)</td>
+                            <td>Protege las libertades del usuario y garantiza que las modificaciones del software también sean de código abierto. Exige que las obras derivadas se licencien bajo la GPL.</td>
+                            <td>Linux, GNU Core Utilities.</td>
+                        </tr>
+                        <tr>
+                            <td>Licencia MIT</td>
+                            <td>Permite un uso muy flexible, incluyendo uso en proyectos propietarios. Solo requiere la inclusión del aviso de derechos de autor.</td>
+                            <td>Node.js, Ruby on Rails, </td>
+                        </tr>
+
+                        <tr>
+                            <td>Licencia Apache</td>
+                            <td>Permite un uso flexible y favorece la colaboración en proyectos de código abierto. Requiere la atribución y la inclusión de avisos de cambios.</td>
+                            <td>Node.js, Ruby on Rails, Android</td>
+                        </tr>
+
+                        <tr>
+                            <td>Licencia Creative Commons</td>
+                            <td>Ampliamente utilizada para contenido no software (como imágenes y música). Ofrece una variedad de licencias que permiten diferentes grados de flexibilidad en el uso y la atribución.</td>
+                            <td>Fotografías de Flickr, música en SoundCloud.</td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </small>
+                <p><small>Existen muchas licencias similares a las listadas. Estas son solo algunas de las mas populares.</small></p>
+                <p><small>¿No sabés con qué licencia publicar tu software? <a href="https://choosealicense.com/" target="_blank">choosealicense.com</a></small></p>
+                </section>
+
+                <section data-state="no_footer">
+
+                    <h3>Comparativa de licencias software libre</h3>
+                    <small>
+                    <ul>
+                        <li>Licencias software libre Permisivas:
+                            <ul>
+                                <li><strong>MIT</strong>: La mas permisiva. Permite cambiar el tipo de licencia</li>
+                                <li><strong>Apache</strong>: Patentes de software. Requiere que las derivadas se publiquen bajo misma licencia.</li>
+                                <li><strong>BSD</strong>: Compatibilidad con software privativo. Requiere que las derivadas se publiquen bajo misma licencia.</li>
+                            </ul>
+                        </li>
+                        <li>Licencias Copyleft (algo mas restrictivas)
+                            <ul>
+                                <li><strong>GPL2</strong>: Obligación de distribuir el código fuente si se distribuye el producto</li>
+                                <li><strong>GPL3</strong>: Protección de patentes y prohíbe el código para proyectos que pueden infringir la privacidad del usuario</li>
+                                
+                                <li>BSL: Bussiness Software License.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Licencias "weak" copyleft (débilmente restrictivas)
+                            <ul>
+                                <li><strong>LGPL v3</strong>: Permite usarlo con otras licencias. Si se hace un cambio, los cambios deben ser publicados bajo la misma licencia.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </small>
+
+                <p><small>Las licencias, por lo general, deben incluir un archivo <strong>LICENSE</strong> que contenga la licencia con la cual está publicado.</small></p>
+
+
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Resumen</h3>
+                    <p><small>Richard Stallman comenzó el movimiento del software libre en respuesta a la creciente restricción en el uso del software y la pérdida de las libertades de los usuarios. Su compromiso con las "Cuatro Libertades" y su trabajo en el Proyecto GNU sentaron las bases para la comunidad de software libre tal como la conocemos hoy.</small></p>
+                    <p><small>El software libre se basa en la idea de que los usuarios deben tener la libertad de controlar el software que utilizan, en lugar de que el software los controle. Esto promueve la colaboración, la innovación y la transparencia, y a menudo se asocia con proyectos y comunidades de desarrollo de código abierto donde las personas trabajan juntas para crear y mejorar software de manera colectiva.</small></p>
+                    <p><small>El software libre y el software privativo representan dos enfoques distintos en la industria del software, y la elección entre uno y otro a menudo depende de las necesidades y valores del usuario o la organización.</small></p>
+                    <p><small>Es importante tener en cuenta que estas licencias varían en términos de restricciones y permisos. La elección de una licencia dependerá de los objetivos del proyecto, la filosofía del autor y cómo desea que otros utilicen su trabajo. Es esencial leer y comprender la licencia específica antes de utilizar cualquier software o contenido con licencia.</small></p>
+                </section>
+
+                <section>
+                    <h2>¿Preguntas?</h2>
+                </section>
+            </section>
+
+            <section>
+                
+                <section  section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+                    <h2>Librerías</h2>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>¿Qué son las librerías?</h3>
+                    <p><small>Las librerías de software, también conocidas como bibliotecas de software o bibliotecas de código, son conjuntos de código reutilizable que se crean para realizar tareas comunes o específicas en el desarrollo de software. </small></p>
+                    <p><small>Estas librerías contienen funciones, clases y rutinas que pueden ser utilizadas por otros programas o aplicaciones para llevar a cabo tareas específicas <strong>sin tener que escribir todo el código desde cero</strong>.</small></p>
+                    <p><small>Las librerías pueden incluir funcionalidades como procesamiento de datos, gráficos, comunicación en red, cifrado, entre otros.</small></p>
+                </section>
+
+
+
+                <section data-state="no_footer">
+
+                    <h3>Librerías Python</h3>
+
+                    <p><small>En Python, entre las librerías mas populares encontramos:</small></p>
+                    <small>
+                    <ul>
+                        <li><strong><a href="https://numpy.org/" target="_blank">NumPy</a></strong>: Utilizada para realizar cálculos numéricos y operaciones con matrices y arreglos. Es fundamental en el ámbito de la ciencia de datos y la computación científica. (Licencia BSD)</li>
+                        <li><strong><a href="https://pandas.pydata.org/" target="_blank">pandas</a> </strong>: Ideal para el análisis y manipulación de datos en formato tabular, como hojas de cálculo. Es ampliamente utilizado en la manipulación de datos y la limpieza de datos. (Licencia MIT)</li>
+                        <li><strong><a href="https://www.djangoproject.com/" target="_blank">Django</a> y <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">Flask</a></strong>: Frameworks web que simplifican el desarrollo de aplicaciones web en Python. (Licencia BSD)</li>
+                        <li><strong><a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a></strong>: Ideal para crear una API rápidamente. (Licencia MIT).</li>
+                        <li><strong><a href="https://opencv.org/" target="_blank">OpenCV</a></strong>: Una librería de visión por computadora que se utiliza en aplicaciones de procesamiento de imágenes y video. (Varias versiones de la licencia)</li>
+                        <li><strong><a href="https://www.pygame.org/news" target="_blank">pygame</a> y <a href="https://api.arcade.academy/en/latest/" target="_blank">arcade</a></strong>: Motores de juegos que facilita el desarrollo de juegos en 2D. Son una opción popular para desarrolladores de videojuegos independientes. (Licencia MIT)</li>
+
+                    </ul>
+                    </small>
+
+                </section>
+
+
+                <section data-state="no_footer">
+                    <h3>Módulos, paquetes y librerías</h3>
+                    <p><strong>Módulos</strong><small>Un módulo en Python es un archivo individual que contiene código Python. Puede incluir funciones, clases y variables que pueden ser reutilizadas en otros programas. Los módulos se utilizan para organizar y dividir el código en componentes más pequeños y manejables.</small></p>
+                    <p><strong>Paquete</strong><small> Un paquete es una forma de organizar múltiples módulos relacionados en un directorio. Los paquetes contienen un archivo especial llamado <code>__init__.py</code>, que indica que el directorio es un paquete. Los paquetes permiten estructurar y jerarquizar el código de manera lógica y organizada.</small></p>
+                    <p><strong>Librería</strong><small>Una librería (o biblioteca) en Python es un conjunto de módulos, paquetes y funciones que proporcionan funcionalidades específicas o herramientas útiles para realizar tareas comunes. Las librerías se utilizan para extender las capacidades de Python y facilitar la reutilización de código.</small></p>
+
+                    <p><small>Los módulos son los componentes más pequeños y básicos en Python, los paquetes son grupos de módulos relacionados organizados en directorios, y las librerías son colecciones más grandes que pueden incluir múltiples módulos y paquetes relacionados. </small></p>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Importar módulos, paquetes y/o librerías</h3>
+                    <p><small>Hemos visto que es posible extender nuestro programa importando código externo. Este código externo suele ser un módulo, paquete o librería.</small></p>
+
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+                        # Importamos las funciones de random
+                        import random
+
+                        # Importamos Faker
+                        from faker import Faker
+					</code></pre>
+
+                    <p><small>Algunos paquetes o librerías pueden requerir instalarlo antes de usarlo. Eso lo veremos en un lab en las próximas clases.</small></p>
+                    
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Ejemplo: Faker</h3>
+                    <p><small>Faker es un paquete de Python que genera datos falsos. Ya sea que necesitemos iniciar una base de datos con datos, realizar pruebas de estrés o anonimizar datos tomados de un servicio, entre otras cosas. Faker nos puede generar ese tipo de información. Fue publicado con licencia MIT.</small></p>
+                    <p><small>En 2022, los alumnos del curso de programación del Centro de Formación Profesional 410 a modo de trabajo final, colaboraron junto con su instructor en el proyecto de Software Libre Faker. La colaboración se basó en estudiar el código y agregar el código necesario para que sea posible generar datos falsos de Argentina.</small></p>
+                    
+                    <small>
+                    <ul>
+                        <li><a href="https://github.com/joke2k/faker/tree/master" target="_blank">Código fuente de Faker</a></li>
+                        <li><a href="https://faker.readthedocs.io/en/master/" target="_blank">Documentación de Faker</a></li>
+                        <li><a href="https://github.com/joke2k/faker/pull/1784" target="_blank">Pull-request</a></li>
+                        <li><a href="https://faker.readthedocs.io/en/master/locales/es_AR.html" target="_blank">Documentación para Argentina</a></li>
+                        <li><a href="https://faker.readthedocs.io/en/master/locales/es_AR.html#faker.providers.address.es_AR.Provider.street_procer">Easter EGG</a> en pŕoceres. <span class="fragment">Omar Nuñez y Malvinas Argentinas</span></li>
+                        
+                    </ul>
+                    </small>
+                    
+                    <br>
+                    <div class="r-stack codigo_shadow codigo-redondo">
+                        
+                        <img class="" data-fragment-index="0" src="img/software_libre/faker.png" >
+                      </div>
+                      <p><small><a href="https://github.com/joke2k/faker/blob/master/CHANGELOG.md">Changelog</a> donde se registra el cambio</small></p>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Como probar Faker</h3>
+
+                    <p><small>Primero se debe instalar Faker</small></p>
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+                        pip install faker
+					</code></pre>
+                    <p><small>Luego podemos probar este código</small></p>
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="python codigo-redondo" data-trim>
+                        from faker import Faker
+                        fake = Faker('es_AR')
+
+                        for _ in range(5):
+                            print(f"Nombre: {fake.name()}")
+                            print(f"Domicilio: {fake.address()}")
+                            print(f"Patente: {fake.license_plate()}\n")
+					</code></pre>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Faker</h3>
+                    <p><small>El código puede producir datos como los siguientes:</small></p>
+
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+                        Nombre: Alma Ponce
+                        Domicilio: Avenida Santa Rosa N° 33
+                            Santa Rosa 6300, La Pampa
+                        Matrícula: AO008HR
+
+                        Nombre: Benjamin Figueroa
+                        Domicilio: Av. Pte. Perón N° 550
+                            Rawson 9103, Chubut
+                        Patente: ESX308
+
+                        Nombre: Emma Quiroga
+                        Domicilio: Calle 187 Bis N° 42 Dto. 2
+                            San Salvador de Jujuy 4600, Jujuy
+                        Matrícula: AD545PZ
+
+                    </code></pre>
+
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Conclusiones</h3>
+                    <small>
+                    <ul>
+                        <li>Se pueden utilizar, paquetes, módulos y librerías para extender nuestro programa.</li>
+                        <li>Hay miles de paquetes y librerías de código abierto (Software Libre) para usar, estudiar y colaborar</li>
+                        <li>Podemos licenciar nuestro software con licencias</li>
+                        <li>Aunque tengamos poco conocimiento de programación, se puede colaborar en algún proyecto y así aprender a programar.</li>
+                    </ul>
+
+
+                </small>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h2>¿Preguntas?</h2>
+
+                </section>
+
+
+                
+            </section>
+
+            
+
+        </section>
+						
+
+					
+    </div>
+</div>
+
+<footer>
+    <!-- Logos en el footer -->
+    <div id="logos-footer" class="footer">
+        <span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+        <span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+        <span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+    
+            revealDiv = document.querySelector("body div.reveal")
+            footer = document.getElementById("logos-footer");
+            revealDiv.appendChild(footer);
+    
+        } );
+    </script>
+</footer>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+
+
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+
+        // Para eventos personalizados. Indica que está en la presentación
+
+    Reveal.on( 'customevent', function() {
+        var element = document.getElementById("logos-footer");
+        element.style.display = "table";
+        element.style.opacity = "40%";
+
+    } );
+
+    Reveal.on( 'no_footer', function() {
+        var element = document.getElementById("logos-footer");
+        //element.style.display = "none";
+        // element.style.display = "table";
+        element.style.opacity = "15%";
+    } );
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+    });
+</script>
+
+</body>
+</html>
