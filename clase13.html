@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Curso de Programación 2023 - CFL 410</title>
+		<link rel="icon" type="image/x-icon" href="/img/logos/cfl_logo.png">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/egg.css">
+		<script src="js/egg.js"></script>
+		
+	</head>
+	<body>
+
+		<!-- The EGG -->
+		<!-- NO egg for this class :( -->
+
+
+		<div class="reveal">
+			<div class="slides">
+
+			<section id="inicio" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+
+                <section>
+				
+				    <h2>Curso de programación</h2>
+				    <h4>Clase 13 : Git</h4>
+
+                </section>
+
+                
+                    <section id="indice" data-state="no_footer">
+                        <h2>Clase 13 - Git</h2>
+                        <h3>Contenido de la clase</h3>
+                        <small>
+                        <ul>
+    
+                                    <li><a href="#/git0">Introducción a Git</a></li>
+                                    
+                                    <li><a href="#/conceptos1">Definiendo conceptos I</a></li>
+                                    <li><a href="#/working_git">Como se trabaja en Git (Ejemplos gráficos)</a></li>
+                                    <li><a href="#/conceptos2">Definiendo conceptos II</a></li>
+                                    <li><a href="#/flujo_trabajo">Flujo de trabajo</a></li>
+                                    <li><a href="#/instalacion">Instalación de Git y herramientas gráficas</a></li>
+                                    <li><a href="#/init">Creando repo</a></li>
+                                    <li><a href="#/commits">Creando commits</a></li>
+                                    <li><a href="#/status">Estado del repo</a></li>
+                                    <li><a href="#/status">Branchs</a></li>
+                                    <li><a href="#/merge">Merge</a></li>
+                                <li><a href="#/ejercicio">Ejercicio en clase</a></li>
+    
+                        </ul>
+                    </small>
+                    </section>
+    
+
+
+			</section>
+
+            <section>
+
+                <section id="git0" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+
+                    <h3>Introducción a Git</h3>
+
+                </section>
+
+                <section id="git1" data-state="no_footer">
+                    <h3>¿Qué es GIT?</h3>
+                    <p><small>Git es <strong>un software</strong> para <em>control de versiones</em> (VCS del inglés Version control system) diseñado por <a href="https://es.wikipedia.org/wiki/Linus_Torvalds" target="_blank">Linus Torvalds</a> y es de código abierto.</small></p>
+                    <h4>¿Qué es el control de versiones?</h4>
+                    <p><small>El control de versiones se refiere al proceso de guardar diferentes versiones a lo largo de las etapas de un proyecto. No solo versiones completas, si no cambios en el código fuente.</small></p>
+                    <p><small>Con el control de versiones podemos, en cualquier momento, volver a una versión anterior cuando queramos.</small></p>
+                    <h4 class="fragment">¿Es lo mismo que Github?</h4>
+                    <p class="fragment"><small><strong>¡NO!</strong> Github es una <em>plataforma</em> para almacenar repositorios <em>remotos</em> de git. Hay muchas otras alternativas a <a href="https://github.com/" target="_blank">GitHub</a> siendo la mas relevante hoy en día <a href="https://about.gitlab.com/" target="_blank">GitLab</a>.</small></p>
+                </section>
+
+                <section id="git2" data-state="no_footer">
+                    <h3>¿Para qué sirve Git?</h3>
+
+                    <p><small>Imaginemos que estamos en un equipo de desarrollo de software de muchas personas trabajando sobre el mismo software. ¿Se imaginan compartir el código entre todos?.</small></p>
+                    <p><small>Por ejemplo, si alguien abre un archivo en modo escritura, ninguna otra persona podría acceder con permisos de escritura.  No habría seguimiento de cambios que hizo cada desarrollador.</small></p>
+                    <!-- <p><small>Un software para control de versiones nos proveen herramientas para trabajar no solamente en equipo y poder desarrollar sobre el mismo código sino que también nos proveen las herramientas de seguimiento por cada línea de código que se fueron agregando a lo largo del tiempo, bifurcar el código, volver a una versión anterior, etc.</small></p> -->
+                    
+                    <small>
+                    <ul>Un sistema de control de versiones nos permite:
+                        <li>Tener historial de los cambios</li>
+                        <li>Almacenar el código</li>
+                        <li>Trabajar en equipo</li>
+                        <li>Nos permite rastrear errores</li>
+                    </ul>
+                    </small>
+                    <p><small>Hoy en día, el software de control de versiones mas popular es Git. Y es de <em>suma importancia para los desarrolladores</em> comprender su funcionamiento.</small></p>
+
+                </section>
+
+                <section id="git3" data-state="no_footer">
+                    <h3>Arquitectura de Git</h3>
+                    <p><small>Git, que presenta una <strong>arquitectura distribuida</strong> (o descentralizada).
+                        En lugar de tener un único espacio para todo el historial de versiones del software (arquitectura centralizada),
+                        como sucede de manera habitual en los sistemas de control de versiones,
+                        como <em>CVS</em> o <em>Subversion</em>, en Git, la copia de trabajo del código de cada
+                        desarrollador <em>es también un repositorio</em>
+                        Es decir, cada desarrollador tendrá una copia del repositorio completo en su estación de trabajo.
+                    </small></p>
+
+                    <img class="" data-fragment-index="0" src="img/clase13/git_arch.png">
+
+                </section>
+
+                <section id="git3-3" data-state="no_footer">
+                    <h3>Arquitectura de Git</h3>
+
+                     <p><small>La <strong>arquitectura distribuida</strong> presenta una ventaja, ya que si el servidor donde está alojado nuestro código por alguna razón llega a no estar disponible por un momento, podemos seguir trabajando al tener una copia en nuestra estación de trabajo.</small></p>
+                    
+                    <p><small>Caso contrario, en una <strong>arquitectura centralizada</strong> NO podremos no solamente acceder a los nuevos cambios que introdujeron los otros desarrolladores, sino tampoco a nuestro código donde estábamos trabajando.</small></p>
+                    
+                    <p><small>Otra ventaja es que en Git casi todas las operaciones son locales. Reduciendo el tráfico de la red.</small></p>
+
+                    
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>¿Preguntas?</h3>
+                </section>
+
+            </section>
+
+            <section>
+
+                <section id="git0" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+
+                    <h3>Definiendo Conceptos I</h3>
+
+                </section>
+
+                <section id="conceptos1" data-state="no_footer">
+
+                    <h3>Definiendo conceptos I</h3>
+                    
+                    <small>
+                    <ul>
+                        <li><strong>Repositorio</strong>: Un repositorio es un lugar donde Git almacena y gestiona tus archivos y su historial. Puede ser local (en tu computadora) o remoto (en un servidor en línea).</li>
+                        <li><strong>Commit</strong>: Un commit es un "punto de control" en la historia de tu proyecto. Representa un conjunto de cambios realizados en tus archivos. Cada commit tiene un mensaje que describe los cambios que se realizaron.</li>
+                        <li><strong>Branch</strong>: Una rama es una línea de desarrollo independiente dentro de un repositorio. Puedes crear ramas para trabajar en nuevas características o solucionar problemas sin afectar la rama principal, llamada generalmente "master" o "main"</li>
+                        <li><strong>Merge (fusionar)</strong>: Cuando dos ramas de desarrollo se combinan, se realiza una fusión (merge). Los cambios de una rama se integran en otra. Por lo general, esto se hace para incorporar nuevas características o correcciones en la rama principal.</li>
+                        <li><strong>Head</strong>: Se refiere al commit en el que estamos posicionado en cada momento. Por regla general HEAD suele coincidir con el último commit de la rama en la que estés, ya que habitualmente estás trabajando en lo último. Pero es posible movernos en el tiempo a otro commit, entonces el HEAD apuntará a otro commit.</li>
+                    </ul>
+                    </small>
+
+                </section>
+
+
+                <section id="working_git" data-state="no_footer" data-transition="none">
+                    <h3>Como se trabaja en Git</h3>
+                    <p>Commits</p>
+                    <img src="./img/clase13/Git_commit0.svg">
+                    <small>
+                    <ul>
+                        <li>Cada círculo es un commit. (c1), (c2), etc...</li>
+                        <li>Es posible volver a cada commit y ver el historial de cambios</li>
+                    </ul>
+                    </small>
+
+                </section>
+
+                <section data-state="no_footer" data-transition="none">
+                    <h3>Como se trabaja en Git</h3>
+                    <p>Commits</p>
+                    <img src="./img/clase13/Git_commit1.svg">
+                    <small>
+                    <ul>
+                        <li>Cada círculo es un commit. (c1), (c2), etc...</li>
+                        <li>Es posible volver a cada commit y ver el historial de cambios</li>
+                    </ul>
+                    </small>
+
+                </section>
+
+                <section data-state="no_footer" data-transition="none">
+                    <h3>Como se trabaja en Git</h3>
+                    <p>Commits</p>
+                    <img src="./img/clase13/Git_commit2.svg">
+                    <small>
+                    <ul>
+                        <li>Cada círculo es un commit. (c1), (c2), etc...</li>
+                        <li>Es posible volver a cada commit y ver el historial de cambios</li>
+                    </ul>
+                    </small>
+
+                </section>
+
+                <section data-state="no_footer" data-transition="none">
+                    <h3>Como se trabaja en Git</h3>
+                    <p>Commits</p>
+                    <img src="./img/clase13/Git_commit3.svg">
+                    <small>
+                    <ul>
+                        <li>Cada círculo es un commit. (c1), (c2), etc...</li>
+                        <li>Es posible volver a cada commit y ver el historial de cambios</li>
+                    </ul>
+                    </small>
+
+                    
+
+                </section>
+
+                <section  data-state="no_footer" data-transition="fade">
+                    <h3>Como se trabaja en Git</h3>
+                    <p>Commits</p>
+                    <img src="./img/clase13/Git_00.png">
+                    <small>
+                    <ul>
+                        <li>Para usar git es necesario utilizar comandos de consola o interface gráfica</li>
+                        <li>El comando utilizado para crear un commit es: <br><code>git commit -m "Mensaje de cambios"</code></li>
+                    </ul>
+                    </small>
+
+                    <p><small><a href="https://learngitbranching.js.org/?locale=es_AR&NODEMO=" target="_blank">Aprender Git</a></small>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Como se trabaja en Git</h3>
+                    <p>Usando branchs</p>
+
+                    <img src="./img/clase13/Git_01.png">
+                    <small>
+                    <ul>
+                        <li>Hay dos branchs: <code>main</code> y <code>new_feature</code></li>
+                        <li>Merge de commit: En c3 se hizo un <em>merge</em> de <code>new_feature</code> con <code>main</code>.</li>
+                        <ul>
+                            <li>*c3 = c1.2 + c2</li>
+                        </ul>
+                    </ul>
+                    </small>
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Como se trabaja en Git</h3>
+                    
+
+                    <img src="./img/clase13/Git_02.png">
+                    <small>
+                    <ul>
+                        <li>Hay tres branchs: <code>main</code>, <code>new_feature</code> y <code>bug_fix</code></li>
+                        <li>Merge de commits:</li>
+                        <ul>
+                            <li>c2 = c1 + c1.a</li>
+                            <li>c3= c2 + c1.2</li>
+                        </ul>
+                    </ul>
+                    </small>
+                </section>
+
+                <section data-state="no_footer">
+                    <h3>Como se trabaja en Git</h3>
+
+                    <img src="./img/clase13/Git_03.png">
+                    <small>
+                    <ul>
+                        <li>Es posible que otro branch sobrepase al <code>main</code>, de hecho la mayoría de veces algún branch está por delante del <code>main</code></li>
+                        <li>La rama <mode>main</mode> se usa para un código de producción o que es estable. En el resto de las ramas pueden ser pruebas, versiones de desarrollo o nuevas características (features).</li>
+                        <li>Las nuevas características por lo general son branchs que parten de una rama de desarrollo.</li>
+                    </ul>
+                    </small>
+                </section>
+
+                <section id="repaso_conceptos_1">
+                    <h3>Repaso de conceptos</h3>
+                    <small>
+                        <ul>
+                            <li><strong>Repositorio</strong><span class="fragment">: Un lugar donde se almacenan cosas, en nuestro caso, código de programación.</span></li>
+                            <li><strong>Commit</strong><span class="fragment">: Una instantánea (como una "foto") de nuestro código en un momento dado. Los commits tienen un comentario y es posible hacer un registro de cambios.</span></li>
+                            <li><strong>Merge (fusión)</strong><span class="fragment">: Es una fusión entre dos ramas o branchs.</span></li>
+                            <li><strong>Branch o rama</strong><span class="fragment">: Es una bifurcación y va en paralelo a las demás ramas. Las ramas pueden "mergearse" o mezclarse para sumar los cambios realizados.</span></li>
+                            <li><strong>main</strong><span class="fragment">: Es el nombre que se le conoce a la rama principal. Anteriormente llamada "master". Por lo general esta rama debe mantenerse limpia y el código que está en el main debe ser funcional.</span></li>
+                            <li><strong>Head</strong><span class="fragment">: Es el commit donde estamos parados en un momento determinado. Recordar que es posible moverse entre ramas y anteriores commits.</span></li>
+
+                        </ul>
+                    </small>
+                    <p><small class="fragment">Existen muchos mas conceptos asociados a Git. Estos son los conceptos mas básicos.</small></p>
+
+                </section>
+
+                <section data-state="no_footer">
+                    <h2>¿Preguntas?</h2>
+                </section>
+
+            </section>
+
+            <section>
+                <section id="conceptos2" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+
+                    <h3>Definiendo Conceptos II</h3>
+
+                </section>
+
+                <section id="conceptos2_1" data-state="no_footer">
+                    <h3>Definiendo conceptos II</h3>
+
+                    <small>
+                    <ul>
+
+                        <li><strong>Clonar</strong>: Clonar un repositorio significa copiar todo el historial y los archivos de un repositorio remoto a tu máquina local. Esto te permite trabajar en el proyecto de forma aislada y tener una copia local.</li>
+                        <li><strong>Etiquetas (tags)</strong>: Las etiquetas se utilizan para marcar puntos específicos en la historia del repositorio, generalmente versiones estables del software.</li>
+                        <li><strong>Pull</strong>: Cuando obtienes los cambios de un repositorio remoto y los mezclas con tu repositorio local, se llama "pull". Es común hacer esto para mantener tu copia local actualizada con los cambios realizados por otros colaboradores.</li>
+                        <li><strong>Push</strong>: Subir tus cambios locales a un repositorio remoto se llama "push". Esto permite que otros colaboradores vean tus cambios y colaboren con nosotros.</li>
+                        
+                        </ul>
+                    </small>
+
+
+                </section>
+
+                <section id="conceptos2_2" data-state="no_footer">
+
+                    <h3>Definiendo conceptos II</h3>
+
+                    <small>
+                    <ul>
+
+                        <li><strong>Estado (status)</strong>: Es el estado de tu repositorio en cualquier momento. Se consulta para ver qué archivos se han modificado, cuáles están pendientes de confirmación y otros detalles.</strong></li>
+                        <li><strong>Historial (log)</strong>: Es el historial de cambios realizados en tu repositorio, incluyendo quién hizo qué cambios y cuándo se hicieron.</strong></li>
+                        <li><strong>Hash</strong>: Un hash es una función que dada una entrada de información, devuelve una cadena de longitud fija. Es altamente usado para realizar verificaciones de integridad de la información y así comprobar que la misma no se haya corrompido. <strong>Los commits se identifican con un hash.</strong></li>
+                        </ul>
+                    </small>
+
+                    <p><small>Cada uno de los conceptos citados tiene una forma de consultarlos. Por lo general es con comandos de git o mediante herramientas gráficas.</small></p>
+
+                </section>
+
+                <section id="comandos" data-state="no_footer">
+                    <h3>Comandos básicos</h3>
+                    <h4>Agregar archivos para un commit</h4>
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+                        git add archivo.txt # Agrega un archivo en particular
+                        git add * # Agrega todos los archivos
+                    </code></pre>
+
+                    <h4>Realizar un commit</h4>
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+                        git commit -m "Descripción del commit"
+                    </code></pre>
+
+                    <p><small>Estos son los comandos que mas va a utilizar. Puede practicar en <a href="https://learngitbranching.js.org/?locale=es_AR&NODEMO=" target="_blank">Learn Git Branch</a>. Tenga en cuenta que para simplificar, en dicha página no hace falta hacer <code>git add</code> ni tampoco agregar un comentario al commit.</small></p>
+                </section>
+
+                <section id="comandos2" data-state="no_footer">
+
+                    <h3>Comandos básicos</h3>
+                    <h4>Crear un branch</h4>
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+                        git branch branch1 # Crea un nuevo branch
+                        git checkout branch2 # Crea un nuevo branch o cambia a existente
+                        git checkout -b branch3 # Crea un nuevo branch y cambia el HEAD
+                    </code></pre>
+
+                    <h4>Cambiar a un branch o commit</h4>
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+                        git switch branch1 # Cambia el HEAD al último commit de branch1
+                        git checkout branch1 # Cambia el HEAD al último commit de branch1
+
+                        git switch a123dd # Cambia al commit hash a123dd
+                        git checkout a123dd # Cambia al commit con hash a123dd
+                    </code></pre>
+
+                    <p><small>En <a href="https://learngitbranching.js.org/?locale=es_AR&NODEMO=" target="_blank">Learn Git Branch</a> algunos comandos pueden no funcionar como <code>git checkout -b</code> pero el resto es completamente funcional.</small></p>
+
+                </section>
+
+                <section id="comandos3" data-state="no_footer">
+
+                    <h3>Comandos básicos</h3>
+                    <h4>Hacer un merge</h4>
+                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
+                        git switch main # Cambio al branch main
+                        git merge develop # Fusiono desde develop a main
+                    </code></pre>
+
+                    <p class="fragment"><small>
+                        <strong>Conflictos (Conflict)</strong>: Los conflictos ocurren cuando dos ramas tienen cambios conflictivos en el mismo lugar del archivo. Debes resolver estos conflictos manualmente antes de fusionar las ramas.
+                    </small></p>
+
+                </section>
+
+
+
+                <section data-state="no_footer">
+                    <h3>Resumen</h3>
+                    <p><small>Git es una herramienta poderosa para el control de versiones que te permite colaborar en proyectos, realizar un seguimiento de cambios y mantener un historial detallado de tu trabajo.</small></p>
+                    <p><small>Existen herramientas gráficas para ayudarnos a usar Git como <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> (MIT), <a href="https://www.gitkraken.com/" target="_blank">Git Kraken</a> (Privativo), <a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a> (Extensión para VsCode)<a href="https://raw.githubusercontent.com/mhutchie/vscode-git-graph/develop/LICENSE">(License)</a>. <a href="https://git-scm.com/downloads/guis">Mas clientes GUI</a> para Git.</small></p>
+                    <p><small>Hoy en día es indispensable para cualquier desarrollador de software tener conocimientos de Git ya que es hoy por hoy la herramienta mas usada para versionar código a nivel mundial.</small></p>
+
+                </section>
+
+                <section data-state="no_footer">
+
+                    <h2>¿Preguntas?</h2>
+
+                </section>
+            </section>
+
+            <section>
+                <section id="conceptos2" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+                    <h2>Ejercicio en clase</h2>
+                </section>
+
+                <section id="ejercicio" data-state="no_footer">
+
+                            <h2>Ejercicio en clase</h2>
+                            <p><small>Desde el sitio <a href="https://learngitbranching.js.org/?locale=es_ES&NODEMO=" target="_blank">LearnGitBranching</a> realizar lo siguiente:</small></p>
+                        <small>
+                            <ul>
+                                <li>Desde el branch <code>main</code> crear un nuevo branch llamado <code>bugFix</code></li>
+                                <li>Hacer un commit en <code>bugFix</code></li>
+                                <li>Volver al branch <code>main</code> y hacer otro commit</li>
+                                <li>Mergear <code>bugFix</code> a <code>main</code></li>
+                            </ul>
+                        </small>
+                            
+                            <img data-src="./img/clase13/Git_04.png" style="height: 30%; width: 30%">
+						
+						
+						
+					</section>
+
+                </section>
+            </section>
+            
+
+					
+    </div>
+</div>
+
+<footer>
+    <!-- Logos en el footer -->
+    <div id="logos-footer" class="footer">
+        <span class="element"><img src="img/logos/cfl_logo.png" class="foot-image"></span>
+        <span class="element"><img src="img/logos/idep_logo.png" class="foot-image-idep"></span>
+        <span class="element"><img src="img/logos/info_logo.png" class="foot-image"></span>
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+    
+            revealDiv = document.querySelector("body div.reveal")
+            footer = document.getElementById("logos-footer");
+            revealDiv.appendChild(footer);
+    
+        } );
+    </script>
+</footer>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+
+
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+
+        // Para eventos personalizados. Indica que está en la presentación
+
+    Reveal.on( 'customevent', function() {
+        var element = document.getElementById("logos-footer");
+        element.style.display = "table";
+        element.style.opacity = "40%";
+
+    } );
+
+    Reveal.on( 'no_footer', function() {
+        var element = document.getElementById("logos-footer");
+        //element.style.display = "none";
+        // element.style.display = "table";
+        element.style.opacity = "15%";
+    } );
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
+    });
+</script>
+
+</body>
+</html>
