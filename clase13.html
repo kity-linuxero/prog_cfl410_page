@@ -383,24 +383,60 @@
                     <h3>Comandos básicos</h3>
                     <h4>Hacer un merge</h4>
                     <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
-                        git branch branch1 # Crea un nuevo branch
-                        git checkout branch2 # Crea un nuevo branch o cambia a existente
-                        git checkout -b branch3 # Crea un nuevo branch y cambia el HEAD
+                        git switch main # Cambio al branch main
+                        git git merge develop # Fusiono desde develop a main
                     </code></pre>
 
-                    <h4>Cambiar a un branch o commit</h4>
-                    <pre class="codigo_shadow" data-id="code-animation"><code class="bash codigo-redondo" data-trim>
-                        git switch branch1 # Cambia el HEAD al último commit de branch1
-                        git checkout branch1 # Cambia el HEAD al último commit de branch1
+                    <p class="fragment"><small>
+                        <strong>Conflictos (Conflict)</strong>: Los conflictos ocurren cuando dos ramas tienen cambios conflictivos en el mismo lugar del archivo. Debes resolver estos conflictos manualmente antes de fusionar las ramas.
+                    </small></p>
 
-                        git switch a123dd # Cambia al commit hash a123dd
-                        git checkout a123dd # Cambia al commit con hash a123dd
-                    </code></pre>
+                </section>
 
-                    <p><small>En <a href="https://learngitbranching.js.org/?locale=es_AR&NODEMO=" target="_blank">Learn Git Branch</a> algunos comandos pueden no funcionar como <code>git checkout -b</code> pero el resto es completamente funcional.</small></p>
+
+
+                <section data-state="no_footer">
+                    <h3>Resumen</h3>
+                    <p><small>Git es una herramienta poderosa para el control de versiones que te permite colaborar en proyectos, realizar un seguimiento de cambios y mantener un historial detallado de tu trabajo.</small></p>
+                    <p><small>Existen herramientas gráficas para ayudarnos a usar Git como <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> (MIT), <a href="https://www.gitkraken.com/" target="_blank">Git Kraken</a> (Privativo), <a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a> (Extensión para VsCode)<a href="https://raw.githubusercontent.com/mhutchie/vscode-git-graph/develop/LICENSE">(License)</a>. <a href="https://git-scm.com/downloads/guis">Mas clientes GUI</a> para Git.</small></p>
+                    <p><small>Hoy en día es indispensable para cualquier desarrollador de software tener conocimientos de Git ya que es hoy por hoy la herramienta mas usada para versionar código a nivel mundial.</small></p>
+
+                </section>
+
+                <section data-state="no_footer">
+
+                    <h2>¿Preguntas?</h2>
 
                 </section>
             </section>
+
+            <section>
+                <section id="conceptos2" data-state="customevent" data-transition="slide" data-background-gradient="radial-gradient(#ffffff, #dcffdc)" data-background-size="contain">
+                    <h2>Ejercicio en clase</h2>
+                </section>
+
+                <section id="ejercicio" data-state="no_footer">
+
+                            <h2>Ejercicio en clase</h2>
+                            <p><small>Desde el sitio <a href="https://learngitbranching.js.org/?locale=es_ES&NODEMO=" target="_blank">LearnGitBranching</a> realizar lo siguiente:</small></p>
+                        <small>
+                            <ul>
+                                <li>Desde el branch <code>main</code> crear un nuevo branch llamado <code>bugFix</code></li>
+                                <li>Hacer un commit en <code>bugFix</code></li>
+                                <li>Volver al branch <code>main</code> y hacer otro commit</li>
+                                <li>Mergear <code>bugFix</code> a <code>main</code></li>
+                            </ul>
+                        </small>
+                            
+                            <img data-src="./img/clase13/Git_04.png" style="height: 30%; width: 30%">
+						
+						
+						
+					</section>
+
+                </section>
+            </section>
+            
 
 					
     </div>
